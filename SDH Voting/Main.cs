@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 
 namespace SDH_Voting
@@ -173,6 +174,55 @@ namespace SDH_Voting
                 MessageBox.Show("Please select a row to delete.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void button_Export_Click(object sender, EventArgs e)
+        {
+            // Check if there is data in the DataGridView
+            if (InventoryDataGrid.Rows.Count == 0)
+            {
+                MessageBox.Show("No data to export.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            // Initialize a StringBuilder to store CSV content
+            StringBuilder csvContent = new StringBuilder();
+
+            // Write the header row
+            DataGridViewRow headerRow = InventoryDataGrid.Rows[0];
+            foreach (DataGridViewCell headerCell in headerRow.Cells)
+            {
+                csvContent.Append(headerCell.OwningColumn.HeaderText + ",");
+            }
+            csvContent.AppendLine();
+
+            // Write the data rows
+            foreach (DataGridViewRow dataRow in InventoryDataGrid.Rows)
+            {
+                foreach (DataGridViewCell cell in dataRow.Cells)
+                {
+                    csvContent.Append(cell.Value + ",");
+                }
+                csvContent.AppendLine();
+            }
+
+            // Generate file name with current date
+            string currentDate = DateTime.Now.ToString("yyyy-MM-dd");
+            string fileName = $"SDH_Voting_{currentDate}.csv";
+
+            // Prompt the user to save the file
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "CSV files (*.csv)|*.csv";
+            saveFileDialog.Title = "Export CSV File";
+            saveFileDialog.FileName = fileName;
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Write the CSV content to the file
+                File.WriteAllText(saveFileDialog.FileName, csvContent.ToString());
+                MessageBox.Show("Data exported successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
     }
 
     public class Investor
