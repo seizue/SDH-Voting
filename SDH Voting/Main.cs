@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -22,13 +23,18 @@ namespace SDH_Voting
 
         private void LoadData()
         {
-            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "InvestorMasterlist.json");
+            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
+            string filePath = Path.Combine(folderPath, "InvestorMasterlist.json");
             List<Investor> investors = new List<Investor>();
 
             if (File.Exists(filePath))
             {
                 string json = File.ReadAllText(filePath);
-                investors = JsonConvert.DeserializeObject<List<Investor>>(json);
+
+                if (!string.IsNullOrWhiteSpace(json))
+                {
+                    investors = JsonConvert.DeserializeObject<List<Investor>>(json) ?? new List<Investor>();
+                }
             }
 
             // Project to view model
@@ -38,8 +44,10 @@ namespace SDH_Voting
                 Votes = i.Votes
             }).ToList();
 
-            InventoryDataGrid.DataSource = investorViewModels;
+            InventoryDataGrid.DataSource = new BindingList<InvestorViewModel>(investorViewModels);
         }
+
+
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
@@ -94,13 +102,82 @@ namespace SDH_Voting
 
         private void button_UpdateUser_Click(object sender, EventArgs e)
         {
-            NewForm newForm = new NewForm();
-            newForm.ShowDialog();
+            if (InventoryDataGrid.SelectedRows.Count > 0)
+            {
+                int selectedIndex = InventoryDataGrid.SelectedRows[0].Index;
+                InvestorViewModel selectedInvestorViewModel = (InvestorViewModel)InventoryDataGrid.Rows[selectedIndex].DataBoundItem;
+
+                // Find the corresponding Investor object
+                string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting", "InvestorMasterlist.json");
+                List<Investor> investors = new List<Investor>();
+
+                if (File.Exists(filePath))
+                {
+                    string json = File.ReadAllText(filePath);
+                    investors = JsonConvert.DeserializeObject<List<Investor>>(json);
+                }
+
+                Investor selectedInvestor = investors.Find(i => i.Name == selectedInvestorViewModel.Name);
+
+                if (selectedInvestor != null)
+                {
+                    UpdateForm updateForm = new UpdateForm(selectedInvestor);
+                    updateForm.ShowDialog();
+                    LoadData(); // Refresh the data grid after closing the update form
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to update.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            // Check if a row is selected
+            if (InventoryDataGrid.SelectedRows.Count > 0)
+            {
+                // Get the selected row index
+                int selectedIndex = InventoryDataGrid.SelectedRows[0].Index;
+
+                // Get the selected InvestorViewModel
+                InvestorViewModel selectedInvestorViewModel = (InvestorViewModel)InventoryDataGrid.Rows[selectedIndex].DataBoundItem;
+
+                // Find the corresponding Investor object
+                string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting", "InvestorMasterlist.json");
+                List<Investor> investors = new List<Investor>();
+
+                if (File.Exists(filePath))
+                {
+                    string json = File.ReadAllText(filePath);
+                    investors = JsonConvert.DeserializeObject<List<Investor>>(json);
+                }
+
+                Investor selectedInvestor = investors.Find(i => i.Name == selectedInvestorViewModel.Name);
+
+                if (selectedInvestor != null)
+                {
+                    // Remove the selected investor from the list
+                    investors.Remove(selectedInvestor);
+
+                    // Save the updated list to JSON file
+                    string updatedJson = JsonConvert.SerializeObject(investors, Formatting.Indented);
+                    File.WriteAllText(filePath, updatedJson);
+
+                    // Refresh the DataGridView
+                    LoadData();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to delete.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 
     public class Investor
     {
+        public int Id { get; set; } // Unique ID
         public string Name { get; set; }
         public int Shares { get; set; }
         public int Votes { get; set; }

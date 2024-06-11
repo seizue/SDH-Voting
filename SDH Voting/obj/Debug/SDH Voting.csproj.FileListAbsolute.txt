@@ -15,3 +15,4 @@ D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH Voting.csproj.Up2Date
 D:\Venus\Repos\SDH Voting\SDH Voting\bin\Debug\MetroFramework.Design.dll
 D:\Venus\Repos\SDH Voting\SDH Voting\bin\Debug\MetroFramework.dll
 D:\Venus\Repos\SDH Voting\SDH Voting\bin\Debug\MetroFramework.Fonts.dll
+D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.UpdateForm.resources

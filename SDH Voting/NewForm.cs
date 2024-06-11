@@ -64,56 +64,86 @@ namespace SDH_Voting
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            // Get input values
-            string name = textBoxName.Text;
-
-            // Validate and convert inputs
-            if (!TryConvertToNumber(textBoxVotes.Text, out int votes))
+            try
             {
-                MessageBox.Show("Invalid input in Votes. Please enter a valid number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                // Ensure TextBoxes are not null
+                if (textBoxName == null || textBoxVotes == null || textBoxShares == null)
+                {
+                    MessageBox.Show("One or more input fields are missing.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Get input values
+                string name = textBoxName.Text;
+
+                // Validate and convert inputs
+                if (!TryConvertToNumber(textBoxVotes.Text, out int votes))
+                {
+                    MessageBox.Show("Invalid input in Votes. Please enter a valid number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!TryConvertToNumber(textBoxShares.Text.Replace(",", ""), out int shares))
+                {
+                    MessageBox.Show("Invalid input in Shares. Please enter a valid number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Create a new investor object with a unique ID
+                Investor newInvestor = new Investor
+                {
+                    Id = Guid.NewGuid().GetHashCode(), // Use a hash code of a new GUID for simplicity
+                    Name = name,
+                    Shares = shares,
+                    Votes = votes,
+                };
+
+                // Load existing data
+                string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
+
+                // Ensure the directory exists
+                if (!Directory.Exists(folderPath))
+                {
+                    Directory.CreateDirectory(folderPath);
+                }
+
+                string filePath = Path.Combine(folderPath, "InvestorMasterlist.json");
+                List<Investor> investors = new List<Investor>();
+
+                if (File.Exists(filePath))
+                {
+                    string json = File.ReadAllText(filePath);
+                    investors = JsonConvert.DeserializeObject<List<Investor>>(json) ?? new List<Investor>();
+                }
+
+                // Ensure the investors list is not null
+                if (investors == null)
+                {
+                    investors = new List<Investor>();
+                }
+
+                // Add new investor
+                investors.Add(newInvestor);
+
+                // Save updated data
+                string updatedJson = JsonConvert.SerializeObject(investors, Formatting.Indented);
+                File.WriteAllText(filePath, updatedJson);
+
+                // Close the form
+                this.Close();
             }
-
-            if (!TryConvertToNumber(textBoxShares.Text.Replace(",", ""), out int shares))
+            catch (Exception ex)
             {
-                MessageBox.Show("Invalid input in Shares. Please enter a valid number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine(ex.ToString()); // For detailed debugging information
             }
-
-            // Create a new investor object
-            Investor newInvestor = new Investor
-            {
-                Name = name,
-                Shares = shares,
-                Votes = votes,
-            };
-
-            // Load existing data
-            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "InvestorMasterlist.json");
-            List<Investor> investors = new List<Investor>();
-
-            if (File.Exists(filePath))
-            {
-                string json = File.ReadAllText(filePath);
-                investors = JsonConvert.DeserializeObject<List<Investor>>(json);
-            }
-
-            // Add new investor
-            investors.Add(newInvestor);
-
-            // Save updated data
-            string updatedJson = JsonConvert.SerializeObject(investors, Formatting.Indented);
-            File.WriteAllText(filePath, updatedJson);
-
-            // Close the form
-            this.Close();
         }
+
+
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
     }
-
-  
 }
