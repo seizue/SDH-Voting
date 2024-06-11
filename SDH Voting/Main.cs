@@ -20,6 +20,7 @@ namespace SDH_Voting
         {
             InitializeComponent();
             LoadData();
+            txtBoxSearch.TextChanged += txtBoxSearch_TextChanged;
         }
 
         private void LoadData()
@@ -223,7 +224,35 @@ namespace SDH_Voting
             }
         }
 
+        private void txtBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = txtBoxSearch.Text.Trim().ToLower();
+
+            // Check if the search text is empty
+            if (string.IsNullOrEmpty(searchText))
+            {
+                // If the search text is empty, load all data
+                LoadData();
+                return;
+            }
+
+            // Filter the data based on the search text
+            var filteredData = ((BindingList<InvestorViewModel>)InventoryDataGrid.DataSource)
+                                .Where(investor => investor.Name.ToLower().Contains(searchText) || investor.Votes.ToString().Contains(searchText))
+                                .ToList();
+
+            // Update the DataGridView with the filtered data
+            InventoryDataGrid.DataSource = new BindingList<InvestorViewModel>(filteredData);
+        }
+
+        private void txtBoxSearch_ButtonClick(object sender, EventArgs e)
+        {
+            // Trigger the text changed event to perform the search
+            txtBoxSearch_TextChanged(sender, e);
+        }
+
     }
+
 
     public class Investor
     {
