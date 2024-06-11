@@ -16,6 +16,7 @@ namespace SDH_Voting
             InitializeComponent();
             _investor = investor;
             LoadInvestorData();
+            textBoxVotes.TextChanged += textBoxVotes_TextChanged; // Add event handler
         }
 
         private void LoadInvestorData()
@@ -82,6 +83,20 @@ namespace SDH_Voting
             this.Close();
         }
 
+        private void textBoxVotes_TextChanged(object sender, EventArgs e)
+        {
+
+            string input = textBoxVotes.Text;
+            if (TryConvertToNumber(input, out int votes))
+            {
+                textBoxShares.Text = votes.ToString("N0"); // Reflect the number of votes in shares with formatting
+            }
+            else
+            {
+                textBoxShares.Text = "0"; // Handle invalid input
+            }
+        }
+
         private bool TryConvertToNumber(string input, out int result)
         {
             input = input.ToUpper().Trim();
@@ -120,5 +135,8 @@ namespace SDH_Voting
         {
             this.Close();
         }
+
+   
+       
     }
 }

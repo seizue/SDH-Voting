@@ -112,6 +112,7 @@
             this.textBoxVotes.Name = "textBoxVotes";
             this.textBoxVotes.Size = new System.Drawing.Size(200, 23);
             this.textBoxVotes.TabIndex = 444;
+            this.textBoxVotes.TextChanged += new System.EventHandler(this.textBoxVotes_TextChanged);
             // 
             // btnCancel
             // 
