@@ -266,6 +266,16 @@ namespace SDH_Voting
             UpdateDataGridView(filteredData);
         }
 
+        private void btnInvMasterlist_Click(object sender, EventArgs e)
+        {
+            userControlVoting1.Visible = false;
+        }
+    
+
+        private void btnVoting_Click(object sender, EventArgs e)
+        {
+            userControlVoting1.Visible = true;
+        }
     }
 
     public class Investor

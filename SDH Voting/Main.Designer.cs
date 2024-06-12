@@ -38,15 +38,11 @@
             this.buttonMaximize = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnVoting = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button_Export = new System.Windows.Forms.Button();
-            this.buttonDelete = new System.Windows.Forms.Button();
-            this.button_UpdateUser = new System.Windows.Forms.Button();
-            this.button_AddNewUser = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnInvMasterlist = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -60,6 +56,11 @@
             this.label12 = new System.Windows.Forms.Label();
             this.checkBoxName = new MetroFramework.Controls.MetroCheckBox();
             this.checkBoxVotes = new MetroFramework.Controls.MetroCheckBox();
+            this.button_AddNewUser = new System.Windows.Forms.Button();
+            this.button_UpdateUser = new System.Windows.Forms.Button();
+            this.buttonDelete = new System.Windows.Forms.Button();
+            this.button_Export = new System.Windows.Forms.Button();
+            this.userControlVoting1 = new SDH_Voting.UserControlVoting();
             this.panelNav.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -124,29 +125,30 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.btnVoting);
             this.panel1.Location = new System.Drawing.Point(0, 28);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(455, 62);
             this.panel1.TabIndex = 1;
             // 
-            // button3
+            // btnVoting
             // 
-            this.button3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(195)))), ((int)(((byte)(237)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Name = "button3";
-            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button3.Size = new System.Drawing.Size(455, 62);
-            this.button3.TabIndex = 433;
-            this.button3.Text = "VOTING";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnVoting.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnVoting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVoting.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnVoting.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(195)))), ((int)(((byte)(237)))));
+            this.btnVoting.FlatAppearance.BorderSize = 0;
+            this.btnVoting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoting.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
+            this.btnVoting.ForeColor = System.Drawing.Color.Black;
+            this.btnVoting.Location = new System.Drawing.Point(0, 0);
+            this.btnVoting.Name = "btnVoting";
+            this.btnVoting.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnVoting.Size = new System.Drawing.Size(455, 62);
+            this.btnVoting.TabIndex = 433;
+            this.btnVoting.Text = "VOTING";
+            this.btnVoting.UseVisualStyleBackColor = false;
+            this.btnVoting.Click += new System.EventHandler(this.btnVoting_Click);
             // 
             // panel2
             // 
@@ -165,117 +167,34 @@
             this.panel3.Size = new System.Drawing.Size(911, 11);
             this.panel3.TabIndex = 2;
             // 
-            // button_Export
-            // 
-            this.button_Export.BackColor = System.Drawing.Color.Transparent;
-            this.button_Export.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_Export.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(195)))), ((int)(((byte)(237)))));
-            this.button_Export.FlatAppearance.BorderSize = 0;
-            this.button_Export.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Export.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
-            this.button_Export.ForeColor = System.Drawing.Color.Black;
-            this.button_Export.Image = global::SDH_Voting.Properties.Resources.send_file_24px;
-            this.button_Export.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_Export.Location = new System.Drawing.Point(817, 96);
-            this.button_Export.Name = "button_Export";
-            this.button_Export.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button_Export.Size = new System.Drawing.Size(86, 56);
-            this.button_Export.TabIndex = 379;
-            this.button_Export.Text = "EXPORT CSV";
-            this.button_Export.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button_Export.UseVisualStyleBackColor = false;
-            this.button_Export.Click += new System.EventHandler(this.button_Export_Click);
-            // 
-            // buttonDelete
-            // 
-            this.buttonDelete.BackColor = System.Drawing.Color.Transparent;
-            this.buttonDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.buttonDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(195)))), ((int)(((byte)(237)))));
-            this.buttonDelete.FlatAppearance.BorderSize = 0;
-            this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDelete.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
-            this.buttonDelete.ForeColor = System.Drawing.Color.Black;
-            this.buttonDelete.Image = global::SDH_Voting.Properties.Resources.waste_24px;
-            this.buttonDelete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonDelete.Location = new System.Drawing.Point(720, 96);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.buttonDelete.Size = new System.Drawing.Size(59, 56);
-            this.buttonDelete.TabIndex = 378;
-            this.buttonDelete.Text = "DELETE";
-            this.buttonDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.buttonDelete.UseVisualStyleBackColor = false;
-            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
-            // 
-            // button_UpdateUser
-            // 
-            this.button_UpdateUser.BackColor = System.Drawing.Color.Transparent;
-            this.button_UpdateUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_UpdateUser.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(195)))), ((int)(((byte)(237)))));
-            this.button_UpdateUser.FlatAppearance.BorderSize = 0;
-            this.button_UpdateUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_UpdateUser.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
-            this.button_UpdateUser.ForeColor = System.Drawing.Color.Black;
-            this.button_UpdateUser.Image = global::SDH_Voting.Properties.Resources.edit_profile_24px;
-            this.button_UpdateUser.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_UpdateUser.Location = new System.Drawing.Point(640, 96);
-            this.button_UpdateUser.Name = "button_UpdateUser";
-            this.button_UpdateUser.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button_UpdateUser.Size = new System.Drawing.Size(61, 56);
-            this.button_UpdateUser.TabIndex = 377;
-            this.button_UpdateUser.Text = "UPDATE ";
-            this.button_UpdateUser.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button_UpdateUser.UseVisualStyleBackColor = false;
-            this.button_UpdateUser.Click += new System.EventHandler(this.button_UpdateUser_Click);
-            // 
-            // button_AddNewUser
-            // 
-            this.button_AddNewUser.BackColor = System.Drawing.Color.Transparent;
-            this.button_AddNewUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_AddNewUser.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(195)))), ((int)(((byte)(237)))));
-            this.button_AddNewUser.FlatAppearance.BorderSize = 0;
-            this.button_AddNewUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_AddNewUser.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
-            this.button_AddNewUser.ForeColor = System.Drawing.Color.Black;
-            this.button_AddNewUser.Image = global::SDH_Voting.Properties.Resources.add_user_male_24px;
-            this.button_AddNewUser.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_AddNewUser.Location = new System.Drawing.Point(547, 96);
-            this.button_AddNewUser.Name = "button_AddNewUser";
-            this.button_AddNewUser.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button_AddNewUser.Size = new System.Drawing.Size(87, 56);
-            this.button_AddNewUser.TabIndex = 376;
-            this.button_AddNewUser.Text = "ADD NEW";
-            this.button_AddNewUser.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button_AddNewUser.UseVisualStyleBackColor = false;
-            this.button_AddNewUser.Click += new System.EventHandler(this.button_AddNewUser_Click);
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.panel4.Controls.Add(this.button4);
+            this.panel4.Controls.Add(this.btnInvMasterlist);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Location = new System.Drawing.Point(456, 28);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(455, 62);
             this.panel4.TabIndex = 430;
             // 
-            // button4
+            // btnInvMasterlist
             // 
-            this.button4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(195)))), ((int)(((byte)(237)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(2, 0);
-            this.button4.Name = "button4";
-            this.button4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button4.Size = new System.Drawing.Size(453, 62);
-            this.button4.TabIndex = 432;
-            this.button4.Text = "INVESTORS MASTERLIST";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnInvMasterlist.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnInvMasterlist.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnInvMasterlist.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnInvMasterlist.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(195)))), ((int)(((byte)(237)))));
+            this.btnInvMasterlist.FlatAppearance.BorderSize = 0;
+            this.btnInvMasterlist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInvMasterlist.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
+            this.btnInvMasterlist.ForeColor = System.Drawing.Color.Black;
+            this.btnInvMasterlist.Location = new System.Drawing.Point(2, 0);
+            this.btnInvMasterlist.Name = "btnInvMasterlist";
+            this.btnInvMasterlist.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnInvMasterlist.Size = new System.Drawing.Size(453, 62);
+            this.btnInvMasterlist.TabIndex = 432;
+            this.btnInvMasterlist.Text = "INVESTORS MASTERLIST";
+            this.btnInvMasterlist.UseVisualStyleBackColor = false;
+            this.btnInvMasterlist.Click += new System.EventHandler(this.btnInvMasterlist_Click);
             // 
             // panel5
             // 
@@ -496,12 +415,105 @@
             this.checkBoxVotes.UseCustomForeColor = true;
             this.checkBoxVotes.UseSelectable = true;
             // 
+            // button_AddNewUser
+            // 
+            this.button_AddNewUser.BackColor = System.Drawing.Color.Transparent;
+            this.button_AddNewUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_AddNewUser.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(195)))), ((int)(((byte)(237)))));
+            this.button_AddNewUser.FlatAppearance.BorderSize = 0;
+            this.button_AddNewUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_AddNewUser.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
+            this.button_AddNewUser.ForeColor = System.Drawing.Color.Black;
+            this.button_AddNewUser.Image = global::SDH_Voting.Properties.Resources.add_user_male_24px;
+            this.button_AddNewUser.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_AddNewUser.Location = new System.Drawing.Point(547, 96);
+            this.button_AddNewUser.Name = "button_AddNewUser";
+            this.button_AddNewUser.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button_AddNewUser.Size = new System.Drawing.Size(87, 56);
+            this.button_AddNewUser.TabIndex = 376;
+            this.button_AddNewUser.Text = "ADD NEW";
+            this.button_AddNewUser.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button_AddNewUser.UseVisualStyleBackColor = false;
+            this.button_AddNewUser.Click += new System.EventHandler(this.button_AddNewUser_Click);
+            // 
+            // button_UpdateUser
+            // 
+            this.button_UpdateUser.BackColor = System.Drawing.Color.Transparent;
+            this.button_UpdateUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_UpdateUser.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(195)))), ((int)(((byte)(237)))));
+            this.button_UpdateUser.FlatAppearance.BorderSize = 0;
+            this.button_UpdateUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_UpdateUser.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
+            this.button_UpdateUser.ForeColor = System.Drawing.Color.Black;
+            this.button_UpdateUser.Image = global::SDH_Voting.Properties.Resources.edit_profile_24px;
+            this.button_UpdateUser.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_UpdateUser.Location = new System.Drawing.Point(640, 96);
+            this.button_UpdateUser.Name = "button_UpdateUser";
+            this.button_UpdateUser.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button_UpdateUser.Size = new System.Drawing.Size(61, 56);
+            this.button_UpdateUser.TabIndex = 377;
+            this.button_UpdateUser.Text = "UPDATE ";
+            this.button_UpdateUser.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button_UpdateUser.UseVisualStyleBackColor = false;
+            this.button_UpdateUser.Click += new System.EventHandler(this.button_UpdateUser_Click);
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.BackColor = System.Drawing.Color.Transparent;
+            this.buttonDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(195)))), ((int)(((byte)(237)))));
+            this.buttonDelete.FlatAppearance.BorderSize = 0;
+            this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDelete.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
+            this.buttonDelete.ForeColor = System.Drawing.Color.Black;
+            this.buttonDelete.Image = global::SDH_Voting.Properties.Resources.waste_24px;
+            this.buttonDelete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonDelete.Location = new System.Drawing.Point(720, 96);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.buttonDelete.Size = new System.Drawing.Size(59, 56);
+            this.buttonDelete.TabIndex = 378;
+            this.buttonDelete.Text = "DELETE";
+            this.buttonDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonDelete.UseVisualStyleBackColor = false;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
+            // button_Export
+            // 
+            this.button_Export.BackColor = System.Drawing.Color.Transparent;
+            this.button_Export.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_Export.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(195)))), ((int)(((byte)(237)))));
+            this.button_Export.FlatAppearance.BorderSize = 0;
+            this.button_Export.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Export.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
+            this.button_Export.ForeColor = System.Drawing.Color.Black;
+            this.button_Export.Image = global::SDH_Voting.Properties.Resources.send_file_24px;
+            this.button_Export.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_Export.Location = new System.Drawing.Point(817, 96);
+            this.button_Export.Name = "button_Export";
+            this.button_Export.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button_Export.Size = new System.Drawing.Size(86, 56);
+            this.button_Export.TabIndex = 379;
+            this.button_Export.Text = "EXPORT CSV";
+            this.button_Export.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button_Export.UseVisualStyleBackColor = false;
+            this.button_Export.Click += new System.EventHandler(this.button_Export_Click);
+            // 
+            // userControlVoting1
+            // 
+            this.userControlVoting1.BackColor = System.Drawing.Color.White;
+            this.userControlVoting1.Location = new System.Drawing.Point(12, 98);
+            this.userControlVoting1.Name = "userControlVoting1";
+            this.userControlVoting1.Size = new System.Drawing.Size(893, 367);
+            this.userControlVoting1.TabIndex = 437;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(911, 479);
+            this.Controls.Add(this.userControlVoting1);
             this.Controls.Add(this.checkBoxVotes);
             this.Controls.Add(this.checkBoxName);
             this.Controls.Add(this.label12);
@@ -547,8 +559,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnVoting;
+        private System.Windows.Forms.Button btnInvMasterlist;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panelGrid;
@@ -561,6 +573,7 @@
         private System.Windows.Forms.Label label12;
         private MetroFramework.Controls.MetroCheckBox checkBoxName;
         private MetroFramework.Controls.MetroCheckBox checkBoxVotes;
+        private UserControlVoting userControlVoting1;
     }
 }
 

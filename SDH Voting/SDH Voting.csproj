@@ -78,6 +78,12 @@
     <Compile Include="UpdateForm.Designer.cs">
       <DependentUpon>UpdateForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControlVoting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlVoting.Designer.cs">
+      <DependentUpon>UserControlVoting.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +102,9 @@
     </Compile>
     <EmbeddedResource Include="UpdateForm.resx">
       <DependentUpon>UpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlVoting.resx">
+      <DependentUpon>UserControlVoting.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -122,6 +131,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\send_file_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Void_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vote Yes_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ballot_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ballot_24px1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
