@@ -17,10 +17,7 @@ namespace SDH_Voting
             InitializeComponent();
         }
 
-        private void btn_Representative_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btn_UpdateRep_Click(object sender, EventArgs e)
         {
@@ -30,6 +27,12 @@ namespace SDH_Voting
         private void btn_VoidRep_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_AddRepresentative_Click(object sender, EventArgs e)
+        {
+            AddRepForm addRepForm = new AddRepForm();
+            addRepForm.ShowDialog();
         }
     }
 }
