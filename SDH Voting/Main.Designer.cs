@@ -51,13 +51,15 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panelGrid = new System.Windows.Forms.Panel();
-            this.InventoryDataGrid = new MetroFramework.Controls.MetroGrid();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.InventoryDataGrid = new MetroFramework.Controls.MetroGrid();
             this.txtBoxSearch = new MetroFramework.Controls.MetroTextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.checkBoxName = new MetroFramework.Controls.MetroCheckBox();
+            this.checkBoxVotes = new MetroFramework.Controls.MetroCheckBox();
             this.panelNav.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -314,6 +316,46 @@
             this.panelGrid.Size = new System.Drawing.Size(887, 294);
             this.panelGrid.TabIndex = 434;
             // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel11.Location = new System.Drawing.Point(886, 1);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(1, 292);
+            this.panel11.TabIndex = 436;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel10.Location = new System.Drawing.Point(0, 1);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(1, 292);
+            this.panel10.TabIndex = 435;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel9.Location = new System.Drawing.Point(0, 293);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(887, 1);
+            this.panel9.TabIndex = 434;
+            // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel24.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel24.Location = new System.Drawing.Point(0, 0);
+            this.panel24.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(887, 1);
+            this.panel24.TabIndex = 433;
+            // 
             // InventoryDataGrid
             // 
             this.InventoryDataGrid.AllowUserToAddRows = false;
@@ -378,46 +420,6 @@
             this.InventoryDataGrid.UseCustomForeColor = true;
             this.InventoryDataGrid.UseStyleColors = true;
             // 
-            // panel24
-            // 
-            this.panel24.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel24.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel24.Location = new System.Drawing.Point(0, 0);
-            this.panel24.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(887, 1);
-            this.panel24.TabIndex = 433;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(0, 293);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(887, 1);
-            this.panel9.TabIndex = 434;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel10.Location = new System.Drawing.Point(0, 1);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1, 292);
-            this.panel10.TabIndex = 435;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel11.Location = new System.Drawing.Point(886, 1);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1, 292);
-            this.panel11.TabIndex = 436;
-            // 
             // txtBoxSearch
             // 
             this.txtBoxSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
@@ -466,12 +468,42 @@
             this.label12.TabIndex = 436;
             this.label12.Text = "SEARCH";
             // 
+            // checkBoxName
+            // 
+            this.checkBoxName.AutoSize = true;
+            this.checkBoxName.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
+            this.checkBoxName.ForeColor = System.Drawing.Color.DimGray;
+            this.checkBoxName.Location = new System.Drawing.Point(352, 132);
+            this.checkBoxName.Name = "checkBoxName";
+            this.checkBoxName.Size = new System.Drawing.Size(56, 15);
+            this.checkBoxName.TabIndex = 437;
+            this.checkBoxName.Text = "Name";
+            this.checkBoxName.UseCustomBackColor = true;
+            this.checkBoxName.UseCustomForeColor = true;
+            this.checkBoxName.UseSelectable = true;
+            // 
+            // checkBoxVotes
+            // 
+            this.checkBoxVotes.AutoSize = true;
+            this.checkBoxVotes.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
+            this.checkBoxVotes.ForeColor = System.Drawing.Color.DimGray;
+            this.checkBoxVotes.Location = new System.Drawing.Point(427, 132);
+            this.checkBoxVotes.Name = "checkBoxVotes";
+            this.checkBoxVotes.Size = new System.Drawing.Size(54, 15);
+            this.checkBoxVotes.TabIndex = 438;
+            this.checkBoxVotes.Text = "Votes";
+            this.checkBoxVotes.UseCustomBackColor = true;
+            this.checkBoxVotes.UseCustomForeColor = true;
+            this.checkBoxVotes.UseSelectable = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(911, 479);
+            this.Controls.Add(this.checkBoxVotes);
+            this.Controls.Add(this.checkBoxName);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtBoxSearch);
             this.Controls.Add(this.panelGrid);
@@ -527,6 +559,8 @@
         private MetroFramework.Controls.MetroGrid InventoryDataGrid;
         private MetroFramework.Controls.MetroTextBox txtBoxSearch;
         private System.Windows.Forms.Label label12;
+        private MetroFramework.Controls.MetroCheckBox checkBoxName;
+        private MetroFramework.Controls.MetroCheckBox checkBoxVotes;
     }
 }
 

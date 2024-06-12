@@ -16,9 +16,13 @@ namespace SDH_Voting
         private Point lastCursor;
         private Point lastForm;
 
+        private List<InvestorViewModel> originalInvestorList; // Add this member variable
+
+     
         public Main()
         {
             InitializeComponent();
+      
             LoadData();
             txtBoxSearch.TextChanged += txtBoxSearch_TextChanged;
         }
@@ -40,16 +44,19 @@ namespace SDH_Voting
             }
 
             // Project to view model
-            var investorViewModels = investors.Select(i => new InvestorViewModel
+            originalInvestorList = investors.Select(i => new InvestorViewModel
             {
                 Name = i.Name,
                 Votes = i.Votes
             }).ToList();
 
-            InventoryDataGrid.DataSource = new BindingList<InvestorViewModel>(investorViewModels);
+            UpdateDataGridView(originalInvestorList);
         }
 
-
+        private void UpdateDataGridView(List<InvestorViewModel> investors)
+        {
+            InventoryDataGrid.DataSource = new BindingList<InvestorViewModel>(investors);
+        }
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
@@ -232,27 +239,34 @@ namespace SDH_Voting
             if (string.IsNullOrEmpty(searchText))
             {
                 // If the search text is empty, load all data
-                LoadData();
+                UpdateDataGridView(originalInvestorList);
                 return;
             }
 
             // Filter the data based on the search text
-            var filteredData = ((BindingList<InvestorViewModel>)InventoryDataGrid.DataSource)
+            var filteredData = originalInvestorList
                                 .Where(investor => investor.Name.ToLower().Contains(searchText) || investor.Votes.ToString().Contains(searchText))
                                 .ToList();
 
             // Update the DataGridView with the filtered data
-            InventoryDataGrid.DataSource = new BindingList<InvestorViewModel>(filteredData);
+            UpdateDataGridView(filteredData);
         }
 
         private void txtBoxSearch_ButtonClick(object sender, EventArgs e)
         {
-            // Trigger the text changed event to perform the search
-            txtBoxSearch_TextChanged(sender, e);
+            string searchText = txtBoxSearch.Text.Trim().ToLower();
+
+            // Filter the data based on the search text and selected checkboxes
+            var filteredData = originalInvestorList.Where(investor =>
+                (checkBoxName.Checked && investor.Name.ToLower().Contains(searchText)) ||
+                (checkBoxVotes.Checked && investor.Votes.ToString().Contains(searchText))
+            ).ToList();
+
+            // Update the DataGridView with the filtered data
+            UpdateDataGridView(filteredData);
         }
 
     }
-
 
     public class Investor
     {
