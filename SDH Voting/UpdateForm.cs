@@ -26,6 +26,54 @@ namespace SDH_Voting
             textBoxShares.Text = _investor.Shares.ToString("N0");
         }
 
+        private void textBoxVotes_TextChanged(object sender, EventArgs e)
+        {
+
+            string input = textBoxVotes.Text;
+            if (TryConvertToNumber(input, out int votes))
+            {
+                textBoxShares.Text = votes.ToString("N0"); // Reflect the number of votes in shares with formatting
+            }
+            else
+            {
+                textBoxShares.Text = "0"; // Handle invalid input
+            }
+        }
+
+        private bool TryConvertToNumber(string input, out int result)
+        {
+            input = input.ToUpper().Trim();
+            result = 0;
+            Regex regex = new Regex(@"^(\d+(\.\d+)?)([KM]?)$");
+            Match match = regex.Match(input);
+
+            if (match.Success)
+            {
+                double number = double.Parse(match.Groups[1].Value);
+                string unit = match.Groups[3].Value;
+
+                switch (unit)
+                {
+                    case "K":
+                        number *= 1_000;
+                        break;
+                    case "M":
+                        number *= 1_000_000;
+                        break;
+                }
+
+                result = (int)number;
+                return true;
+            }
+
+            return false;
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             // Validate and convert inputs
@@ -83,60 +131,9 @@ namespace SDH_Voting
             this.Close();
         }
 
-        private void textBoxVotes_TextChanged(object sender, EventArgs e)
-        {
-
-            string input = textBoxVotes.Text;
-            if (TryConvertToNumber(input, out int votes))
-            {
-                textBoxShares.Text = votes.ToString("N0"); // Reflect the number of votes in shares with formatting
-            }
-            else
-            {
-                textBoxShares.Text = "0"; // Handle invalid input
-            }
-        }
-
-        private bool TryConvertToNumber(string input, out int result)
-        {
-            input = input.ToUpper().Trim();
-            result = 0;
-            Regex regex = new Regex(@"^(\d+(\.\d+)?)([KM]?)$");
-            Match match = regex.Match(input);
-
-            if (match.Success)
-            {
-                double number = double.Parse(match.Groups[1].Value);
-                string unit = match.Groups[3].Value;
-
-                switch (unit)
-                {
-                    case "K":
-                        number *= 1_000;
-                        break;
-                    case "M":
-                        number *= 1_000_000;
-                        break;
-                }
-
-                result = (int)number;
-                return true;
-            }
-
-            return false;
-        }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        private void buttonClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-   
-       
     }
 }
