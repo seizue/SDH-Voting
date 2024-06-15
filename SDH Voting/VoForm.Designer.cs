@@ -527,7 +527,7 @@
             this.metroTextBox1.CustomButton.TabIndex = 1;
             this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.Icon = global::SDH_Voting.Properties.Resources.account_24px;
+           
             this.metroTextBox1.IconRight = true;
             this.metroTextBox1.Lines = new string[0];
             this.metroTextBox1.Location = new System.Drawing.Point(288, 114);
@@ -551,7 +551,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::SDH_Voting.Properties.Resources.account_24px;
+         
             this.pictureBox2.Location = new System.Drawing.Point(156, 14);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 24);

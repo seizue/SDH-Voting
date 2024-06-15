@@ -63,36 +63,6 @@ namespace SDH_Voting.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap account_24px {
-            get {
-                object obj = ResourceManager.GetObject("account_24px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap account_24px1 {
-            get {
-                object obj = ResourceManager.GetObject("account_24px1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap account_24px11 {
-            get {
-                object obj = ResourceManager.GetObject("account_24px11", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap account_24px2 {
             get {
                 object obj = ResourceManager.GetObject("account_24px2", resourceCulture);
@@ -113,26 +83,6 @@ namespace SDH_Voting.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ballot_24px {
-            get {
-                object obj = ResourceManager.GetObject("ballot_24px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ballot_24px1 {
-            get {
-                object obj = ResourceManager.GetObject("ballot_24px1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap binoculars_24px {
             get {
                 object obj = ResourceManager.GetObject("binoculars_24px", resourceCulture);
@@ -146,6 +96,16 @@ namespace SDH_Voting.Properties {
         internal static System.Drawing.Bitmap binoculars_24px1 {
             get {
                 object obj = ResourceManager.GetObject("binoculars_24px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap database_backup_24px {
+            get {
+                object obj = ResourceManager.GetObject("database_backup_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +143,19 @@ namespace SDH_Voting.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap elections_48px {
+        internal static System.Drawing.Bitmap elections_24 {
             get {
-                object obj = ResourceManager.GetObject("elections_48px", resourceCulture);
+                object obj = ResourceManager.GetObject("elections_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap elections_26px {
+            get {
+                object obj = ResourceManager.GetObject("elections_26px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +166,16 @@ namespace SDH_Voting.Properties {
         internal static System.Drawing.Bitmap export_csv_24px {
             get {
                 object obj = ResourceManager.GetObject("export_csv_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_copy_24px {
+            get {
+                object obj = ResourceManager.GetObject("new_copy_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,26 +206,6 @@ namespace SDH_Voting.Properties {
         internal static System.Drawing.Bitmap user_24px {
             get {
                 object obj = ResourceManager.GetObject("user_24px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Void_24px {
-            get {
-                object obj = ResourceManager.GetObject("Void_24px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Vote_Yes_24px {
-            get {
-                object obj = ResourceManager.GetObject("Vote Yes_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

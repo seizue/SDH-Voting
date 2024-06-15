@@ -207,5 +207,29 @@
   <ItemGroup>
     <None Include="Resources\elections.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_backup_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_copy_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\renew_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\waste_24px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_user_male_24px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_profile_24px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elections_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elections_26px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
