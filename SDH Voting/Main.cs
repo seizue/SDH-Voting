@@ -278,6 +278,7 @@ namespace SDH_Voting
         }
     }
 
+
     public class Investor
     {
         public int Id { get; set; } // Unique ID
@@ -291,4 +292,11 @@ namespace SDH_Voting
         public string Name { get; set; }
         public int Votes { get; set; }
     }
+
+    public class Representative
+    {
+        public string Name { get; set; }
+    }
+
+
 }

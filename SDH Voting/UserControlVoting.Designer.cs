@@ -39,14 +39,13 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
             this.dataGridViewRepresentative = new MetroFramework.Controls.MetroGrid();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Representative = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.No_PV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalVotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.View = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panelVoting = new System.Windows.Forms.Panel();
             this.btnVote = new System.Windows.Forms.Button();
             this.btn_AddRepresentative = new System.Windows.Forms.Button();
             this.btn_UpdateRep = new System.Windows.Forms.Button();
@@ -176,6 +175,23 @@
             this.dataGridViewRepresentative.UseCustomBackColor = true;
             this.dataGridViewRepresentative.UseCustomForeColor = true;
             this.dataGridViewRepresentative.UseStyleColors = true;
+            this.dataGridViewRepresentative.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewRepresentative_CellFormatting);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Location = new System.Drawing.Point(795, 8);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1, 46);
+            this.panel2.TabIndex = 439;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Location = new System.Drawing.Point(88, 8);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1, 46);
+            this.panel1.TabIndex = 446;
             // 
             // ID
             // 
@@ -199,31 +215,8 @@
             // 
             // View
             // 
-            this.View.HeaderText = "View";
+            this.View.HeaderText = "View PV";
             this.View.Name = "View";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Location = new System.Drawing.Point(795, 8);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(2, 46);
-            this.panel2.TabIndex = 439;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Location = new System.Drawing.Point(88, 8);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2, 46);
-            this.panel1.TabIndex = 446;
-            // 
-            // panelVoting
-            // 
-            this.panelVoting.Location = new System.Drawing.Point(1, 70);
-            this.panelVoting.Name = "panelVoting";
-            this.panelVoting.Size = new System.Drawing.Size(893, 297);
-            this.panelVoting.TabIndex = 447;
             // 
             // btnVote
             // 
@@ -244,6 +237,7 @@
             this.btnVote.Text = "VOTE";
             this.btnVote.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnVote.UseVisualStyleBackColor = false;
+            this.btnVote.Click += new System.EventHandler(this.btnVote_Click);
             // 
             // btn_AddRepresentative
             // 
@@ -333,7 +327,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.panelVoting);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnVote);
             this.Controls.Add(this.panelGrid);
@@ -362,13 +355,12 @@
         private System.Windows.Forms.Button btn_VoidRep;
         private System.Windows.Forms.Button button_Export;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnVote;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Representative;
         private System.Windows.Forms.DataGridViewTextBoxColumn No_PV;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalVotes;
-        private System.Windows.Forms.Button btnVote;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewButtonColumn View;
-        private System.Windows.Forms.Panel panelVoting;
     }
 }

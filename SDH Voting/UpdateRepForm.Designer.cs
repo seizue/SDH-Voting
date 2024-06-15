@@ -1,6 +1,6 @@
 ﻿namespace SDH_Voting
 {
-    partial class AddRepForm
+    partial class UpdateRepForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,18 +30,17 @@
         {
             this.panelNav = new System.Windows.Forms.Panel();
             this.buttonClose = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnSaveRep = new System.Windows.Forms.Button();
+            this.button_SaveUpdate = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.textBoxRepName = new MetroFramework.Controls.MetroTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panelNav.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,10 +49,10 @@
             this.panelNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.panelNav.Controls.Add(this.buttonClose);
             this.panelNav.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelNav.Location = new System.Drawing.Point(0, 0);
+            this.panelNav.Location = new System.Drawing.Point(1, 0);
             this.panelNav.Name = "panelNav";
-            this.panelNav.Size = new System.Drawing.Size(308, 29);
-            this.panelNav.TabIndex = 2;
+            this.panelNav.Size = new System.Drawing.Size(306, 29);
+            this.panelNav.TabIndex = 477;
             // 
             // buttonClose
             // 
@@ -61,42 +60,21 @@
             this.buttonClose.BackColor = System.Drawing.Color.IndianRed;
             this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Location = new System.Drawing.Point(282, 7);
+            this.buttonClose.Location = new System.Drawing.Point(280, 7);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(14, 14);
             this.buttonClose.TabIndex = 4;
             this.buttonClose.UseVisualStyleBackColor = false;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click_1);
             // 
-            // panel5
+            // panel1
             // 
-            this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 29);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1, 258);
-            this.panel5.TabIndex = 466;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(307, 29);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1, 258);
-            this.panel4.TabIndex = 467;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(1, 286);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(306, 1);
-            this.panel3.TabIndex = 468;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(1, 278);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(306, 8);
+            this.panel1.TabIndex = 488;
             // 
             // btnExit
             // 
@@ -108,56 +86,56 @@
             this.btnExit.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
             this.btnExit.ForeColor = System.Drawing.Color.MintCream;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExit.Location = new System.Drawing.Point(35, 214);
+            this.btnExit.Location = new System.Drawing.Point(34, 214);
             this.btnExit.Name = "btnExit";
             this.btnExit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnExit.Size = new System.Drawing.Size(236, 27);
-            this.btnExit.TabIndex = 475;
+            this.btnExit.TabIndex = 487;
             this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.buttonRemoveLicense_Click);
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // btnSaveRep
+            // button_SaveUpdate
             // 
-            this.btnSaveRep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(142)))), ((int)(((byte)(141)))));
-            this.btnSaveRep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSaveRep.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(189)))), ((int)(((byte)(188)))));
-            this.btnSaveRep.FlatAppearance.BorderSize = 2;
-            this.btnSaveRep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveRep.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7F, System.Drawing.FontStyle.Bold);
-            this.btnSaveRep.ForeColor = System.Drawing.Color.MintCream;
-            this.btnSaveRep.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSaveRep.Location = new System.Drawing.Point(36, 178);
-            this.btnSaveRep.Name = "btnSaveRep";
-            this.btnSaveRep.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnSaveRep.Size = new System.Drawing.Size(235, 27);
-            this.btnSaveRep.TabIndex = 474;
-            this.btnSaveRep.Text = "SAVE";
-            this.btnSaveRep.UseVisualStyleBackColor = false;
-            this.btnSaveRep.Click += new System.EventHandler(this.btnSaveRep_Click);
+            this.button_SaveUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(142)))), ((int)(((byte)(141)))));
+            this.button_SaveUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_SaveUpdate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(189)))), ((int)(((byte)(188)))));
+            this.button_SaveUpdate.FlatAppearance.BorderSize = 2;
+            this.button_SaveUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_SaveUpdate.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7F, System.Drawing.FontStyle.Bold);
+            this.button_SaveUpdate.ForeColor = System.Drawing.Color.MintCream;
+            this.button_SaveUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_SaveUpdate.Location = new System.Drawing.Point(35, 178);
+            this.button_SaveUpdate.Name = "button_SaveUpdate";
+            this.button_SaveUpdate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button_SaveUpdate.Size = new System.Drawing.Size(235, 27);
+            this.button_SaveUpdate.TabIndex = 486;
+            this.button_SaveUpdate.Text = "SAVE";
+            this.button_SaveUpdate.UseVisualStyleBackColor = false;
+            this.button_SaveUpdate.Click += new System.EventHandler(this.button_SaveUpdate_Click);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 9F);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(184, 42);
+            this.label9.Location = new System.Drawing.Point(183, 42);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(58, 14);
-            this.label9.TabIndex = 473;
-            this.label9.Text = "ADD NEW";
+            this.label9.Size = new System.Drawing.Size(47, 14);
+            this.label9.TabIndex = 485;
+            this.label9.Text = "UPDATE";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(64, 38);
+            this.label8.Location = new System.Drawing.Point(63, 38);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(120, 19);
-            this.label8.TabIndex = 472;
+            this.label8.TabIndex = 484;
             this.label8.Text = "REPRESENTATIVE";
             // 
             // panel13
@@ -165,11 +143,11 @@
             this.panel13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel13.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel13.Location = new System.Drawing.Point(0, 67);
+            this.panel13.Location = new System.Drawing.Point(-1, 67);
             this.panel13.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(310, 1);
-            this.panel13.TabIndex = 471;
+            this.panel13.TabIndex = 483;
             // 
             // textBoxRepName
             // 
@@ -186,7 +164,7 @@
             this.textBoxRepName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.textBoxRepName.CustomButton.UseSelectable = true;
             this.textBoxRepName.Lines = new string[0];
-            this.textBoxRepName.Location = new System.Drawing.Point(35, 122);
+            this.textBoxRepName.Location = new System.Drawing.Point(34, 122);
             this.textBoxRepName.MaxLength = 32767;
             this.textBoxRepName.Name = "textBoxRepName";
             this.textBoxRepName.PasswordChar = '\0';
@@ -199,7 +177,7 @@
             this.textBoxRepName.ShowClearButton = true;
             this.textBoxRepName.Size = new System.Drawing.Size(235, 23);
             this.textBoxRepName.Style = MetroFramework.MetroColorStyle.Silver;
-            this.textBoxRepName.TabIndex = 470;
+            this.textBoxRepName.TabIndex = 482;
             this.textBoxRepName.UseCustomBackColor = true;
             this.textBoxRepName.UseCustomForeColor = true;
             this.textBoxRepName.UseSelectable = true;
@@ -211,42 +189,52 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(33, 99);
+            this.label1.Location = new System.Drawing.Point(32, 99);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 15);
-            this.label1.TabIndex = 469;
+            this.label1.TabIndex = 481;
             this.label1.Text = "REPRESENTATIVE";
             // 
-            // panel1
+            // panel3
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(1, 278);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(306, 8);
-            this.panel1.TabIndex = 476;
+            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(1, 286);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(306, 1);
+            this.panel3.TabIndex = 480;
             // 
-            // label2
+            // panel4
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(123, 99);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 15);
-            this.label2.TabIndex = 502;
-            this.label2.Text = "*";
+            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(307, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1, 287);
+            this.panel4.TabIndex = 479;
             // 
-            // AddRepForm
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1, 287);
+            this.panel5.TabIndex = 478;
+            // 
+            // UpdateRepForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(308, 287);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.panelNav);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnSaveRep);
+            this.Controls.Add(this.button_SaveUpdate);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel13);
@@ -255,12 +243,11 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panelNav);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AddRepForm";
+            this.Name = "UpdateRepForm";
             this.Opacity = 0.96D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add Representative Form";
+            this.Text = "Update Representative Form";
             this.panelNav.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -271,17 +258,16 @@
 
         private System.Windows.Forms.Panel panelNav;
         private System.Windows.Forms.Button buttonClose;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnSaveRep;
+        private System.Windows.Forms.Button button_SaveUpdate;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel13;
         private MetroFramework.Controls.MetroTextBox textBoxRepName;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
     }
 }

@@ -63,6 +63,46 @@ namespace SDH_Voting.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap account_24px {
+            get {
+                object obj = ResourceManager.GetObject("account_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap account_24px1 {
+            get {
+                object obj = ResourceManager.GetObject("account_24px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap account_24px11 {
+            get {
+                object obj = ResourceManager.GetObject("account_24px11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap account_24px2 {
+            get {
+                object obj = ResourceManager.GetObject("account_24px2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_user_male_24px {
             get {
                 object obj = ResourceManager.GetObject("add_user_male_24px", resourceCulture);
@@ -93,6 +133,26 @@ namespace SDH_Voting.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap binoculars_24px {
+            get {
+                object obj = ResourceManager.GetObject("binoculars_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap binoculars_24px1 {
+            get {
+                object obj = ResourceManager.GetObject("binoculars_24px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_user_male_24px {
             get {
                 object obj = ResourceManager.GetObject("delete_user_male_24px", resourceCulture);
@@ -106,6 +166,46 @@ namespace SDH_Voting.Properties {
         internal static System.Drawing.Bitmap edit_profile_24px {
             get {
                 object obj = ResourceManager.GetObject("edit_profile_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap elections {
+            get {
+                object obj = ResourceManager.GetObject("elections", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap elections_48px {
+            get {
+                object obj = ResourceManager.GetObject("elections_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap export_csv_24px {
+            get {
+                object obj = ResourceManager.GetObject("export_csv_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap opera_glasses_24px {
+            get {
+                object obj = ResourceManager.GetObject("opera_glasses_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

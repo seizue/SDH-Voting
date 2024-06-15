@@ -84,11 +84,23 @@
     <Compile Include="UpdateForm.Designer.cs">
       <DependentUpon>UpdateForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateRepForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateRepForm.Designer.cs">
+      <DependentUpon>UpdateRepForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlVoting.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControlVoting.Designer.cs">
       <DependentUpon>UserControlVoting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VoForm.Designer.cs">
+      <DependentUpon>VoForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddRepForm.resx">
       <DependentUpon>AddRepForm.cs</DependentUpon>
@@ -112,8 +124,14 @@
     <EmbeddedResource Include="UpdateForm.resx">
       <DependentUpon>UpdateForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UpdateRepForm.resx">
+      <DependentUpon>UpdateRepForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlVoting.resx">
       <DependentUpon>UserControlVoting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoForm.resx">
+      <DependentUpon>VoForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -158,6 +176,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\delete_user_male_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\export_csv_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_24px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_24px11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_24px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\binoculars_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opera_glasses_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\binoculars_24px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elections_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elections.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
