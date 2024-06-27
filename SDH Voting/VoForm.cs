@@ -42,11 +42,15 @@ namespace SDH_Voting
         private void labelVoterList_Click(object sender, EventArgs e)
         {
             panelVoterList.Visible = true;
+            panel_Indicator.Location = new Point(118, 208);
+            panel_Indicator.Size = new Size(71, 3);
         }
 
         private void labelStatus_Click(object sender, EventArgs e)
         {
             panelVoterList.Visible = false;
+            panel_Indicator.Location = new Point(27, 208);
+            panel_Indicator.Size = new Size(49, 3);
         }
     }
 }
