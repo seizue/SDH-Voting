@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +17,29 @@ namespace SDH_Voting
         public SDHVoForm()
         {
             InitializeComponent();
+            LoadRepresentatives();
         }
+
+        private void LoadRepresentatives()
+        {
+            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
+            string filePath = Path.Combine(folderPath, "SDHRep.json");
+            List<Representative> representatives = new List<Representative>();
+
+            if (File.Exists(filePath))
+            {
+                string json = File.ReadAllText(filePath);
+                representatives = JsonConvert.DeserializeObject<List<Representative>>(json) ?? new List<Representative>();
+            }
+
+            // Populate the ComboBox with the representatives
+            comboRep.Items.Clear(); // Clear any existing items
+            foreach (var rep in representatives)
+            {
+                comboRep.Items.Add(rep.Name); 
+            }
+        }
+
 
         private void buttonClose_Click(object sender, EventArgs e)
         {

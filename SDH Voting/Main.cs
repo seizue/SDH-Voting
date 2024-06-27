@@ -16,7 +16,7 @@ namespace SDH_Voting
         private Point lastCursor;
         private Point lastForm;
 
-        private List<InvestorViewModel> originalInvestorList; // Add this member variable
+        private List<InvestorViewModel> originalInvestorList; 
 
      
         public Main()
