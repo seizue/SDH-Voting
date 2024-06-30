@@ -46,17 +46,23 @@ namespace SDH_Voting
                 }
             }
 
+            // Ensure AutoGenerateColumns is false to prevent automatic column creation
             GridVoters.AutoGenerateColumns = false;
+
+            // Set the data source
             GridVoters.DataSource = new BindingList<Investor>(investors);
 
             // Map existing columns to properties
-            if (GridVoters.Columns["sdhID"] != null) GridVoters.Columns["sdhID"].DataPropertyName = "Id";
+            if (GridVoters.Columns["sdhID"] != null)
+            {
+                GridVoters.Columns["sdhID"].DataPropertyName = "Id";
+                GridVoters.Columns["sdhID"].Visible = false; // Hide the Id column
+            }
+
             if (GridVoters.Columns["sdhStockHolder"] != null) GridVoters.Columns["sdhStockHolder"].DataPropertyName = "Name";
             if (GridVoters.Columns["sdhShares"] != null) GridVoters.Columns["sdhShares"].DataPropertyName = "Shares";
             if (GridVoters.Columns["sdhTotalVotes"] != null) GridVoters.Columns["sdhTotalVotes"].DataPropertyName = "Votes";
         }
-
-
 
 
         private void buttonClose_Click(object sender, EventArgs e)
