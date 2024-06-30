@@ -89,10 +89,10 @@ namespace SDH_Voting
                     return;
                 }
 
-                // Create a new investor object with a unique ID
+                // Create a new investor object with a unique ID (only numbers and 9 characters)
                 Investor newInvestor = new Investor
                 {
-                    Id = Guid.NewGuid().GetHashCode(), // Use a hash code of a new GUID for simplicity
+                    Id = new Random().Next(100000000, 999999999), // Generate a 9-digit number
                     Name = name,
                     Shares = shares,
                     Votes = votes,
