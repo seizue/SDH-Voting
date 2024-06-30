@@ -18,6 +18,7 @@ namespace SDH_Voting
         {
             InitializeComponent();
             LoadRepresentatives();
+            LoadData();
         }
 
         private void LoadRepresentatives()
@@ -40,6 +41,39 @@ namespace SDH_Voting
             }
         }
 
+        private void LoadData()
+        {
+            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
+            string filePath = Path.Combine(folderPath, "InvestorMasterlist.json");
+            List<Investor> investors = new List<Investor>();
+
+            if (File.Exists(filePath))
+            {
+                string json = File.ReadAllText(filePath);
+
+                if (!string.IsNullOrWhiteSpace(json))
+                {
+                    var deserializedInvestors = JsonConvert.DeserializeObject<List<Investor>>(json) ?? new List<Investor>();
+
+                    // Remove duplicates based on Id
+                    investors = deserializedInvestors
+                                .GroupBy(i => i.Id)
+                                .Select(g => g.First())
+                                .ToList();
+                }
+            }
+
+            // Ensure AutoGenerateColumns is false to prevent automatic column creation
+            SelectionVotersGrid.AutoGenerateColumns = false;
+
+            // Set the data source
+            SelectionVotersGrid.DataSource = new BindingList<Investor>(investors);
+
+            // Map existing columns to properties
+            if (SelectionVotersGrid.Columns["vtrID"] != null) SelectionVotersGrid.Columns["vtrID"].DataPropertyName = "ID";
+            if (SelectionVotersGrid.Columns["vtrName"] != null) SelectionVotersGrid.Columns["vtrName"].DataPropertyName = "Name";       
+            if (SelectionVotersGrid.Columns["vtrVotes"] != null) SelectionVotersGrid.Columns["vtrVotes"].DataPropertyName = "Votes";
+        }
 
         private void buttonClose_Click(object sender, EventArgs e)
         {

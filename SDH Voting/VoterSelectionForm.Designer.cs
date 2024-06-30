@@ -39,16 +39,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelGrid = new System.Windows.Forms.Panel();
+            this.GridVoters = new MetroFramework.Controls.MetroGrid();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
-            this.GridVoters = new MetroFramework.Controls.MetroGrid();
             this.sdhID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sdhStockHolder = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sdhShares = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sdhTotalVotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdhVote = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.sdhSelect = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panelNav.SuspendLayout();
             this.panelGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridVoters)).BeginInit();
@@ -119,6 +119,77 @@
             this.panelGrid.Size = new System.Drawing.Size(739, 555);
             this.panelGrid.TabIndex = 521;
             // 
+            // GridVoters
+            // 
+            this.GridVoters.AllowUserToAddRows = false;
+            this.GridVoters.AllowUserToResizeColumns = false;
+            this.GridVoters.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.GridVoters.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.GridVoters.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.GridVoters.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GridVoters.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
+            this.GridVoters.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GridVoters.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.GridVoters.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridVoters.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.GridVoters.ColumnHeadersHeight = 48;
+            this.GridVoters.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.sdhID,
+            this.sdhStockHolder,
+            this.sdhShares,
+            this.sdhTotalVotes,
+            this.sdhSelect});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GridVoters.DefaultCellStyle = dataGridViewCellStyle3;
+            this.GridVoters.EnableHeadersVisualStyles = false;
+            this.GridVoters.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.GridVoters.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.GridVoters.Location = new System.Drawing.Point(3, 3);
+            this.GridVoters.MultiSelect = false;
+            this.GridVoters.Name = "GridVoters";
+            this.GridVoters.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridVoters.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.GridVoters.RowHeadersWidth = 5;
+            this.GridVoters.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
+            this.GridVoters.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.GridVoters.RowTemplate.Height = 23;
+            this.GridVoters.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.GridVoters.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GridVoters.Size = new System.Drawing.Size(733, 545);
+            this.GridVoters.TabIndex = 437;
+            this.GridVoters.UseCustomBackColor = true;
+            this.GridVoters.UseCustomForeColor = true;
+            this.GridVoters.UseStyleColors = true;
+            // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -159,109 +230,37 @@
             this.panel24.Size = new System.Drawing.Size(739, 1);
             this.panel24.TabIndex = 433;
             // 
-            // GridVoters
-            // 
-            this.GridVoters.AllowUserToAddRows = false;
-            this.GridVoters.AllowUserToResizeColumns = false;
-            this.GridVoters.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.GridVoters.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.GridVoters.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.GridVoters.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.GridVoters.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
-            this.GridVoters.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.GridVoters.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.GridVoters.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridVoters.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.GridVoters.ColumnHeadersHeight = 48;
-            this.GridVoters.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.sdhID,
-            this.sdhStockHolder,
-            this.sdhShares,
-            this.sdhTotalVotes,
-            this.sdhVote});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GridVoters.DefaultCellStyle = dataGridViewCellStyle3;
-            this.GridVoters.EnableHeadersVisualStyles = false;
-            this.GridVoters.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.GridVoters.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.GridVoters.Location = new System.Drawing.Point(3, 3);
-            this.GridVoters.MultiSelect = false;
-            this.GridVoters.Name = "GridVoters";
-            this.GridVoters.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridVoters.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.GridVoters.RowHeadersWidth = 5;
-            this.GridVoters.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
-            this.GridVoters.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.GridVoters.RowTemplate.Height = 23;
-            this.GridVoters.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.GridVoters.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridVoters.Size = new System.Drawing.Size(733, 545);
-            this.GridVoters.TabIndex = 437;
-            this.GridVoters.UseCustomBackColor = true;
-            this.GridVoters.UseCustomForeColor = true;
-            this.GridVoters.UseStyleColors = true;
-            // 
             // sdhID
             // 
-            this.sdhID.FillWeight = 25F;
+            this.sdhID.FillWeight = 21.7786F;
             this.sdhID.HeaderText = "ID";
             this.sdhID.Name = "sdhID";
             // 
             // sdhStockHolder
             // 
-            this.sdhStockHolder.FillWeight = 40F;
+            this.sdhStockHolder.FillWeight = 34.84576F;
             this.sdhStockHolder.HeaderText = "Stock Holder Name";
             this.sdhStockHolder.Name = "sdhStockHolder";
             // 
             // sdhShares
             // 
-            this.sdhShares.FillWeight = 30F;
+            this.sdhShares.FillWeight = 26.13432F;
             this.sdhShares.HeaderText = "Shares";
             this.sdhShares.Name = "sdhShares";
             // 
             // sdhTotalVotes
             // 
-            this.sdhTotalVotes.FillWeight = 35F;
+            this.sdhTotalVotes.FillWeight = 30.49004F;
             this.sdhTotalVotes.HeaderText = "Equal Votes";
             this.sdhTotalVotes.Name = "sdhTotalVotes";
             // 
-            // sdhVote
+            // sdhSelect
             // 
-            this.sdhVote.FillWeight = 33.83084F;
-            this.sdhVote.HeaderText = "Vote";
-            this.sdhVote.Items.AddRange(new object[] {
-            "YES",
-            "NO"});
-            this.sdhVote.Name = "sdhVote";
+            this.sdhSelect.FillWeight = 20F;
+            this.sdhSelect.HeaderText = "Select";
+            this.sdhSelect.Name = "sdhSelect";
+            this.sdhSelect.Text = "Select";
+            this.sdhSelect.UseColumnTextForButtonValue = true;
             // 
             // VoterSelectionForm
             // 
@@ -303,6 +302,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sdhStockHolder;
         private System.Windows.Forms.DataGridViewTextBoxColumn sdhShares;
         private System.Windows.Forms.DataGridViewTextBoxColumn sdhTotalVotes;
-        private System.Windows.Forms.DataGridViewComboBoxColumn sdhVote;
+        private System.Windows.Forms.DataGridViewButtonColumn sdhSelect;
     }
 }
