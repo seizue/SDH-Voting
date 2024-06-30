@@ -14,6 +14,9 @@ namespace SDH_Voting
 {
     public partial class VoterSelectionForm : Form
     {
+
+        public event EventHandler<string> StockHolderSelected;
+
         public VoterSelectionForm()
         {
             InitializeComponent();
@@ -23,6 +26,8 @@ namespace SDH_Voting
             {
                 row.Height = 25;
             }
+            // Attach the CellDoubleClick event handler
+            GridVoters.CellDoubleClick += GridVoters_CellDoubleClick;
         }
         private void LoadData()
         {
@@ -66,6 +71,31 @@ namespace SDH_Voting
 
 
         private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void GridVoters_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                // Get the selected row
+                DataGridViewRow selectedRow = GridVoters.Rows[e.RowIndex];
+
+                // Get the value from the "sdhStockHolder" column
+                string stockHolderName = selectedRow.Cells["sdhStockHolder"].Value.ToString();
+
+                // Raise the event to pass data back to SDHVoForm
+                StockHolderSelected?.Invoke(this, stockHolderName);
+
+                // Close the form or perform any other actions
+                this.Close();
+            }
+        }
+
+
+        private void VoterSelectionForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Close();
         }

@@ -14,12 +14,14 @@ namespace SDH_Voting
 {
     public partial class SDHVoForm : Form
     {
-        public SDHVoForm()
+
+        public SDHVoForm(string sdhStockHolder)
         {
             InitializeComponent();
             LoadRepresentatives();
-            LoadData();
+            txtBoxSH.Text = sdhStockHolder;
         }
+
 
         private void LoadRepresentatives()
         {
@@ -102,6 +104,7 @@ namespace SDH_Voting
             panelVoterList.Visible = true;
             panel_Indicator.Location = new Point(118, 208);
             panel_Indicator.Size = new Size(71, 3);
+            LoadData();
         }
 
         private void labelStatus_Click(object sender, EventArgs e)
@@ -114,7 +117,20 @@ namespace SDH_Voting
         private void btnViewVoter_Click(object sender, EventArgs e)
         {
             VoterSelectionForm voterSelectionForm = new VoterSelectionForm();
+            // Subscribe to the event in VoterSelectionForm to receive the selected stockholder name
+            voterSelectionForm.StockHolderSelected += VoterSelectionForm_StockHolderSelected;
             voterSelectionForm.ShowDialog();
+        }
+
+        private void VoterSelectionForm_StockHolderSelected(object sender, string stockHolderName)
+        {
+            // Update the text box with the selected stockholder name
+            txtBoxSH.Text = stockHolderName;
+        }
+
+        private void SDHVoForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

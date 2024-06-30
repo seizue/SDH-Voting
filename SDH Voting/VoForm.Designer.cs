@@ -67,7 +67,7 @@
             this.panel25 = new System.Windows.Forms.Panel();
             this.panel26 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.txtBoxSH = new MetroFramework.Controls.MetroTextBox();
             this.labelStatus = new System.Windows.Forms.Label();
             this.panel_Indicator = new System.Windows.Forms.Panel();
             this.labelVoterList = new System.Windows.Forms.Label();
@@ -80,6 +80,10 @@
             this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
             this.panel23 = new System.Windows.Forms.Panel();
             this.SelectionVotersGrid = new MetroFramework.Controls.MetroGrid();
+            this.vtrID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VtrName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vtrVotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vtrStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel28 = new System.Windows.Forms.Panel();
@@ -97,10 +101,6 @@
             this.panel31 = new System.Windows.Forms.Panel();
             this.panel32 = new System.Windows.Forms.Panel();
             this.btnViewVoter = new System.Windows.Forms.Button();
-            this.vtrID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VtrName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vtrVotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vtrStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel15.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -503,40 +503,40 @@
             this.label6.TabIndex = 503;
             this.label6.Text = "*";
             // 
-            // metroTextBox1
+            // txtBoxSH
             // 
-            this.metroTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            this.txtBoxSH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
             // 
             // 
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(213, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.IconRight = true;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(288, 114);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.ShowButton = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(235, 23);
-            this.metroTextBox1.Style = MetroFramework.MetroColorStyle.Silver;
-            this.metroTextBox1.TabIndex = 504;
-            this.metroTextBox1.UseCustomBackColor = true;
-            this.metroTextBox1.UseCustomForeColor = true;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtBoxSH.CustomButton.Image = null;
+            this.txtBoxSH.CustomButton.Location = new System.Drawing.Point(213, 1);
+            this.txtBoxSH.CustomButton.Name = "";
+            this.txtBoxSH.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtBoxSH.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtBoxSH.CustomButton.TabIndex = 1;
+            this.txtBoxSH.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtBoxSH.CustomButton.UseSelectable = true;
+            this.txtBoxSH.IconRight = true;
+            this.txtBoxSH.Lines = new string[0];
+            this.txtBoxSH.Location = new System.Drawing.Point(288, 114);
+            this.txtBoxSH.MaxLength = 32767;
+            this.txtBoxSH.Name = "txtBoxSH";
+            this.txtBoxSH.PasswordChar = '\0';
+            this.txtBoxSH.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtBoxSH.SelectedText = "";
+            this.txtBoxSH.SelectionLength = 0;
+            this.txtBoxSH.SelectionStart = 0;
+            this.txtBoxSH.ShortcutsEnabled = true;
+            this.txtBoxSH.ShowButton = true;
+            this.txtBoxSH.Size = new System.Drawing.Size(235, 23);
+            this.txtBoxSH.Style = MetroFramework.MetroColorStyle.Silver;
+            this.txtBoxSH.TabIndex = 504;
+            this.txtBoxSH.UseCustomBackColor = true;
+            this.txtBoxSH.UseCustomForeColor = true;
+            this.txtBoxSH.UseSelectable = true;
+            this.txtBoxSH.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtBoxSH.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // labelStatus
             // 
@@ -772,6 +772,39 @@
             this.SelectionVotersGrid.UseCustomBackColor = true;
             this.SelectionVotersGrid.UseCustomForeColor = true;
             // 
+            // vtrID
+            // 
+            this.vtrID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.vtrID.FillWeight = 1F;
+            this.vtrID.Frozen = true;
+            this.vtrID.HeaderText = "ID";
+            this.vtrID.Name = "vtrID";
+            this.vtrID.Width = 160;
+            // 
+            // VtrName
+            // 
+            this.VtrName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.VtrName.FillWeight = 3F;
+            this.VtrName.Frozen = true;
+            this.VtrName.HeaderText = "Stock Holder";
+            this.VtrName.Name = "VtrName";
+            this.VtrName.Width = 250;
+            // 
+            // vtrVotes
+            // 
+            this.vtrVotes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.vtrVotes.FillWeight = 5F;
+            this.vtrVotes.HeaderText = "No. of Votes";
+            this.vtrVotes.Name = "vtrVotes";
+            this.vtrVotes.Width = 320;
+            // 
+            // vtrStatus
+            // 
+            this.vtrStatus.FillWeight = 3F;
+            this.vtrStatus.HeaderText = "Status";
+            this.vtrStatus.Name = "vtrStatus";
+            this.vtrStatus.Width = 120;
+            // 
             // panel24
             // 
             this.panel24.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -819,16 +852,16 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label2.Location = new System.Drawing.Point(285, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 15);
+            this.label2.Size = new System.Drawing.Size(111, 15);
             this.label2.TabIndex = 514;
-            this.label2.Text = "Select Voter";
+            this.label2.Text = "Select Stock Holder";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(353, 90);
+            this.label4.Location = new System.Drawing.Point(393, 90);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(13, 15);
             this.label4.TabIndex = 515;
@@ -959,39 +992,6 @@
             this.btnViewVoter.UseVisualStyleBackColor = false;
             this.btnViewVoter.Click += new System.EventHandler(this.btnViewVoter_Click);
             // 
-            // vtrID
-            // 
-            this.vtrID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.vtrID.FillWeight = 1F;
-            this.vtrID.Frozen = true;
-            this.vtrID.HeaderText = "ID";
-            this.vtrID.Name = "vtrID";
-            this.vtrID.Width = 160;
-            // 
-            // VtrName
-            // 
-            this.VtrName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.VtrName.FillWeight = 3F;
-            this.VtrName.Frozen = true;
-            this.VtrName.HeaderText = "Stock Holder";
-            this.VtrName.Name = "VtrName";
-            this.VtrName.Width = 250;
-            // 
-            // vtrVotes
-            // 
-            this.vtrVotes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.vtrVotes.FillWeight = 5F;
-            this.vtrVotes.HeaderText = "No. of Votes";
-            this.vtrVotes.Name = "vtrVotes";
-            this.vtrVotes.Width = 320;
-            // 
-            // vtrStatus
-            // 
-            this.vtrStatus.FillWeight = 3F;
-            this.vtrStatus.HeaderText = "Status";
-            this.vtrStatus.Name = "vtrStatus";
-            this.vtrStatus.Width = 120;
-            // 
             // SDHVoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1009,7 +1009,7 @@
             this.Controls.Add(this.panel_Indicator);
             this.Controls.Add(this.labelVoterList);
             this.Controls.Add(this.btnViewVoter);
-            this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.txtBoxSH);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel10);
@@ -1027,6 +1027,7 @@
             this.Name = "SDHVoForm";
             this.Opacity = 0.99D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SDHVoForm_FormClosed);
             this.panel15.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -1083,7 +1084,7 @@
         private System.Windows.Forms.Panel panel25;
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Label label6;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox txtBoxSH;
         private System.Windows.Forms.Label labelStatus;
         private System.Windows.Forms.Panel panel_Indicator;
         private System.Windows.Forms.Label labelVoterList;

@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using SDH_Voting;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,6 +10,8 @@ namespace SDH_Voting
 {
     public partial class UserControlVoting : UserControl
     {
+        private string sdhStockHolder;
+
         public UserControlVoting()
         {
             InitializeComponent();
@@ -78,9 +81,10 @@ namespace SDH_Voting
 
         private void btnVote_Click(object sender, EventArgs e)
         {
-            SDHVoForm votersForm = new SDHVoForm();
+            SDHVoForm votersForm = new SDHVoForm(sdhStockHolder);
             votersForm.ShowDialog();
         }
     }
   
 }
+

@@ -18,7 +18,6 @@ namespace SDH_Voting
 
         private List<InvestorViewModel> originalInvestorList; 
 
-     
         public Main()
         {
             InitializeComponent();
