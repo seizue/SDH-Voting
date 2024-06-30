@@ -12,8 +12,12 @@ namespace SDH_Voting
         public UserControlVoting()
         {
             InitializeComponent();
-            LoadRepresentatives(); // Load the representatives when the UserControl is initialized
-           
+            LoadRepresentatives(); 
+
+            foreach (DataGridViewRow row in dataGridViewRepresentative.Rows)
+            {
+                row.Height = 30;
+            }
         }
 
         private void btn_UpdateRep_Click(object sender, EventArgs e)

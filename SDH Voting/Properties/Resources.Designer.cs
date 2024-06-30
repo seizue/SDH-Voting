@@ -113,6 +113,26 @@ namespace SDH_Voting.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap combo_chart_24px {
+            get {
+                object obj = ResourceManager.GetObject("combo_chart_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap combo_chart_24px1 {
+            get {
+                object obj = ResourceManager.GetObject("combo_chart_24px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap database_backup_24px {
             get {
                 object obj = ResourceManager.GetObject("database_backup_24px", resourceCulture);
@@ -176,6 +196,26 @@ namespace SDH_Voting.Properties {
         internal static System.Drawing.Bitmap export_csv_24px {
             get {
                 object obj = ResourceManager.GetObject("export_csv_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap full_page_view_24px {
+            get {
+                object obj = ResourceManager.GetObject("full_page_view_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Full_Screen_24px {
+            get {
+                object obj = ResourceManager.GetObject("Full Screen_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

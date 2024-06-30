@@ -234,5 +234,17 @@
   <ItemGroup>
     <None Include="Resources\account_24px3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\full_page_view_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Full Screen_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\combo_chart_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\combo_chart_24px1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
