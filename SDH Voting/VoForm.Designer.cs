@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonMinimize = new System.Windows.Forms.Button();
             this.buttonMaximize = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
@@ -51,6 +51,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtBoxAVoters = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -59,6 +60,7 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.txtBoxVoted = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -72,6 +74,7 @@
             this.panel20 = new System.Windows.Forms.Panel();
             this.panelNav = new System.Windows.Forms.Panel();
             this.panelVoterList = new System.Windows.Forms.Panel();
+            this.buttonDownload = new System.Windows.Forms.Button();
             this.checkBoxNonVoted = new MetroFramework.Controls.MetroCheckBox();
             this.checkBoxVoted = new MetroFramework.Controls.MetroCheckBox();
             this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
@@ -87,21 +90,18 @@
             this.panel22 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.buttonDownload = new System.Windows.Forms.Button();
             this.btnViewVoter = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel15.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelNav.SuspendLayout();
             this.panelVoterList.SuspendLayout();
             this.panel23.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SelectionVotersGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonMinimize
@@ -321,6 +321,16 @@
             this.txtBoxAVoters.TabIndex = 429;
             this.txtBoxAVoters.Text = "15";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SDH_Voting.Properties.Resources.account_24px2;
+            this.pictureBox1.Location = new System.Drawing.Point(155, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 426;
+            this.pictureBox1.TabStop = false;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -411,6 +421,16 @@
             this.txtBoxVoted.Size = new System.Drawing.Size(52, 29);
             this.txtBoxVoted.TabIndex = 429;
             this.txtBoxVoted.Text = "15";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::SDH_Voting.Properties.Resources.account_24px;
+            this.pictureBox2.Location = new System.Drawing.Point(156, 14);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 426;
+            this.pictureBox2.TabStop = false;
             // 
             // label1
             // 
@@ -582,6 +602,23 @@
             this.panelVoterList.TabIndex = 513;
             this.panelVoterList.Visible = false;
             // 
+            // buttonDownload
+            // 
+            this.buttonDownload.FlatAppearance.BorderSize = 0;
+            this.buttonDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDownload.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold);
+            this.buttonDownload.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonDownload.Image = global::SDH_Voting.Properties.Resources.export_csv_24px;
+            this.buttonDownload.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonDownload.Location = new System.Drawing.Point(766, 3);
+            this.buttonDownload.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonDownload.Name = "buttonDownload";
+            this.buttonDownload.Size = new System.Drawing.Size(108, 29);
+            this.buttonDownload.TabIndex = 524;
+            this.buttonDownload.Text = "Download";
+            this.buttonDownload.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDownload.UseVisualStyleBackColor = true;
+            // 
             // checkBoxNonVoted
             // 
             this.checkBoxNonVoted.AutoSize = true;
@@ -665,40 +702,40 @@
             this.SelectionVotersGrid.AllowUserToAddRows = false;
             this.SelectionVotersGrid.AllowUserToResizeColumns = false;
             this.SelectionVotersGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(248)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.SelectionVotersGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(248)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.SelectionVotersGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.SelectionVotersGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.SelectionVotersGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
             this.SelectionVotersGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SelectionVotersGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.SelectionVotersGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SelectionVotersGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SelectionVotersGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.SelectionVotersGrid.ColumnHeadersHeight = 48;
             this.SelectionVotersGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.VtrName,
             this.Votes,
             this.VotersStatus});
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.SelectionVotersGrid.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.SelectionVotersGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.SelectionVotersGrid.EnableHeadersVisualStyles = false;
             this.SelectionVotersGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.SelectionVotersGrid.GridColor = System.Drawing.Color.WhiteSmoke;
@@ -706,19 +743,19 @@
             this.SelectionVotersGrid.MultiSelect = false;
             this.SelectionVotersGrid.Name = "SelectionVotersGrid";
             this.SelectionVotersGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SelectionVotersGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SelectionVotersGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.SelectionVotersGrid.RowHeadersWidth = 5;
             this.SelectionVotersGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
-            this.SelectionVotersGrid.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
+            this.SelectionVotersGrid.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.SelectionVotersGrid.RowTemplate.Height = 23;
             this.SelectionVotersGrid.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.SelectionVotersGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -822,23 +859,6 @@
             this.label4.TabIndex = 515;
             this.label4.Text = "*";
             // 
-            // buttonDownload
-            // 
-            this.buttonDownload.FlatAppearance.BorderSize = 0;
-            this.buttonDownload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDownload.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold);
-            this.buttonDownload.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonDownload.Image = global::SDH_Voting.Properties.Resources.export_csv_24px;
-            this.buttonDownload.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonDownload.Location = new System.Drawing.Point(766, 3);
-            this.buttonDownload.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.buttonDownload.Name = "buttonDownload";
-            this.buttonDownload.Size = new System.Drawing.Size(108, 29);
-            this.buttonDownload.TabIndex = 524;
-            this.buttonDownload.Text = "Download";
-            this.buttonDownload.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDownload.UseVisualStyleBackColor = true;
-            // 
             // btnViewVoter
             // 
             this.btnViewVoter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
@@ -855,26 +875,7 @@
             this.btnViewVoter.TabIndex = 490;
             this.btnViewVoter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnViewVoter.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::SDH_Voting.Properties.Resources.account_24px;
-            this.pictureBox2.Location = new System.Drawing.Point(156, 14);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 426;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SDH_Voting.Properties.Resources.account_24px2;
-            this.pictureBox1.Location = new System.Drawing.Point(155, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 426;
-            this.pictureBox1.TabStop = false;
+            this.btnViewVoter.Click += new System.EventHandler(this.btnViewVoter_Click);
             // 
             // panel6
             // 
@@ -931,15 +932,15 @@
             this.panel15.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelNav.ResumeLayout(false);
             this.panelVoterList.ResumeLayout(false);
             this.panelVoterList.PerformLayout();
             this.panel23.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SelectionVotersGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

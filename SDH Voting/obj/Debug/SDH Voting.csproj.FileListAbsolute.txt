@@ -20,3 +20,4 @@ D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH Voting.csproj.CoreCompileInpu
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH Voting.csproj.Up2Date
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH Voting.exe
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH Voting.pdb
+D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.VoterSelectionForm.resources

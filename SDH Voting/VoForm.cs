@@ -76,5 +76,11 @@ namespace SDH_Voting
             panel_Indicator.Location = new Point(27, 208);
             panel_Indicator.Size = new Size(49, 3);
         }
+
+        private void btnViewVoter_Click(object sender, EventArgs e)
+        {
+            VoterSelectionForm voterSelectionForm = new VoterSelectionForm();
+            voterSelectionForm.ShowDialog();
+        }
     }
 }

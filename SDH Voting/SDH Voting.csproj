@@ -102,6 +102,12 @@
     <Compile Include="VoForm.Designer.cs">
       <DependentUpon>VoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="VoterSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VoterSelectionForm.Designer.cs">
+      <DependentUpon>VoterSelectionForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddRepForm.resx">
       <DependentUpon>AddRepForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VoForm.resx">
       <DependentUpon>VoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoterSelectionForm.resx">
+      <DependentUpon>VoterSelectionForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
