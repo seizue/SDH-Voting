@@ -86,10 +86,15 @@ namespace SDH_Voting
         {
             if (WindowState == FormWindowState.Maximized)
             {
+                // Restore to normal size
                 WindowState = FormWindowState.Normal;
             }
             else
             {
+                // Maximize the form considering the taskbar height
+                Rectangle workingArea = Screen.GetWorkingArea(this);
+                MaximizedBounds = new Rectangle(0, 0, workingArea.Width, workingArea.Height);
+
                 WindowState = FormWindowState.Maximized;
             }
         }
