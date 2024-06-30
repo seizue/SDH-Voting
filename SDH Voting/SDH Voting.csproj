@@ -264,5 +264,14 @@
   <ItemGroup>
     <None Include="Resources\meeting_room_24px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_configuration_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_configuration_24pxdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\combo_chart_24px11.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

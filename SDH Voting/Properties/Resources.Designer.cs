@@ -113,19 +113,9 @@ namespace SDH_Voting.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap combo_chart_24px {
+        internal static System.Drawing.Bitmap combo_chart_24px11 {
             get {
-                object obj = ResourceManager.GetObject("combo_chart_24px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap combo_chart_24px1 {
-            get {
-                object obj = ResourceManager.GetObject("combo_chart_24px1", resourceCulture);
+                object obj = ResourceManager.GetObject("combo_chart_24px11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +193,9 @@ namespace SDH_Voting.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap full_page_view_24px {
+        internal static System.Drawing.Bitmap file_configuration_24pxdd {
             get {
-                object obj = ResourceManager.GetObject("full_page_view_24px", resourceCulture);
+                object obj = ResourceManager.GetObject("file_configuration_24pxdd", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -266,16 +256,6 @@ namespace SDH_Voting.Properties {
         internal static System.Drawing.Bitmap send_file_24px {
             get {
                 object obj = ResourceManager.GetObject("send_file_24px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap stocks_24px {
-            get {
-                object obj = ResourceManager.GetObject("stocks_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
