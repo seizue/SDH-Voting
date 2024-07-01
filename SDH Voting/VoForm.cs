@@ -73,9 +73,17 @@ namespace SDH_Voting
 
             // Map existing columns to properties
             if (SelectionVotersGrid.Columns["vtrID"] != null) SelectionVotersGrid.Columns["vtrID"].DataPropertyName = "ID";
-            if (SelectionVotersGrid.Columns["vtrName"] != null) SelectionVotersGrid.Columns["vtrName"].DataPropertyName = "Name";       
-            if (SelectionVotersGrid.Columns["vtrVotes"] != null) SelectionVotersGrid.Columns["vtrVotes"].DataPropertyName = "Votes";
+            if (SelectionVotersGrid.Columns["vtrName"] != null) SelectionVotersGrid.Columns["vtrName"].DataPropertyName = "Name";
+
+            // Format Votes column with commas
+            if (SelectionVotersGrid.Columns["vtrVotes"] != null)
+            {
+                SelectionVotersGrid.Columns["vtrVotes"].DataPropertyName = "Votes";
+                SelectionVotersGrid.Columns["vtrVotes"].DefaultCellStyle.Format = "N0";
+            }
         }
+
+
 
         private void buttonClose_Click(object sender, EventArgs e)
         {

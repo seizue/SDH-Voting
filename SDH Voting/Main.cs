@@ -60,14 +60,48 @@ namespace SDH_Voting
 
         private void UpdateDataGridView(List<InvestorViewModel> investors)
         {
+            // Clear the existing rows and columns
             InventoryDataGrid.Rows.Clear();
+            InventoryDataGrid.Columns.Clear();
 
+            // Add columns without formatting for ID
+            DataGridViewTextBoxColumn idColumn = new DataGridViewTextBoxColumn
+            {
+                HeaderText = "ID",
+                DataPropertyName = "Id"
+            };
+            InventoryDataGrid.Columns.Add(idColumn);
+
+            // Add columns with formatting for Votes and Shares
+            DataGridViewTextBoxColumn nameColumn = new DataGridViewTextBoxColumn
+            {
+                HeaderText = "Name",
+                DataPropertyName = "Name"
+            };
+            InventoryDataGrid.Columns.Add(nameColumn);
+
+            DataGridViewTextBoxColumn votesColumn = new DataGridViewTextBoxColumn
+            {
+                HeaderText = "Votes",
+                DataPropertyName = "Votes",
+                DefaultCellStyle = new DataGridViewCellStyle { Format = "N0" }
+            };
+            InventoryDataGrid.Columns.Add(votesColumn);
+
+            DataGridViewTextBoxColumn sharesColumn = new DataGridViewTextBoxColumn
+            {
+                HeaderText = "Shares",
+                DataPropertyName = "Shares",
+                DefaultCellStyle = new DataGridViewCellStyle { Format = "N0" }
+            };
+            InventoryDataGrid.Columns.Add(sharesColumn);
+
+            // Add rows
             foreach (var investor in investors)
             {
                 InventoryDataGrid.Rows.Add(investor.Id, investor.Name, investor.Votes, investor.Shares);
             }
         }
-
 
         private void buttonClose_Click(object sender, EventArgs e)
         {

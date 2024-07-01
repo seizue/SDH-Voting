@@ -65,8 +65,20 @@ namespace SDH_Voting
             }
 
             if (GridVoters.Columns["sdhStockHolder"] != null) GridVoters.Columns["sdhStockHolder"].DataPropertyName = "Name";
-            if (GridVoters.Columns["sdhShares"] != null) GridVoters.Columns["sdhShares"].DataPropertyName = "Shares";
-            if (GridVoters.Columns["sdhTotalVotes"] != null) GridVoters.Columns["sdhTotalVotes"].DataPropertyName = "Votes";
+
+            // Format Shares column with commas
+            if (GridVoters.Columns["sdhShares"] != null)
+            {
+                GridVoters.Columns["sdhShares"].DataPropertyName = "Shares";
+                GridVoters.Columns["sdhShares"].DefaultCellStyle.Format = "N0";
+            }
+
+            // Format Total Votes column with commas
+            if (GridVoters.Columns["sdhTotalVotes"] != null)
+            {
+                GridVoters.Columns["sdhTotalVotes"].DataPropertyName = "Votes";
+                GridVoters.Columns["sdhTotalVotes"].DefaultCellStyle.Format = "N0";
+            }
         }
 
 
