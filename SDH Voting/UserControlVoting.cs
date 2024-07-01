@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 
 namespace SDH_Voting
@@ -83,6 +84,80 @@ namespace SDH_Voting
         {
             SDHVoForm votersForm = new SDHVoForm(sdhStockHolder);
             votersForm.ShowDialog();
+        }
+
+        private void button_Export_Click(object sender, EventArgs e)
+        {
+            // Check if there is data in the DataGridView
+            if (dataGridViewRepresentative.Rows.Count == 0)
+            {
+                MessageBox.Show("No data to export.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            // Initialize a StringBuilder to store CSV content
+            StringBuilder csvContent = new StringBuilder();
+
+            // Write the header row, excluding the "View" column
+            foreach (DataGridViewColumn column in dataGridViewRepresentative.Columns)
+            {
+                if (column.Name != "View")
+                {
+                    csvContent.Append(column.HeaderText + ",");
+                }
+            }
+            csvContent.AppendLine();
+
+            // Write the data rows, excluding the "View" column
+            foreach (DataGridViewRow row in dataGridViewRepresentative.Rows)
+            {
+                if (row.IsNewRow) continue; // Skip the new row placeholder
+
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    if (cell.OwningColumn.Name != "View")
+                    {
+                        if (cell.Value != null)
+                        {
+                            csvContent.Append(cell.Value.ToString() + ",");
+                        }
+                        else
+                        {
+                            csvContent.Append(",");
+                        }
+                    }
+                }
+                csvContent.AppendLine();
+            }
+
+            // Generate file name with current date
+            string currentDate = DateTime.Now.ToString("yyyy-MM-dd");
+            string fileName = $"SDH_Representatives_{currentDate}.csv";
+
+            // Prompt the user to save the file
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "CSV files (*.csv)|*.csv";
+            saveFileDialog.Title = "Export CSV File";
+            saveFileDialog.FileName = fileName;
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Write the CSV content to the file
+                File.WriteAllText(saveFileDialog.FileName, csvContent.ToString());
+                MessageBox.Show("Data exported successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+
+
+        private void button_Refresh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExpandGrid_Click(object sender, EventArgs e)
+        {
+
         }
     }
   
