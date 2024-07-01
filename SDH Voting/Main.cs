@@ -24,10 +24,6 @@ namespace SDH_Voting
       
             LoadData();
             txtBoxSearch.TextChanged += txtBoxSearch_TextChanged;
-            foreach (DataGridViewRow row in InventoryDataGrid.Rows)
-            {
-                row.Height = 30;
-            }
         }
 
         private void LoadData()
@@ -56,6 +52,12 @@ namespace SDH_Voting
             }).ToList();
 
             UpdateDataGridView(originalInvestorList);
+
+            //Custom Row Height of DataGrid
+            foreach (DataGridViewRow row in InventoryDataGrid.Rows)
+            {
+                row.Height = 30;
+            }
         }
 
         private void UpdateDataGridView(List<InvestorViewModel> investors)
@@ -164,25 +166,57 @@ namespace SDH_Voting
             if (InventoryDataGrid.SelectedRows.Count > 0)
             {
                 int selectedIndex = InventoryDataGrid.SelectedRows[0].Index;
-                InvestorViewModel selectedInvestorViewModel = (InvestorViewModel)InventoryDataGrid.Rows[selectedIndex].DataBoundItem;
 
-                // Find the corresponding Investor object
-                string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting", "InvestorMasterlist.json");
-                List<Investor> investors = new List<Investor>();
-
-                if (File.Exists(filePath))
+                // Ensure the selected row index is within bounds
+                if (selectedIndex >= 0 && selectedIndex < originalInvestorList.Count)
                 {
-                    string json = File.ReadAllText(filePath);
-                    investors = JsonConvert.DeserializeObject<List<Investor>>(json);
+                    InvestorViewModel selectedInvestorViewModel = originalInvestorList[selectedIndex];
+
+                    // Ensure selectedInvestorViewModel is not null
+                    if (selectedInvestorViewModel != null)
+                    {
+                        // Find the corresponding Investor object
+                        string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting", "InvestorMasterlist.json");
+
+                        if (File.Exists(filePath))
+                        {
+                            string json = File.ReadAllText(filePath);
+                            List<Investor> investors = JsonConvert.DeserializeObject<List<Investor>>(json);
+
+                            // Ensure investors is not null and contains data
+                            if (investors != null)
+                            {
+                                Investor selectedInvestor = investors.Find(i => i.Name == selectedInvestorViewModel.Name);
+
+                                if (selectedInvestor != null)
+                                {
+                                    UpdateForm updateForm = new UpdateForm(selectedInvestor);
+                                    updateForm.ShowDialog();
+                                    LoadData(); // Refresh the data grid after closing the update form
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Selected investor not found in the list.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Error loading investor data from file.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Investor data file not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Selected row does not contain valid data.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-
-                Investor selectedInvestor = investors.Find(i => i.Name == selectedInvestorViewModel.Name);
-
-                if (selectedInvestor != null)
+                else
                 {
-                    UpdateForm updateForm = new UpdateForm(selectedInvestor);
-                    updateForm.ShowDialog();
-                    LoadData(); // Refresh the data grid after closing the update form
+                    MessageBox.Show("Selected row index is out of bounds.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
@@ -190,6 +224,7 @@ namespace SDH_Voting
                 MessageBox.Show("Please select a row to update.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
@@ -199,32 +234,54 @@ namespace SDH_Voting
                 // Get the selected row index
                 int selectedIndex = InventoryDataGrid.SelectedRows[0].Index;
 
-                // Get the selected InvestorViewModel
-                InvestorViewModel selectedInvestorViewModel = (InvestorViewModel)InventoryDataGrid.Rows[selectedIndex].DataBoundItem;
-
-                // Find the corresponding Investor object
-                string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting", "InvestorMasterlist.json");
-                List<Investor> investors = new List<Investor>();
-
-                if (File.Exists(filePath))
+                // Ensure the selected row index is within bounds
+                if (selectedIndex >= 0 && selectedIndex < originalInvestorList.Count)
                 {
-                    string json = File.ReadAllText(filePath);
-                    investors = JsonConvert.DeserializeObject<List<Investor>>(json);
+                    InvestorViewModel selectedInvestorViewModel = originalInvestorList[selectedIndex];
+
+                    // Find the corresponding Investor object
+                    string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting", "InvestorMasterlist.json");
+
+                    if (File.Exists(filePath))
+                    {
+                        string json = File.ReadAllText(filePath);
+                        List<Investor> investors = JsonConvert.DeserializeObject<List<Investor>>(json);
+
+                        // Ensure investors is not null and contains data
+                        if (investors != null)
+                        {
+                            Investor selectedInvestor = investors.Find(i => i.Name == selectedInvestorViewModel.Name);
+
+                            if (selectedInvestor != null)
+                            {
+                                // Remove the selected investor from the list
+                                investors.Remove(selectedInvestor);
+
+                                // Save the updated list to JSON file
+                                string updatedJson = JsonConvert.SerializeObject(investors, Formatting.Indented);
+                                File.WriteAllText(filePath, updatedJson);
+
+                                // Refresh the DataGridView
+                                LoadData();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Selected investor not found in the list.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error loading investor data from file.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Investor data file not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-
-                Investor selectedInvestor = investors.Find(i => i.Name == selectedInvestorViewModel.Name);
-
-                if (selectedInvestor != null)
+                else
                 {
-                    // Remove the selected investor from the list
-                    investors.Remove(selectedInvestor);
-
-                    // Save the updated list to JSON file
-                    string updatedJson = JsonConvert.SerializeObject(investors, Formatting.Indented);
-                    File.WriteAllText(filePath, updatedJson);
-
-                    // Refresh the DataGridView
-                    LoadData();
+                    MessageBox.Show("Selected row index is out of bounds.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
@@ -232,6 +289,7 @@ namespace SDH_Voting
                 MessageBox.Show("Please select a row to delete.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
 
         private void button_Export_Click(object sender, EventArgs e)
         {
