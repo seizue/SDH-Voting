@@ -17,11 +17,6 @@ namespace SDH_Voting
         {
             InitializeComponent();
             LoadRepresentatives(); 
-
-            foreach (DataGridViewRow row in dataGridViewRepresentative.Rows)
-            {
-                row.Height = 30;
-            }
         }
 
         private void btn_UpdateRep_Click(object sender, EventArgs e)
@@ -32,8 +27,65 @@ namespace SDH_Voting
 
         private void btn_VoidRep_Click(object sender, EventArgs e)
         {
+            // Check if a row is selected
+            if (dataGridViewRepresentative.SelectedRows.Count > 0)
+            {
+                // Get the selected row index
+                int selectedIndex = dataGridViewRepresentative.SelectedRows[0].Index;
 
+                // Ensure the selected row index is within bounds
+                if (selectedIndex >= 0 && selectedIndex < dataGridViewRepresentative.Rows.Count)
+                {
+                    // Confirm the deletion with the user
+                    DialogResult result = MessageBox.Show("Are you sure you want to void this representative?", "Confirm Void", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        // Get the representative name from the selected row
+                        string representativeName = dataGridViewRepresentative.Rows[selectedIndex].Cells["Representative"].Value.ToString(); 
+
+                        // Remove the selected row from the DataGridView
+                        dataGridViewRepresentative.Rows.RemoveAt(selectedIndex);
+
+                        // Load the existing representatives from the JSON file
+                        string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
+                        string filePath = Path.Combine(folderPath, "SDHRep.json");
+                        List<Representative> representatives = new List<Representative>();
+
+                        if (File.Exists(filePath))
+                        {
+                            string json = File.ReadAllText(filePath);
+                            representatives = JsonConvert.DeserializeObject<List<Representative>>(json) ?? new List<Representative>();
+                        }
+
+                        // Find and remove the representative from the list
+                        Representative representativeToRemove = representatives.FirstOrDefault(r => r.Name == representativeName);
+                        if (representativeToRemove != null)
+                        {
+                            representatives.Remove(representativeToRemove);
+
+                            // Save the updated list to the JSON file
+                            string updatedJson = JsonConvert.SerializeObject(representatives, Formatting.Indented);
+                            File.WriteAllText(filePath, updatedJson);
+
+                            MessageBox.Show("Representative voided successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Representative not found in the list.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Selected row index is out of bounds.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to void.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
+
 
         private void btn_AddRepresentative_Click(object sender, EventArgs e)
         {
@@ -62,6 +114,12 @@ namespace SDH_Voting
             {
                 int id = i + 1; // Auto-generate ID starting from 1
                 dataGridViewRepresentative.Rows.Add(id, representatives[i].Name, "", "", ""); // Add representative name to the correct column
+            }
+
+
+            foreach (DataGridViewRow row in dataGridViewRepresentative.Rows)
+            {
+                row.Height = 30;
             }
         }
 
@@ -147,7 +205,6 @@ namespace SDH_Voting
                 MessageBox.Show("Data exported successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
 
 
         private void button_Refresh_Click(object sender, EventArgs e)
