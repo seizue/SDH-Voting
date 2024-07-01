@@ -383,12 +383,24 @@ namespace SDH_Voting
         private void btnInvMasterlist_Click(object sender, EventArgs e)
         {
             userControlVoting1.Visible = false;
+            btnInvMasterlist.BackColor = Color.FromArgb(95, 123, 108);
+            btnInvMasterlist.ForeColor = Color.Beige;
+            tableLayoutPanel1.BackColor = Color.FromArgb(113, 145, 128);
+
+            btnVoting.BackColor = Color.FromArgb(126, 162, 143);
+            btnVoting.ForeColor = Color.FromArgb(30, 58, 42);
         }
-    
+
 
         private void btnVoting_Click(object sender, EventArgs e)
         {
             userControlVoting1.Visible = true;
+            btnVoting.BackColor = Color.FromArgb(95, 123, 108);
+            btnVoting.ForeColor = Color.Beige;
+            tableLayoutPanel1.BackColor = Color.FromArgb(113, 145, 128);
+
+            btnInvMasterlist.BackColor = Color.FromArgb(126, 162, 143);
+            btnInvMasterlist.ForeColor = Color.FromArgb(30, 58, 42);
         }
     }
 
