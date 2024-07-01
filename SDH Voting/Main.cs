@@ -24,6 +24,10 @@ namespace SDH_Voting
       
             LoadData();
             txtBoxSearch.TextChanged += txtBoxSearch_TextChanged;
+            foreach (DataGridViewRow row in InventoryDataGrid.Rows)
+            {
+                row.Height = 30;
+            }
         }
 
         private void LoadData()
@@ -45,8 +49,10 @@ namespace SDH_Voting
             // Project to view model
             originalInvestorList = investors.Select(i => new InvestorViewModel
             {
+                Id = i.Id,
                 Name = i.Name,
-                Votes = i.Votes
+                Votes = i.Votes,
+                Shares = i.Shares
             }).ToList();
 
             UpdateDataGridView(originalInvestorList);
@@ -54,8 +60,14 @@ namespace SDH_Voting
 
         private void UpdateDataGridView(List<InvestorViewModel> investors)
         {
-            InventoryDataGrid.DataSource = new BindingList<InvestorViewModel>(investors);
+            InventoryDataGrid.Rows.Clear();
+
+            foreach (var investor in investors)
+            {
+                InventoryDataGrid.Rows.Add(investor.Id, investor.Name, investor.Votes, investor.Shares);
+            }
         }
+
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
@@ -285,7 +297,7 @@ namespace SDH_Voting
 
     public class Investor
     {
-        public int Id { get; set; } // Unique ID
+        public int Id { get; set; } // Updated property name to 'ID'
         public string Name { get; set; }
         public int Shares { get; set; }
         public int Votes { get; set; }
@@ -293,9 +305,12 @@ namespace SDH_Voting
 
     public class InvestorViewModel
     {
+        public int Id { get; set; } // Added ID property
         public string Name { get; set; }
+        public int Shares { get; set; } // Added Shares property
         public int Votes { get; set; }
     }
+
 
     public class Representative
     {
