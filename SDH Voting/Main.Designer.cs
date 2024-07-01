@@ -67,6 +67,7 @@
             this.invVotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.invShares = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userControlVoting1 = new SDH_Voting.UserControlVoting();
+            this.checkBoxId = new MetroFramework.Controls.MetroCheckBox();
             this.panelNav.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -354,7 +355,7 @@
             // 
             // 
             this.txtBoxSearch.CustomButton.Image = null;
-            this.txtBoxSearch.CustomButton.Location = new System.Drawing.Point(280, 1);
+            this.txtBoxSearch.CustomButton.Location = new System.Drawing.Point(229, 1);
             this.txtBoxSearch.CustomButton.Name = "";
             this.txtBoxSearch.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtBoxSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -373,7 +374,7 @@
             this.txtBoxSearch.ShortcutsEnabled = true;
             this.txtBoxSearch.ShowButton = true;
             this.txtBoxSearch.ShowClearButton = true;
-            this.txtBoxSearch.Size = new System.Drawing.Size(302, 23);
+            this.txtBoxSearch.Size = new System.Drawing.Size(251, 23);
             this.txtBoxSearch.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtBoxSearch.TabIndex = 435;
             this.txtBoxSearch.UseCustomBackColor = true;
@@ -400,7 +401,7 @@
             this.checkBoxName.AutoSize = true;
             this.checkBoxName.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
             this.checkBoxName.ForeColor = System.Drawing.Color.DimGray;
-            this.checkBoxName.Location = new System.Drawing.Point(352, 132);
+            this.checkBoxName.Location = new System.Drawing.Point(354, 131);
             this.checkBoxName.Name = "checkBoxName";
             this.checkBoxName.Size = new System.Drawing.Size(56, 15);
             this.checkBoxName.TabIndex = 437;
@@ -414,7 +415,7 @@
             this.checkBoxVotes.AutoSize = true;
             this.checkBoxVotes.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
             this.checkBoxVotes.ForeColor = System.Drawing.Color.DimGray;
-            this.checkBoxVotes.Location = new System.Drawing.Point(427, 132);
+            this.checkBoxVotes.Location = new System.Drawing.Point(427, 131);
             this.checkBoxVotes.Name = "checkBoxVotes";
             this.checkBoxVotes.Size = new System.Drawing.Size(54, 15);
             this.checkBoxVotes.TabIndex = 438;
@@ -582,12 +583,27 @@
             this.userControlVoting1.Size = new System.Drawing.Size(893, 369);
             this.userControlVoting1.TabIndex = 437;
             // 
+            // checkBoxId
+            // 
+            this.checkBoxId.AutoSize = true;
+            this.checkBoxId.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
+            this.checkBoxId.ForeColor = System.Drawing.Color.DimGray;
+            this.checkBoxId.Location = new System.Drawing.Point(299, 131);
+            this.checkBoxId.Name = "checkBoxId";
+            this.checkBoxId.Size = new System.Drawing.Size(36, 15);
+            this.checkBoxId.TabIndex = 461;
+            this.checkBoxId.Text = "ID";
+            this.checkBoxId.UseCustomBackColor = true;
+            this.checkBoxId.UseCustomForeColor = true;
+            this.checkBoxId.UseSelectable = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(911, 487);
+            this.Controls.Add(this.checkBoxId);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.userControlVoting1);
             this.Controls.Add(this.metroPanel1);
@@ -657,6 +673,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn invName;
         private System.Windows.Forms.DataGridViewTextBoxColumn invVotes;
         private System.Windows.Forms.DataGridViewTextBoxColumn invShares;
+        private MetroFramework.Controls.MetroCheckBox checkBoxId;
     }
 }
 

@@ -353,12 +353,16 @@ namespace SDH_Voting
 
             // Filter the data based on the search text
             var filteredData = originalInvestorList
-                                .Where(investor => investor.Name.ToLower().Contains(searchText) || investor.Votes.ToString().Contains(searchText))
+                                .Where(investor =>
+                                    investor.Id.ToLower().Contains(searchText) ||
+                                    investor.Name.ToLower().Contains(searchText) ||
+                                    investor.Votes.ToString().Contains(searchText))
                                 .ToList();
 
             // Update the DataGridView with the filtered data
             UpdateDataGridView(filteredData);
         }
+
 
         private void txtBoxSearch_ButtonClick(object sender, EventArgs e)
         {
@@ -366,6 +370,7 @@ namespace SDH_Voting
 
             // Filter the data based on the search text and selected checkboxes
             var filteredData = originalInvestorList.Where(investor =>
+                (checkBoxId.Checked && investor.Id.ToLower().Contains(searchText)) ||
                 (checkBoxName.Checked && investor.Name.ToLower().Contains(searchText)) ||
                 (checkBoxVotes.Checked && investor.Votes.ToString().Contains(searchText))
             ).ToList();
@@ -373,6 +378,7 @@ namespace SDH_Voting
             // Update the DataGridView with the filtered data
             UpdateDataGridView(filteredData);
         }
+
 
         private void btnInvMasterlist_Click(object sender, EventArgs e)
         {
