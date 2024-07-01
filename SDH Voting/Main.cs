@@ -389,7 +389,7 @@ namespace SDH_Voting
 
     public class Investor
     {
-        public int Id { get; set; } // Updated property name to 'ID'
+        public String Id { get; set; } 
         public string Name { get; set; }
         public int Shares { get; set; }
         public int Votes { get; set; }
@@ -397,12 +397,11 @@ namespace SDH_Voting
 
     public class InvestorViewModel
     {
-        public int Id { get; set; } // Added ID property
+        public string Id { get; set; } 
         public string Name { get; set; }
-        public int Shares { get; set; } // Added Shares property
+        public int Shares { get; set; }
         public int Votes { get; set; }
     }
-
 
     public class Representative
     {

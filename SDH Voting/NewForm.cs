@@ -28,6 +28,16 @@ namespace SDH_Voting
             }
         }
 
+
+        private string GenerateId()
+        {
+            // Generate a random 6-character alphanumeric ID in the format A123-B2A
+            Random random = new Random();
+            string idPart1 = $"{(char)('A' + random.Next(0, 26))}{random.Next(100, 1000)}";
+            string idPart2 = $"-{(char)('A' + random.Next(0, 26))}{random.Next(0, 10)}{(char)('A' + random.Next(0, 26))}";
+            return idPart1 + idPart2;
+        }
+
         private bool TryConvertToNumber(string input, out int result)
         {
             input = input.ToUpper().Trim(); // Standardize input to uppercase and trim whitespace
@@ -62,6 +72,7 @@ namespace SDH_Voting
             this.Close();
         }
 
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
@@ -89,10 +100,11 @@ namespace SDH_Voting
                     return;
                 }
 
-                // Create a new investor object with a unique ID (only numbers and 9 characters)
+                // Create a new investor object with a unique ID (format: A123-B2A)
+                string generatedId = GenerateId();
                 Investor newInvestor = new Investor
                 {
-                    Id = new Random().Next(100000000, 999999999), // Generate a 9-digit number
+                    Id = generatedId,
                     Name = name,
                     Shares = shares,
                     Votes = votes,
@@ -143,5 +155,6 @@ namespace SDH_Voting
         {
             this.Close();
         }
+
     }
 }
