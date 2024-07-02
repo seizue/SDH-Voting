@@ -80,10 +80,6 @@
             this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
             this.panel23 = new System.Windows.Forms.Panel();
             this.SelectionVotersGrid = new MetroFramework.Controls.MetroGrid();
-            this.vtrID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VtrName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vtrVotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.vtrStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel28 = new System.Windows.Forms.Panel();
@@ -101,6 +97,9 @@
             this.panel31 = new System.Windows.Forms.Panel();
             this.panel32 = new System.Windows.Forms.Panel();
             this.btnViewVoter = new System.Windows.Forms.Button();
+            this.VtrName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vtrVotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vtrStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel15.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -733,7 +732,6 @@
             this.SelectionVotersGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.SelectionVotersGrid.ColumnHeadersHeight = 48;
             this.SelectionVotersGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.vtrID,
             this.VtrName,
             this.vtrVotes,
             this.vtrStatus});
@@ -772,39 +770,6 @@
             this.SelectionVotersGrid.TabIndex = 391;
             this.SelectionVotersGrid.UseCustomBackColor = true;
             this.SelectionVotersGrid.UseCustomForeColor = true;
-            // 
-            // vtrID
-            // 
-            this.vtrID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.vtrID.FillWeight = 1F;
-            this.vtrID.Frozen = true;
-            this.vtrID.HeaderText = "ID";
-            this.vtrID.Name = "vtrID";
-            this.vtrID.Width = 160;
-            // 
-            // VtrName
-            // 
-            this.VtrName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.VtrName.FillWeight = 3F;
-            this.VtrName.Frozen = true;
-            this.VtrName.HeaderText = "Stock Holder";
-            this.VtrName.Name = "VtrName";
-            this.VtrName.Width = 250;
-            // 
-            // vtrVotes
-            // 
-            this.vtrVotes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.vtrVotes.FillWeight = 5F;
-            this.vtrVotes.HeaderText = "No. of Votes";
-            this.vtrVotes.Name = "vtrVotes";
-            this.vtrVotes.Width = 320;
-            // 
-            // vtrStatus
-            // 
-            this.vtrStatus.FillWeight = 3F;
-            this.vtrStatus.HeaderText = "Status";
-            this.vtrStatus.Name = "vtrStatus";
-            this.vtrStatus.Width = 120;
             // 
             // panel24
             // 
@@ -993,6 +958,30 @@
             this.btnViewVoter.UseVisualStyleBackColor = false;
             this.btnViewVoter.Click += new System.EventHandler(this.btnViewVoter_Click);
             // 
+            // VtrName
+            // 
+            this.VtrName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.VtrName.FillWeight = 3F;
+            this.VtrName.Frozen = true;
+            this.VtrName.HeaderText = "Stock Holder";
+            this.VtrName.Name = "VtrName";
+            this.VtrName.Width = 320;
+            // 
+            // vtrVotes
+            // 
+            this.vtrVotes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.vtrVotes.FillWeight = 5F;
+            this.vtrVotes.HeaderText = "No. of Votes";
+            this.vtrVotes.Name = "vtrVotes";
+            this.vtrVotes.Width = 330;
+            // 
+            // vtrStatus
+            // 
+            this.vtrStatus.FillWeight = 3F;
+            this.vtrStatus.HeaderText = "Status";
+            this.vtrStatus.Name = "vtrStatus";
+            this.vtrStatus.Width = 220;
+            // 
             // SDHVoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1114,7 +1103,6 @@
         private System.Windows.Forms.Panel panel30;
         private System.Windows.Forms.Panel panel31;
         private System.Windows.Forms.Panel panel32;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vtrID;
         private System.Windows.Forms.DataGridViewTextBoxColumn VtrName;
         private System.Windows.Forms.DataGridViewTextBoxColumn vtrVotes;
         private System.Windows.Forms.DataGridViewTextBoxColumn vtrStatus;

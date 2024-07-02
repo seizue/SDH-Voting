@@ -108,7 +108,7 @@ namespace SDH_Voting
                     Name = name,
                     Shares = shares,
                     Votes = votes,
-                    Status = "No" // Set the status to "No" for new investors
+                    Status = "NO" // Set the status to "No" for new investors
                 };
 
                 // Load existing data

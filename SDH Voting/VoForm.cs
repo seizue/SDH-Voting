@@ -14,6 +14,7 @@ namespace SDH_Voting
 {
     public partial class SDHVoForm : Form
     {
+        private string selectedInvestorId;
 
         public SDHVoForm(string sdhStockHolder)
         {
@@ -72,15 +73,15 @@ namespace SDH_Voting
             SelectionVotersGrid.DataSource = new BindingList<Investor>(investors);
 
             // Map existing columns to properties
-            if (SelectionVotersGrid.Columns["vtrID"] != null) SelectionVotersGrid.Columns["vtrID"].DataPropertyName = "ID";
-            if (SelectionVotersGrid.Columns["vtrName"] != null) SelectionVotersGrid.Columns["vtrName"].DataPropertyName = "Name";
-
-            // Format Votes column with commas
+            if (SelectionVotersGrid.Columns["vtrName"] != null)
+                SelectionVotersGrid.Columns["vtrName"].DataPropertyName = "Name";
             if (SelectionVotersGrid.Columns["vtrVotes"] != null)
             {
                 SelectionVotersGrid.Columns["vtrVotes"].DataPropertyName = "Votes";
                 SelectionVotersGrid.Columns["vtrVotes"].DefaultCellStyle.Format = "N0";
             }
+            if (SelectionVotersGrid.Columns["vtrStatus"] != null)
+                SelectionVotersGrid.Columns["vtrStatus"].DataPropertyName = "Status";
         }
 
 
@@ -130,16 +131,20 @@ namespace SDH_Voting
         private void btnViewVoter_Click(object sender, EventArgs e)
         {
             VoterSelectionForm voterSelectionForm = new VoterSelectionForm();
-            // Subscribe to the event in VoterSelectionForm to receive the selected stockholder name
+            // Subscribe to the event in VoterSelectionForm to receive the selected stockholder name and ID
             voterSelectionForm.StockHolderSelected += VoterSelectionForm_StockHolderSelected;
             voterSelectionForm.ShowDialog();
         }
 
-        private void VoterSelectionForm_StockHolderSelected(object sender, string stockHolderName)
+        // Update the event handler to match the correct signature
+        private void VoterSelectionForm_StockHolderSelected(object sender, (string StockHolderName, string InvestorId) data)
         {
             // Update the text box with the selected stockholder name
-            txtBoxSH.Text = stockHolderName;
+            txtBoxSH.Text = data.StockHolderName;
+            // Store the selected investor's ID
+            selectedInvestorId = data.InvestorId;
         }
+
 
         private void SDHVoForm_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -148,7 +153,69 @@ namespace SDH_Voting
 
         private void btnSaveVoters_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(selectedInvestorId))
+            {
+                MessageBox.Show("No investor selected.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            try
+            {
+                string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
+                string filePath = Path.Combine(folderPath, "InvestorMasterlist.json");
+                List<Investor> investors = new List<Investor>();
+
+                if (File.Exists(filePath))
+                {
+                    string json = File.ReadAllText(filePath);
+                    investors = JsonConvert.DeserializeObject<List<Investor>>(json) ?? new List<Investor>();
+                }
+
+                // Update the status of the selected investor to "YES"
+                var investor = investors.FirstOrDefault(i => i.Id == selectedInvestorId);
+                if (investor != null)
+                {
+                    investor.Status = "YES";
+                }
+
+                // Save the updated data back to the JSON file
+                string updatedJson = JsonConvert.SerializeObject(investors, Formatting.Indented);
+                File.WriteAllText(filePath, updatedJson);
+
+                // Save selected data to SDH_VoteSelected.json
+                string voteSelectedFilePath = Path.Combine(folderPath, "SDH_VoteSelected.json");
+                List<VoteSelectedData> voteSelectedList = new List<VoteSelectedData>();
+
+                if (File.Exists(voteSelectedFilePath))
+                {
+                    string voteSelectedJson = File.ReadAllText(voteSelectedFilePath);
+                    voteSelectedList = JsonConvert.DeserializeObject<List<VoteSelectedData>>(voteSelectedJson) ?? new List<VoteSelectedData>();
+                }
+
+                // Add new entry for the selected vote
+                voteSelectedList.Add(new VoteSelectedData
+                {
+                    Representative = comboRep.SelectedItem.ToString(),
+                    StockHolder = txtBoxSH.Text
+                });
+
+                // Save updated vote selected data
+                string updatedVoteSelectedJson = JsonConvert.SerializeObject(voteSelectedList, Formatting.Indented);
+                File.WriteAllText(voteSelectedFilePath, updatedVoteSelectedJson);
+
+                // Reload the data to reflect changes in the DataGridView
+                LoadData();
+
+                // Display success message and close the form
+                MessageBox.Show("Status updated to 'YES' for the selected investor.\nVote selected data saved to SDH_VoteSelected.json.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
+
+    
 }

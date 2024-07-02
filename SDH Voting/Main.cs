@@ -21,8 +21,6 @@ namespace SDH_Voting
         public Main()
         {
             InitializeComponent();
-      
-            LoadData();
             txtBoxSearch.TextChanged += txtBoxSearch_TextChanged;
         }
 
@@ -102,7 +100,7 @@ namespace SDH_Voting
             // Add the new VtrStatus column
             DataGridViewTextBoxColumn statusColumn = new DataGridViewTextBoxColumn
             {
-                HeaderText = "Status",
+                HeaderText = "Voting Status",
                 DataPropertyName = "VtrStatus"
             };
             InventoryDataGrid.Columns.Add(statusColumn);
@@ -393,6 +391,8 @@ namespace SDH_Voting
         private void btnInvMasterlist_Click(object sender, EventArgs e)
         {
             userControlVoting1.Visible = false;
+            LoadData();
+
             btnInvMasterlist.BackColor = Color.FromArgb(95, 123, 108);
             btnInvMasterlist.ForeColor = Color.Beige;
             tableLayoutPanel1.BackColor = Color.FromArgb(113, 145, 128);
@@ -438,5 +438,9 @@ namespace SDH_Voting
         public string Name { get; set; }
     }
 
-
+    public class VoteSelectedData
+    {
+        public string Representative { get; set; }
+        public string StockHolder { get; set; }
+    }
 }

@@ -15,7 +15,7 @@ namespace SDH_Voting
     public partial class VoterSelectionForm : Form
     {
 
-        public event EventHandler<string> StockHolderSelected;
+        public event EventHandler<(string StockHolderName, string InvestorId)> StockHolderSelected;
 
         public VoterSelectionForm()
         {
@@ -81,7 +81,6 @@ namespace SDH_Voting
             }
         }
 
-
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -89,7 +88,6 @@ namespace SDH_Voting
 
         private void GridVoters_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
                 // Get the selected row
@@ -97,9 +95,10 @@ namespace SDH_Voting
 
                 // Get the value from the "sdhStockHolder" column
                 string stockHolderName = selectedRow.Cells["sdhStockHolder"].Value.ToString();
+                string investorId = selectedRow.Cells["sdhID"].Value.ToString();
 
                 // Raise the event to pass data back to SDHVoForm
-                StockHolderSelected?.Invoke(this, stockHolderName);
+                StockHolderSelected?.Invoke(this, (stockHolderName, investorId));
 
                 // Close the form or perform any other actions
                 this.Close();
