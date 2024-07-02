@@ -9,10 +9,144 @@ namespace SDH_Voting
 {
     public partial class AddRepForm : Form
     {
+        private List<Investor> investors;
+        private string folderPath;
+        private string masterListFilePath;
+        private string repFilePath;
+
         public AddRepForm()
         {
             InitializeComponent();
+            InitializeData();
         }
+
+        private void InitializeData()
+        {
+            // Initialize variables
+            folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
+            masterListFilePath = Path.Combine(folderPath, "InvestorMasterlist.json");
+            repFilePath = Path.Combine(folderPath, "SDHRep.json");
+            investors = new List<Investor>();
+
+            // Load existing investors from file if it exists
+            LoadInvestorsFromFile();
+
+            // Bind investors names to comboRep
+            BindInvestorsToComboBox();
+        }
+
+        private void LoadInvestorsFromFile()
+        {
+            try
+            {
+                if (File.Exists(repFilePath))
+                {
+                    string json = File.ReadAllText(masterListFilePath);
+                    investors = JsonConvert.DeserializeObject<List<Investor>>(json) ?? new List<Investor>();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while loading investors: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BindInvestorsToComboBox()
+        {
+            comboRep.Items.Clear();
+            foreach (var investor in investors)
+            {
+                comboRep.Items.Add(investor.Name);
+            }
+        }
+
+        private void DisplayInvestorDetails(int index)
+        {
+            if (index >= 0 && index < investors.Count)
+            {
+                textBoxName.Text = investors[index].Name; // Display the investor's name
+                textBoxVotes.Text = investors[index].Votes.ToString(); // Display votes
+                textBoxShares.Text = investors[index].Shares.ToString(); // Display shares
+            }
+        }
+
+        private void btnSaveRep_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Get the values from text boxes
+                string repName = textBoxName.Text.Trim();
+                string votesText = textBoxVotes.Text.Trim();
+                string sharesText = textBoxShares.Text.Trim();
+
+                // Validate name
+                if (string.IsNullOrWhiteSpace(repName))
+                {
+                    MessageBox.Show("Please enter a name for the representative.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Validate and parse Votes and Shares
+                if (!int.TryParse(votesText, out int votes))
+                {
+                    MessageBox.Show("Please enter a valid number for Votes.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (!int.TryParse(sharesText, out int shares))
+                {
+                    MessageBox.Show("Please enter a valid number for Shares.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Create a new investor
+                var newInvestor = new Investor
+                {
+                    Name = repName,
+                    Votes = votes,
+                    Shares = shares
+                };
+
+                // Add the new investor to the list in memory
+                investors.Add(newInvestor);
+
+                // Save the new investor to SDHRep.json
+                SaveInvestorsToFile(newInvestor);
+
+                MessageBox.Show("Entry saved successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Clear text boxes for next entry
+                textBoxName.Clear();
+                textBoxVotes.Clear();
+                textBoxShares.Clear();
+                textBoxName.Focus(); // Set focus back to name textbox
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while saving entry: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void SaveInvestorsToFile(Investor newInvestor)
+        {
+            try
+            {
+                Directory.CreateDirectory(folderPath); 
+
+                // Serialize the new investor to JSON
+                string json = JsonConvert.SerializeObject(newInvestor);
+
+                // Append the serialized JSON to SDHRep.json
+                File.AppendAllText(repFilePath, json + Environment.NewLine);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while saving investor data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
@@ -24,40 +158,15 @@ namespace SDH_Voting
             this.Close();
         }
 
-        private void btnSaveRep_Click(object sender, EventArgs e)
+        private void comboRep_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Get the representative's name from the textbox
-            string repName = textBoxRepName.Text.Trim();
+            // Get the selected investor's index
+            int selectedIndex = comboRep.SelectedIndex;
 
-            // Validate the input
-            if (string.IsNullOrEmpty(repName))
-            {
-                MessageBox.Show("Representative name cannot be empty.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            // Load existing representatives from the JSON file
-            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
-            string filePath = Path.Combine(folderPath, "SDHRep.json");
-            List<Representative> representatives = new List<Representative>();
-
-            if (File.Exists(filePath))
-            {
-                string json = File.ReadAllText(filePath);
-                representatives = JsonConvert.DeserializeObject<List<Representative>>(json) ?? new List<Representative>();
-            }
-
-            // Add the new representative to the list
-            representatives.Add(new Representative { Name = repName });
-
-            // Save the updated list back to the JSON file
-            string updatedJson = JsonConvert.SerializeObject(representatives, Formatting.Indented);
-            File.WriteAllText(filePath, updatedJson);
-
-            // Notify the user and close the form
-            MessageBox.Show("Representative saved successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
+            // Display details for the selected investor
+            DisplayInvestorDetails(selectedIndex);
         }
-    }
 
+      
+    }
 }

@@ -436,6 +436,8 @@ namespace SDH_Voting
     public class Representative
     {
         public string Name { get; set; }
+        public int Votes { get; set; } 
+        public int Shares { get; set; }
     }
 
     public class VoteSelectedData

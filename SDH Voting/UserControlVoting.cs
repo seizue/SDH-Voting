@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using SDH_Voting;
 using System;
 using System.Collections.Generic;
@@ -92,38 +93,55 @@ namespace SDH_Voting
                     DialogResult result = MessageBox.Show("Are you sure you want to void this representative?", "Confirm Void", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
-                        // Get the representative name from the selected row
-                        string representativeName = dataGridViewRepresentative.Rows[selectedIndex].Cells["Representative"].Value.ToString(); 
-
-                        // Remove the selected row from the DataGridView
-                        dataGridViewRepresentative.Rows.RemoveAt(selectedIndex);
-
-                        // Load the existing representatives from the JSON file
-                        string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
-                        string filePath = Path.Combine(folderPath, "SDHRep.json");
-                        List<Representative> representatives = new List<Representative>();
-
-                        if (File.Exists(filePath))
+                        try
                         {
-                            string json = File.ReadAllText(filePath);
-                            representatives = JsonConvert.DeserializeObject<List<Representative>>(json) ?? new List<Representative>();
+                            // Get the representative name from the selected row
+                            string representativeName = dataGridViewRepresentative.Rows[selectedIndex].Cells["Representative"].Value.ToString();
+
+                            // Remove the selected row from the DataGridView
+                            dataGridViewRepresentative.Rows.RemoveAt(selectedIndex);
+
+                            // Load the existing representatives from the JSON file
+                            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
+                            string filePath = Path.Combine(folderPath, "SDHRep.json");
+
+                            if (File.Exists(filePath))
+                            {
+                                // Read all lines from the file
+                                string[] jsonLines = File.ReadAllLines(filePath);
+
+                                // Create a list to hold the updated JSON lines
+                                List<string> updatedJsonLines = new List<string>();
+
+                                foreach (var line in jsonLines)
+                                {
+                                    // Deserialize each line into a JObject
+                                    JObject jsonRep = JObject.Parse(line);
+
+                                    // Check if the representative's name matches the one to be removed
+                                    if (jsonRep["Name"].ToString() != representativeName)
+                                    {
+                                        // Add the line back to the updated list
+                                        updatedJsonLines.Add(line);
+                                    }
+                                }
+
+                                // Write the updated JSON lines back to the file
+                                File.WriteAllLines(filePath, updatedJsonLines);
+
+                                MessageBox.Show("Representative voided successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                // Reload the representatives in DataGridView
+                                LoadRepresentatives();
+                            }
+                            else
+                            {
+                                MessageBox.Show("SDHRep.json file not found.", "File Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
                         }
-
-                        // Find and remove the representative from the list
-                        Representative representativeToRemove = representatives.FirstOrDefault(r => r.Name == representativeName);
-                        if (representativeToRemove != null)
+                        catch (Exception ex)
                         {
-                            representatives.Remove(representativeToRemove);
-
-                            // Save the updated list to the JSON file
-                            string updatedJson = JsonConvert.SerializeObject(representatives, Formatting.Indented);
-                            File.WriteAllText(filePath, updatedJson);
-
-                            MessageBox.Show("Representative voided successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Representative not found in the list.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show($"An error occurred while voiding representative: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
@@ -139,6 +157,7 @@ namespace SDH_Voting
         }
 
 
+
         private void btn_AddRepresentative_Click(object sender, EventArgs e)
         {
             AddRepForm addRepForm = new AddRepForm();
@@ -150,30 +169,55 @@ namespace SDH_Voting
         {
             string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
             string filePath = Path.Combine(folderPath, "SDHRep.json");
-            List<Representative> representatives = new List<Representative>();
 
-            if (File.Exists(filePath))
+            try
             {
-                string json = File.ReadAllText(filePath);
-                representatives = JsonConvert.DeserializeObject<List<Representative>>(json) ?? new List<Representative>();
+                List<Representative> representatives = new List<Representative>();
+
+                if (File.Exists(filePath))
+                {
+                    // Read all lines from the file
+                    string[] jsonLines = File.ReadAllLines(filePath);
+
+                    foreach (var line in jsonLines)
+                    {
+                        // Deserialize each line into a Representative object
+                        Representative rep = JsonConvert.DeserializeObject<Representative>(line);
+                        if (rep != null)
+                        {
+                            representatives.Add(rep);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("SDHRep.json file not found.", "File Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                // Clear the existing rows before populating
+                dataGridViewRepresentative.Rows.Clear();
+
+                // Add representatives to the DataGridView
+                foreach (var rep in representatives)
+                {
+                    int id = dataGridViewRepresentative.Rows.Add(); // Auto-generated ID
+                    dataGridViewRepresentative.Rows[id].Cells["Representative"].Value = rep.Name; // Load Name into Representative column
+                    dataGridViewRepresentative.Rows[id].Cells["TotalVotes"].Value = rep.Votes; // Load Votes into TotalVotes column
+                }
+
+                // Set row heights
+                foreach (DataGridViewRow row in dataGridViewRepresentative.Rows)
+                {
+                    row.Height = 30;
+                }
             }
-
-            // Clear the existing rows
-            dataGridViewRepresentative.Rows.Clear();
-
-            // Auto-generate IDs and add representatives to the DataGridView
-            for (int i = 0; i < representatives.Count; i++)
+            catch (Exception ex)
             {
-                int id = i + 1; // Auto-generate ID starting from 1
-                dataGridViewRepresentative.Rows.Add(id, representatives[i].Name, "", "", ""); // Add representative name to the correct column
-            }
-
-
-            foreach (DataGridViewRow row in dataGridViewRepresentative.Rows)
-            {
-                row.Height = 30;
+                MessageBox.Show($"Error loading representatives: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
 
         private void dataGridViewRepresentative_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
