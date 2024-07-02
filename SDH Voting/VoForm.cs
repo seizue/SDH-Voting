@@ -145,5 +145,10 @@ namespace SDH_Voting
         {
             this.Close();
         }
+
+        private void btnSaveVoters_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

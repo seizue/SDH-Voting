@@ -108,6 +108,7 @@ namespace SDH_Voting
                     Name = name,
                     Shares = shares,
                     Votes = votes,
+                    Status = "No" // Set the status to "No" for new investors
                 };
 
                 // Load existing data
@@ -150,6 +151,7 @@ namespace SDH_Voting
                 Console.WriteLine(ex.ToString()); // For detailed debugging information
             }
         }
+
 
         private void btnExit_Click(object sender, EventArgs e)
         {

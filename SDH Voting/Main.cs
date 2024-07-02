@@ -48,7 +48,8 @@ namespace SDH_Voting
                 Id = i.Id,
                 Name = i.Name,
                 Votes = i.Votes,
-                Shares = i.Shares
+                Shares = i.Shares,
+                Status = i.Status,
             }).ToList();
 
             UpdateDataGridView(originalInvestorList);
@@ -98,12 +99,21 @@ namespace SDH_Voting
             };
             InventoryDataGrid.Columns.Add(sharesColumn);
 
+            // Add the new VtrStatus column
+            DataGridViewTextBoxColumn statusColumn = new DataGridViewTextBoxColumn
+            {
+                HeaderText = "Status",
+                DataPropertyName = "VtrStatus"
+            };
+            InventoryDataGrid.Columns.Add(statusColumn);
+
             // Add rows
             foreach (var investor in investors)
             {
-                InventoryDataGrid.Rows.Add(investor.Id, investor.Name, investor.Votes, investor.Shares);
+                InventoryDataGrid.Rows.Add(investor.Id, investor.Name, investor.Votes, investor.Shares, investor.Status);
             }
         }
+
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
@@ -411,6 +421,7 @@ namespace SDH_Voting
         public string Name { get; set; }
         public int Shares { get; set; }
         public int Votes { get; set; }
+        public string Status { get; set; } 
     }
 
     public class InvestorViewModel
@@ -419,6 +430,7 @@ namespace SDH_Voting
         public string Name { get; set; }
         public int Shares { get; set; }
         public int Votes { get; set; }
+        public string Status { get; set; }
     }
 
     public class Representative

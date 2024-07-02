@@ -179,6 +179,7 @@
             this.btnSaveVoters.TabIndex = 482;
             this.btnSaveVoters.Text = "SAVE CHANGES";
             this.btnSaveVoters.UseVisualStyleBackColor = false;
+            this.btnSaveVoters.Click += new System.EventHandler(this.btnSaveVoters_Click);
             // 
             // label9
             // 
