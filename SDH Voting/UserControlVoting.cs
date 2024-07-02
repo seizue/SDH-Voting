@@ -21,9 +21,61 @@ namespace SDH_Voting
 
         private void btn_UpdateRep_Click(object sender, EventArgs e)
         {
-            UpdateRepForm updateRepForm = new UpdateRepForm();
-            updateRepForm.ShowDialog();
+            if (dataGridViewRepresentative.SelectedRows.Count > 0)
+            {
+                int selectedIndex = dataGridViewRepresentative.SelectedRows[0].Index;
+                if (selectedIndex >= 0 && selectedIndex < dataGridViewRepresentative.Rows.Count)
+                {
+                    string representativeName = dataGridViewRepresentative.Rows[selectedIndex].Cells["Representative"].Value.ToString();
+
+                    UpdateRepForm updateRepForm = new UpdateRepForm(representativeName);
+                    if (updateRepForm.ShowDialog() == DialogResult.OK)
+                    {
+                        // Save the updated representative data
+                        string updatedName = updateRepForm.RepName;
+
+                        // Load the existing representatives from the JSON file
+                        string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
+                        string filePath = Path.Combine(folderPath, "SDHRep.json");
+                        List<Representative> representatives = new List<Representative>();
+
+                        if (File.Exists(filePath))
+                        {
+                            string json = File.ReadAllText(filePath);
+                            representatives = JsonConvert.DeserializeObject<List<Representative>>(json) ?? new List<Representative>();
+                        }
+
+                        // Find and update the representative in the list
+                        Representative representativeToUpdate = representatives.FirstOrDefault(r => r.Name == representativeName);
+                        if (representativeToUpdate != null)
+                        {
+                            representativeToUpdate.Name = updatedName;
+
+                            // Save the updated list to the JSON file
+                            string updatedJson = JsonConvert.SerializeObject(representatives, Formatting.Indented);
+                            File.WriteAllText(filePath, updatedJson);
+
+                            // Refresh the DataGridView
+                            LoadRepresentatives();
+                            MessageBox.Show("Representative updated successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Representative not found in the list.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Selected row index is out of bounds.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to update.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
+
 
         private void btn_VoidRep_Click(object sender, EventArgs e)
         {

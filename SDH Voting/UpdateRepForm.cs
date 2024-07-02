@@ -12,9 +12,12 @@ namespace SDH_Voting
 {
     public partial class UpdateRepForm : Form
     {
-        public UpdateRepForm()
+        public string RepName { get; private set; }
+
+        public UpdateRepForm(string currentRepName)
         {
             InitializeComponent();
+            textBoxRepName.Text = currentRepName;
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
@@ -24,7 +27,9 @@ namespace SDH_Voting
 
         private void button_SaveUpdate_Click(object sender, EventArgs e)
         {
-
+            RepName = textBoxRepName.Text;
+            DialogResult = DialogResult.OK;
+            this.Close();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

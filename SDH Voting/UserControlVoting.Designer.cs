@@ -40,6 +40,11 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
             this.dataGridViewRepresentative = new MetroFramework.Controls.MetroGrid();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Representative = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalVotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.No_PV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.View = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.metroPanel11 = new MetroFramework.Controls.MetroPanel();
             this.metroPanel17 = new MetroFramework.Controls.MetroPanel();
@@ -56,11 +61,6 @@
             this.btn_VoidRep = new System.Windows.Forms.Button();
             this.button_Export = new System.Windows.Forms.Button();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Representative = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalVotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.No_PV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.View = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panelGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRepresentative)).BeginInit();
             this.SuspendLayout();
@@ -148,6 +148,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewRepresentative.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewRepresentative.ColumnHeadersHeight = 48;
+            this.dataGridViewRepresentative.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewRepresentative.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.Representative,
@@ -191,6 +192,36 @@
             this.dataGridViewRepresentative.UseCustomForeColor = true;
             this.dataGridViewRepresentative.UseStyleColors = true;
             this.dataGridViewRepresentative.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewRepresentative_CellFormatting);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // Representative
+            // 
+            this.Representative.HeaderText = "Representative";
+            this.Representative.Name = "Representative";
+            // 
+            // TotalVotes
+            // 
+            this.TotalVotes.HeaderText = "Total Votes";
+            this.TotalVotes.Name = "TotalVotes";
+            // 
+            // No_PV
+            // 
+            this.No_PV.HeaderText = "No. PV";
+            this.No_PV.Name = "No_PV";
+            // 
+            // View
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
+            this.View.DefaultCellStyle = dataGridViewCellStyle3;
+            this.View.HeaderText = "View PV";
+            this.View.Name = "View";
+            this.View.Text = "View";
+            this.View.UseColumnTextForButtonValue = true;
             // 
             // panel2
             // 
@@ -484,36 +515,6 @@
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // Representative
-            // 
-            this.Representative.HeaderText = "Representative";
-            this.Representative.Name = "Representative";
-            // 
-            // TotalVotes
-            // 
-            this.TotalVotes.HeaderText = "Total Votes";
-            this.TotalVotes.Name = "TotalVotes";
-            // 
-            // No_PV
-            // 
-            this.No_PV.HeaderText = "No. PV";
-            this.No_PV.Name = "No_PV";
-            // 
-            // View
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
-            this.View.DefaultCellStyle = dataGridViewCellStyle3;
-            this.View.HeaderText = "View PV";
-            this.View.Name = "View";
-            this.View.Text = "View";
-            this.View.UseColumnTextForButtonValue = true;
             // 
             // UserControlVoting
             // 
