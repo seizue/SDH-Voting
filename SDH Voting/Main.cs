@@ -7,6 +7,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Diagnostics;
+
 
 namespace SDH_Voting
 {
@@ -21,8 +23,81 @@ namespace SDH_Voting
         public Main()
         {
             InitializeComponent();
+            InitializeApplicationData();
             txtBoxSearch.TextChanged += txtBoxSearch_TextChanged;
         }
+
+        private void InitializeApplicationData()
+        {
+            try
+            {
+                string appDataRoamingFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+                string folderPath = Path.Combine(appDataRoamingFolder, "SDH Voting");
+
+                Debug.WriteLine($"Application Data Roaming Folder: {appDataRoamingFolder}");
+                Debug.WriteLine($"Target Folder Path: {folderPath}");
+
+                // Create the folder if it does not exist
+                if (!Directory.Exists(folderPath))
+                {
+                    try
+                    {
+                        Directory.CreateDirectory(folderPath);
+                        Debug.WriteLine($"Created folder: {folderPath}");
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.WriteLine($"Error creating folder: {ex.Message}");
+                        MessageBox.Show($"Error creating folder: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return; // Exit method if folder creation fails
+                    }
+                }
+                else
+                {
+                    Debug.WriteLine($"Folder already exists: {folderPath}");
+                }
+
+                // Check if InvestorMasterlist.json exists, create if not
+                string filePath = Path.Combine(folderPath, "InvestorMasterlist.json");
+                if (!File.Exists(filePath))
+                {
+                    try
+                    {
+                        File.WriteAllText(filePath, "[]"); // Initialize with an empty array if file doesn't exist
+                        Debug.WriteLine($"Created file: {filePath}");
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.WriteLine($"Error creating InvestorMasterlist.json: {ex.Message}");
+                        MessageBox.Show($"Error creating InvestorMasterlist.json: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return; // Exit method if file creation fails
+                    }
+                }
+
+                // Check if SDHRep.Json exists, create if not
+                string sdhRepFilePath = Path.Combine(folderPath, "SDHRep.json");
+                if (!File.Exists(sdhRepFilePath))
+                {
+                    try
+                    {
+                        File.WriteAllText(sdhRepFilePath, "{}"); // Initialize with an empty object if file doesn't exist
+                        Debug.WriteLine($"Created file: {sdhRepFilePath}");
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.WriteLine($"Error creating SDHRep.json: {ex.Message}");
+                        MessageBox.Show($"Error creating SDHRep.json: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return; // Exit method if file creation fails
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error in InitializeApplicationData(): {ex.Message}");
+                MessageBox.Show($"An error occurred while initializing application data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
         private void LoadData()
         {

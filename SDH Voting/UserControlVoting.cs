@@ -16,8 +16,7 @@ namespace SDH_Voting
 
         public UserControlVoting()
         {
-            InitializeComponent();
-            LoadRepresentatives(); 
+            InitializeComponent();      
         }
 
         private void btn_UpdateRep_Click(object sender, EventArgs e)
@@ -156,8 +155,6 @@ namespace SDH_Voting
             }
         }
 
-
-
         private void btn_AddRepresentative_Click(object sender, EventArgs e)
         {
             AddRepForm addRepForm = new AddRepForm();
@@ -188,11 +185,7 @@ namespace SDH_Voting
                             representatives.Add(rep);
                         }
                     }
-                }
-                else
-                {
-                    MessageBox.Show("SDHRep.json file not found.", "File Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                }          
 
                 // Clear the existing rows before populating
                 dataGridViewRepresentative.Rows.Clear();
@@ -312,6 +305,11 @@ namespace SDH_Voting
         private void btnExpandGrid_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void UserControlVoting_Load(object sender, EventArgs e)
+        {
+            LoadRepresentatives();
         }
     }
   
