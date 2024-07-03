@@ -28,26 +28,40 @@ namespace SDH_Voting
             txtBoxSH.Text = sdhStockHolder;
         }
 
-
         private void LoadRepresentatives()
         {
             string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
             string filePath = Path.Combine(folderPath, "SDHRep.json");
             List<Representative> representatives = new List<Representative>();
 
-            if (File.Exists(filePath))
+            try
             {
-                string json = File.ReadAllText(filePath);
-                representatives = JsonConvert.DeserializeObject<List<Representative>>(json) ?? new List<Representative>();
-            }
+                if (File.Exists(filePath))
+                {
+                    // Read all lines from the file
+                    string[] jsonLines = File.ReadAllLines(filePath);
 
-            // Populate the ComboBox with the representatives
-            comboRep.Items.Clear(); // Clear any existing items
-            foreach (var rep in representatives)
+                    foreach (string json in jsonLines)
+                    {
+                        // Deserialize each JSON line into a Representative object
+                        Representative rep = JsonConvert.DeserializeObject<Representative>(json);
+                        representatives.Add(rep);
+                    }
+
+                    // Populate the ComboBox with the representatives' names
+                    comboRep.Items.Clear(); // Clear any existing items
+                    foreach (var rep in representatives)
+                    {
+                        comboRep.Items.Add(rep.Name);
+                    }
+                }
+            }
+            catch (Exception ex)
             {
-                comboRep.Items.Add(rep.Name); 
+                MessageBox.Show($"Error loading representatives: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void LoadData()
         {
