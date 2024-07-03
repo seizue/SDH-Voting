@@ -34,7 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panelGrid = new System.Windows.Forms.Panel();
+            this.panelUserGrid = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -61,24 +61,24 @@
             this.btn_VoidRep = new System.Windows.Forms.Button();
             this.button_Export = new System.Windows.Forms.Button();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.panelGrid.SuspendLayout();
+            this.panelUserGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRepresentative)).BeginInit();
             this.SuspendLayout();
             // 
-            // panelGrid
+            // panelUserGrid
             // 
-            this.panelGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panelUserGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelGrid.Controls.Add(this.panel11);
-            this.panelGrid.Controls.Add(this.panel10);
-            this.panelGrid.Controls.Add(this.panel9);
-            this.panelGrid.Controls.Add(this.panel24);
-            this.panelGrid.Controls.Add(this.dataGridViewRepresentative);
-            this.panelGrid.Location = new System.Drawing.Point(1, 70);
-            this.panelGrid.Name = "panelGrid";
-            this.panelGrid.Size = new System.Drawing.Size(887, 318);
-            this.panelGrid.TabIndex = 444;
+            this.panelUserGrid.Controls.Add(this.panel11);
+            this.panelUserGrid.Controls.Add(this.panel10);
+            this.panelUserGrid.Controls.Add(this.panel9);
+            this.panelUserGrid.Controls.Add(this.panel24);
+            this.panelUserGrid.Controls.Add(this.dataGridViewRepresentative);
+            this.panelUserGrid.Location = new System.Drawing.Point(1, 70);
+            this.panelUserGrid.Name = "panelUserGrid";
+            this.panelUserGrid.Size = new System.Drawing.Size(887, 318);
+            this.panelUserGrid.TabIndex = 444;
             // 
             // panel11
             // 
@@ -131,9 +131,6 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.dataGridViewRepresentative.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewRepresentative.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewRepresentative.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewRepresentative.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
             this.dataGridViewRepresentative.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -163,6 +160,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewRepresentative.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewRepresentative.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewRepresentative.EnableHeadersVisualStyles = false;
             this.dataGridViewRepresentative.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dataGridViewRepresentative.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -526,6 +524,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.panelUserGrid);
             this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.metroPanel1);
@@ -537,7 +536,6 @@
             this.Controls.Add(this.metroPanel17);
             this.Controls.Add(this.metroPanel16);
             this.Controls.Add(this.btnVote);
-            this.Controls.Add(this.panelGrid);
             this.Controls.Add(this.btn_AddRepresentative);
             this.Controls.Add(this.btn_UpdateRep);
             this.Controls.Add(this.btn_VoidRep);
@@ -546,14 +544,14 @@
             this.Name = "UserControlVoting";
             this.Size = new System.Drawing.Size(893, 391);
             this.Load += new System.EventHandler(this.UserControlVoting_Load);
-            this.panelGrid.ResumeLayout(false);
+            this.panelUserGrid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRepresentative)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panelGrid;
+        private System.Windows.Forms.Panel panelUserGrid;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;

@@ -305,7 +305,16 @@ namespace SDH_Voting
 
         private void btnExpandGrid_Click(object sender, EventArgs e)
         {
+            panelUserGrid.Dock = DockStyle.Fill;
+            dataGridViewRepresentative.Dock = DockStyle.Fill;
+        }
 
+        public void RestorGridView()
+        {         
+            panelUserGrid.Anchor = AnchorStyles.Top;
+            panelUserGrid.Anchor = AnchorStyles.Left;
+            panelUserGrid.Anchor = AnchorStyles.Right;
+            panelUserGrid.Anchor = AnchorStyles.Bottom;
         }
 
         private void UserControlVoting_Load(object sender, EventArgs e)

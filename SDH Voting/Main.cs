@@ -500,6 +500,11 @@ namespace SDH_Voting
             btnInvMasterlist.BackColor = Color.FromArgb(126, 162, 143);
             btnInvMasterlist.ForeColor = Color.FromArgb(30, 58, 42);
         }
+
+        private void btnCloseFP_Click(object sender, EventArgs e)
+        {
+            userControlVoting1.RestorGridView();
+        }
     }
 
 
