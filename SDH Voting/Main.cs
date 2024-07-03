@@ -80,14 +80,28 @@ namespace SDH_Voting
                 {
                     try
                     {
-                        File.WriteAllText(sdhRepFilePath, "{}"); // Initialize with an empty object if file doesn't exist
-                        Debug.WriteLine($"Created file: {sdhRepFilePath}");
+                        // Create an empty file (without any content)
+                        using (FileStream fs = File.Create(sdhRepFilePath))
+                        {
+                            Debug.WriteLine($"Created empty file: {sdhRepFilePath}");
+                        }
                     }
                     catch (Exception ex)
                     {
                         Debug.WriteLine($"Error creating SDHRep.json: {ex.Message}");
                         MessageBox.Show($"Error creating SDHRep.json: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return; // Exit method if file creation fails
+                    }
+                }
+                else
+                {
+                    // If the file exists but is not empty, handle it if necessary
+                    string jsonContent = File.ReadAllText(sdhRepFilePath);
+                    if (jsonContent.Trim() != "")
+                    {
+                        // Handle the case where the file is not empty as needed
+                        // (Optional: You can decide how to handle this case based on your application's requirements)
+                        Debug.WriteLine($"SDHRep.json exists and is not empty. Content: {jsonContent}");
                     }
                 }
             }
