@@ -14,6 +14,11 @@ namespace SDH_Voting
 {
     public partial class SDHVoForm : Form
     {
+
+        private bool isDragging = false;
+        private Point lastCursor;
+        private Point lastForm;
+
         private string selectedInvestorId;
 
         public SDHVoForm(string sdhStockHolder)
@@ -214,6 +219,28 @@ namespace SDH_Voting
             {
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void panelNav_MouseDown(object sender, MouseEventArgs e)
+        {
+            isDragging = true;
+            lastCursor = Cursor.Position;
+            lastForm = this.Location;
+        }
+
+        private void panelNav_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                int deltaX = Cursor.Position.X - lastCursor.X;
+                int deltaY = Cursor.Position.Y - lastCursor.Y;
+                this.Location = new Point(lastForm.X + deltaX, lastForm.Y + deltaY);
+            }
+        }
+
+        private void panelNav_MouseUp(object sender, MouseEventArgs e)
+        {
+            isDragging = false;
         }
     }
 
