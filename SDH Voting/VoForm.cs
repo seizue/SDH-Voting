@@ -103,8 +103,6 @@ namespace SDH_Voting
                 SelectionVotersGrid.Columns["vtrStatus"].DataPropertyName = "Status";
         }
 
-
-
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -163,7 +161,6 @@ namespace SDH_Voting
             // Store the selected investor's ID
             selectedInvestorId = data.InvestorId;
         }
-
 
         private void SDHVoForm_FormClosed(object sender, FormClosedEventArgs e)
         {

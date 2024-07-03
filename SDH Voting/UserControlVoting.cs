@@ -76,7 +76,6 @@ namespace SDH_Voting
             }
         }
 
-
         private void btn_VoidRep_Click(object sender, EventArgs e)
         {
             // Check if a row is selected

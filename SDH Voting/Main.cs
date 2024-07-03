@@ -100,7 +100,6 @@ namespace SDH_Voting
                     if (jsonContent.Trim() != "")
                     {
                         // Handle the case where the file is not empty as needed
-                        // (Optional: You can decide how to handle this case based on your application's requirements)
                         Debug.WriteLine($"SDHRep.json exists and is not empty. Content: {jsonContent}");
                     }
                 }

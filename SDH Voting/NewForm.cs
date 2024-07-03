@@ -72,7 +72,6 @@ namespace SDH_Voting
             this.Close();
         }
 
-
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
@@ -100,7 +99,7 @@ namespace SDH_Voting
                     return;
                 }
 
-                // Create a new investor object with a unique ID (format: A123-B2A)
+                // Create a new investor object with a unique ID 
                 string generatedId = GenerateId();
                 Investor newInvestor = new Investor
                 {
@@ -151,7 +150,6 @@ namespace SDH_Voting
                 Console.WriteLine(ex.ToString()); // For detailed debugging information
             }
         }
-
 
         private void btnExit_Click(object sender, EventArgs e)
         {
