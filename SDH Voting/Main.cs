@@ -504,6 +504,13 @@ namespace SDH_Voting
         private void btnCloseFP_Click(object sender, EventArgs e)
         {
             userControlVoting1.RestorGridView();
+            btnCloseFP.Visible = false;
+        }
+
+        // Method to make btnCloseFP visible
+        public void ShowCloseButton()
+        {
+            btnCloseFP.Visible = true;
         }
     }
 

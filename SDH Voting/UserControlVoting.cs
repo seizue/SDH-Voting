@@ -308,6 +308,12 @@ namespace SDH_Voting
             panelMenu.Visible = false;
             panelUserGrid.Dock = DockStyle.Fill;
             dataGridViewRepresentative.Dock = DockStyle.Fill;
+            
+            Main mainForm = this.FindForm() as Main;
+            if (mainForm != null)
+            {
+                mainForm.ShowCloseButton();
+            }
         }
 
         public void RestorGridView()

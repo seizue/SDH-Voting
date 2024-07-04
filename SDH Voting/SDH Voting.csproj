@@ -273,5 +273,20 @@
   <ItemGroup>
     <None Include="Resources\combo_chart_24px11.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restore_window_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restore_window_24px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restore_window_24px2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restore_window_24px3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restore_window_24px4.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
