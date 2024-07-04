@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelNav = new System.Windows.Forms.Panel();
+            this.btnCloseFP = new System.Windows.Forms.Button();
             this.buttonMinimize = new System.Windows.Forms.Button();
             this.buttonMaximize = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
@@ -69,7 +70,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.userControlVoting1 = new SDH_Voting.UserControlVoting();
-            this.btnCloseFP = new System.Windows.Forms.Button();
             this.panelNav.SuspendLayout();
             this.panelGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryDataGrid)).BeginInit();
@@ -91,6 +91,19 @@
             this.panelNav.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseDown);
             this.panelNav.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseMove);
             this.panelNav.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseUp);
+            // 
+            // btnCloseFP
+            // 
+            this.btnCloseFP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCloseFP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnCloseFP.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.btnCloseFP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseFP.Location = new System.Drawing.Point(11, 7);
+            this.btnCloseFP.Name = "btnCloseFP";
+            this.btnCloseFP.Size = new System.Drawing.Size(14, 14);
+            this.btnCloseFP.TabIndex = 7;
+            this.btnCloseFP.UseVisualStyleBackColor = false;
+            this.btnCloseFP.Click += new System.EventHandler(this.btnCloseFP_Click);
             // 
             // buttonMinimize
             // 
@@ -610,19 +623,6 @@
             this.userControlVoting1.Name = "userControlVoting1";
             this.userControlVoting1.Size = new System.Drawing.Size(893, 382);
             this.userControlVoting1.TabIndex = 437;
-            // 
-            // btnCloseFP
-            // 
-            this.btnCloseFP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCloseFP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnCloseFP.FlatAppearance.BorderColor = System.Drawing.Color.Green;
-            this.btnCloseFP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseFP.Location = new System.Drawing.Point(448, 7);
-            this.btnCloseFP.Name = "btnCloseFP";
-            this.btnCloseFP.Size = new System.Drawing.Size(14, 14);
-            this.btnCloseFP.TabIndex = 7;
-            this.btnCloseFP.UseVisualStyleBackColor = false;
-            this.btnCloseFP.Click += new System.EventHandler(this.btnCloseFP_Click);
             // 
             // Main
             // 

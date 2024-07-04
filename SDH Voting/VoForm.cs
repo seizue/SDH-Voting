@@ -169,6 +169,11 @@ namespace SDH_Voting
 
         private void btnSaveVoters_Click(object sender, EventArgs e)
         {
+            SaveRepVoter();
+        }
+
+        public void SaveRepVoter()
+        {
             if (string.IsNullOrEmpty(selectedInvestorId))
             {
                 MessageBox.Show("No investor selected.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -222,15 +227,16 @@ namespace SDH_Voting
                 // Reload the data to reflect changes in the DataGridView
                 LoadData();
 
-                // Display success message and close the form
-                MessageBox.Show("Status updated to 'YES' for the selected investor.\nVote selected data saved to SDH_VoteSelected.json.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Close the form 
                 this.Close();
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void panelNav_MouseDown(object sender, MouseEventArgs e)
         {

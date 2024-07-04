@@ -531,6 +531,8 @@ namespace SDH_Voting
         public string Name { get; set; }
         public int Votes { get; set; } 
         public int Shares { get; set; }
+        public string SHVoter { get ; set; }
+        public int SHVotes { get; set; }
     }
 
     public class VoteSelectedData
