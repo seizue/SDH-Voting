@@ -147,6 +147,28 @@ namespace SDH_Voting
             }
         }
 
+        private void SaveDataToSHList()
+        {
+            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
+            string filePath = Path.Combine(folderPath, "InvestorMasterlist.json");
+            string shListFilePath = Path.Combine(folderPath, "SDH_SHList.json");
+
+            if (File.Exists(filePath))
+            {
+                string json = File.ReadAllText(filePath);
+                List<Investor> investors = JsonConvert.DeserializeObject<List<Investor>>(json) ?? new List<Investor>();
+
+                // Serialize and save to SDH_SHList.json
+                string shListJson = JsonConvert.SerializeObject(investors, Formatting.Indented);
+                File.WriteAllText(shListFilePath, shListJson);
+            }
+            else
+            {
+                MessageBox.Show("InvestorMasterlist.json file not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
         private void UpdateDataGridView(List<InvestorViewModel> investors)
         {
             // Clear the existing rows and columns
@@ -255,6 +277,7 @@ namespace SDH_Voting
             NewForm newForm = new NewForm();
             newForm.ShowDialog();
             LoadData();
+            SaveDataToSHList();
         }
 
         private void button_UpdateUser_Click(object sender, EventArgs e)
@@ -289,6 +312,7 @@ namespace SDH_Voting
                                     UpdateForm updateForm = new UpdateForm(selectedInvestor);
                                     updateForm.ShowDialog();
                                     LoadData(); // Refresh the data grid after closing the update form
+                                    SaveDataToSHList();
                                 }
                                 else
                                 {
@@ -359,6 +383,7 @@ namespace SDH_Voting
 
                                 // Refresh the DataGridView
                                 LoadData();
+                                SaveDataToSHList();
                             }
                             else
                             {
@@ -538,8 +563,7 @@ namespace SDH_Voting
         public string Name { get; set; }
         public int Votes { get; set; } 
         public int Shares { get; set; }
-        public string SHVoter { get ; set; }
-        public int SHVotes { get; set; }
+     
     }
 
     public class VoteSelectedData

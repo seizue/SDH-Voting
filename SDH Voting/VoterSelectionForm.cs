@@ -36,7 +36,7 @@ namespace SDH_Voting
         private void LoadData()
         {
             string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
-            string filePath = Path.Combine(folderPath, "InvestorMasterlist.json");
+            string filePath = Path.Combine(folderPath, "SDH_SHList.json");
             List<Investor> investors = new List<Investor>();
 
             if (File.Exists(filePath))

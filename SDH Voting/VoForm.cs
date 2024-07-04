@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -66,7 +67,7 @@ namespace SDH_Voting
         private void LoadData()
         {
             string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
-            string filePath = Path.Combine(folderPath, "InvestorMasterlist.json");
+            string filePath = Path.Combine(folderPath, "SDH_SHList.json");
             List<Investor> investors = new List<Investor>();
 
             if (File.Exists(filePath))
@@ -183,13 +184,28 @@ namespace SDH_Voting
             try
             {
                 string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
-                string filePath = Path.Combine(folderPath, "InvestorMasterlist.json");
-                List<Investor> investors = new List<Investor>();
+                string investorFilePath = Path.Combine(folderPath, "InvestorMasterlist.json");
+                string repFilePath = Path.Combine(folderPath, "SDHRep.json");
 
-                if (File.Exists(filePath))
+                List<Investor> investors = new List<Investor>();
+                List<Representative> representatives = new List<Representative>();
+
+                // Load investors from InvestorMasterlist.json
+                if (File.Exists(investorFilePath))
                 {
-                    string json = File.ReadAllText(filePath);
-                    investors = JsonConvert.DeserializeObject<List<Investor>>(json) ?? new List<Investor>();
+                    string investorJson = File.ReadAllText(investorFilePath);
+                    investors = JsonConvert.DeserializeObject<List<Investor>>(investorJson) ?? new List<Investor>();
+                }
+
+                // Load representatives from SDHRep.json
+                if (File.Exists(repFilePath))
+                {
+                    string[] repJsonArray = File.ReadAllLines(repFilePath);
+                    foreach (string repJson in repJsonArray)
+                    {
+                        var representative = JsonConvert.DeserializeObject<Representative>(repJson);
+                        representatives.Add(representative);
+                    }
                 }
 
                 // Update the status of the selected investor to "YES"
@@ -199,9 +215,36 @@ namespace SDH_Voting
                     investor.Status = "YES";
                 }
 
-                // Save the updated data back to the JSON file
-                string updatedJson = JsonConvert.SerializeObject(investors, Formatting.Indented);
-                File.WriteAllText(filePath, updatedJson);
+                // Update the representative's votes and shares
+                var selectedRepName = comboRep.SelectedItem.ToString();
+                var rep = representatives.FirstOrDefault(r => r.Name == selectedRepName);
+                if (rep != null)
+                {
+                    var selectedInvestorVotes = investors.FirstOrDefault(i => i.Id == selectedInvestorId)?.Votes ?? 0;
+                    rep.Votes += selectedInvestorVotes;
+                    rep.Shares += selectedInvestorVotes; // Update Shares to be equivalent to Votes
+                }
+
+                // Save the updated investors back to InvestorMasterlist.json
+                string updatedInvestorJson = JsonConvert.SerializeObject(investors, Formatting.Indented);
+                File.WriteAllText(investorFilePath, updatedInvestorJson);
+
+                // Save the updated representatives back to SDHRep.json in original format
+                List<string> updatedRepJsonLines = new List<string>();
+                foreach (var representative in representatives)
+                {
+                    // Serialize excluding null values and SHVotes property
+                    string repJsonLine = JsonConvert.SerializeObject(representative, new JsonSerializerSettings
+                    {
+                        NullValueHandling = NullValueHandling.Ignore, // Ignore null values
+                        ContractResolver = new DefaultContractResolver
+                        {
+                            IgnoreSerializableAttribute = true
+                        }
+                    });
+                    updatedRepJsonLines.Add(repJsonLine);
+                }
+                File.WriteAllLines(repFilePath, updatedRepJsonLines);
 
                 // Save selected data to SDH_VoteSelected.json
                 string voteSelectedFilePath = Path.Combine(folderPath, "SDH_VoteSelected.json");
@@ -226,6 +269,7 @@ namespace SDH_Voting
 
                 // Reload the data to reflect changes in the DataGridView
                 LoadData();
+                LoadRepresentatives();
 
                 // Close the form 
                 this.Close();
@@ -236,6 +280,7 @@ namespace SDH_Voting
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
 
         private void panelNav_MouseDown(object sender, MouseEventArgs e)

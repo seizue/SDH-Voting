@@ -161,7 +161,7 @@ namespace SDH_Voting
             LoadRepresentatives(); // Reload the representatives after adding a new one
         }
 
-        private void LoadRepresentatives()
+        public void LoadRepresentatives()
         {
             string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
             string filePath = Path.Combine(folderPath, "SDHRep.json");
@@ -212,7 +212,6 @@ namespace SDH_Voting
                 MessageBox.Show($"Error loading representatives: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
 
         private void dataGridViewRepresentative_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
