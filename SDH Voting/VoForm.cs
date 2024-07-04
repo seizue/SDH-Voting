@@ -19,17 +19,20 @@ namespace SDH_Voting
         private bool isDragging = false;
         private Point lastCursor;
         private Point lastForm;
-
+        private UserControlVoting userControlVoting;
         private string selectedInvestorId;
 
         public SDHVoForm(string sdhStockHolder)
         {
             InitializeComponent();
-            LoadRepresentatives();
+            LoadRepresentativesComboRep();
             txtBoxSH.Text = sdhStockHolder;
+
+            userControlVoting = new UserControlVoting();
+            userControlVoting.ReloadData();
         }
 
-        private void LoadRepresentatives()
+        private void LoadRepresentativesComboRep()
         {
             string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
             string filePath = Path.Combine(folderPath, "SDHRep.json");
@@ -55,6 +58,7 @@ namespace SDH_Voting
                     {
                         comboRep.Items.Add(rep.Name);
                     }
+
                 }
             }
             catch (Exception ex)
@@ -166,11 +170,15 @@ namespace SDH_Voting
         private void SDHVoForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Close();
+
         }
 
         private void btnSaveVoters_Click(object sender, EventArgs e)
         {
             SaveRepVoter();
+
+            // Call ReloadData after SaveRepVoter has completed its operations
+            userControlVoting.ReloadData();
         }
 
         public void SaveRepVoter()
@@ -223,6 +231,7 @@ namespace SDH_Voting
                     var selectedInvestorVotes = investors.FirstOrDefault(i => i.Id == selectedInvestorId)?.Votes ?? 0;
                     rep.Votes += selectedInvestorVotes;
                     rep.Shares += selectedInvestorVotes; // Update Shares to be equivalent to Votes
+
                 }
 
                 // Save the updated investors back to InvestorMasterlist.json
@@ -243,42 +252,49 @@ namespace SDH_Voting
                         }
                     });
                     updatedRepJsonLines.Add(repJsonLine);
+
                 }
+            
                 File.WriteAllLines(repFilePath, updatedRepJsonLines);
+                // Reload the data to reflect changes in the DataGridView           
 
+               
                 // Save selected data to SDH_VoteSelected.json
-                string voteSelectedFilePath = Path.Combine(folderPath, "SDH_VoteSelected.json");
-                List<VoteSelectedData> voteSelectedList = new List<VoteSelectedData>();
+                SaveSelectedVoteData(folderPath);
 
-                if (File.Exists(voteSelectedFilePath))
-                {
-                    string voteSelectedJson = File.ReadAllText(voteSelectedFilePath);
-                    voteSelectedList = JsonConvert.DeserializeObject<List<VoteSelectedData>>(voteSelectedJson) ?? new List<VoteSelectedData>();
-                }
+                // Call ReloadData after SaveRepVoter has completed its operations
+                userControlVoting.ReloadData();
 
-                // Add new entry for the selected vote
-                voteSelectedList.Add(new VoteSelectedData
-                {
-                    Representative = comboRep.SelectedItem.ToString(),
-                    StockHolder = txtBoxSH.Text
-                });
-
-                // Save updated vote selected data
-                string updatedVoteSelectedJson = JsonConvert.SerializeObject(voteSelectedList, Formatting.Indented);
-                File.WriteAllText(voteSelectedFilePath, updatedVoteSelectedJson);
-
-                // Reload the data to reflect changes in the DataGridView
-                LoadData();
-                LoadRepresentatives();
-
-                // Close the form 
-                this.Close();
+           
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void SaveSelectedVoteData(string folderPath)
+        {
+            string voteSelectedFilePath = Path.Combine(folderPath, "SDH_VoteSelected.json");
+            List<VoteSelectedData> voteSelectedList = new List<VoteSelectedData>();
+
+            if (File.Exists(voteSelectedFilePath))
+            {
+                string voteSelectedJson = File.ReadAllText(voteSelectedFilePath);
+                voteSelectedList = JsonConvert.DeserializeObject<List<VoteSelectedData>>(voteSelectedJson) ?? new List<VoteSelectedData>();
+            }
+
+            // Add new entry for the selected vote
+            voteSelectedList.Add(new VoteSelectedData
+            {
+                Representative = comboRep.SelectedItem.ToString(),
+                StockHolder = txtBoxSH.Text
+            });
+
+            // Save updated vote selected data
+            string updatedVoteSelectedJson = JsonConvert.SerializeObject(voteSelectedList, Formatting.Indented);
+            File.WriteAllText(voteSelectedFilePath, updatedVoteSelectedJson);
         }
 
 
@@ -304,6 +320,18 @@ namespace SDH_Voting
         {
             isDragging = false;
         }
+
+        private void SDHVoForm_Load(object sender, EventArgs e)
+        {
+            userControlVoting.ReloadData();
+        }
+
+        private void buttonDownload_Click(object sender, EventArgs e)
+        {
+            userControlVoting.ReloadData();
+        }
+
+
     }
 
     

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 
 namespace SDH_Voting
@@ -18,13 +19,14 @@ namespace SDH_Voting
         private Point lastCursor;
         private Point lastForm;
 
-        private List<InvestorViewModel> originalInvestorList; 
+        private List<InvestorViewModel> originalInvestorList;
 
         public Main()
         {
             InitializeComponent();
             InitializeApplicationData();
             txtBoxSearch.TextChanged += txtBoxSearch_TextChanged;
+         
         }
 
         private void InitializeApplicationData()

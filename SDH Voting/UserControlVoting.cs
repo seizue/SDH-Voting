@@ -16,7 +16,8 @@ namespace SDH_Voting
 
         public UserControlVoting()
         {
-            InitializeComponent();      
+            InitializeComponent();
+            ReloadData();
         }
 
         private void btn_UpdateRep_Click(object sender, EventArgs e)
@@ -299,7 +300,12 @@ namespace SDH_Voting
 
         private void button_Refresh_Click(object sender, EventArgs e)
         {
+            ReloadData();
+        }
 
+        public void ReloadData()
+        {
+            LoadRepresentatives();
         }
 
         private void btnExpandGrid_Click(object sender, EventArgs e)
