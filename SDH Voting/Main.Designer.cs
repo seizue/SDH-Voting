@@ -94,9 +94,8 @@
             // 
             // btnCloseFP
             // 
-            this.btnCloseFP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCloseFP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnCloseFP.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.btnCloseFP.BackColor = System.Drawing.Color.Khaki;
+            this.btnCloseFP.FlatAppearance.BorderColor = System.Drawing.Color.Olive;
             this.btnCloseFP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCloseFP.Location = new System.Drawing.Point(11, 7);
             this.btnCloseFP.Name = "btnCloseFP";

@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelUserGrid = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -61,33 +61,33 @@
             this.btn_VoidRep = new System.Windows.Forms.Button();
             this.button_Export = new System.Windows.Forms.Button();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.panelMenu = new System.Windows.Forms.Panel();
             this.panelUserGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRepresentative)).BeginInit();
+            this.panelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelUserGrid
             // 
-            this.panelUserGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelUserGrid.Controls.Add(this.dataGridViewRepresentative);
             this.panelUserGrid.Controls.Add(this.panel11);
             this.panelUserGrid.Controls.Add(this.panel10);
             this.panelUserGrid.Controls.Add(this.panel9);
             this.panelUserGrid.Controls.Add(this.panel24);
-            this.panelUserGrid.Controls.Add(this.dataGridViewRepresentative);
-            this.panelUserGrid.Location = new System.Drawing.Point(1, 70);
+            this.panelUserGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelUserGrid.Location = new System.Drawing.Point(0, 77);
             this.panelUserGrid.Name = "panelUserGrid";
-            this.panelUserGrid.Size = new System.Drawing.Size(887, 318);
+            this.panelUserGrid.Size = new System.Drawing.Size(893, 314);
             this.panelUserGrid.TabIndex = 444;
             // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel11.Location = new System.Drawing.Point(886, 1);
+            this.panel11.Location = new System.Drawing.Point(892, 1);
             this.panel11.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1, 316);
+            this.panel11.Size = new System.Drawing.Size(1, 312);
             this.panel11.TabIndex = 436;
             // 
             // panel10
@@ -97,17 +97,17 @@
             this.panel10.Location = new System.Drawing.Point(0, 1);
             this.panel10.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1, 316);
+            this.panel10.Size = new System.Drawing.Size(1, 312);
             this.panel10.TabIndex = 435;
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(0, 317);
+            this.panel9.Location = new System.Drawing.Point(0, 313);
             this.panel9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(887, 1);
+            this.panel9.Size = new System.Drawing.Size(893, 1);
             this.panel9.TabIndex = 434;
             // 
             // panel24
@@ -117,7 +117,7 @@
             this.panel24.Location = new System.Drawing.Point(0, 0);
             this.panel24.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(887, 1);
+            this.panel24.Size = new System.Drawing.Size(893, 1);
             this.panel24.TabIndex = 433;
             // 
             // dataGridViewRepresentative
@@ -125,25 +125,25 @@
             this.dataGridViewRepresentative.AllowUserToAddRows = false;
             this.dataGridViewRepresentative.AllowUserToResizeColumns = false;
             this.dataGridViewRepresentative.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.dataGridViewRepresentative.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.dataGridViewRepresentative.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewRepresentative.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewRepresentative.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
             this.dataGridViewRepresentative.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewRepresentative.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewRepresentative.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewRepresentative.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRepresentative.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewRepresentative.ColumnHeadersHeight = 48;
             this.dataGridViewRepresentative.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewRepresentative.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -152,39 +152,39 @@
             this.TotalVotes,
             this.No_PV,
             this.View});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewRepresentative.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewRepresentative.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridViewRepresentative.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewRepresentative.EnableHeadersVisualStyles = false;
             this.dataGridViewRepresentative.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dataGridViewRepresentative.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dataGridViewRepresentative.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewRepresentative.Location = new System.Drawing.Point(1, 1);
             this.dataGridViewRepresentative.MultiSelect = false;
             this.dataGridViewRepresentative.Name = "dataGridViewRepresentative";
             this.dataGridViewRepresentative.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewRepresentative.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRepresentative.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridViewRepresentative.RowHeadersWidth = 5;
             this.dataGridViewRepresentative.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
-            this.dataGridViewRepresentative.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
+            this.dataGridViewRepresentative.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewRepresentative.RowTemplate.Height = 23;
             this.dataGridViewRepresentative.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewRepresentative.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewRepresentative.Size = new System.Drawing.Size(887, 318);
+            this.dataGridViewRepresentative.Size = new System.Drawing.Size(891, 312);
             this.dataGridViewRepresentative.TabIndex = 432;
             this.dataGridViewRepresentative.UseCustomBackColor = true;
             this.dataGridViewRepresentative.UseCustomForeColor = true;
@@ -217,9 +217,9 @@
             // 
             // View
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
-            this.View.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
+            this.View.DefaultCellStyle = dataGridViewCellStyle9;
             this.View.FillWeight = 35F;
             this.View.HeaderText = "View PV";
             this.View.Name = "View";
@@ -230,7 +230,7 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Location = new System.Drawing.Point(817, 4);
+            this.panel2.Location = new System.Drawing.Point(818, 9);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1, 46);
             this.panel2.TabIndex = 439;
@@ -242,7 +242,7 @@
             this.metroPanel11.HorizontalScrollbarBarColor = true;
             this.metroPanel11.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel11.HorizontalScrollbarSize = 10;
-            this.metroPanel11.Location = new System.Drawing.Point(81, 10);
+            this.metroPanel11.Location = new System.Drawing.Point(82, 15);
             this.metroPanel11.Name = "metroPanel11";
             this.metroPanel11.Size = new System.Drawing.Size(1, 40);
             this.metroPanel11.TabIndex = 457;
@@ -259,7 +259,7 @@
             this.metroPanel17.HorizontalScrollbarBarColor = true;
             this.metroPanel17.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel17.HorizontalScrollbarSize = 10;
-            this.metroPanel17.Location = new System.Drawing.Point(251, 14);
+            this.metroPanel17.Location = new System.Drawing.Point(252, 19);
             this.metroPanel17.Name = "metroPanel17";
             this.metroPanel17.Size = new System.Drawing.Size(1, 29);
             this.metroPanel17.TabIndex = 456;
@@ -276,7 +276,7 @@
             this.metroPanel16.HorizontalScrollbarBarColor = true;
             this.metroPanel16.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel16.HorizontalScrollbarSize = 10;
-            this.metroPanel16.Location = new System.Drawing.Point(173, 15);
+            this.metroPanel16.Location = new System.Drawing.Point(174, 20);
             this.metroPanel16.Name = "metroPanel16";
             this.metroPanel16.Size = new System.Drawing.Size(1, 29);
             this.metroPanel16.TabIndex = 455;
@@ -290,7 +290,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Location = new System.Drawing.Point(733, 4);
+            this.panel1.Location = new System.Drawing.Point(734, 9);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1, 46);
             this.panel1.TabIndex = 458;
@@ -302,7 +302,7 @@
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(338, 10);
+            this.metroPanel1.Location = new System.Drawing.Point(339, 15);
             this.metroPanel1.Name = "metroPanel1";
             this.metroPanel1.Size = new System.Drawing.Size(1, 40);
             this.metroPanel1.TabIndex = 461;
@@ -323,7 +323,7 @@
             this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.Image = global::SDH_Voting.Properties.Resources.file_configuration_24pxdd;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(445, 3);
+            this.button3.Location = new System.Drawing.Point(446, 8);
             this.button3.Name = "button3";
             this.button3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.button3.Size = new System.Drawing.Size(71, 51);
@@ -343,7 +343,7 @@
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Image = global::SDH_Voting.Properties.Resources.combo_chart_24px11;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(358, 3);
+            this.button2.Location = new System.Drawing.Point(359, 8);
             this.button2.Name = "button2";
             this.button2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.button2.Size = new System.Drawing.Size(50, 51);
@@ -364,7 +364,7 @@
             this.btnExpandGrid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(42)))));
             this.btnExpandGrid.Image = global::SDH_Voting.Properties.Resources.Full_Screen_24px;
             this.btnExpandGrid.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnExpandGrid.Location = new System.Drawing.Point(659, 3);
+            this.btnExpandGrid.Location = new System.Drawing.Point(660, 8);
             this.btnExpandGrid.Name = "btnExpandGrid";
             this.btnExpandGrid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnExpandGrid.Size = new System.Drawing.Size(64, 50);
@@ -386,7 +386,7 @@
             this.button_Refresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(42)))));
             this.button_Refresh.Image = global::SDH_Voting.Properties.Resources.database_backup_24px;
             this.button_Refresh.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_Refresh.Location = new System.Drawing.Point(743, 3);
+            this.button_Refresh.Location = new System.Drawing.Point(744, 8);
             this.button_Refresh.Name = "button_Refresh";
             this.button_Refresh.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.button_Refresh.Size = new System.Drawing.Size(64, 50);
@@ -407,7 +407,7 @@
             this.btnVote.ForeColor = System.Drawing.Color.Black;
             this.btnVote.Image = global::SDH_Voting.Properties.Resources.elections_26px;
             this.btnVote.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnVote.Location = new System.Drawing.Point(3, 3);
+            this.btnVote.Location = new System.Drawing.Point(4, 8);
             this.btnVote.Name = "btnVote";
             this.btnVote.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnVote.Size = new System.Drawing.Size(72, 51);
@@ -428,7 +428,7 @@
             this.btn_AddRepresentative.ForeColor = System.Drawing.Color.Black;
             this.btn_AddRepresentative.Image = global::SDH_Voting.Properties.Resources.add_user_male_24px;
             this.btn_AddRepresentative.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_AddRepresentative.Location = new System.Drawing.Point(102, 4);
+            this.btn_AddRepresentative.Location = new System.Drawing.Point(103, 9);
             this.btn_AddRepresentative.Name = "btn_AddRepresentative";
             this.btn_AddRepresentative.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_AddRepresentative.Size = new System.Drawing.Size(64, 49);
@@ -449,7 +449,7 @@
             this.btn_UpdateRep.ForeColor = System.Drawing.Color.Black;
             this.btn_UpdateRep.Image = global::SDH_Voting.Properties.Resources.edit_profile_24px;
             this.btn_UpdateRep.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_UpdateRep.Location = new System.Drawing.Point(180, 4);
+            this.btn_UpdateRep.Location = new System.Drawing.Point(181, 9);
             this.btn_UpdateRep.Name = "btn_UpdateRep";
             this.btn_UpdateRep.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_UpdateRep.Size = new System.Drawing.Size(64, 50);
@@ -470,7 +470,7 @@
             this.btn_VoidRep.ForeColor = System.Drawing.Color.Black;
             this.btn_VoidRep.Image = global::SDH_Voting.Properties.Resources.waste_24px;
             this.btn_VoidRep.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_VoidRep.Location = new System.Drawing.Point(259, 4);
+            this.btn_VoidRep.Location = new System.Drawing.Point(260, 9);
             this.btn_VoidRep.Name = "btn_VoidRep";
             this.btn_VoidRep.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_VoidRep.Size = new System.Drawing.Size(64, 50);
@@ -492,7 +492,7 @@
             this.button_Export.ForeColor = System.Drawing.Color.Black;
             this.button_Export.Image = global::SDH_Voting.Properties.Resources.send_file_24px;
             this.button_Export.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_Export.Location = new System.Drawing.Point(824, 3);
+            this.button_Export.Location = new System.Drawing.Point(825, 8);
             this.button_Export.Name = "button_Export";
             this.button_Export.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.button_Export.Size = new System.Drawing.Size(64, 50);
@@ -509,7 +509,7 @@
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(428, 14);
+            this.metroPanel2.Location = new System.Drawing.Point(429, 19);
             this.metroPanel2.Name = "metroPanel2";
             this.metroPanel2.Size = new System.Drawing.Size(1, 29);
             this.metroPanel2.TabIndex = 463;
@@ -519,33 +519,43 @@
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
             // 
+            // panelMenu
+            // 
+            this.panelMenu.Controls.Add(this.button3);
+            this.panelMenu.Controls.Add(this.panel2);
+            this.panelMenu.Controls.Add(this.metroPanel2);
+            this.panelMenu.Controls.Add(this.button_Export);
+            this.panelMenu.Controls.Add(this.btn_VoidRep);
+            this.panelMenu.Controls.Add(this.metroPanel1);
+            this.panelMenu.Controls.Add(this.btn_UpdateRep);
+            this.panelMenu.Controls.Add(this.button2);
+            this.panelMenu.Controls.Add(this.btn_AddRepresentative);
+            this.panelMenu.Controls.Add(this.btnExpandGrid);
+            this.panelMenu.Controls.Add(this.btnVote);
+            this.panelMenu.Controls.Add(this.panel1);
+            this.panelMenu.Controls.Add(this.metroPanel16);
+            this.panelMenu.Controls.Add(this.metroPanel11);
+            this.panelMenu.Controls.Add(this.metroPanel17);
+            this.panelMenu.Controls.Add(this.button_Refresh);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(893, 77);
+            this.panelMenu.TabIndex = 465;
+            // 
             // UserControlVoting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panelUserGrid);
-            this.Controls.Add(this.metroPanel2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.metroPanel1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnExpandGrid);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.metroPanel11);
-            this.Controls.Add(this.button_Refresh);
-            this.Controls.Add(this.metroPanel17);
-            this.Controls.Add(this.metroPanel16);
-            this.Controls.Add(this.btnVote);
-            this.Controls.Add(this.btn_AddRepresentative);
-            this.Controls.Add(this.btn_UpdateRep);
-            this.Controls.Add(this.btn_VoidRep);
-            this.Controls.Add(this.button_Export);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelMenu);
             this.Name = "UserControlVoting";
             this.Size = new System.Drawing.Size(893, 391);
             this.Load += new System.EventHandler(this.UserControlVoting_Load);
             this.panelUserGrid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRepresentative)).EndInit();
+            this.panelMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -578,5 +588,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalVotes;
         private System.Windows.Forms.DataGridViewTextBoxColumn No_PV;
         private System.Windows.Forms.DataGridViewButtonColumn View;
+        private System.Windows.Forms.Panel panelMenu;
     }
 }
