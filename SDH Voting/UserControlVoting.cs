@@ -159,7 +159,8 @@ namespace SDH_Voting
         {
             AddRepForm addRepForm = new AddRepForm();
             addRepForm.ShowDialog();
-            LoadRepresentatives(); // Reload the representatives after adding a new one
+            LoadRepresentatives();
+            AddViewButtonColumn();
         }
 
         public void LoadRepresentatives()
@@ -392,6 +393,47 @@ namespace SDH_Voting
 
         }
 
+        private void AddViewButtonColumn()
+        {
+            // Clear existing button columns (if any)
+            dataGridViewRepresentative.Columns.Remove("View");
+
+            // Add a new DataGridViewButtonColumn for viewing voters
+            DataGridViewButtonColumn viewButtonColumn = new DataGridViewButtonColumn();
+            viewButtonColumn.Name = "View";
+            viewButtonColumn.HeaderText = "View Voters";
+            viewButtonColumn.Text = "View";
+            viewButtonColumn.UseColumnTextForButtonValue = true;
+            dataGridViewRepresentative.Columns.Add(viewButtonColumn);
+        }
+
+        private void dataGridViewRepresentative_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            // Check if the click is on the View Voters button column
+            if (e.RowIndex >= 0 && e.ColumnIndex == dataGridViewRepresentative.Columns["View"].Index)
+            {
+                // Get the representative name from the clicked row
+                string representativeName = dataGridViewRepresentative.Rows[e.RowIndex].Cells["Representative"].Value.ToString();
+
+                // Show the ViewVotersForm with the selected representative's voters
+                ShowViewVotersForm(representativeName);
+            }
+        }
+
+        private void ShowViewVotersForm(string representativeName)
+        {
+            try
+            {
+                // Instantiate ViewVotersForm with the selected representative's name
+                ViewVotersForm viewVotersForm = new ViewVotersForm(representativeName);
+                viewVotersForm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error showing voters: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
 

@@ -28,40 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelUserGrid = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel24 = new System.Windows.Forms.Panel();
             this.dataGridViewRepresentative = new MetroFramework.Controls.MetroGrid();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Representative = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalVotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.No_PV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.View = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel24 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.metroPanel11 = new MetroFramework.Controls.MetroPanel();
             this.metroPanel17 = new MetroFramework.Controls.MetroPanel();
             this.metroPanel16 = new MetroFramework.Controls.MetroPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnExpandGrid = new System.Windows.Forms.Button();
-            this.button_Refresh = new System.Windows.Forms.Button();
-            this.btnVote = new System.Windows.Forms.Button();
-            this.btn_AddRepresentative = new System.Windows.Forms.Button();
-            this.btn_UpdateRep = new System.Windows.Forms.Button();
-            this.btn_VoidRep = new System.Windows.Forms.Button();
-            this.button_Export = new System.Windows.Forms.Button();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button_Export = new System.Windows.Forms.Button();
+            this.btn_VoidRep = new System.Windows.Forms.Button();
+            this.btn_UpdateRep = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btn_AddRepresentative = new System.Windows.Forms.Button();
+            this.btnExpandGrid = new System.Windows.Forms.Button();
+            this.btnVote = new System.Windows.Forms.Button();
+            this.button_Refresh = new System.Windows.Forms.Button();
             this.panelUserGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRepresentative)).BeginInit();
             this.panelMenu.SuspendLayout();
@@ -79,6 +79,113 @@
             this.panelUserGrid.Name = "panelUserGrid";
             this.panelUserGrid.Size = new System.Drawing.Size(893, 314);
             this.panelUserGrid.TabIndex = 444;
+            // 
+            // dataGridViewRepresentative
+            // 
+            this.dataGridViewRepresentative.AllowUserToAddRows = false;
+            this.dataGridViewRepresentative.AllowUserToResizeColumns = false;
+            this.dataGridViewRepresentative.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.dataGridViewRepresentative.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewRepresentative.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewRepresentative.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
+            this.dataGridViewRepresentative.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewRepresentative.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewRepresentative.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRepresentative.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewRepresentative.ColumnHeadersHeight = 48;
+            this.dataGridViewRepresentative.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridViewRepresentative.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Representative,
+            this.TotalVotes,
+            this.No_PV,
+            this.View});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewRepresentative.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewRepresentative.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewRepresentative.EnableHeadersVisualStyles = false;
+            this.dataGridViewRepresentative.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dataGridViewRepresentative.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dataGridViewRepresentative.Location = new System.Drawing.Point(1, 1);
+            this.dataGridViewRepresentative.MultiSelect = false;
+            this.dataGridViewRepresentative.Name = "dataGridViewRepresentative";
+            this.dataGridViewRepresentative.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRepresentative.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewRepresentative.RowHeadersWidth = 5;
+            this.dataGridViewRepresentative.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
+            this.dataGridViewRepresentative.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewRepresentative.RowTemplate.Height = 23;
+            this.dataGridViewRepresentative.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridViewRepresentative.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewRepresentative.Size = new System.Drawing.Size(891, 312);
+            this.dataGridViewRepresentative.TabIndex = 432;
+            this.dataGridViewRepresentative.UseCustomBackColor = true;
+            this.dataGridViewRepresentative.UseCustomForeColor = true;
+            this.dataGridViewRepresentative.UseStyleColors = true;
+            this.dataGridViewRepresentative.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewRepresentative_CellContentClick);
+            this.dataGridViewRepresentative.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewRepresentative_CellFormatting);
+            // 
+            // ID
+            // 
+            this.ID.FillWeight = 30F;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // Representative
+            // 
+            this.Representative.FillWeight = 49F;
+            this.Representative.HeaderText = "Representative";
+            this.Representative.Name = "Representative";
+            // 
+            // TotalVotes
+            // 
+            this.TotalVotes.FillWeight = 68F;
+            this.TotalVotes.HeaderText = "Total Votes";
+            this.TotalVotes.Name = "TotalVotes";
+            // 
+            // No_PV
+            // 
+            this.No_PV.FillWeight = 35F;
+            this.No_PV.HeaderText = "No. PV";
+            this.No_PV.Name = "No_PV";
+            // 
+            // View
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
+            this.View.DefaultCellStyle = dataGridViewCellStyle3;
+            this.View.FillWeight = 35F;
+            this.View.HeaderText = "View PV";
+            this.View.Name = "View";
+            this.View.Text = "View";
+            this.View.UseColumnTextForButtonValue = true;
             // 
             // panel11
             // 
@@ -119,112 +226,6 @@
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(893, 1);
             this.panel24.TabIndex = 433;
-            // 
-            // dataGridViewRepresentative
-            // 
-            this.dataGridViewRepresentative.AllowUserToAddRows = false;
-            this.dataGridViewRepresentative.AllowUserToResizeColumns = false;
-            this.dataGridViewRepresentative.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.dataGridViewRepresentative.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridViewRepresentative.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewRepresentative.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
-            this.dataGridViewRepresentative.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewRepresentative.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridViewRepresentative.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewRepresentative.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGridViewRepresentative.ColumnHeadersHeight = 48;
-            this.dataGridViewRepresentative.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridViewRepresentative.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Representative,
-            this.TotalVotes,
-            this.No_PV,
-            this.View});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewRepresentative.DefaultCellStyle = dataGridViewCellStyle10;
-            this.dataGridViewRepresentative.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewRepresentative.EnableHeadersVisualStyles = false;
-            this.dataGridViewRepresentative.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.dataGridViewRepresentative.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dataGridViewRepresentative.Location = new System.Drawing.Point(1, 1);
-            this.dataGridViewRepresentative.MultiSelect = false;
-            this.dataGridViewRepresentative.Name = "dataGridViewRepresentative";
-            this.dataGridViewRepresentative.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewRepresentative.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.dataGridViewRepresentative.RowHeadersWidth = 5;
-            this.dataGridViewRepresentative.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
-            this.dataGridViewRepresentative.RowsDefaultCellStyle = dataGridViewCellStyle12;
-            this.dataGridViewRepresentative.RowTemplate.Height = 23;
-            this.dataGridViewRepresentative.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridViewRepresentative.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewRepresentative.Size = new System.Drawing.Size(891, 312);
-            this.dataGridViewRepresentative.TabIndex = 432;
-            this.dataGridViewRepresentative.UseCustomBackColor = true;
-            this.dataGridViewRepresentative.UseCustomForeColor = true;
-            this.dataGridViewRepresentative.UseStyleColors = true;
-            this.dataGridViewRepresentative.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewRepresentative_CellFormatting);
-            // 
-            // ID
-            // 
-            this.ID.FillWeight = 30F;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // Representative
-            // 
-            this.Representative.FillWeight = 49F;
-            this.Representative.HeaderText = "Representative";
-            this.Representative.Name = "Representative";
-            // 
-            // TotalVotes
-            // 
-            this.TotalVotes.FillWeight = 68F;
-            this.TotalVotes.HeaderText = "Total Votes";
-            this.TotalVotes.Name = "TotalVotes";
-            // 
-            // No_PV
-            // 
-            this.No_PV.FillWeight = 35F;
-            this.No_PV.HeaderText = "No. PV";
-            this.No_PV.Name = "No_PV";
-            // 
-            // View
-            // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
-            this.View.DefaultCellStyle = dataGridViewCellStyle9;
-            this.View.FillWeight = 35F;
-            this.View.HeaderText = "View PV";
-            this.View.Name = "View";
-            this.View.Text = "View";
-            this.View.UseColumnTextForButtonValue = true;
             // 
             // panel2
             // 
@@ -312,196 +313,6 @@
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Image = global::SDH_Voting.Properties.Resources.file_configuration_24pxdd;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(446, 8);
-            this.button3.Name = "button3";
-            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button3.Size = new System.Drawing.Size(71, 51);
-            this.button3.TabIndex = 462;
-            this.button3.Text = "SETTINGS";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Image = global::SDH_Voting.Properties.Resources.combo_chart_24px11;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(359, 8);
-            this.button2.Name = "button2";
-            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button2.Size = new System.Drawing.Size(50, 51);
-            this.button2.TabIndex = 460;
-            this.button2.Text = "CHART";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // btnExpandGrid
-            // 
-            this.btnExpandGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExpandGrid.BackColor = System.Drawing.Color.Transparent;
-            this.btnExpandGrid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnExpandGrid.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnExpandGrid.FlatAppearance.BorderSize = 0;
-            this.btnExpandGrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExpandGrid.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.65F, System.Drawing.FontStyle.Bold);
-            this.btnExpandGrid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(42)))));
-            this.btnExpandGrid.Image = global::SDH_Voting.Properties.Resources.Full_Screen_24px;
-            this.btnExpandGrid.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnExpandGrid.Location = new System.Drawing.Point(660, 8);
-            this.btnExpandGrid.Name = "btnExpandGrid";
-            this.btnExpandGrid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnExpandGrid.Size = new System.Drawing.Size(64, 50);
-            this.btnExpandGrid.TabIndex = 459;
-            this.btnExpandGrid.Text = "EXPAND ";
-            this.btnExpandGrid.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnExpandGrid.UseVisualStyleBackColor = false;
-            this.btnExpandGrid.Click += new System.EventHandler(this.btnExpandGrid_Click);
-            // 
-            // button_Refresh
-            // 
-            this.button_Refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_Refresh.BackColor = System.Drawing.Color.Transparent;
-            this.button_Refresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_Refresh.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_Refresh.FlatAppearance.BorderSize = 0;
-            this.button_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Refresh.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.65F, System.Drawing.FontStyle.Bold);
-            this.button_Refresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(42)))));
-            this.button_Refresh.Image = global::SDH_Voting.Properties.Resources.database_backup_24px;
-            this.button_Refresh.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_Refresh.Location = new System.Drawing.Point(744, 8);
-            this.button_Refresh.Name = "button_Refresh";
-            this.button_Refresh.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button_Refresh.Size = new System.Drawing.Size(64, 50);
-            this.button_Refresh.TabIndex = 447;
-            this.button_Refresh.Text = "RFRESH";
-            this.button_Refresh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button_Refresh.UseVisualStyleBackColor = false;
-            this.button_Refresh.Click += new System.EventHandler(this.button_Refresh_Click);
-            // 
-            // btnVote
-            // 
-            this.btnVote.BackColor = System.Drawing.Color.Transparent;
-            this.btnVote.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnVote.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnVote.FlatAppearance.BorderSize = 0;
-            this.btnVote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVote.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
-            this.btnVote.ForeColor = System.Drawing.Color.Black;
-            this.btnVote.Image = global::SDH_Voting.Properties.Resources.elections_26px;
-            this.btnVote.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnVote.Location = new System.Drawing.Point(4, 8);
-            this.btnVote.Name = "btnVote";
-            this.btnVote.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnVote.Size = new System.Drawing.Size(72, 51);
-            this.btnVote.TabIndex = 445;
-            this.btnVote.Text = "VOTE";
-            this.btnVote.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnVote.UseVisualStyleBackColor = false;
-            this.btnVote.Click += new System.EventHandler(this.btnVote_Click);
-            // 
-            // btn_AddRepresentative
-            // 
-            this.btn_AddRepresentative.BackColor = System.Drawing.Color.Transparent;
-            this.btn_AddRepresentative.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_AddRepresentative.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_AddRepresentative.FlatAppearance.BorderSize = 0;
-            this.btn_AddRepresentative.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AddRepresentative.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
-            this.btn_AddRepresentative.ForeColor = System.Drawing.Color.Black;
-            this.btn_AddRepresentative.Image = global::SDH_Voting.Properties.Resources.add_user_male_24px;
-            this.btn_AddRepresentative.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_AddRepresentative.Location = new System.Drawing.Point(103, 9);
-            this.btn_AddRepresentative.Name = "btn_AddRepresentative";
-            this.btn_AddRepresentative.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btn_AddRepresentative.Size = new System.Drawing.Size(64, 49);
-            this.btn_AddRepresentative.TabIndex = 440;
-            this.btn_AddRepresentative.Text = "ADD NEW";
-            this.btn_AddRepresentative.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_AddRepresentative.UseVisualStyleBackColor = false;
-            this.btn_AddRepresentative.Click += new System.EventHandler(this.btn_AddRepresentative_Click);
-            // 
-            // btn_UpdateRep
-            // 
-            this.btn_UpdateRep.BackColor = System.Drawing.Color.Transparent;
-            this.btn_UpdateRep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_UpdateRep.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_UpdateRep.FlatAppearance.BorderSize = 0;
-            this.btn_UpdateRep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_UpdateRep.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
-            this.btn_UpdateRep.ForeColor = System.Drawing.Color.Black;
-            this.btn_UpdateRep.Image = global::SDH_Voting.Properties.Resources.edit_profile_24px;
-            this.btn_UpdateRep.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_UpdateRep.Location = new System.Drawing.Point(181, 9);
-            this.btn_UpdateRep.Name = "btn_UpdateRep";
-            this.btn_UpdateRep.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btn_UpdateRep.Size = new System.Drawing.Size(64, 50);
-            this.btn_UpdateRep.TabIndex = 441;
-            this.btn_UpdateRep.Text = "UPDATE ";
-            this.btn_UpdateRep.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_UpdateRep.UseVisualStyleBackColor = false;
-            this.btn_UpdateRep.Click += new System.EventHandler(this.btn_UpdateRep_Click);
-            // 
-            // btn_VoidRep
-            // 
-            this.btn_VoidRep.BackColor = System.Drawing.Color.Transparent;
-            this.btn_VoidRep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_VoidRep.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_VoidRep.FlatAppearance.BorderSize = 0;
-            this.btn_VoidRep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_VoidRep.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
-            this.btn_VoidRep.ForeColor = System.Drawing.Color.Black;
-            this.btn_VoidRep.Image = global::SDH_Voting.Properties.Resources.waste_24px;
-            this.btn_VoidRep.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_VoidRep.Location = new System.Drawing.Point(260, 9);
-            this.btn_VoidRep.Name = "btn_VoidRep";
-            this.btn_VoidRep.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btn_VoidRep.Size = new System.Drawing.Size(64, 50);
-            this.btn_VoidRep.TabIndex = 442;
-            this.btn_VoidRep.Text = "DELETE";
-            this.btn_VoidRep.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_VoidRep.UseVisualStyleBackColor = false;
-            this.btn_VoidRep.Click += new System.EventHandler(this.btn_VoidRep_Click);
-            // 
-            // button_Export
-            // 
-            this.button_Export.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_Export.BackColor = System.Drawing.Color.Transparent;
-            this.button_Export.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button_Export.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_Export.FlatAppearance.BorderSize = 0;
-            this.button_Export.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Export.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
-            this.button_Export.ForeColor = System.Drawing.Color.Black;
-            this.button_Export.Image = global::SDH_Voting.Properties.Resources.send_file_24px;
-            this.button_Export.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_Export.Location = new System.Drawing.Point(825, 8);
-            this.button_Export.Name = "button_Export";
-            this.button_Export.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button_Export.Size = new System.Drawing.Size(64, 50);
-            this.button_Export.TabIndex = 443;
-            this.button_Export.Text = "EXPORT";
-            this.button_Export.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button_Export.UseVisualStyleBackColor = false;
-            this.button_Export.Click += new System.EventHandler(this.button_Export_Click);
-            // 
             // metroPanel2
             // 
             this.metroPanel2.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -542,6 +353,196 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(893, 77);
             this.panelMenu.TabIndex = 465;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Image = global::SDH_Voting.Properties.Resources.file_configuration_24pxdd;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button3.Location = new System.Drawing.Point(446, 8);
+            this.button3.Name = "button3";
+            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button3.Size = new System.Drawing.Size(71, 51);
+            this.button3.TabIndex = 462;
+            this.button3.Text = "SETTINGS";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button_Export
+            // 
+            this.button_Export.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_Export.BackColor = System.Drawing.Color.Transparent;
+            this.button_Export.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_Export.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_Export.FlatAppearance.BorderSize = 0;
+            this.button_Export.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Export.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
+            this.button_Export.ForeColor = System.Drawing.Color.Black;
+            this.button_Export.Image = global::SDH_Voting.Properties.Resources.send_file_24px;
+            this.button_Export.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_Export.Location = new System.Drawing.Point(825, 8);
+            this.button_Export.Name = "button_Export";
+            this.button_Export.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button_Export.Size = new System.Drawing.Size(64, 50);
+            this.button_Export.TabIndex = 443;
+            this.button_Export.Text = "EXPORT";
+            this.button_Export.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button_Export.UseVisualStyleBackColor = false;
+            this.button_Export.Click += new System.EventHandler(this.button_Export_Click);
+            // 
+            // btn_VoidRep
+            // 
+            this.btn_VoidRep.BackColor = System.Drawing.Color.Transparent;
+            this.btn_VoidRep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_VoidRep.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_VoidRep.FlatAppearance.BorderSize = 0;
+            this.btn_VoidRep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_VoidRep.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
+            this.btn_VoidRep.ForeColor = System.Drawing.Color.Black;
+            this.btn_VoidRep.Image = global::SDH_Voting.Properties.Resources.waste_24px;
+            this.btn_VoidRep.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_VoidRep.Location = new System.Drawing.Point(260, 9);
+            this.btn_VoidRep.Name = "btn_VoidRep";
+            this.btn_VoidRep.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btn_VoidRep.Size = new System.Drawing.Size(64, 50);
+            this.btn_VoidRep.TabIndex = 442;
+            this.btn_VoidRep.Text = "DELETE";
+            this.btn_VoidRep.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_VoidRep.UseVisualStyleBackColor = false;
+            this.btn_VoidRep.Click += new System.EventHandler(this.btn_VoidRep_Click);
+            // 
+            // btn_UpdateRep
+            // 
+            this.btn_UpdateRep.BackColor = System.Drawing.Color.Transparent;
+            this.btn_UpdateRep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_UpdateRep.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_UpdateRep.FlatAppearance.BorderSize = 0;
+            this.btn_UpdateRep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_UpdateRep.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
+            this.btn_UpdateRep.ForeColor = System.Drawing.Color.Black;
+            this.btn_UpdateRep.Image = global::SDH_Voting.Properties.Resources.edit_profile_24px;
+            this.btn_UpdateRep.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_UpdateRep.Location = new System.Drawing.Point(181, 9);
+            this.btn_UpdateRep.Name = "btn_UpdateRep";
+            this.btn_UpdateRep.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btn_UpdateRep.Size = new System.Drawing.Size(64, 50);
+            this.btn_UpdateRep.TabIndex = 441;
+            this.btn_UpdateRep.Text = "UPDATE ";
+            this.btn_UpdateRep.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_UpdateRep.UseVisualStyleBackColor = false;
+            this.btn_UpdateRep.Click += new System.EventHandler(this.btn_UpdateRep_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Image = global::SDH_Voting.Properties.Resources.combo_chart_24px11;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(359, 8);
+            this.button2.Name = "button2";
+            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button2.Size = new System.Drawing.Size(50, 51);
+            this.button2.TabIndex = 460;
+            this.button2.Text = "CHART";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // btn_AddRepresentative
+            // 
+            this.btn_AddRepresentative.BackColor = System.Drawing.Color.Transparent;
+            this.btn_AddRepresentative.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_AddRepresentative.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btn_AddRepresentative.FlatAppearance.BorderSize = 0;
+            this.btn_AddRepresentative.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AddRepresentative.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
+            this.btn_AddRepresentative.ForeColor = System.Drawing.Color.Black;
+            this.btn_AddRepresentative.Image = global::SDH_Voting.Properties.Resources.add_user_male_24px;
+            this.btn_AddRepresentative.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_AddRepresentative.Location = new System.Drawing.Point(103, 9);
+            this.btn_AddRepresentative.Name = "btn_AddRepresentative";
+            this.btn_AddRepresentative.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btn_AddRepresentative.Size = new System.Drawing.Size(64, 49);
+            this.btn_AddRepresentative.TabIndex = 440;
+            this.btn_AddRepresentative.Text = "ADD NEW";
+            this.btn_AddRepresentative.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_AddRepresentative.UseVisualStyleBackColor = false;
+            this.btn_AddRepresentative.Click += new System.EventHandler(this.btn_AddRepresentative_Click);
+            // 
+            // btnExpandGrid
+            // 
+            this.btnExpandGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExpandGrid.BackColor = System.Drawing.Color.Transparent;
+            this.btnExpandGrid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExpandGrid.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnExpandGrid.FlatAppearance.BorderSize = 0;
+            this.btnExpandGrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExpandGrid.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.65F, System.Drawing.FontStyle.Bold);
+            this.btnExpandGrid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(42)))));
+            this.btnExpandGrid.Image = global::SDH_Voting.Properties.Resources.Full_Screen_24px;
+            this.btnExpandGrid.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnExpandGrid.Location = new System.Drawing.Point(660, 8);
+            this.btnExpandGrid.Name = "btnExpandGrid";
+            this.btnExpandGrid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnExpandGrid.Size = new System.Drawing.Size(64, 50);
+            this.btnExpandGrid.TabIndex = 459;
+            this.btnExpandGrid.Text = "EXPAND ";
+            this.btnExpandGrid.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnExpandGrid.UseVisualStyleBackColor = false;
+            this.btnExpandGrid.Click += new System.EventHandler(this.btnExpandGrid_Click);
+            // 
+            // btnVote
+            // 
+            this.btnVote.BackColor = System.Drawing.Color.Transparent;
+            this.btnVote.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVote.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnVote.FlatAppearance.BorderSize = 0;
+            this.btnVote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVote.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
+            this.btnVote.ForeColor = System.Drawing.Color.Black;
+            this.btnVote.Image = global::SDH_Voting.Properties.Resources.elections_26px;
+            this.btnVote.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnVote.Location = new System.Drawing.Point(4, 8);
+            this.btnVote.Name = "btnVote";
+            this.btnVote.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnVote.Size = new System.Drawing.Size(72, 51);
+            this.btnVote.TabIndex = 445;
+            this.btnVote.Text = "VOTE";
+            this.btnVote.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnVote.UseVisualStyleBackColor = false;
+            this.btnVote.Click += new System.EventHandler(this.btnVote_Click);
+            // 
+            // button_Refresh
+            // 
+            this.button_Refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_Refresh.BackColor = System.Drawing.Color.Transparent;
+            this.button_Refresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_Refresh.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_Refresh.FlatAppearance.BorderSize = 0;
+            this.button_Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Refresh.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.65F, System.Drawing.FontStyle.Bold);
+            this.button_Refresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(42)))));
+            this.button_Refresh.Image = global::SDH_Voting.Properties.Resources.database_backup_24px;
+            this.button_Refresh.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_Refresh.Location = new System.Drawing.Point(744, 8);
+            this.button_Refresh.Name = "button_Refresh";
+            this.button_Refresh.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button_Refresh.Size = new System.Drawing.Size(64, 50);
+            this.button_Refresh.TabIndex = 447;
+            this.button_Refresh.Text = "RFRESH";
+            this.button_Refresh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button_Refresh.UseVisualStyleBackColor = false;
+            this.button_Refresh.Click += new System.EventHandler(this.button_Refresh_Click);
             // 
             // UserControlVoting
             // 

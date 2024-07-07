@@ -96,6 +96,12 @@
     <Compile Include="UserControlVoting.Designer.cs">
       <DependentUpon>UserControlVoting.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewVotersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewVotersForm.Designer.cs">
+      <DependentUpon>ViewVotersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="VoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlVoting.resx">
       <DependentUpon>UserControlVoting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewVotersForm.resx">
+      <DependentUpon>ViewVotersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VoForm.resx">
       <DependentUpon>VoForm.cs</DependentUpon>
