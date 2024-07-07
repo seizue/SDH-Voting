@@ -213,6 +213,64 @@ namespace SDH_Voting
                 MessageBox.Show($"Error loading representatives: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void LoadDataFromJson()
+        {
+            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
+            string filePath = Path.Combine(folderPath, "SDH_VoteSelected.json");
+
+            try
+            {
+                if (File.Exists(filePath))
+                {
+                    string json = File.ReadAllText(filePath);
+                    JArray voteData = JArray.Parse(json);
+
+                    // Dictionary to store representative and unique stockholders who voted for them
+                    var representativeData = new Dictionary<string, HashSet<string>>();
+
+                    foreach (JObject vote in voteData)
+                    {
+                        string representativeName = vote["Representative"].ToString();
+                        string stockHolder = vote["StockHolder"].ToString();
+
+                        if (representativeData.ContainsKey(representativeName))
+                        {
+                            representativeData[representativeName].Add(stockHolder); // Add stockholder if not already added
+                        }
+                        else
+                        {
+                            var stockHolders = new HashSet<string>();
+                            stockHolders.Add(stockHolder);
+                            representativeData.Add(representativeName, stockHolders);
+                        }
+                    }
+
+                    // Update No_PV column with count of unique stockholders who voted for each representative
+                    foreach (DataGridViewRow row in dataGridViewRepresentative.Rows)
+                    {
+                        string representativeName = row.Cells["Representative"].Value.ToString();
+                        if (representativeData.ContainsKey(representativeName))
+                        {
+                            row.Cells["No_PV"].Value = representativeData[representativeName].Count;
+                        }
+                        else
+                        {
+                            row.Cells["No_PV"].Value = 0; // Default to 0 if no votes found for this representative
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("SDH_VoteSelected.json file not found.", "File Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading data from SDH_VoteSelected.json: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
 
         private void dataGridViewRepresentative_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -306,6 +364,7 @@ namespace SDH_Voting
         public void ReloadData()
         {
             LoadRepresentatives();
+            LoadDataFromJson();
         }
 
         private void btnExpandGrid_Click(object sender, EventArgs e)

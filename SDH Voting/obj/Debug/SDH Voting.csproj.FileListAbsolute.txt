@@ -44,3 +44,26 @@ C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH Voting
 C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH Voting.csproj.Up2Date
 C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH Voting.exe
 C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH Voting.pdb
+C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\SDH Voting.exe.config
+C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\SDH Voting.exe
+C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\SDH Voting.pdb
+C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\MetroFramework.Design.dll
+C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\MetroFramework.dll
+C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH Voting.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.AddRepForm.resources
+C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.Main.resources
+C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.NewForm.resources
+C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.Properties.Resources.resources
+C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.UpdateForm.resources
+C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.UpdateRepForm.resources
+C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.UserControlVoting.resources
+C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.SDHVoForm.resources
+C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.VoterSelectionForm.resources
+C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH Voting.csproj.GenerateResource.cache
+C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH Voting.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH Voting.csproj.Up2Date
+C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH Voting.exe
+C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH Voting.pdb
