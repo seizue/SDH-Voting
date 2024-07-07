@@ -37,7 +37,7 @@ namespace SDH_Voting
         private void LoadData()
         {
             string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
-            string filePath = Path.Combine(folderPath, "SDH_SHList.json");
+            string filePath = Path.Combine(folderPath, "InvestorMasterlist.json");
             List<Investor> investors = new List<Investor>();
 
             if (File.Exists(filePath))
@@ -48,11 +48,12 @@ namespace SDH_Voting
                 {
                     var deserializedInvestors = JsonConvert.DeserializeObject<List<Investor>>(json) ?? new List<Investor>();
 
-                    // Remove duplicates based on Id
+                    // Filter out investors with Status = "YES"
                     investors = deserializedInvestors
-                                .GroupBy(i => i.Id)
-                                .Select(g => g.First())
-                                .ToList();
+                                    .Where(i => i.Status != "YES")
+                                    .GroupBy(i => i.Id)
+                                    .Select(g => g.First())
+                                    .ToList();
                 }
             }
 
@@ -85,6 +86,7 @@ namespace SDH_Voting
                 GridVoters.Columns["sdhTotalVotes"].DefaultCellStyle.Format = "N0";
             }
         }
+
 
         private void buttonClose_Click(object sender, EventArgs e)
         {

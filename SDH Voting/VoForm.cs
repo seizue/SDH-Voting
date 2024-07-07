@@ -265,7 +265,7 @@ namespace SDH_Voting
                 // Call ReloadData after SaveRepVoter has completed its operations
                 userControlVoting.ReloadData();
 
-           
+                this.Close();
 
             }
             catch (Exception ex)

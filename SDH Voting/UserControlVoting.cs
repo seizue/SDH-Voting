@@ -213,7 +213,7 @@ namespace SDH_Voting
                 MessageBox.Show($"Error loading representatives: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void LoadDataFromJson()
+        private void LoadSHSelected()
         {
             string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
             string filePath = Path.Combine(folderPath, "SDH_VoteSelected.json");
@@ -364,7 +364,8 @@ namespace SDH_Voting
         public void ReloadData()
         {
             LoadRepresentatives();
-            LoadDataFromJson();
+            LoadSHSelected();
+
         }
 
         private void btnExpandGrid_Click(object sender, EventArgs e)
@@ -372,7 +373,7 @@ namespace SDH_Voting
             panelMenu.Visible = false;
             panelUserGrid.Dock = DockStyle.Fill;
             dataGridViewRepresentative.Dock = DockStyle.Fill;
-            
+
             Main mainForm = this.FindForm() as Main;
             if (mainForm != null)
             {
@@ -382,14 +383,15 @@ namespace SDH_Voting
 
         public void RestorGridView()
         {
-            panelMenu.Visible = true;                   
+            panelMenu.Visible = true;
         }
 
         private void UserControlVoting_Load(object sender, EventArgs e)
         {
-            LoadRepresentatives();
+            ReloadData();
+
         }
+
     }
-  
 }
 
