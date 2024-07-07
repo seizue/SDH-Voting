@@ -44,9 +44,11 @@ namespace SDH_Voting
                     // Bind voters data to the DataGridView
                     ViewGridVoters.Rows.Clear();
 
+                    int id = 1;
                     foreach (string voter in voters)
                     {
                         int index = ViewGridVoters.Rows.Add();
+                        ViewGridVoters.Rows[index].Cells["sdhID"].Value = id++; // Generate and assign ID
                         ViewGridVoters.Rows[index].Cells["sdhVoters"].Value = voter;
                         ViewGridVoters.Rows[index].Cells["sdhRepresentative"].Value = representativeName;
                     }
@@ -61,6 +63,7 @@ namespace SDH_Voting
                 MessageBox.Show($"Error loading voters: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
