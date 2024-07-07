@@ -21,13 +21,14 @@ namespace SDH_Voting
         private Point lastForm;
         private UserControlVoting userControlVoting;
         private string selectedInvestorId;
+        private List<Investor> investors;
 
         public SDHVoForm(string sdhStockHolder)
         {
             InitializeComponent();
             LoadRepresentativesComboRep();
             txtBoxSH.Text = sdhStockHolder;
-
+            LoadInvestorsData();
             userControlVoting = new UserControlVoting();
             userControlVoting.ReloadData();
         }
@@ -67,45 +68,31 @@ namespace SDH_Voting
             }
         }
 
-
-        private void LoadData()
+        private void LoadInvestorsData()
         {
             string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
-            string filePath = Path.Combine(folderPath, "SDH_SHList.json");
-            List<Investor> investors = new List<Investor>();
+            string filePath = Path.Combine(folderPath, "InvestorMasterlist.json");
 
             if (File.Exists(filePath))
             {
                 string json = File.ReadAllText(filePath);
+                investors = JsonConvert.DeserializeObject<List<Investor>>(json) ?? new List<Investor>();
 
-                if (!string.IsNullOrWhiteSpace(json))
-                {
-                    var deserializedInvestors = JsonConvert.DeserializeObject<List<Investor>>(json) ?? new List<Investor>();
+                // Display total stockholders count
+                textBoxAllSH.Text = investors.Count.ToString();
 
-                    // Remove duplicates based on Id
-                    investors = deserializedInvestors
-                                .GroupBy(i => i.Id)
-                                .Select(g => g.First())
-                                .ToList();
-                }
+                // Calculate counts based on Status
+                int votedCount = investors.Count(i => i.Status == "YES");
+                int notVotedCount = investors.Count(i => i.Status == "NO");
+
+                // Display counts
+                txtBoxVoted.Text = votedCount.ToString();
+                txtBoxAVoters.Text = notVotedCount.ToString();
             }
-
-            // Ensure AutoGenerateColumns is false to prevent automatic column creation
-            SelectionVotersGrid.AutoGenerateColumns = false;
-
-            // Set the data source
-            SelectionVotersGrid.DataSource = new BindingList<Investor>(investors);
-
-            // Map existing columns to properties
-            if (SelectionVotersGrid.Columns["vtrName"] != null)
-                SelectionVotersGrid.Columns["vtrName"].DataPropertyName = "Name";
-            if (SelectionVotersGrid.Columns["vtrVotes"] != null)
+            else
             {
-                SelectionVotersGrid.Columns["vtrVotes"].DataPropertyName = "Votes";
-                SelectionVotersGrid.Columns["vtrVotes"].DefaultCellStyle.Format = "N0";
+                MessageBox.Show("InvestorMasterlist.json file not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (SelectionVotersGrid.Columns["vtrStatus"] != null)
-                SelectionVotersGrid.Columns["vtrStatus"].DataPropertyName = "Status";
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
@@ -135,19 +122,10 @@ namespace SDH_Voting
             WindowState = FormWindowState.Minimized;
         }
 
-        private void labelVoterList_Click(object sender, EventArgs e)
-        {
-            panelVoterList.Visible = true;
-            panel_Indicator.Location = new Point(118, 208);
-            panel_Indicator.Size = new Size(71, 3);
-            LoadData();
-        }
 
         private void labelStatus_Click(object sender, EventArgs e)
         {
-            panelVoterList.Visible = false;
-            panel_Indicator.Location = new Point(27, 208);
-            panel_Indicator.Size = new Size(49, 3);
+          
         }
 
         private void btnViewVoter_Click(object sender, EventArgs e)
@@ -324,12 +302,9 @@ namespace SDH_Voting
         private void SDHVoForm_Load(object sender, EventArgs e)
         {
             userControlVoting.ReloadData();
+            LoadInvestorsData();
         }
 
-        private void buttonDownload_Click(object sender, EventArgs e)
-        {
-            userControlVoting.ReloadData();
-        }
 
 
     }
