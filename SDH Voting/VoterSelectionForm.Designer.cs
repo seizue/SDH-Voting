@@ -40,15 +40,15 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelGrid = new System.Windows.Forms.Panel();
             this.GridVoters = new MetroFramework.Controls.MetroGrid();
+            this.sdhID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdhStockHolder = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdhShares = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdhTotalVotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdhSelect = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
-            this.sdhSelect = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.sdhTotalVotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdhShares = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdhStockHolder = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdhID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelNav.SuspendLayout();
             this.panelGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridVoters)).BeginInit();
@@ -185,7 +185,7 @@
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
             this.GridVoters.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.GridVoters.RowTemplate.Height = 23;
-            this.GridVoters.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.GridVoters.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.GridVoters.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GridVoters.Size = new System.Drawing.Size(733, 545);
             this.GridVoters.TabIndex = 437;
@@ -193,6 +193,38 @@
             this.GridVoters.UseCustomForeColor = true;
             this.GridVoters.UseStyleColors = true;
             this.GridVoters.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridVoters_CellDoubleClick);
+            // 
+            // sdhID
+            // 
+            this.sdhID.FillWeight = 21.7786F;
+            this.sdhID.HeaderText = "ID";
+            this.sdhID.Name = "sdhID";
+            // 
+            // sdhStockHolder
+            // 
+            this.sdhStockHolder.FillWeight = 34.84576F;
+            this.sdhStockHolder.HeaderText = "Stock Holder Name";
+            this.sdhStockHolder.Name = "sdhStockHolder";
+            // 
+            // sdhShares
+            // 
+            this.sdhShares.FillWeight = 26.13432F;
+            this.sdhShares.HeaderText = "Shares";
+            this.sdhShares.Name = "sdhShares";
+            // 
+            // sdhTotalVotes
+            // 
+            this.sdhTotalVotes.FillWeight = 30.49004F;
+            this.sdhTotalVotes.HeaderText = "Equal Votes";
+            this.sdhTotalVotes.Name = "sdhTotalVotes";
+            // 
+            // sdhSelect
+            // 
+            this.sdhSelect.FillWeight = 20F;
+            this.sdhSelect.HeaderText = "Select";
+            this.sdhSelect.Name = "sdhSelect";
+            this.sdhSelect.Text = "Select";
+            this.sdhSelect.UseColumnTextForButtonValue = true;
             // 
             // panel11
             // 
@@ -233,38 +265,6 @@
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(739, 1);
             this.panel24.TabIndex = 433;
-            // 
-            // sdhSelect
-            // 
-            this.sdhSelect.FillWeight = 20F;
-            this.sdhSelect.HeaderText = "Select";
-            this.sdhSelect.Name = "sdhSelect";
-            this.sdhSelect.Text = "Select";
-            this.sdhSelect.UseColumnTextForButtonValue = true;
-            // 
-            // sdhTotalVotes
-            // 
-            this.sdhTotalVotes.FillWeight = 30.49004F;
-            this.sdhTotalVotes.HeaderText = "Equal Votes";
-            this.sdhTotalVotes.Name = "sdhTotalVotes";
-            // 
-            // sdhShares
-            // 
-            this.sdhShares.FillWeight = 26.13432F;
-            this.sdhShares.HeaderText = "Shares";
-            this.sdhShares.Name = "sdhShares";
-            // 
-            // sdhStockHolder
-            // 
-            this.sdhStockHolder.FillWeight = 34.84576F;
-            this.sdhStockHolder.HeaderText = "Stock Holder Name";
-            this.sdhStockHolder.Name = "sdhStockHolder";
-            // 
-            // sdhID
-            // 
-            this.sdhID.FillWeight = 21.7786F;
-            this.sdhID.HeaderText = "ID";
-            this.sdhID.Name = "sdhID";
             // 
             // VoterSelectionForm
             // 

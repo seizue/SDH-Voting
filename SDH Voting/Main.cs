@@ -26,7 +26,7 @@ namespace SDH_Voting
             InitializeComponent();
             InitializeApplicationData();
             LoadData();
-          
+         
             txtBoxSearch.TextChanged += txtBoxSearch_TextChanged;
             checkBoxVoted.CheckedChanged += checkBoxVoted_CheckedChanged;
             checkBoxNonVoted.CheckedChanged += checkBoxNonVoted_CheckedChanged;

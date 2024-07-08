@@ -13,6 +13,7 @@ namespace SDH_Voting
     public partial class UserControlVoting : UserControl
     {
         private string sdhStockHolder;
+        private List<VoteSelectedData> SDH_VoteSelected = new List<VoteSelectedData>();
 
         public UserControlVoting()
         {
@@ -442,6 +443,36 @@ namespace SDH_Voting
             }
         }
 
+        private void btnPosted_Click(object sender, EventArgs e)
+        {
+            // Clear data in SDH_VoteSelected
+            SDH_VoteSelected.Clear();
+
+            // Save the cleared data to SDH_VoteSelected.json
+            SaveSDH_VoteSelectedData();
+
+            // Optionally, notify the user or perform additional actions
+            MessageBox.Show("All data in SDH_VoteSelected has been cleared and saved.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void SaveSDH_VoteSelectedData()
+        {
+            try
+            {
+                string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
+                string filePath = Path.Combine(folderPath, "SDH_VoteSelected.json");
+
+                // Serialize an empty array to JSON format
+                string json = JsonConvert.SerializeObject(new List<VoteSelectedData>(), Formatting.Indented);
+
+                // Write the JSON data to the file
+                File.WriteAllText(filePath, json);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving SDH_VoteSelected data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
 

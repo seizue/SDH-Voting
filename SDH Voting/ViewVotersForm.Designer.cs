@@ -34,12 +34,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelNav = new System.Windows.Forms.Panel();
+            this.buttonMaximize = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelGrid = new System.Windows.Forms.Panel();
             this.ViewGridVoters = new MetroFramework.Controls.MetroGrid();
+            this.sdhID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdhVoters = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -48,9 +51,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.btnExportCSV = new System.Windows.Forms.Button();
-            this.sdhID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdhVoters = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonMaximize = new System.Windows.Forms.Button();
             this.panelNav.SuspendLayout();
             this.panelGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ViewGridVoters)).BeginInit();
@@ -69,6 +69,19 @@
             this.panelNav.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseDown);
             this.panelNav.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseMove);
             this.panelNav.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseUp);
+            // 
+            // buttonMaximize
+            // 
+            this.buttonMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(103)))));
+            this.buttonMaximize.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(180)))), ((int)(((byte)(90)))));
+            this.buttonMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMaximize.Location = new System.Drawing.Point(709, 7);
+            this.buttonMaximize.Name = "buttonMaximize";
+            this.buttonMaximize.Size = new System.Drawing.Size(14, 14);
+            this.buttonMaximize.TabIndex = 6;
+            this.buttonMaximize.UseVisualStyleBackColor = false;
+            this.buttonMaximize.Click += new System.EventHandler(this.buttonMaximize_Click);
             // 
             // buttonClose
             // 
@@ -191,6 +204,21 @@
             this.ViewGridVoters.UseCustomForeColor = true;
             this.ViewGridVoters.UseStyleColors = true;
             // 
+            // sdhID
+            // 
+            this.sdhID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sdhID.DividerWidth = 2;
+            this.sdhID.FillWeight = 99.7962F;
+            this.sdhID.HeaderText = "ID";
+            this.sdhID.Name = "sdhID";
+            // 
+            // sdhVoters
+            // 
+            this.sdhVoters.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sdhVoters.FillWeight = 420F;
+            this.sdhVoters.HeaderText = "Stock Holder";
+            this.sdhVoters.Name = "sdhVoters";
+            // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -285,34 +313,6 @@
             this.btnExportCSV.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExportCSV.UseVisualStyleBackColor = false;
             this.btnExportCSV.Click += new System.EventHandler(this.btnExportCSV_Click);
-            // 
-            // sdhID
-            // 
-            this.sdhID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.sdhID.DividerWidth = 2;
-            this.sdhID.FillWeight = 99.7962F;
-            this.sdhID.HeaderText = "ID";
-            this.sdhID.Name = "sdhID";
-            // 
-            // sdhVoters
-            // 
-            this.sdhVoters.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.sdhVoters.FillWeight = 420F;
-            this.sdhVoters.HeaderText = "Stock Holder";
-            this.sdhVoters.Name = "sdhVoters";
-            // 
-            // buttonMaximize
-            // 
-            this.buttonMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(103)))));
-            this.buttonMaximize.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.buttonMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMaximize.Location = new System.Drawing.Point(709, 7);
-            this.buttonMaximize.Name = "buttonMaximize";
-            this.buttonMaximize.Size = new System.Drawing.Size(14, 14);
-            this.buttonMaximize.TabIndex = 6;
-            this.buttonMaximize.UseVisualStyleBackColor = false;
-            this.buttonMaximize.Click += new System.EventHandler(this.buttonMaximize_Click);
             // 
             // ViewVotersForm
             // 
