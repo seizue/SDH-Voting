@@ -11,12 +11,13 @@ namespace SDH_Voting
     {
         private Investor _investor;
 
+
         public UpdateForm(Investor investor)
         {
             InitializeComponent();
             _investor = investor;
             LoadInvestorData();
-            textBoxVotes.TextChanged += textBoxVotes_TextChanged; // Add event handler
+            textBoxVotes.TextChanged += textBoxVotes_TextChanged;
         }
 
         private void LoadInvestorData()
@@ -71,7 +72,7 @@ namespace SDH_Voting
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close();        
         }
 
         private void btnSave_Click(object sender, EventArgs e)

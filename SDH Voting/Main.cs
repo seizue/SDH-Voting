@@ -25,9 +25,12 @@ namespace SDH_Voting
         {
             InitializeComponent();
             InitializeApplicationData();
+            LoadData();
+          
             txtBoxSearch.TextChanged += txtBoxSearch_TextChanged;
             checkBoxVoted.CheckedChanged += checkBoxVoted_CheckedChanged;
             checkBoxNonVoted.CheckedChanged += checkBoxNonVoted_CheckedChanged;
+           
         }
 
         private void InitializeApplicationData()
@@ -115,7 +118,7 @@ namespace SDH_Voting
         }
 
 
-        private void LoadData()
+        public void LoadData()
         {
             string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
             string filePath = Path.Combine(folderPath, "InvestorMasterlist.json");
@@ -144,7 +147,10 @@ namespace SDH_Voting
             UpdateDataGridView(originalInvestorList);
 
             //Custom Row Height of DataGrid
-            CustomCellHeight();
+            foreach (DataGridViewRow row in InventoryDataGrid.Rows)
+            {
+                row.Height = 30;
+            }
 
             ApplyFilters();
         }
@@ -220,9 +226,15 @@ namespace SDH_Voting
             // Add rows
             foreach (var investor in investors)
             {
-                InventoryDataGrid.Rows.Add(investor.Id, investor.Name, investor.Votes, investor.Shares, investor.Status);
+                DataGridViewRow row = new DataGridViewRow();
+                row.CreateCells(InventoryDataGrid, investor.Id, investor.Name, investor.Votes, investor.Shares, investor.Status);
+                InventoryDataGrid.Rows.Add(row);
+
+                // Set the row height explicitly
+                row.Height = 30;
             }
         }
+
 
         private void ApplyFilters()
         {
