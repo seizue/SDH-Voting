@@ -26,7 +26,8 @@ namespace SDH_Voting
             InitializeComponent();
             InitializeApplicationData();
             txtBoxSearch.TextChanged += txtBoxSearch_TextChanged;
-         
+            checkBoxVoted.CheckedChanged += checkBoxVoted_CheckedChanged;
+            checkBoxNonVoted.CheckedChanged += checkBoxNonVoted_CheckedChanged;
         }
 
         private void InitializeApplicationData()
@@ -143,10 +144,9 @@ namespace SDH_Voting
             UpdateDataGridView(originalInvestorList);
 
             //Custom Row Height of DataGrid
-            foreach (DataGridViewRow row in InventoryDataGrid.Rows)
-            {
-                row.Height = 30;
-            }
+            CustomCellHeight();
+
+            ApplyFilters();
         }
 
         private void SaveDataToSHList()
@@ -224,6 +224,31 @@ namespace SDH_Voting
             }
         }
 
+        private void ApplyFilters()
+        {
+            string searchText = txtBoxSearch.Text.Trim().ToLower();
+
+            if (originalInvestorList == null)
+            {
+                // Log the error or handle it as needed
+                MessageBox.Show("Investor list is not initialized.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Filter the data based on the search text
+            var filteredData = originalInvestorList
+                                .Where(investor =>
+                                    (string.IsNullOrEmpty(searchText) ||
+                                     investor.Id.ToLower().Contains(searchText) ||
+                                     investor.Name.ToLower().Contains(searchText) ||
+                                     investor.Votes.ToString().Contains(searchText)) &&
+                                    (!checkBoxVoted.Checked || investor.Status.Equals("Yes", StringComparison.OrdinalIgnoreCase)) &&
+                                    (!checkBoxNonVoted.Checked || investor.Status.Equals("No", StringComparison.OrdinalIgnoreCase)))
+                                .ToList();
+
+            // Update the DataGridView with the filtered data
+            UpdateDataGridView(filteredData);
+        }
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
@@ -466,6 +491,12 @@ namespace SDH_Voting
         {
             string searchText = txtBoxSearch.Text.Trim().ToLower();
 
+            // Check if the originalInvestorList is null
+            if (originalInvestorList == null)
+            {
+                return;
+            }
+
             // Check if the search text is empty
             if (string.IsNullOrEmpty(searchText))
             {
@@ -484,30 +515,72 @@ namespace SDH_Voting
 
             // Update the DataGridView with the filtered data
             UpdateDataGridView(filteredData);
+            CustomCellHeight();
+            ApplyFilters();
         }
-
 
         private void txtBoxSearch_ButtonClick(object sender, EventArgs e)
         {
             string searchText = txtBoxSearch.Text.Trim().ToLower();
 
-            // Filter the data based on the search text and selected checkboxes
-            var filteredData = originalInvestorList.Where(investor =>
-                (checkBoxId.Checked && investor.Id.ToLower().Contains(searchText)) ||
-                (checkBoxName.Checked && investor.Name.ToLower().Contains(searchText)) ||
-                (checkBoxVotes.Checked && investor.Votes.ToString().Contains(searchText))
-            ).ToList();
+            // Check if the originalInvestorList is null
+            if (originalInvestorList == null)
+            {           
+                return;
+            }
+
+            // Filter the data based on the search text
+            var filteredData = originalInvestorList
+                                .Where(investor =>
+                                    investor.Id.ToLower().Contains(searchText) ||
+                                    investor.Name.ToLower().Contains(searchText) ||
+                                    investor.Votes.ToString().Contains(searchText))
+                                .ToList();
 
             // Update the DataGridView with the filtered data
             UpdateDataGridView(filteredData);
+
+            CustomCellHeight();
         }
 
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string searchText = txtBoxSearch.Text.Trim().ToLower();
 
+            // Check if the originalInvestorList is null
+            if (originalInvestorList == null)
+            {
+                return;
+            }
+
+            // Filter the data based on the search text
+            var filteredData = originalInvestorList
+                                .Where(investor =>
+                                    investor.Id.ToLower().Contains(searchText) ||
+                                    investor.Name.ToLower().Contains(searchText) ||
+                                    investor.Votes.ToString().Contains(searchText))
+                                .ToList();
+
+            // Update the DataGridView with the filtered data
+            UpdateDataGridView(filteredData);
+            CustomCellHeight();
+        }
+
+        public void CustomCellHeight()
+        {
+            //Custom Row Height of DataGrid
+            foreach (DataGridViewRow row in InventoryDataGrid.Rows)
+            {
+                row.Height = 30;
+            }
+        }
+
+      
         private void btnInvMasterlist_Click(object sender, EventArgs e)
         {
             userControlVoting1.Visible = false;
             LoadData();
-
+            CustomCellHeight();
             btnInvMasterlist.BackColor = Color.FromArgb(95, 123, 108);
             btnInvMasterlist.ForeColor = Color.Beige;
             tableLayoutPanel1.BackColor = Color.FromArgb(113, 145, 128);
@@ -538,6 +611,18 @@ namespace SDH_Voting
         public void ShowCloseButton()
         {
             btnCloseFP.Visible = true;
+        }
+
+        private void checkBoxVoted_CheckedChanged(object sender, EventArgs e)
+        {
+            ApplyFilters();
+            CustomCellHeight();
+        }
+
+        private void checkBoxNonVoted_CheckedChanged(object sender, EventArgs e)
+        {
+            ApplyFilters();
+            CustomCellHeight();
         }
     }
 

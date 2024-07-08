@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelNav = new System.Windows.Forms.Panel();
-            this.btnCloseFP = new System.Windows.Forms.Button();
             this.buttonMinimize = new System.Windows.Forms.Button();
             this.buttonMaximize = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
@@ -56,20 +55,21 @@
             this.invStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtBoxSearch = new MetroFramework.Controls.MetroTextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.checkBoxName = new MetroFramework.Controls.MetroCheckBox();
-            this.checkBoxVotes = new MetroFramework.Controls.MetroCheckBox();
             this.metroPanel16 = new MetroFramework.Controls.MetroPanel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.checkBoxId = new MetroFramework.Controls.MetroCheckBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.userControlVoting1 = new SDH_Voting.UserControlVoting();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.button_AddNewUser = new System.Windows.Forms.Button();
             this.button_UpdateUser = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.button_Export = new System.Windows.Forms.Button();
+            this.btnCloseFP = new System.Windows.Forms.Button();
+            this.checkBoxVoted = new MetroFramework.Controls.MetroCheckBox();
+            this.checkBoxNonVoted = new MetroFramework.Controls.MetroCheckBox();
             this.panelNav.SuspendLayout();
             this.panelGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryDataGrid)).BeginInit();
@@ -91,23 +91,6 @@
             this.panelNav.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseDown);
             this.panelNav.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseMove);
             this.panelNav.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseUp);
-            // 
-            // btnCloseFP
-            // 
-            this.btnCloseFP.BackColor = System.Drawing.Color.Transparent;
-            this.btnCloseFP.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(87)))), ((int)(((byte)(64)))));
-            this.btnCloseFP.FlatAppearance.BorderSize = 0;
-            this.btnCloseFP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnCloseFP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnCloseFP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseFP.Image = global::SDH_Voting.Properties.Resources.restore_window_24px4;
-            this.btnCloseFP.Location = new System.Drawing.Point(6, 2);
-            this.btnCloseFP.Name = "btnCloseFP";
-            this.btnCloseFP.Size = new System.Drawing.Size(23, 22);
-            this.btnCloseFP.TabIndex = 7;
-            this.btnCloseFP.UseVisualStyleBackColor = false;
-            this.btnCloseFP.Visible = false;
-            this.btnCloseFP.Click += new System.EventHandler(this.btnCloseFP_Click);
             // 
             // buttonMinimize
             // 
@@ -276,25 +259,25 @@
             this.InventoryDataGrid.AllowUserToAddRows = false;
             this.InventoryDataGrid.AllowUserToResizeColumns = false;
             this.InventoryDataGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.InventoryDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle41.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle41.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
+            dataGridViewCellStyle41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.InventoryDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle41;
             this.InventoryDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.InventoryDataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
             this.InventoryDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.InventoryDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.InventoryDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.InventoryDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
+            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.InventoryDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle42;
             this.InventoryDataGrid.ColumnHeadersHeight = 48;
             this.InventoryDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.invID,
@@ -302,14 +285,14 @@
             this.invVotes,
             this.invShares,
             this.invStatus});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.InventoryDataGrid.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle43.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.InventoryDataGrid.DefaultCellStyle = dataGridViewCellStyle43;
             this.InventoryDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InventoryDataGrid.EnableHeadersVisualStyles = false;
             this.InventoryDataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -318,19 +301,19 @@
             this.InventoryDataGrid.MultiSelect = false;
             this.InventoryDataGrid.Name = "InventoryDataGrid";
             this.InventoryDataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.InventoryDataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle44.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.InventoryDataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle44;
             this.InventoryDataGrid.RowHeadersWidth = 5;
             this.InventoryDataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
-            this.InventoryDataGrid.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle45.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle45.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
+            this.InventoryDataGrid.RowsDefaultCellStyle = dataGridViewCellStyle45;
             this.InventoryDataGrid.RowTemplate.Height = 23;
             this.InventoryDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.InventoryDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -372,7 +355,7 @@
             // 
             // 
             this.txtBoxSearch.CustomButton.Image = null;
-            this.txtBoxSearch.CustomButton.Location = new System.Drawing.Point(229, 1);
+            this.txtBoxSearch.CustomButton.Location = new System.Drawing.Point(254, 1);
             this.txtBoxSearch.CustomButton.Name = "";
             this.txtBoxSearch.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtBoxSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -380,7 +363,7 @@
             this.txtBoxSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtBoxSearch.CustomButton.UseSelectable = true;
             this.txtBoxSearch.Lines = new string[0];
-            this.txtBoxSearch.Location = new System.Drawing.Point(24, 121);
+            this.txtBoxSearch.Location = new System.Drawing.Point(27, 118);
             this.txtBoxSearch.MaxLength = 32767;
             this.txtBoxSearch.Name = "txtBoxSearch";
             this.txtBoxSearch.PasswordChar = '\0';
@@ -391,7 +374,7 @@
             this.txtBoxSearch.ShortcutsEnabled = true;
             this.txtBoxSearch.ShowButton = true;
             this.txtBoxSearch.ShowClearButton = true;
-            this.txtBoxSearch.Size = new System.Drawing.Size(251, 23);
+            this.txtBoxSearch.Size = new System.Drawing.Size(276, 23);
             this.txtBoxSearch.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtBoxSearch.TabIndex = 435;
             this.txtBoxSearch.UseCustomBackColor = true;
@@ -407,39 +390,11 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label12.Location = new System.Drawing.Point(23, 102);
+            this.label12.Location = new System.Drawing.Point(24, 97);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(49, 15);
             this.label12.TabIndex = 436;
             this.label12.Text = "SEARCH";
-            // 
-            // checkBoxName
-            // 
-            this.checkBoxName.AutoSize = true;
-            this.checkBoxName.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
-            this.checkBoxName.ForeColor = System.Drawing.Color.DimGray;
-            this.checkBoxName.Location = new System.Drawing.Point(354, 129);
-            this.checkBoxName.Name = "checkBoxName";
-            this.checkBoxName.Size = new System.Drawing.Size(56, 15);
-            this.checkBoxName.TabIndex = 437;
-            this.checkBoxName.Text = "Name";
-            this.checkBoxName.UseCustomBackColor = true;
-            this.checkBoxName.UseCustomForeColor = true;
-            this.checkBoxName.UseSelectable = true;
-            // 
-            // checkBoxVotes
-            // 
-            this.checkBoxVotes.AutoSize = true;
-            this.checkBoxVotes.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
-            this.checkBoxVotes.ForeColor = System.Drawing.Color.DimGray;
-            this.checkBoxVotes.Location = new System.Drawing.Point(427, 129);
-            this.checkBoxVotes.Name = "checkBoxVotes";
-            this.checkBoxVotes.Size = new System.Drawing.Size(54, 15);
-            this.checkBoxVotes.TabIndex = 438;
-            this.checkBoxVotes.Text = "Votes";
-            this.checkBoxVotes.UseCustomBackColor = true;
-            this.checkBoxVotes.UseCustomForeColor = true;
-            this.checkBoxVotes.UseSelectable = true;
             // 
             // metroPanel16
             // 
@@ -485,20 +440,6 @@
             this.panel7.Size = new System.Drawing.Size(1, 382);
             this.panel7.TabIndex = 460;
             // 
-            // checkBoxId
-            // 
-            this.checkBoxId.AutoSize = true;
-            this.checkBoxId.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
-            this.checkBoxId.ForeColor = System.Drawing.Color.DimGray;
-            this.checkBoxId.Location = new System.Drawing.Point(299, 129);
-            this.checkBoxId.Name = "checkBoxId";
-            this.checkBoxId.Size = new System.Drawing.Size(36, 15);
-            this.checkBoxId.TabIndex = 461;
-            this.checkBoxId.Text = "ID";
-            this.checkBoxId.UseCustomBackColor = true;
-            this.checkBoxId.UseCustomForeColor = true;
-            this.checkBoxId.UseSelectable = true;
-            // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Gainsboro;
@@ -539,10 +480,28 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.userControlVoting1.BackColor = System.Drawing.Color.White;
-            this.userControlVoting1.Location = new System.Drawing.Point(11, 83);
+            this.userControlVoting1.Location = new System.Drawing.Point(9, 86);
             this.userControlVoting1.Name = "userControlVoting1";
-            this.userControlVoting1.Size = new System.Drawing.Size(893, 382);
+            this.userControlVoting1.Size = new System.Drawing.Size(893, 379);
             this.userControlVoting1.TabIndex = 437;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            this.btnSearch.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSearch.FlatAppearance.BorderSize = 2;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSearch.Image = global::SDH_Voting.Properties.Resources.find_user_male_16px;
+            this.btnSearch.Location = new System.Drawing.Point(281, 115);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(44, 29);
+            this.btnSearch.TabIndex = 491;
+            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // button_AddNewUser
             // 
@@ -628,21 +587,67 @@
             this.button_Export.UseVisualStyleBackColor = false;
             this.button_Export.Click += new System.EventHandler(this.button_Export_Click);
             // 
+            // btnCloseFP
+            // 
+            this.btnCloseFP.BackColor = System.Drawing.Color.Transparent;
+            this.btnCloseFP.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(87)))), ((int)(((byte)(64)))));
+            this.btnCloseFP.FlatAppearance.BorderSize = 0;
+            this.btnCloseFP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnCloseFP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCloseFP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseFP.Image = global::SDH_Voting.Properties.Resources.restore_window_24px4;
+            this.btnCloseFP.Location = new System.Drawing.Point(6, 2);
+            this.btnCloseFP.Name = "btnCloseFP";
+            this.btnCloseFP.Size = new System.Drawing.Size(23, 22);
+            this.btnCloseFP.TabIndex = 7;
+            this.btnCloseFP.UseVisualStyleBackColor = false;
+            this.btnCloseFP.Visible = false;
+            this.btnCloseFP.Click += new System.EventHandler(this.btnCloseFP_Click);
+            // 
+            // checkBoxVoted
+            // 
+            this.checkBoxVoted.AutoSize = true;
+            this.checkBoxVoted.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
+            this.checkBoxVoted.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.checkBoxVoted.Location = new System.Drawing.Point(361, 122);
+            this.checkBoxVoted.Name = "checkBoxVoted";
+            this.checkBoxVoted.Size = new System.Drawing.Size(56, 15);
+            this.checkBoxVoted.TabIndex = 492;
+            this.checkBoxVoted.Text = "Voted";
+            this.checkBoxVoted.UseCustomForeColor = true;
+            this.checkBoxVoted.UseSelectable = true;
+            this.checkBoxVoted.CheckedChanged += new System.EventHandler(this.checkBoxVoted_CheckedChanged);
+            // 
+            // checkBoxNonVoted
+            // 
+            this.checkBoxNonVoted.AutoSize = true;
+            this.checkBoxNonVoted.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
+            this.checkBoxNonVoted.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.checkBoxNonVoted.Location = new System.Drawing.Point(435, 122);
+            this.checkBoxNonVoted.Name = "checkBoxNonVoted";
+            this.checkBoxNonVoted.Size = new System.Drawing.Size(84, 15);
+            this.checkBoxNonVoted.TabIndex = 493;
+            this.checkBoxNonVoted.Text = "Non-Voted";
+            this.checkBoxNonVoted.UseCustomForeColor = true;
+            this.checkBoxNonVoted.UseSelectable = true;
+            this.checkBoxNonVoted.CheckedChanged += new System.EventHandler(this.checkBoxNonVoted_CheckedChanged);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(911, 487);
+            this.Controls.Add(this.userControlVoting1);
+            this.Controls.Add(this.checkBoxNonVoted);
+            this.Controls.Add(this.checkBoxVoted);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.userControlVoting1);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.metroPanel16);
-            this.Controls.Add(this.checkBoxVotes);
-            this.Controls.Add(this.checkBoxName);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtBoxSearch);
             this.Controls.Add(this.panelGrid);
@@ -654,7 +659,6 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panelNav);
-            this.Controls.Add(this.checkBoxId);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -690,14 +694,11 @@
         private MetroFramework.Controls.MetroGrid InventoryDataGrid;
         private MetroFramework.Controls.MetroTextBox txtBoxSearch;
         private System.Windows.Forms.Label label12;
-        private MetroFramework.Controls.MetroCheckBox checkBoxName;
-        private MetroFramework.Controls.MetroCheckBox checkBoxVotes;
         private UserControlVoting userControlVoting1;
         private MetroFramework.Controls.MetroPanel metroPanel16;
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btnInvMasterlist;
-        private MetroFramework.Controls.MetroCheckBox checkBoxId;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
@@ -707,6 +708,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn invShares;
         private System.Windows.Forms.DataGridViewTextBoxColumn invStatus;
         private System.Windows.Forms.Button btnCloseFP;
+        private System.Windows.Forms.Button btnSearch;
+        private MetroFramework.Controls.MetroCheckBox checkBoxVoted;
+        private MetroFramework.Controls.MetroCheckBox checkBoxNonVoted;
     }
 }
 

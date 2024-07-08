@@ -203,6 +203,26 @@ namespace SDH_Voting.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap find_user_male_16px {
+            get {
+                object obj = ResourceManager.GetObject("find_user_male_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap find_user_male_24px {
+            get {
+                object obj = ResourceManager.GetObject("find_user_male_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Full_Screen_24px {
             get {
                 object obj = ResourceManager.GetObject("Full Screen_24px", resourceCulture);
@@ -256,6 +276,16 @@ namespace SDH_Voting.Properties {
         internal static System.Drawing.Bitmap restore_window_24px4 {
             get {
                 object obj = ResourceManager.GetObject("restore_window_24px4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_client_24px {
+            get {
+                object obj = ResourceManager.GetObject("search_client_24px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
