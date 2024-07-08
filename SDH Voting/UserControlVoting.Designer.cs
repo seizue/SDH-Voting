@@ -47,20 +47,20 @@
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.metroPanel11 = new MetroFramework.Controls.MetroPanel();
-            this.metroPanel17 = new MetroFramework.Controls.MetroPanel();
-            this.metroPanel16 = new MetroFramework.Controls.MetroPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.btnPosted = new System.Windows.Forms.Button();
+            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.button3 = new System.Windows.Forms.Button();
             this.button_Export = new System.Windows.Forms.Button();
             this.btn_VoidRep = new System.Windows.Forms.Button();
-            this.btn_UpdateRep = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btn_AddRepresentative = new System.Windows.Forms.Button();
             this.btnExpandGrid = new System.Windows.Forms.Button();
             this.btnVote = new System.Windows.Forms.Button();
+            this.metroPanel16 = new MetroFramework.Controls.MetroPanel();
             this.button_Refresh = new System.Windows.Forms.Button();
             this.panelUserGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRepresentative)).BeginInit();
@@ -238,12 +238,12 @@
             // 
             // metroPanel11
             // 
-            this.metroPanel11.BackColor = System.Drawing.Color.Gainsboro;
+            this.metroPanel11.BackColor = System.Drawing.Color.WhiteSmoke;
             this.metroPanel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.metroPanel11.HorizontalScrollbarBarColor = true;
             this.metroPanel11.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel11.HorizontalScrollbarSize = 10;
-            this.metroPanel11.Location = new System.Drawing.Point(82, 15);
+            this.metroPanel11.Location = new System.Drawing.Point(74, 15);
             this.metroPanel11.Name = "metroPanel11";
             this.metroPanel11.Size = new System.Drawing.Size(1, 40);
             this.metroPanel11.TabIndex = 457;
@@ -252,40 +252,6 @@
             this.metroPanel11.VerticalScrollbarBarColor = true;
             this.metroPanel11.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel11.VerticalScrollbarSize = 10;
-            // 
-            // metroPanel17
-            // 
-            this.metroPanel17.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroPanel17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.metroPanel17.HorizontalScrollbarBarColor = true;
-            this.metroPanel17.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel17.HorizontalScrollbarSize = 10;
-            this.metroPanel17.Location = new System.Drawing.Point(252, 19);
-            this.metroPanel17.Name = "metroPanel17";
-            this.metroPanel17.Size = new System.Drawing.Size(1, 29);
-            this.metroPanel17.TabIndex = 456;
-            this.metroPanel17.UseCustomBackColor = true;
-            this.metroPanel17.UseStyleColors = true;
-            this.metroPanel17.VerticalScrollbarBarColor = true;
-            this.metroPanel17.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel17.VerticalScrollbarSize = 10;
-            // 
-            // metroPanel16
-            // 
-            this.metroPanel16.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroPanel16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.metroPanel16.HorizontalScrollbarBarColor = true;
-            this.metroPanel16.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel16.HorizontalScrollbarSize = 10;
-            this.metroPanel16.Location = new System.Drawing.Point(174, 20);
-            this.metroPanel16.Name = "metroPanel16";
-            this.metroPanel16.Size = new System.Drawing.Size(1, 29);
-            this.metroPanel16.TabIndex = 455;
-            this.metroPanel16.UseCustomBackColor = true;
-            this.metroPanel16.UseStyleColors = true;
-            this.metroPanel16.VerticalScrollbarBarColor = true;
-            this.metroPanel16.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel16.VerticalScrollbarSize = 10;
             // 
             // panel1
             // 
@@ -296,49 +262,16 @@
             this.panel1.Size = new System.Drawing.Size(1, 46);
             this.panel1.TabIndex = 458;
             // 
-            // metroPanel1
-            // 
-            this.metroPanel1.BackColor = System.Drawing.Color.Gainsboro;
-            this.metroPanel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(339, 15);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(1, 40);
-            this.metroPanel1.TabIndex = 461;
-            this.metroPanel1.UseCustomBackColor = true;
-            this.metroPanel1.UseStyleColors = true;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
-            // 
-            // metroPanel2
-            // 
-            this.metroPanel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroPanel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.metroPanel2.HorizontalScrollbarBarColor = true;
-            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(429, 19);
-            this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(1, 29);
-            this.metroPanel2.TabIndex = 463;
-            this.metroPanel2.UseCustomBackColor = true;
-            this.metroPanel2.UseStyleColors = true;
-            this.metroPanel2.VerticalScrollbarBarColor = true;
-            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
-            // 
             // panelMenu
             // 
+            this.panelMenu.Controls.Add(this.panel3);
+            this.panelMenu.Controls.Add(this.metroPanel1);
+            this.panelMenu.Controls.Add(this.btnPosted);
+            this.panelMenu.Controls.Add(this.metroPanel2);
             this.panelMenu.Controls.Add(this.button3);
             this.panelMenu.Controls.Add(this.panel2);
-            this.panelMenu.Controls.Add(this.metroPanel2);
             this.panelMenu.Controls.Add(this.button_Export);
             this.panelMenu.Controls.Add(this.btn_VoidRep);
-            this.panelMenu.Controls.Add(this.metroPanel1);
-            this.panelMenu.Controls.Add(this.btn_UpdateRep);
             this.panelMenu.Controls.Add(this.button2);
             this.panelMenu.Controls.Add(this.btn_AddRepresentative);
             this.panelMenu.Controls.Add(this.btnExpandGrid);
@@ -346,7 +279,6 @@
             this.panelMenu.Controls.Add(this.panel1);
             this.panelMenu.Controls.Add(this.metroPanel16);
             this.panelMenu.Controls.Add(this.metroPanel11);
-            this.panelMenu.Controls.Add(this.metroPanel17);
             this.panelMenu.Controls.Add(this.button_Refresh);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
@@ -354,8 +286,72 @@
             this.panelMenu.Size = new System.Drawing.Size(893, 77);
             this.panelMenu.TabIndex = 465;
             // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel3.Location = new System.Drawing.Point(649, 9);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1, 46);
+            this.panel3.TabIndex = 469;
+            // 
+            // metroPanel1
+            // 
+            this.metroPanel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.metroPanel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(350, 15);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(1, 40);
+            this.metroPanel1.TabIndex = 468;
+            this.metroPanel1.UseCustomBackColor = true;
+            this.metroPanel1.UseStyleColors = true;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // btnPosted
+            // 
+            this.btnPosted.BackColor = System.Drawing.Color.White;
+            this.btnPosted.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPosted.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnPosted.FlatAppearance.BorderSize = 0;
+            this.btnPosted.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPosted.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
+            this.btnPosted.ForeColor = System.Drawing.Color.Firebrick;
+            this.btnPosted.Image = global::SDH_Voting.Properties.Resources.approval_24px;
+            this.btnPosted.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPosted.Location = new System.Drawing.Point(370, 7);
+            this.btnPosted.Name = "btnPosted";
+            this.btnPosted.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnPosted.Size = new System.Drawing.Size(57, 51);
+            this.btnPosted.TabIndex = 467;
+            this.btnPosted.Text = "POSTED";
+            this.btnPosted.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnPosted.UseVisualStyleBackColor = false;
+            // 
+            // metroPanel2
+            // 
+            this.metroPanel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.metroPanel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.metroPanel2.HorizontalScrollbarBarColor = true;
+            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.HorizontalScrollbarSize = 10;
+            this.metroPanel2.Location = new System.Drawing.Point(161, 15);
+            this.metroPanel2.Name = "metroPanel2";
+            this.metroPanel2.Size = new System.Drawing.Size(1, 40);
+            this.metroPanel2.TabIndex = 464;
+            this.metroPanel2.UseCustomBackColor = true;
+            this.metroPanel2.UseStyleColors = true;
+            this.metroPanel2.VerticalScrollbarBarColor = true;
+            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.VerticalScrollbarSize = 10;
+            // 
             // button3
             // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.BackColor = System.Drawing.Color.Transparent;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
@@ -365,7 +361,7 @@
             this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.Image = global::SDH_Voting.Properties.Resources.file_configuration_24pxdd;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(446, 8);
+            this.button3.Location = new System.Drawing.Point(568, 7);
             this.button3.Name = "button3";
             this.button3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.button3.Size = new System.Drawing.Size(71, 51);
@@ -407,7 +403,7 @@
             this.btn_VoidRep.ForeColor = System.Drawing.Color.Black;
             this.btn_VoidRep.Image = global::SDH_Voting.Properties.Resources.waste_24px;
             this.btn_VoidRep.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_VoidRep.Location = new System.Drawing.Point(260, 9);
+            this.btn_VoidRep.Location = new System.Drawing.Point(267, 8);
             this.btn_VoidRep.Name = "btn_VoidRep";
             this.btn_VoidRep.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btn_VoidRep.Size = new System.Drawing.Size(64, 50);
@@ -416,27 +412,6 @@
             this.btn_VoidRep.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_VoidRep.UseVisualStyleBackColor = false;
             this.btn_VoidRep.Click += new System.EventHandler(this.btn_VoidRep_Click);
-            // 
-            // btn_UpdateRep
-            // 
-            this.btn_UpdateRep.BackColor = System.Drawing.Color.Transparent;
-            this.btn_UpdateRep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_UpdateRep.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btn_UpdateRep.FlatAppearance.BorderSize = 0;
-            this.btn_UpdateRep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_UpdateRep.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
-            this.btn_UpdateRep.ForeColor = System.Drawing.Color.Black;
-            this.btn_UpdateRep.Image = global::SDH_Voting.Properties.Resources.edit_profile_24px;
-            this.btn_UpdateRep.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_UpdateRep.Location = new System.Drawing.Point(181, 9);
-            this.btn_UpdateRep.Name = "btn_UpdateRep";
-            this.btn_UpdateRep.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btn_UpdateRep.Size = new System.Drawing.Size(64, 50);
-            this.btn_UpdateRep.TabIndex = 441;
-            this.btn_UpdateRep.Text = "UPDATE ";
-            this.btn_UpdateRep.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_UpdateRep.UseVisualStyleBackColor = false;
-            this.btn_UpdateRep.Click += new System.EventHandler(this.btn_UpdateRep_Click);
             // 
             // button2
             // 
@@ -449,7 +424,7 @@
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Image = global::SDH_Voting.Properties.Resources.combo_chart_24px11;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(359, 8);
+            this.button2.Location = new System.Drawing.Point(94, 7);
             this.button2.Name = "button2";
             this.button2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.button2.Size = new System.Drawing.Size(50, 51);
@@ -469,10 +444,10 @@
             this.btn_AddRepresentative.ForeColor = System.Drawing.Color.Black;
             this.btn_AddRepresentative.Image = global::SDH_Voting.Properties.Resources.add_user_male_24px;
             this.btn_AddRepresentative.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_AddRepresentative.Location = new System.Drawing.Point(103, 9);
+            this.btn_AddRepresentative.Location = new System.Drawing.Point(184, 8);
             this.btn_AddRepresentative.Name = "btn_AddRepresentative";
             this.btn_AddRepresentative.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btn_AddRepresentative.Size = new System.Drawing.Size(64, 49);
+            this.btn_AddRepresentative.Size = new System.Drawing.Size(64, 50);
             this.btn_AddRepresentative.TabIndex = 440;
             this.btn_AddRepresentative.Text = "ADD NEW";
             this.btn_AddRepresentative.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -510,17 +485,34 @@
             this.btnVote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVote.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
             this.btnVote.ForeColor = System.Drawing.Color.Black;
-            this.btnVote.Image = global::SDH_Voting.Properties.Resources.elections_26px;
+            this.btnVote.Image = global::SDH_Voting.Properties.Resources.zombie_hand_thumbs_up_26px;
             this.btnVote.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnVote.Location = new System.Drawing.Point(4, 8);
+            this.btnVote.Location = new System.Drawing.Point(3, 7);
             this.btnVote.Name = "btnVote";
             this.btnVote.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnVote.Size = new System.Drawing.Size(72, 51);
+            this.btnVote.Size = new System.Drawing.Size(57, 51);
             this.btnVote.TabIndex = 445;
             this.btnVote.Text = "VOTE";
             this.btnVote.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnVote.UseVisualStyleBackColor = false;
             this.btnVote.Click += new System.EventHandler(this.btnVote_Click);
+            // 
+            // metroPanel16
+            // 
+            this.metroPanel16.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroPanel16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.metroPanel16.HorizontalScrollbarBarColor = true;
+            this.metroPanel16.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel16.HorizontalScrollbarSize = 10;
+            this.metroPanel16.Location = new System.Drawing.Point(257, 19);
+            this.metroPanel16.Name = "metroPanel16";
+            this.metroPanel16.Size = new System.Drawing.Size(1, 29);
+            this.metroPanel16.TabIndex = 455;
+            this.metroPanel16.UseCustomBackColor = true;
+            this.metroPanel16.UseStyleColors = true;
+            this.metroPanel16.VerticalScrollbarBarColor = true;
+            this.metroPanel16.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel16.VerticalScrollbarSize = 10;
             // 
             // button_Refresh
             // 
@@ -569,26 +561,26 @@
         private System.Windows.Forms.Panel panel24;
         private MetroFramework.Controls.MetroGrid dataGridViewRepresentative;
         private System.Windows.Forms.Button btn_AddRepresentative;
-        private System.Windows.Forms.Button btn_UpdateRep;
         private System.Windows.Forms.Button btn_VoidRep;
         private System.Windows.Forms.Button button_Export;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnVote;
         private MetroFramework.Controls.MetroPanel metroPanel11;
         private System.Windows.Forms.Button button_Refresh;
-        private MetroFramework.Controls.MetroPanel metroPanel17;
-        private MetroFramework.Controls.MetroPanel metroPanel16;
         private System.Windows.Forms.Button btnExpandGrid;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button2;
-        private MetroFramework.Controls.MetroPanel metroPanel1;
         private System.Windows.Forms.Button button3;
-        private MetroFramework.Controls.MetroPanel metroPanel2;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Representative;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalVotes;
         private System.Windows.Forms.DataGridViewTextBoxColumn No_PV;
         private System.Windows.Forms.DataGridViewButtonColumn View;
         private System.Windows.Forms.Panel panelMenu;
+        private MetroFramework.Controls.MetroPanel metroPanel2;
+        private System.Windows.Forms.Button btnPosted;
+        private MetroFramework.Controls.MetroPanel metroPanel1;
+        private System.Windows.Forms.Panel panel3;
+        private MetroFramework.Controls.MetroPanel metroPanel16;
     }
 }

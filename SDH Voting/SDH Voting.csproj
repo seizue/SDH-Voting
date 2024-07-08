@@ -309,5 +309,29 @@
   <ItemGroup>
     <None Include="Resources\export_csv_24px1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\double_tick_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\double_tick_24px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tick Box_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\protect_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\approval_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elections_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elections_26px11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zombie_hand_thumbs_up_26px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

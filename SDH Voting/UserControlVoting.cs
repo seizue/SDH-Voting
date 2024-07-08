@@ -267,8 +267,6 @@ namespace SDH_Voting
             }
         }
 
-
-
         private void dataGridViewRepresentative_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             // Exclude "View" column from showing "-"
@@ -362,7 +360,6 @@ namespace SDH_Voting
         {
             LoadRepresentatives();
             LoadSHSelected();
-
         }
 
         private void btnExpandGrid_Click(object sender, EventArgs e)
@@ -386,7 +383,6 @@ namespace SDH_Voting
         private void UserControlVoting_Load(object sender, EventArgs e)
         {
             ReloadData();
-
         }
 
         private void AddViewButtonColumn()
