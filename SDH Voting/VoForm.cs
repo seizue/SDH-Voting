@@ -148,7 +148,6 @@ namespace SDH_Voting
         private void SDHVoForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Close();
-
         }
 
         private void btnSaveVoters_Click(object sender, EventArgs e)
@@ -274,8 +273,6 @@ namespace SDH_Voting
             string updatedVoteSelectedJson = JsonConvert.SerializeObject(voteSelectedList, Formatting.Indented);
             File.WriteAllText(voteSelectedFilePath, updatedVoteSelectedJson);
         }
-
-
 
         private void panelNav_MouseDown(object sender, MouseEventArgs e)
         {

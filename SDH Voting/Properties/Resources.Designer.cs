@@ -193,6 +193,16 @@ namespace SDH_Voting.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap export_csv_24px1 {
+            get {
+                object obj = ResourceManager.GetObject("export_csv_24px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap file_configuration_24pxdd {
             get {
                 object obj = ResourceManager.GetObject("file_configuration_24pxdd", resourceCulture);

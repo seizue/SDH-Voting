@@ -142,6 +142,12 @@
   <data name="waste_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\waste_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="find_user_male_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\find_user_male_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="binoculars_24px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\binoculars_24px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="meeting_room_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\meeting_room_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,11 +160,11 @@
   <data name="elections_26px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\elections_26px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="restore_window_24px4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\restore_window_24px4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Full Screen_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Full Screen_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="account_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\account_24px3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,8 +172,8 @@
   <data name="add_user_male_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add_user_male_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="account_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\account_24px3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="restore_window_24px4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\restore_window_24px4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="elections" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\elections.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,14 +181,11 @@
   <data name="combo_chart_24px11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\combo_chart_24px11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="export_csv_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\export_csv_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="opera_glasses_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\opera_glasses_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="binoculars_24px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\binoculars_24px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="export_csv_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\export_csv_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="send_file_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\send_file_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,7 +196,7 @@
   <data name="elections_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\elections_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="find_user_male_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\find_user_male_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="export_csv_24px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\export_csv_24px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
