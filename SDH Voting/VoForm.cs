@@ -175,14 +175,12 @@ namespace SDH_Voting
                 List<Investor> investors = new List<Investor>();
                 List<Representative> representatives = new List<Representative>();
 
-                // Load investors from InvestorMasterlist.json
                 if (File.Exists(investorFilePath))
                 {
                     string investorJson = File.ReadAllText(investorFilePath);
                     investors = JsonConvert.DeserializeObject<List<Investor>>(investorJson) ?? new List<Investor>();
                 }
 
-                // Load representatives from SDHRep.json
                 if (File.Exists(repFilePath))
                 {
                     string[] repJsonArray = File.ReadAllLines(repFilePath);
@@ -193,63 +191,56 @@ namespace SDH_Voting
                     }
                 }
 
-                // Update the status of the selected investor to "YES"
                 var investor = investors.FirstOrDefault(i => i.Id == selectedInvestorId);
                 if (investor != null)
                 {
-                    investor.Status = "YES";
+                    investor.VoteCount++;
+                    if (investor.VoteCount >= 5)
+                    {
+                        investor.Status = "YES";
+                    }
                 }
 
-                // Update the representative's votes and shares
                 var selectedRepName = comboRep.SelectedItem.ToString();
                 var rep = representatives.FirstOrDefault(r => r.Name == selectedRepName);
                 if (rep != null)
                 {
-                    var selectedInvestorVotes = investors.FirstOrDefault(i => i.Id == selectedInvestorId)?.Votes ?? 0;
+                    var selectedInvestorVotes = investor?.Votes ?? 0;
                     rep.Votes += selectedInvestorVotes;
-                    rep.Shares += selectedInvestorVotes; // Update Shares to be equivalent to Votes
-
+                    rep.Shares += selectedInvestorVotes;
                 }
 
-                // Save the updated investors back to InvestorMasterlist.json
                 string updatedInvestorJson = JsonConvert.SerializeObject(investors, Formatting.Indented);
                 File.WriteAllText(investorFilePath, updatedInvestorJson);
 
-                // Save the updated representatives back to SDHRep.json in original format
                 List<string> updatedRepJsonLines = new List<string>();
                 foreach (var representative in representatives)
                 {
-                    // Serialize excluding null values and SHVotes property
                     string repJsonLine = JsonConvert.SerializeObject(representative, new JsonSerializerSettings
                     {
-                        NullValueHandling = NullValueHandling.Ignore, // Ignore null values
+                        NullValueHandling = NullValueHandling.Ignore,
                         ContractResolver = new DefaultContractResolver
                         {
                             IgnoreSerializableAttribute = true
                         }
                     });
                     updatedRepJsonLines.Add(repJsonLine);
-
                 }
-            
-                File.WriteAllLines(repFilePath, updatedRepJsonLines);
-                // Reload the data to reflect changes in the DataGridView           
 
-               
-                // Save selected data to SDH_VoteSelected.json
+                File.WriteAllLines(repFilePath, updatedRepJsonLines);
+
                 SaveSelectedVoteData(folderPath);
 
-                // Call ReloadData after SaveRepVoter has completed its operations
                 userControlVoting.ReloadData();
 
                 this.Close();
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void SaveSelectedVoteData(string folderPath)
         {

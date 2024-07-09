@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelUserGrid = new System.Windows.Forms.Panel();
             this.dataGridViewRepresentative = new MetroFramework.Controls.MetroGrid();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,7 +53,7 @@
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.btnPosted = new System.Windows.Forms.Button();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.button_Export = new System.Windows.Forms.Button();
             this.btn_VoidRep = new System.Windows.Forms.Button();
             this.btnChart = new System.Windows.Forms.Button();
@@ -85,24 +85,24 @@
             this.dataGridViewRepresentative.AllowUserToAddRows = false;
             this.dataGridViewRepresentative.AllowUserToResizeColumns = false;
             this.dataGridViewRepresentative.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.dataGridViewRepresentative.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.dataGridViewRepresentative.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewRepresentative.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
             this.dataGridViewRepresentative.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewRepresentative.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewRepresentative.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewRepresentative.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRepresentative.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewRepresentative.ColumnHeadersHeight = 48;
             this.dataGridViewRepresentative.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewRepresentative.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -111,14 +111,14 @@
             this.TotalVotes,
             this.No_PV,
             this.View});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewRepresentative.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewRepresentative.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridViewRepresentative.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewRepresentative.EnableHeadersVisualStyles = false;
             this.dataGridViewRepresentative.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -127,19 +127,19 @@
             this.dataGridViewRepresentative.MultiSelect = false;
             this.dataGridViewRepresentative.Name = "dataGridViewRepresentative";
             this.dataGridViewRepresentative.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewRepresentative.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewRepresentative.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridViewRepresentative.RowHeadersWidth = 5;
             this.dataGridViewRepresentative.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
-            this.dataGridViewRepresentative.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
+            this.dataGridViewRepresentative.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewRepresentative.RowTemplate.Height = 23;
             this.dataGridViewRepresentative.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewRepresentative.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -185,9 +185,9 @@
             // View
             // 
             this.View.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.View.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.View.DefaultCellStyle = dataGridViewCellStyle9;
             this.View.FillWeight = 13F;
             this.View.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.View.HeaderText = "View PV";
@@ -279,7 +279,7 @@
             this.panelMenu.Controls.Add(this.metroPanel1);
             this.panelMenu.Controls.Add(this.btnPosted);
             this.panelMenu.Controls.Add(this.metroPanel2);
-            this.panelMenu.Controls.Add(this.button3);
+            this.panelMenu.Controls.Add(this.btnSettings);
             this.panelMenu.Controls.Add(this.panel2);
             this.panelMenu.Controls.Add(this.button_Export);
             this.panelMenu.Controls.Add(this.btn_VoidRep);
@@ -361,26 +361,27 @@
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
             // 
-            // button3
+            // btnSettings
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Image = global::SDH_Voting.Properties.Resources.file_configuration_24pxdd;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(568, 7);
-            this.button3.Name = "button3";
-            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button3.Size = new System.Drawing.Size(71, 51);
-            this.button3.TabIndex = 462;
-            this.button3.Text = "SETTINGS";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSettings.BackColor = System.Drawing.Color.Transparent;
+            this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSettings.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSettings.FlatAppearance.BorderSize = 0;
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
+            this.btnSettings.ForeColor = System.Drawing.Color.Black;
+            this.btnSettings.Image = global::SDH_Voting.Properties.Resources.file_configuration_24pxdd;
+            this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSettings.Location = new System.Drawing.Point(568, 7);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnSettings.Size = new System.Drawing.Size(71, 51);
+            this.btnSettings.TabIndex = 462;
+            this.btnSettings.Text = "SETTINGS";
+            this.btnSettings.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSettings.UseVisualStyleBackColor = false;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // button_Export
             // 
@@ -582,7 +583,7 @@
         private System.Windows.Forms.Button btnExpandGrid;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnChart;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.Panel panelMenu;
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private System.Windows.Forms.Button btnPosted;

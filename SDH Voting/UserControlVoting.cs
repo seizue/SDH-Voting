@@ -419,6 +419,12 @@ namespace SDH_Voting
             btn_VoidRep.Enabled = hasData;
             btnPosted.Enabled = hasData;
         }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            SettingsForm settingsForm = new SettingsForm();
+            settingsForm.ShowDialog();
+        }
     }
 }
 

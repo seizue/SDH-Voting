@@ -619,7 +619,7 @@ namespace SDH_Voting
             // Save the cleared data to SDH_VoteSelected.json
             SaveSDH_VoteSelectedData();
 
-            // Update the status in InvestorMasterlist.json
+            // Update the status and reset VoteCount in InvestorMasterlist.json
             UpdateInvestorMasterlistStatus();
 
             // Empty the data in SDHRep.json
@@ -681,10 +681,11 @@ namespace SDH_Voting
                     // Deserialize the JSON data into a list of investors
                     List<Investor> investors = JsonConvert.DeserializeObject<List<Investor>>(json);
 
-                    // Update the status of all investors to "NO"
+                    // Update the status and reset the VoteCount of all investors
                     foreach (var investor in investors)
                     {
                         investor.Status = "NO";
+                        investor.VoteCount = 0;
                     }
 
                     // Serialize the updated list of investors back to JSON format
@@ -703,6 +704,7 @@ namespace SDH_Voting
                 MessageBox.Show($"Error updating InvestorMasterlist status: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
 
         private void btnInvMasterlist_Click(object sender, EventArgs e)
@@ -771,7 +773,8 @@ namespace SDH_Voting
         public string Name { get; set; }
         public int Shares { get; set; }
         public int Votes { get; set; }
-        public string Status { get; set; } 
+        public string Status { get; set; }
+        public int VoteCount { get; set; }
     }
 
     public class InvestorViewModel

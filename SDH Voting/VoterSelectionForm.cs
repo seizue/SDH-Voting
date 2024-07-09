@@ -48,11 +48,9 @@ namespace SDH_Voting
                 {
                     var deserializedInvestors = JsonConvert.DeserializeObject<List<Investor>>(json) ?? new List<Investor>();
 
-                    // Filter out investors with Status = "YES"
+                    // Include only investors who haven't reached the vote limit and whose status is not "YES"
                     investors = deserializedInvestors
-                                    .Where(i => i.Status != "YES")
-                                    .GroupBy(i => i.Id)
-                                    .Select(g => g.First())
+                                    .Where(i => i.VoteCount < 5 && i.Status != "YES")
                                     .ToList();
                 }
             }

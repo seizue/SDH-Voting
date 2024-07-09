@@ -67,7 +67,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 419);
+            this.panel1.Location = new System.Drawing.Point(0, 391);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(663, 8);
             this.panel1.TabIndex = 488;
@@ -77,12 +77,12 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 9F);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(137, 42);
+            this.label9.Location = new System.Drawing.Point(85, 42);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 14);
+            this.label9.Size = new System.Drawing.Size(38, 14);
             this.label9.TabIndex = 485;
-            this.label9.Text = "UPDATE";
+            this.label9.Text = "FORM";
             // 
             // label8
             // 
@@ -92,9 +92,9 @@
             this.label8.Location = new System.Drawing.Point(17, 38);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(120, 19);
+            this.label8.Size = new System.Drawing.Size(71, 19);
             this.label8.TabIndex = 484;
-            this.label8.Text = "REPRESENTATIVE";
+            this.label8.Text = "SETTINGS";
             // 
             // panel13
             // 
@@ -111,7 +111,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 427);
+            this.panel3.Location = new System.Drawing.Point(0, 399);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(663, 1);
@@ -124,7 +124,7 @@
             this.panel4.Location = new System.Drawing.Point(662, 29);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1, 390);
+            this.panel4.Size = new System.Drawing.Size(1, 362);
             this.panel4.TabIndex = 504;
             // 
             // panel5
@@ -134,7 +134,7 @@
             this.panel5.Location = new System.Drawing.Point(0, 29);
             this.panel5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1, 390);
+            this.panel5.Size = new System.Drawing.Size(1, 362);
             this.panel5.TabIndex = 505;
             // 
             // SettingsForm
@@ -142,7 +142,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(663, 428);
+            this.ClientSize = new System.Drawing.Size(663, 400);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panelNav);
