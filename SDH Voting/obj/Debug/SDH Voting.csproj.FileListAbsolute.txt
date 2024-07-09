@@ -48,17 +48,29 @@ C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.
 D:\Venus\Repos\SDH Voting\SDH Voting\bin\Debug\SDH Voting.exe.config
 D:\Venus\Repos\SDH Voting\SDH Voting\bin\Debug\SDH Voting.exe
 D:\Venus\Repos\SDH Voting\SDH Voting\bin\Debug\SDH Voting.pdb
+D:\Venus\Repos\SDH Voting\SDH Voting\bin\Debug\LiveCharts.dll
+D:\Venus\Repos\SDH Voting\SDH Voting\bin\Debug\LiveCharts.WinForms.dll
+D:\Venus\Repos\SDH Voting\SDH Voting\bin\Debug\LiveCharts.Wpf.dll
 D:\Venus\Repos\SDH Voting\SDH Voting\bin\Debug\MetroFramework.Design.dll
 D:\Venus\Repos\SDH Voting\SDH Voting\bin\Debug\MetroFramework.dll
 D:\Venus\Repos\SDH Voting\SDH Voting\bin\Debug\MetroFramework.Fonts.dll
 D:\Venus\Repos\SDH Voting\SDH Voting\bin\Debug\Newtonsoft.Json.dll
+D:\Venus\Repos\SDH Voting\SDH Voting\bin\Debug\LiveCharts.pdb
+D:\Venus\Repos\SDH Voting\SDH Voting\bin\Debug\LiveCharts.xml
+D:\Venus\Repos\SDH Voting\SDH Voting\bin\Debug\LiveCharts.WinForms.pdb
+D:\Venus\Repos\SDH Voting\SDH Voting\bin\Debug\LiveCharts.WinForms.xml
+D:\Venus\Repos\SDH Voting\SDH Voting\bin\Debug\LiveCharts.Wpf.pdb
+D:\Venus\Repos\SDH Voting\SDH Voting\bin\Debug\LiveCharts.Wpf.xml
 D:\Venus\Repos\SDH Voting\SDH Voting\bin\Debug\Newtonsoft.Json.xml
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH Voting.csproj.AssemblyReference.cache
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.AddRepForm.resources
+D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.ChartForm.resources
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.Main.resources
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.NewForm.resources
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.Properties.Resources.resources
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.UpdateForm.resources
+D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.SettingsForm.resources
+D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.UserControlVoting.resources
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.ViewVotersForm.resources
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.SDHVoForm.resources
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.VoterSelectionForm.resources
@@ -67,5 +79,3 @@ D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH Voting.csproj.CoreCompileInpu
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH Voting.csproj.Up2Date
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH Voting.exe
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH Voting.pdb
-D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.SettingsForm.resources
-D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.UserControlVoting.resources

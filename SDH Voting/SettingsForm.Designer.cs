@@ -178,7 +178,7 @@
             this.txtBoxFontSize.CustomButton.Visible = false;
             this.txtBoxFontSize.IconRight = true;
             this.txtBoxFontSize.Lines = new string[0];
-            this.txtBoxFontSize.Location = new System.Drawing.Point(32, 133);
+            this.txtBoxFontSize.Location = new System.Drawing.Point(32, 139);
             this.txtBoxFontSize.MaxLength = 32767;
             this.txtBoxFontSize.Name = "txtBoxFontSize";
             this.txtBoxFontSize.PasswordChar = '\0';
@@ -206,7 +206,7 @@
             this.btnSaveFS.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.75F, System.Drawing.FontStyle.Bold);
             this.btnSaveFS.ForeColor = System.Drawing.Color.MintCream;
             this.btnSaveFS.Image = global::SDH_Voting.Properties.Resources.Done_16px;
-            this.btnSaveFS.Location = new System.Drawing.Point(149, 133);
+            this.btnSaveFS.Location = new System.Drawing.Point(149, 139);
             this.btnSaveFS.Name = "btnSaveFS";
             this.btnSaveFS.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnSaveFS.Size = new System.Drawing.Size(33, 23);
@@ -223,7 +223,7 @@
             this.btnSaveRH.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.75F, System.Drawing.FontStyle.Bold);
             this.btnSaveRH.ForeColor = System.Drawing.Color.MintCream;
             this.btnSaveRH.Image = global::SDH_Voting.Properties.Resources.Done_16px;
-            this.btnSaveRH.Location = new System.Drawing.Point(364, 133);
+            this.btnSaveRH.Location = new System.Drawing.Point(364, 139);
             this.btnSaveRH.Name = "btnSaveRH";
             this.btnSaveRH.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnSaveRH.Size = new System.Drawing.Size(33, 23);
@@ -247,7 +247,7 @@
             this.metroTextBox1.CustomButton.Visible = false;
             this.metroTextBox1.IconRight = true;
             this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(247, 133);
+            this.metroTextBox1.Location = new System.Drawing.Point(247, 139);
             this.metroTextBox1.MaxLength = 32767;
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.PasswordChar = '\0';

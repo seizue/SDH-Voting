@@ -210,7 +210,6 @@ namespace SDH_Voting
             return number.ToString("#,##0");
         }
 
-
         private void LoadSHSelected()
         {
             string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
@@ -291,7 +290,6 @@ namespace SDH_Voting
             }
         }
 
-
         public class DataGridViewProgressColumn : DataGridViewTextBoxColumn
         {
             public DataGridViewProgressColumn() : base()
@@ -299,7 +297,6 @@ namespace SDH_Voting
                 CellTemplate = new DataGridViewProgressCell();
             }
         }
-
 
         public class DataGridViewProgressCell : DataGridViewTextBoxCell
         {
@@ -491,8 +488,6 @@ namespace SDH_Voting
           
         }
 
-       
-
         private void UpdateButtonStates()
         {
             bool hasData = dataGridViewRepresentative.Rows.Count > 0;
@@ -507,6 +502,12 @@ namespace SDH_Voting
         {
             SettingsForm settingsForm = new SettingsForm();
             settingsForm.ShowDialog();
+        }
+
+        private void btnChart_Click(object sender, EventArgs e)
+        {
+            ChartForm chartForm = new ChartForm();
+            chartForm.ShowDialog();
         }
     }
 }

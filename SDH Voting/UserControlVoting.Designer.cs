@@ -36,6 +36,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelUserGrid = new System.Windows.Forms.Panel();
             this.dataGridViewRepresentative = new MetroFramework.Controls.MetroGrid();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Representative = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalVotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Progress = new SDH_Voting.UserControlVoting.DataGridViewProgressColumn();
+            this.No_PV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.View = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -57,12 +63,6 @@
             this.btnVote = new System.Windows.Forms.Button();
             this.metroPanel16 = new MetroFramework.Controls.MetroPanel();
             this.button_Refresh = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Representative = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalVotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Progress = new SDH_Voting.UserControlVoting.DataGridViewProgressColumn();
-            this.No_PV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.View = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panelUserGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRepresentative)).BeginInit();
             this.panelMenu.SuspendLayout();
@@ -152,6 +152,60 @@
             this.dataGridViewRepresentative.UseStyleColors = true;
             this.dataGridViewRepresentative.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewRepresentative_CellContentClick);
             this.dataGridViewRepresentative.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewRepresentative_CellFormatting);
+            // 
+            // ID
+            // 
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ID.FillWeight = 19.42796F;
+            this.ID.Frozen = true;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Width = 132;
+            // 
+            // Representative
+            // 
+            this.Representative.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Representative.FillWeight = 50F;
+            this.Representative.HeaderText = "Representative";
+            this.Representative.Name = "Representative";
+            // 
+            // TotalVotes
+            // 
+            this.TotalVotes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TotalVotes.FillWeight = 50F;
+            this.TotalVotes.HeaderText = "Total Votes";
+            this.TotalVotes.Name = "TotalVotes";
+            // 
+            // Progress
+            // 
+            this.Progress.HeaderText = "Progress";
+            this.Progress.Name = "Progress";
+            this.Progress.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Progress.Width = 180;
+            // 
+            // No_PV
+            // 
+            this.No_PV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.No_PV.FillWeight = 19.42796F;
+            this.No_PV.HeaderText = "No. PV";
+            this.No_PV.Name = "No_PV";
+            this.No_PV.Width = 150;
+            // 
+            // View
+            // 
+            this.View.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.View.DefaultCellStyle = dataGridViewCellStyle3;
+            this.View.FillWeight = 13F;
+            this.View.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.View.HeaderText = "View PV";
+            this.View.Name = "View";
+            this.View.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.View.Text = "View";
+            this.View.ToolTipText = "View People Voted";
+            this.View.UseColumnTextForButtonValue = true;
+            this.View.Width = 115;
             // 
             // panel11
             // 
@@ -400,6 +454,7 @@
             this.btnChart.Text = "CHART";
             this.btnChart.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnChart.UseVisualStyleBackColor = false;
+            this.btnChart.Click += new System.EventHandler(this.btnChart_Click);
             // 
             // btn_AddRepresentative
             // 
@@ -503,60 +558,6 @@
             this.button_Refresh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button_Refresh.UseVisualStyleBackColor = false;
             this.button_Refresh.Click += new System.EventHandler(this.button_Refresh_Click);
-            // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ID.FillWeight = 19.42796F;
-            this.ID.Frozen = true;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Width = 132;
-            // 
-            // Representative
-            // 
-            this.Representative.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Representative.FillWeight = 50F;
-            this.Representative.HeaderText = "Representative";
-            this.Representative.Name = "Representative";
-            // 
-            // TotalVotes
-            // 
-            this.TotalVotes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TotalVotes.FillWeight = 50F;
-            this.TotalVotes.HeaderText = "Total Votes";
-            this.TotalVotes.Name = "TotalVotes";
-            // 
-            // Progress
-            // 
-            this.Progress.HeaderText = "Progress";
-            this.Progress.Name = "Progress";
-            this.Progress.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Progress.Width = 180;
-            // 
-            // No_PV
-            // 
-            this.No_PV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.No_PV.FillWeight = 19.42796F;
-            this.No_PV.HeaderText = "No. PV";
-            this.No_PV.Name = "No_PV";
-            this.No_PV.Width = 150;
-            // 
-            // View
-            // 
-            this.View.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.View.DefaultCellStyle = dataGridViewCellStyle3;
-            this.View.FillWeight = 13F;
-            this.View.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.View.HeaderText = "View PV";
-            this.View.Name = "View";
-            this.View.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.View.Text = "View";
-            this.View.ToolTipText = "View People Voted";
-            this.View.UseColumnTextForButtonValue = true;
-            this.View.Width = 115;
             // 
             // UserControlVoting
             // 
