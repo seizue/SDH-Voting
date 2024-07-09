@@ -81,7 +81,7 @@ namespace SDH_Voting
                     }
                 }
 
-                // Check if SDHRep.Json exists, create if not
+                // Check if SDHRep.json exists, create if not
                 string sdhRepFilePath = Path.Combine(folderPath, "SDHRep.json");
                 if (!File.Exists(sdhRepFilePath))
                 {
@@ -110,6 +110,24 @@ namespace SDH_Voting
                         Debug.WriteLine($"SDHRep.json exists and is not empty. Content: {jsonContent}");
                     }
                 }
+
+                // Check if SDH_VoteSelected.json exists, create if not
+                string voteSelectedFilePath = Path.Combine(folderPath, "SDH_VoteSelected.json");
+                if (!File.Exists(voteSelectedFilePath))
+                {
+                    try
+                    {
+                        File.WriteAllText(voteSelectedFilePath, "[]"); // Initialize with an empty array if file doesn't exist
+                        Debug.WriteLine($"Created file: {voteSelectedFilePath}");
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.WriteLine($"Error creating SDH_VoteSelected.json: {ex.Message}");
+                        MessageBox.Show($"Error creating SDH_VoteSelected.json: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return; // Exit method if file creation fails
+                    }
+                }
+
             }
             catch (Exception ex)
             {
@@ -117,6 +135,7 @@ namespace SDH_Voting
                 MessageBox.Show($"An error occurred while initializing application data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
 
         public void LoadData()

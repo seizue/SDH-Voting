@@ -226,10 +226,6 @@ namespace SDH_Voting
                         }
                     }
                 }
-                else
-                {
-                    MessageBox.Show("SDH_VoteSelected.json file not found.", "File Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
             }
             catch (Exception ex)
             {
