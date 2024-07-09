@@ -19,6 +19,7 @@ namespace SDH_Voting
         {
             InitializeComponent();
             ReloadData();
+            UpdateButtonStates();
         }
 
         private void btn_UpdateRep_Click(object sender, EventArgs e)
@@ -158,6 +159,7 @@ namespace SDH_Voting
             addRepForm.ShowDialog();
             LoadRepresentatives();
             AddViewButtonColumn();
+            UpdateButtonStates();
         }
 
         public void LoadRepresentatives()
@@ -210,6 +212,8 @@ namespace SDH_Voting
             {
                 MessageBox.Show($"Error loading representatives: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            UpdateButtonStates();
         }
 
         private string FormatNumber(int number)
@@ -472,6 +476,16 @@ namespace SDH_Voting
             {
                 MessageBox.Show($"Error saving SDH_VoteSelected data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void UpdateButtonStates()
+        {
+            bool hasData = dataGridViewRepresentative.Rows.Count > 0;
+
+            btnVote.Enabled = hasData;
+            btnChart.Enabled = hasData;
+            btn_VoidRep.Enabled = hasData;
+            btnPosted.Enabled = hasData;
         }
     }
 }
