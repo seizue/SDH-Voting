@@ -102,12 +102,24 @@ namespace SDH_Voting
 
         private void btn_AddRepresentative_Click(object sender, EventArgs e)
         {
-            AddRepForm addRepForm = new AddRepForm();
+            // Get the list of existing representatives
+            List<string> existingRepresentatives = new List<string>();
+            foreach (DataGridViewRow row in dataGridViewRepresentative.Rows)
+            {
+                if (row.Cells["Representative"].Value != null)
+                {
+                    existingRepresentatives.Add(row.Cells["Representative"].Value.ToString());
+                }
+            }
+
+            // Pass the existing representatives to AddRepForm
+            AddRepForm addRepForm = new AddRepForm(existingRepresentatives);
             addRepForm.ShowDialog();
             LoadRepresentatives();
             AddViewButtonColumn();
             UpdateButtonStates();
         }
+
 
         public void LoadRepresentatives()
         {

@@ -13,10 +13,12 @@ namespace SDH_Voting
         private string folderPath;
         private string masterListFilePath;
         private string repFilePath;
+        private List<string> existingRepresentatives;
 
-        public AddRepForm()
+        public AddRepForm(List<string> existingRepresentatives)
         {
             InitializeComponent();
+            this.existingRepresentatives = existingRepresentatives;
             InitializeData();
         }
 
@@ -31,9 +33,14 @@ namespace SDH_Voting
             // Load existing investors from file if it exists
             LoadInvestorsFromFile();
 
+            // Filter out investors whose names already exist in the representatives list
+            var filteredInvestors = investors.Where(inv => !existingRepresentatives.Contains(inv.Name)).ToList();
+            investors = filteredInvestors;
+
             // Bind investors names to comboRep
             BindInvestorsToComboBox();
         }
+
 
         private void LoadInvestorsFromFile()
         {
