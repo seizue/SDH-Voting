@@ -31,9 +31,12 @@ namespace SDH_Voting
             {
                 row.Height = 25;
             }
-            // Attach the CellDoubleClick event handler
+
+            // Attach event handler
             GridVoters.CellDoubleClick += GridVoters_CellDoubleClick;
+            txtBoxSearch.TextChanged += txtBoxSearch_TextChanged;
         }
+
         private void LoadData()
         {
             string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
@@ -136,6 +139,75 @@ namespace SDH_Voting
         private void panelNav_MouseUp(object sender, MouseEventArgs e)
         {
             isDragging = false;
+        }
+
+        private void GridVoters_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                // Get the selected row
+                DataGridViewRow selectedRow = GridVoters.Rows[e.RowIndex];
+
+                // Get the value from the "sdhStockHolder" column
+                string stockHolderName = selectedRow.Cells["sdhStockHolder"].Value.ToString();
+                string investorId = selectedRow.Cells["sdhID"].Value.ToString();
+
+                // Raise the event to pass data back to SDHVoForm
+                StockHolderSelected?.Invoke(this, (stockHolderName, investorId));
+
+                // Close the form or perform any other actions
+                this.Close();
+            }
+        }
+
+        private void txtBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = txtBoxSearch.Text.Trim();
+
+            // Get the BindingList from the DataSource
+            BindingList<Investor> investors = (BindingList<Investor>)GridVoters.DataSource;
+
+            // If no search text is entered, reset the DataGridView
+            if (string.IsNullOrWhiteSpace(searchText))
+            {
+                GridVoters.DataSource = investors;
+            }
+            else
+            {
+                // Perform case-insensitive search by stock holder name
+                var filteredInvestors = investors.Where(i => i.Name.IndexOf(searchText, StringComparison.OrdinalIgnoreCase) >= 0).ToList();
+
+                // Update the DataGridView with the filtered results
+                GridVoters.DataSource = new BindingList<Investor>(filteredInvestors);
+            }
+        }
+
+        private void txtBoxSearch_ClearClicked()
+        {
+            txtBoxSearch.Text = ""; // Clear the text in txtBoxSearch
+            LoadData();
+        }
+
+        private void txtBoxSearch_ButtonClick(object sender, EventArgs e)
+        {
+            string searchText = txtBoxSearch.Text.Trim();
+
+            // Get the BindingList from the DataSource
+            BindingList<Investor> investors = (BindingList<Investor>)GridVoters.DataSource;
+
+            // If no search text is entered, reset the DataGridView
+            if (string.IsNullOrWhiteSpace(searchText))
+            {
+                GridVoters.DataSource = investors;
+            }
+            else
+            {
+                // Perform case-insensitive search by stock holder name
+                var filteredInvestors = investors.Where(i => i.Name.IndexOf(searchText, StringComparison.OrdinalIgnoreCase) >= 0).ToList();
+
+                // Update the DataGridView with the filtered results
+                GridVoters.DataSource = new BindingList<Investor>(filteredInvestors);
+            }
         }
     }
 }
