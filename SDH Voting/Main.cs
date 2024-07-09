@@ -603,6 +603,9 @@ namespace SDH_Voting
             // Update the status in InvestorMasterlist.json
             UpdateInvestorMasterlistStatus();
 
+            // Empty the data in SDHRep.json
+            EmptySDHRepData();
+
             LoadData();
 
             // Optionally, notify the user or perform additional actions
@@ -625,6 +628,22 @@ namespace SDH_Voting
             catch (Exception ex)
             {
                 MessageBox.Show($"Error saving SDH_VoteSelected data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void EmptySDHRepData()
+        {
+            try
+            {
+                string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
+                string filePath = Path.Combine(folderPath, "SDHRep.json");
+
+                // Write an empty string to the file to clear its content
+                File.WriteAllText(filePath, string.Empty);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error emptying SDHRep.json: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -675,7 +694,6 @@ namespace SDH_Voting
             btnInvMasterlist.BackColor = Color.FromArgb(95, 123, 108);
             btnInvMasterlist.ForeColor = Color.Beige;
             tableLayoutPanel1.BackColor = Color.FromArgb(113, 145, 128);
-
             btnVoting.BackColor = Color.FromArgb(126, 162, 143);
             btnVoting.ForeColor = Color.FromArgb(30, 58, 42);
         }
@@ -684,10 +702,10 @@ namespace SDH_Voting
         private void btnVoting_Click(object sender, EventArgs e)
         {
             userControlVoting1.Visible = true;
+            userControlVoting1.ReloadData();
             btnVoting.BackColor = Color.FromArgb(95, 123, 108);
             btnVoting.ForeColor = Color.Beige;
             tableLayoutPanel1.BackColor = Color.FromArgb(113, 145, 128);
-
             btnInvMasterlist.BackColor = Color.FromArgb(126, 162, 143);
             btnInvMasterlist.ForeColor = Color.FromArgb(30, 58, 42);
         }
