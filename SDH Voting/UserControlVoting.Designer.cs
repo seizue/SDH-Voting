@@ -91,7 +91,6 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.dataGridViewRepresentative.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewRepresentative.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewRepresentative.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
             this.dataGridViewRepresentative.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewRepresentative.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -154,38 +153,50 @@
             // 
             // ID
             // 
-            this.ID.FillWeight = 30F;
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ID.FillWeight = 19.42796F;
+            this.ID.Frozen = true;
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
+            this.ID.Width = 132;
             // 
             // Representative
             // 
-            this.Representative.FillWeight = 49F;
+            this.Representative.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Representative.FillWeight = 31.73233F;
             this.Representative.HeaderText = "Representative";
             this.Representative.Name = "Representative";
             // 
             // TotalVotes
             // 
-            this.TotalVotes.FillWeight = 68F;
+            this.TotalVotes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TotalVotes.FillWeight = 50F;
             this.TotalVotes.HeaderText = "Total Votes";
             this.TotalVotes.Name = "TotalVotes";
             // 
             // No_PV
             // 
-            this.No_PV.FillWeight = 35F;
+            this.No_PV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.No_PV.FillWeight = 19.42796F;
             this.No_PV.HeaderText = "No. PV";
             this.No_PV.Name = "No_PV";
+            this.No_PV.Width = 150;
             // 
             // View
             // 
+            this.View.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.View.DefaultCellStyle = dataGridViewCellStyle3;
-            this.View.FillWeight = 35F;
+            this.View.FillWeight = 13F;
+            this.View.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.View.HeaderText = "View PV";
             this.View.Name = "View";
+            this.View.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.View.Text = "View";
+            this.View.ToolTipText = "View People Voted";
             this.View.UseColumnTextForButtonValue = true;
+            this.View.Width = 115;
             // 
             // panel11
             // 
@@ -572,16 +583,16 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnChart;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Representative;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalVotes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn No_PV;
-        private System.Windows.Forms.DataGridViewButtonColumn View;
         private System.Windows.Forms.Panel panelMenu;
         private MetroFramework.Controls.MetroPanel metroPanel2;
         private System.Windows.Forms.Button btnPosted;
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private System.Windows.Forms.Panel panel3;
         private MetroFramework.Controls.MetroPanel metroPanel16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Representative;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TotalVotes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn No_PV;
+        private System.Windows.Forms.DataGridViewButtonColumn View;
     }
 }

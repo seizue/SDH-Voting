@@ -600,8 +600,13 @@ namespace SDH_Voting
             // Save the cleared data to SDH_VoteSelected.json
             SaveSDH_VoteSelectedData();
 
+            // Update the status in InvestorMasterlist.json
+            UpdateInvestorMasterlistStatus();
+
+            LoadData();
+
             // Optionally, notify the user or perform additional actions
-            MessageBox.Show("All VOTES are cleared!.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("All VOTES are cleared!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void SaveSDH_VoteSelectedData()
@@ -622,6 +627,45 @@ namespace SDH_Voting
                 MessageBox.Show($"Error saving SDH_VoteSelected data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void UpdateInvestorMasterlistStatus()
+        {
+            try
+            {
+                string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
+                string masterListFilePath = Path.Combine(folderPath, "InvestorMasterlist.json");
+
+                if (File.Exists(masterListFilePath))
+                {
+                    // Read the JSON data from the file
+                    string json = File.ReadAllText(masterListFilePath);
+
+                    // Deserialize the JSON data into a list of investors
+                    List<Investor> investors = JsonConvert.DeserializeObject<List<Investor>>(json);
+
+                    // Update the status of all investors to "NO"
+                    foreach (var investor in investors)
+                    {
+                        investor.Status = "NO";
+                    }
+
+                    // Serialize the updated list of investors back to JSON format
+                    string updatedJson = JsonConvert.SerializeObject(investors, Formatting.Indented);
+
+                    // Write the updated JSON data back to the file
+                    File.WriteAllText(masterListFilePath, updatedJson);
+                }
+                else
+                {
+                    MessageBox.Show("InvestorMasterlist.json file not found.", "File Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating InvestorMasterlist status: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
         private void btnInvMasterlist_Click(object sender, EventArgs e)
         {
