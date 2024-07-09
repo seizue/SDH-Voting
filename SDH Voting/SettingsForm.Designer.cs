@@ -37,6 +37,18 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtBoxFontSize = new MetroFramework.Controls.MetroTextBox();
+            this.btnSaveFS = new System.Windows.Forms.Button();
+            this.btnSaveRH = new System.Windows.Forms.Button();
+            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.comBox_WindowState = new MetroFramework.Controls.MetroComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button_Save = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.panelNav.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -137,12 +149,232 @@
             this.panel5.Size = new System.Drawing.Size(1, 362);
             this.panel5.TabIndex = 505;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(29, 114);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 16);
+            this.label2.TabIndex = 507;
+            this.label2.Text = "Change Font Size";
+            // 
+            // txtBoxFontSize
+            // 
+            this.txtBoxFontSize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            // 
+            // 
+            // 
+            this.txtBoxFontSize.CustomButton.Image = null;
+            this.txtBoxFontSize.CustomButton.Location = new System.Drawing.Point(97, 1);
+            this.txtBoxFontSize.CustomButton.Name = "";
+            this.txtBoxFontSize.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtBoxFontSize.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtBoxFontSize.CustomButton.TabIndex = 1;
+            this.txtBoxFontSize.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtBoxFontSize.CustomButton.UseSelectable = true;
+            this.txtBoxFontSize.CustomButton.Visible = false;
+            this.txtBoxFontSize.IconRight = true;
+            this.txtBoxFontSize.Lines = new string[0];
+            this.txtBoxFontSize.Location = new System.Drawing.Point(32, 133);
+            this.txtBoxFontSize.MaxLength = 32767;
+            this.txtBoxFontSize.Name = "txtBoxFontSize";
+            this.txtBoxFontSize.PasswordChar = '\0';
+            this.txtBoxFontSize.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtBoxFontSize.SelectedText = "";
+            this.txtBoxFontSize.SelectionLength = 0;
+            this.txtBoxFontSize.SelectionStart = 0;
+            this.txtBoxFontSize.ShortcutsEnabled = true;
+            this.txtBoxFontSize.Size = new System.Drawing.Size(119, 23);
+            this.txtBoxFontSize.Style = MetroFramework.MetroColorStyle.Silver;
+            this.txtBoxFontSize.TabIndex = 508;
+            this.txtBoxFontSize.UseCustomBackColor = true;
+            this.txtBoxFontSize.UseCustomForeColor = true;
+            this.txtBoxFontSize.UseSelectable = true;
+            this.txtBoxFontSize.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtBoxFontSize.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // btnSaveFS
+            // 
+            this.btnSaveFS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(142)))), ((int)(((byte)(141)))));
+            this.btnSaveFS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSaveFS.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(189)))), ((int)(((byte)(188)))));
+            this.btnSaveFS.FlatAppearance.BorderSize = 2;
+            this.btnSaveFS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveFS.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.75F, System.Drawing.FontStyle.Bold);
+            this.btnSaveFS.ForeColor = System.Drawing.Color.MintCream;
+            this.btnSaveFS.Image = global::SDH_Voting.Properties.Resources.Done_16px;
+            this.btnSaveFS.Location = new System.Drawing.Point(149, 133);
+            this.btnSaveFS.Name = "btnSaveFS";
+            this.btnSaveFS.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnSaveFS.Size = new System.Drawing.Size(33, 23);
+            this.btnSaveFS.TabIndex = 509;
+            this.btnSaveFS.UseVisualStyleBackColor = false;
+            // 
+            // btnSaveRH
+            // 
+            this.btnSaveRH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(142)))), ((int)(((byte)(141)))));
+            this.btnSaveRH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSaveRH.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(189)))), ((int)(((byte)(188)))));
+            this.btnSaveRH.FlatAppearance.BorderSize = 2;
+            this.btnSaveRH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveRH.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.75F, System.Drawing.FontStyle.Bold);
+            this.btnSaveRH.ForeColor = System.Drawing.Color.MintCream;
+            this.btnSaveRH.Image = global::SDH_Voting.Properties.Resources.Done_16px;
+            this.btnSaveRH.Location = new System.Drawing.Point(364, 133);
+            this.btnSaveRH.Name = "btnSaveRH";
+            this.btnSaveRH.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnSaveRH.Size = new System.Drawing.Size(33, 23);
+            this.btnSaveRH.TabIndex = 512;
+            this.btnSaveRH.UseVisualStyleBackColor = false;
+            // 
+            // metroTextBox1
+            // 
+            this.metroTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            // 
+            // 
+            // 
+            this.metroTextBox1.CustomButton.Image = null;
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(97, 1);
+            this.metroTextBox1.CustomButton.Name = "";
+            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox1.CustomButton.TabIndex = 1;
+            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox1.CustomButton.UseSelectable = true;
+            this.metroTextBox1.CustomButton.Visible = false;
+            this.metroTextBox1.IconRight = true;
+            this.metroTextBox1.Lines = new string[0];
+            this.metroTextBox1.Location = new System.Drawing.Point(247, 133);
+            this.metroTextBox1.MaxLength = 32767;
+            this.metroTextBox1.Name = "metroTextBox1";
+            this.metroTextBox1.PasswordChar = '\0';
+            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox1.SelectedText = "";
+            this.metroTextBox1.SelectionLength = 0;
+            this.metroTextBox1.SelectionStart = 0;
+            this.metroTextBox1.ShortcutsEnabled = true;
+            this.metroTextBox1.Size = new System.Drawing.Size(119, 23);
+            this.metroTextBox1.Style = MetroFramework.MetroColorStyle.Silver;
+            this.metroTextBox1.TabIndex = 511;
+            this.metroTextBox1.UseCustomBackColor = true;
+            this.metroTextBox1.UseCustomForeColor = true;
+            this.metroTextBox1.UseSelectable = true;
+            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(244, 114);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 16);
+            this.label1.TabIndex = 510;
+            this.label1.Text = "Change Row Height";
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Location = new System.Drawing.Point(0, 190);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(665, 1);
+            this.panel2.TabIndex = 513;
+            // 
+            // comBox_WindowState
+            // 
+            this.comBox_WindowState.FormattingEnabled = true;
+            this.comBox_WindowState.ItemHeight = 23;
+            this.comBox_WindowState.Items.AddRange(new object[] {
+            "Normal",
+            "Maximize"});
+            this.comBox_WindowState.Location = new System.Drawing.Point(32, 265);
+            this.comBox_WindowState.Name = "comBox_WindowState";
+            this.comBox_WindowState.PromptText = "Normal";
+            this.comBox_WindowState.Size = new System.Drawing.Size(225, 29);
+            this.comBox_WindowState.TabIndex = 517;
+            this.comBox_WindowState.UseCustomBackColor = true;
+            this.comBox_WindowState.UseCustomForeColor = true;
+            this.comBox_WindowState.UseSelectable = true;
+            this.comBox_WindowState.UseStyleColors = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 9F);
+            this.label5.ForeColor = System.Drawing.Color.Gray;
+            this.label5.Location = new System.Drawing.Point(29, 230);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(268, 14);
+            this.label5.TabIndex = 516;
+            this.label5.Text = "Option to change the app window default state!";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 11F);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label4.Location = new System.Drawing.Point(29, 205);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(221, 18);
+            this.label4.TabIndex = 515;
+            this.label4.Text = "WINDOW DEFAULT STATE SETTINGS";
+            // 
+            // button_Save
+            // 
+            this.button_Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.button_Save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_Save.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(195)))), ((int)(((byte)(237)))));
+            this.button_Save.FlatAppearance.BorderSize = 2;
+            this.button_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Save.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
+            this.button_Save.ForeColor = System.Drawing.Color.MintCream;
+            this.button_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_Save.Location = new System.Drawing.Point(32, 314);
+            this.button_Save.Name = "button_Save";
+            this.button_Save.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button_Save.Size = new System.Drawing.Size(225, 29);
+            this.button_Save.TabIndex = 514;
+            this.button_Save.Text = "SAVE";
+            this.button_Save.UseVisualStyleBackColor = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 11F);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(29, 82);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(221, 18);
+            this.label3.TabIndex = 518;
+            this.label3.Text = "WINDOW DEFAULT STATE SETTINGS";
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(663, 400);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.comBox_WindowState);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.button_Save);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.btnSaveRH);
+            this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnSaveFS);
+            this.Controls.Add(this.txtBoxFontSize);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panelNav);
@@ -173,5 +405,17 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label2;
+        private MetroFramework.Controls.MetroTextBox txtBoxFontSize;
+        private System.Windows.Forms.Button btnSaveFS;
+        private System.Windows.Forms.Button btnSaveRH;
+        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
+        private MetroFramework.Controls.MetroComboBox comBox_WindowState;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button_Save;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -62,15 +62,15 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBoxVoted = new MetroFramework.Controls.MetroCheckBox();
+            this.checkBoxNonVoted = new MetroFramework.Controls.MetroCheckBox();
+            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
+            this.btnClearVote = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.button_AddNewUser = new System.Windows.Forms.Button();
             this.button_UpdateUser = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.button_Export = new System.Windows.Forms.Button();
-            this.checkBoxVoted = new MetroFramework.Controls.MetroCheckBox();
-            this.checkBoxNonVoted = new MetroFramework.Controls.MetroCheckBox();
-            this.btnClearVote = new System.Windows.Forms.Button();
-            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.userControlVoting1 = new SDH_Voting.UserControlVoting();
             this.panelNav.SuspendLayout();
             this.panelGrid.SuspendLayout();
@@ -493,6 +493,72 @@
             this.panel1.Size = new System.Drawing.Size(1, 52);
             this.panel1.TabIndex = 464;
             // 
+            // checkBoxVoted
+            // 
+            this.checkBoxVoted.AutoSize = true;
+            this.checkBoxVoted.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
+            this.checkBoxVoted.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.checkBoxVoted.Location = new System.Drawing.Point(297, 120);
+            this.checkBoxVoted.Name = "checkBoxVoted";
+            this.checkBoxVoted.Size = new System.Drawing.Size(56, 15);
+            this.checkBoxVoted.TabIndex = 492;
+            this.checkBoxVoted.Text = "Voted";
+            this.checkBoxVoted.UseCustomForeColor = true;
+            this.checkBoxVoted.UseSelectable = true;
+            this.checkBoxVoted.CheckedChanged += new System.EventHandler(this.checkBoxVoted_CheckedChanged);
+            // 
+            // checkBoxNonVoted
+            // 
+            this.checkBoxNonVoted.AutoSize = true;
+            this.checkBoxNonVoted.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
+            this.checkBoxNonVoted.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.checkBoxNonVoted.Location = new System.Drawing.Point(371, 120);
+            this.checkBoxNonVoted.Name = "checkBoxNonVoted";
+            this.checkBoxNonVoted.Size = new System.Drawing.Size(84, 15);
+            this.checkBoxNonVoted.TabIndex = 493;
+            this.checkBoxNonVoted.Text = "Non-Voted";
+            this.checkBoxNonVoted.UseCustomForeColor = true;
+            this.checkBoxNonVoted.UseSelectable = true;
+            this.checkBoxNonVoted.CheckedChanged += new System.EventHandler(this.checkBoxNonVoted_CheckedChanged);
+            // 
+            // metroPanel2
+            // 
+            this.metroPanel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroPanel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.metroPanel2.HorizontalScrollbarBarColor = true;
+            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.HorizontalScrollbarSize = 10;
+            this.metroPanel2.Location = new System.Drawing.Point(821, 106);
+            this.metroPanel2.Name = "metroPanel2";
+            this.metroPanel2.Size = new System.Drawing.Size(1, 29);
+            this.metroPanel2.TabIndex = 495;
+            this.metroPanel2.UseCustomBackColor = true;
+            this.metroPanel2.UseStyleColors = true;
+            this.metroPanel2.VerticalScrollbarBarColor = true;
+            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.VerticalScrollbarSize = 10;
+            // 
+            // btnClearVote
+            // 
+            this.btnClearVote.BackColor = System.Drawing.Color.Transparent;
+            this.btnClearVote.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClearVote.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnClearVote.FlatAppearance.BorderSize = 0;
+            this.btnClearVote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearVote.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
+            this.btnClearVote.ForeColor = System.Drawing.Color.Black;
+            this.btnClearVote.Image = global::SDH_Voting.Properties.Resources.erase_24px1;
+            this.btnClearVote.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnClearVote.Location = new System.Drawing.Point(732, 97);
+            this.btnClearVote.Name = "btnClearVote";
+            this.btnClearVote.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnClearVote.Size = new System.Drawing.Size(82, 50);
+            this.btnClearVote.TabIndex = 494;
+            this.btnClearVote.Text = "CLR VOTE ";
+            this.btnClearVote.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnClearVote.UseVisualStyleBackColor = false;
+            this.btnClearVote.Click += new System.EventHandler(this.btnClearVote_Click);
+            // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
@@ -594,72 +660,6 @@
             this.button_Export.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button_Export.UseVisualStyleBackColor = false;
             this.button_Export.Click += new System.EventHandler(this.button_Export_Click);
-            // 
-            // checkBoxVoted
-            // 
-            this.checkBoxVoted.AutoSize = true;
-            this.checkBoxVoted.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
-            this.checkBoxVoted.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.checkBoxVoted.Location = new System.Drawing.Point(297, 120);
-            this.checkBoxVoted.Name = "checkBoxVoted";
-            this.checkBoxVoted.Size = new System.Drawing.Size(56, 15);
-            this.checkBoxVoted.TabIndex = 492;
-            this.checkBoxVoted.Text = "Voted";
-            this.checkBoxVoted.UseCustomForeColor = true;
-            this.checkBoxVoted.UseSelectable = true;
-            this.checkBoxVoted.CheckedChanged += new System.EventHandler(this.checkBoxVoted_CheckedChanged);
-            // 
-            // checkBoxNonVoted
-            // 
-            this.checkBoxNonVoted.AutoSize = true;
-            this.checkBoxNonVoted.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
-            this.checkBoxNonVoted.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.checkBoxNonVoted.Location = new System.Drawing.Point(371, 120);
-            this.checkBoxNonVoted.Name = "checkBoxNonVoted";
-            this.checkBoxNonVoted.Size = new System.Drawing.Size(84, 15);
-            this.checkBoxNonVoted.TabIndex = 493;
-            this.checkBoxNonVoted.Text = "Non-Voted";
-            this.checkBoxNonVoted.UseCustomForeColor = true;
-            this.checkBoxNonVoted.UseSelectable = true;
-            this.checkBoxNonVoted.CheckedChanged += new System.EventHandler(this.checkBoxNonVoted_CheckedChanged);
-            // 
-            // btnClearVote
-            // 
-            this.btnClearVote.BackColor = System.Drawing.Color.Transparent;
-            this.btnClearVote.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnClearVote.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnClearVote.FlatAppearance.BorderSize = 0;
-            this.btnClearVote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClearVote.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
-            this.btnClearVote.ForeColor = System.Drawing.Color.Black;
-            this.btnClearVote.Image = global::SDH_Voting.Properties.Resources.erase_24px1;
-            this.btnClearVote.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnClearVote.Location = new System.Drawing.Point(732, 97);
-            this.btnClearVote.Name = "btnClearVote";
-            this.btnClearVote.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnClearVote.Size = new System.Drawing.Size(82, 50);
-            this.btnClearVote.TabIndex = 494;
-            this.btnClearVote.Text = "CLR VOTE ";
-            this.btnClearVote.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnClearVote.UseVisualStyleBackColor = false;
-            this.btnClearVote.Click += new System.EventHandler(this.btnClearVote_Click);
-            // 
-            // metroPanel2
-            // 
-            this.metroPanel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroPanel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.metroPanel2.HorizontalScrollbarBarColor = true;
-            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(821, 106);
-            this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(1, 29);
-            this.metroPanel2.TabIndex = 495;
-            this.metroPanel2.UseCustomBackColor = true;
-            this.metroPanel2.UseStyleColors = true;
-            this.metroPanel2.VerticalScrollbarBarColor = true;
-            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
             // 
             // userControlVoting1
             // 
