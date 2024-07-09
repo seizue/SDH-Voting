@@ -69,6 +69,8 @@
             this.button_Export = new System.Windows.Forms.Button();
             this.checkBoxVoted = new MetroFramework.Controls.MetroCheckBox();
             this.checkBoxNonVoted = new MetroFramework.Controls.MetroCheckBox();
+            this.btnClearVote = new System.Windows.Forms.Button();
+            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.userControlVoting1 = new SDH_Voting.UserControlVoting();
             this.panelNav.SuspendLayout();
             this.panelGrid.SuspendLayout();
@@ -172,7 +174,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Location = new System.Drawing.Point(806, 101);
+            this.panel2.Location = new System.Drawing.Point(725, 101);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1, 46);
             this.panel2.TabIndex = 2;
@@ -372,7 +374,7 @@
             // 
             // 
             this.txtBoxSearch.CustomButton.Image = null;
-            this.txtBoxSearch.CustomButton.Location = new System.Drawing.Point(254, 1);
+            this.txtBoxSearch.CustomButton.Location = new System.Drawing.Point(211, 1);
             this.txtBoxSearch.CustomButton.Name = "";
             this.txtBoxSearch.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtBoxSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -391,7 +393,7 @@
             this.txtBoxSearch.ShortcutsEnabled = true;
             this.txtBoxSearch.ShowButton = true;
             this.txtBoxSearch.ShowClearButton = true;
-            this.txtBoxSearch.Size = new System.Drawing.Size(276, 23);
+            this.txtBoxSearch.Size = new System.Drawing.Size(233, 23);
             this.txtBoxSearch.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtBoxSearch.TabIndex = 435;
             this.txtBoxSearch.UseCustomBackColor = true;
@@ -420,7 +422,7 @@
             this.metroPanel16.HorizontalScrollbarBarColor = true;
             this.metroPanel16.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel16.HorizontalScrollbarSize = 10;
-            this.metroPanel16.Location = new System.Drawing.Point(721, 106);
+            this.metroPanel16.Location = new System.Drawing.Point(640, 106);
             this.metroPanel16.Name = "metroPanel16";
             this.metroPanel16.Size = new System.Drawing.Size(1, 29);
             this.metroPanel16.TabIndex = 456;
@@ -437,7 +439,7 @@
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(644, 106);
+            this.metroPanel1.Location = new System.Drawing.Point(563, 106);
             this.metroPanel1.Name = "metroPanel1";
             this.metroPanel1.Size = new System.Drawing.Size(1, 29);
             this.metroPanel1.TabIndex = 457;
@@ -460,7 +462,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel8.Location = new System.Drawing.Point(553, 101);
+            this.panel8.Location = new System.Drawing.Point(472, 101);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1, 46);
             this.panel8.TabIndex = 462;
@@ -500,7 +502,7 @@
             this.btnSearch.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnSearch.Image = global::SDH_Voting.Properties.Resources.find_user_male_16px;
-            this.btnSearch.Location = new System.Drawing.Point(281, 115);
+            this.btnSearch.Location = new System.Drawing.Point(238, 115);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(44, 29);
@@ -520,7 +522,7 @@
             this.button_AddNewUser.ForeColor = System.Drawing.Color.Black;
             this.button_AddNewUser.Image = global::SDH_Voting.Properties.Resources.add_user_male_24px;
             this.button_AddNewUser.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_AddNewUser.Location = new System.Drawing.Point(574, 97);
+            this.button_AddNewUser.Location = new System.Drawing.Point(493, 97);
             this.button_AddNewUser.Name = "button_AddNewUser";
             this.button_AddNewUser.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.button_AddNewUser.Size = new System.Drawing.Size(64, 50);
@@ -541,7 +543,7 @@
             this.button_UpdateUser.ForeColor = System.Drawing.Color.Black;
             this.button_UpdateUser.Image = global::SDH_Voting.Properties.Resources.edit_profile_24px;
             this.button_UpdateUser.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_UpdateUser.Location = new System.Drawing.Point(651, 96);
+            this.button_UpdateUser.Location = new System.Drawing.Point(570, 96);
             this.button_UpdateUser.Name = "button_UpdateUser";
             this.button_UpdateUser.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.button_UpdateUser.Size = new System.Drawing.Size(64, 50);
@@ -562,7 +564,7 @@
             this.buttonDelete.ForeColor = System.Drawing.Color.Black;
             this.buttonDelete.Image = global::SDH_Voting.Properties.Resources.waste_24px;
             this.buttonDelete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonDelete.Location = new System.Drawing.Point(728, 97);
+            this.buttonDelete.Location = new System.Drawing.Point(647, 97);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.buttonDelete.Size = new System.Drawing.Size(64, 50);
@@ -598,7 +600,7 @@
             this.checkBoxVoted.AutoSize = true;
             this.checkBoxVoted.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
             this.checkBoxVoted.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.checkBoxVoted.Location = new System.Drawing.Point(361, 122);
+            this.checkBoxVoted.Location = new System.Drawing.Point(297, 120);
             this.checkBoxVoted.Name = "checkBoxVoted";
             this.checkBoxVoted.Size = new System.Drawing.Size(56, 15);
             this.checkBoxVoted.TabIndex = 492;
@@ -612,7 +614,7 @@
             this.checkBoxNonVoted.AutoSize = true;
             this.checkBoxNonVoted.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
             this.checkBoxNonVoted.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.checkBoxNonVoted.Location = new System.Drawing.Point(435, 122);
+            this.checkBoxNonVoted.Location = new System.Drawing.Point(371, 120);
             this.checkBoxNonVoted.Name = "checkBoxNonVoted";
             this.checkBoxNonVoted.Size = new System.Drawing.Size(84, 15);
             this.checkBoxNonVoted.TabIndex = 493;
@@ -620,6 +622,44 @@
             this.checkBoxNonVoted.UseCustomForeColor = true;
             this.checkBoxNonVoted.UseSelectable = true;
             this.checkBoxNonVoted.CheckedChanged += new System.EventHandler(this.checkBoxNonVoted_CheckedChanged);
+            // 
+            // btnClearVote
+            // 
+            this.btnClearVote.BackColor = System.Drawing.Color.Transparent;
+            this.btnClearVote.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClearVote.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(195)))), ((int)(((byte)(237)))));
+            this.btnClearVote.FlatAppearance.BorderSize = 0;
+            this.btnClearVote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClearVote.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
+            this.btnClearVote.ForeColor = System.Drawing.Color.Black;
+            this.btnClearVote.Image = global::SDH_Voting.Properties.Resources.erase_24px1;
+            this.btnClearVote.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnClearVote.Location = new System.Drawing.Point(732, 97);
+            this.btnClearVote.Name = "btnClearVote";
+            this.btnClearVote.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnClearVote.Size = new System.Drawing.Size(82, 50);
+            this.btnClearVote.TabIndex = 494;
+            this.btnClearVote.Text = "CLR VOTE ";
+            this.btnClearVote.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnClearVote.UseVisualStyleBackColor = false;
+            this.btnClearVote.Click += new System.EventHandler(this.btnClearVote_Click);
+            // 
+            // metroPanel2
+            // 
+            this.metroPanel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroPanel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.metroPanel2.HorizontalScrollbarBarColor = true;
+            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.HorizontalScrollbarSize = 10;
+            this.metroPanel2.Location = new System.Drawing.Point(821, 106);
+            this.metroPanel2.Name = "metroPanel2";
+            this.metroPanel2.Size = new System.Drawing.Size(1, 29);
+            this.metroPanel2.TabIndex = 495;
+            this.metroPanel2.UseCustomBackColor = true;
+            this.metroPanel2.UseStyleColors = true;
+            this.metroPanel2.VerticalScrollbarBarColor = true;
+            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel2.VerticalScrollbarSize = 10;
             // 
             // userControlVoting1
             // 
@@ -639,6 +679,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(911, 487);
             this.Controls.Add(this.userControlVoting1);
+            this.Controls.Add(this.metroPanel2);
+            this.Controls.Add(this.btnClearVote);
             this.Controls.Add(this.checkBoxNonVoted);
             this.Controls.Add(this.checkBoxVoted);
             this.Controls.Add(this.btnSearch);
@@ -711,6 +753,8 @@
         private System.Windows.Forms.Button btnSearch;
         private MetroFramework.Controls.MetroCheckBox checkBoxVoted;
         private MetroFramework.Controls.MetroCheckBox checkBoxNonVoted;
+        private System.Windows.Forms.Button btnClearVote;
+        private MetroFramework.Controls.MetroPanel metroPanel2;
     }
 }
 

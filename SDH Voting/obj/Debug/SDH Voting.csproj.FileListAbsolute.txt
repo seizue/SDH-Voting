@@ -59,7 +59,6 @@ D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.Main.resources
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.NewForm.resources
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.Properties.Resources.resources
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.UpdateForm.resources
-D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.UpdateRepForm.resources
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.UserControlVoting.resources
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.ViewVotersForm.resources
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.SDHVoForm.resources
@@ -69,3 +68,4 @@ D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH Voting.csproj.CoreCompileInpu
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH Voting.csproj.Up2Date
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH Voting.exe
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH Voting.pdb
+D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.SettingsForm.resources

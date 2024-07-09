@@ -22,59 +22,6 @@ namespace SDH_Voting
             UpdateButtonStates();
         }
 
-        private void btn_UpdateRep_Click(object sender, EventArgs e)
-        {
-            // Load the existing representatives from the JSON file
-            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
-            string filePath = Path.Combine(folderPath, "SDHRep.json");
-
-            if (File.Exists(filePath))
-            {
-                try
-                {
-                    // Read all text from the JSON file
-                    string json = File.ReadAllText(filePath);
-
-                    // Deserialize JSON as a single Representative object
-                    Representative representative = JsonConvert.DeserializeObject<Representative>(json);
-
-                    if (representative != null)
-                    {
-                        // Open the UpdateRepForm for editing
-                        UpdateRepForm updateRepForm = new UpdateRepForm(representative.Name);
-                        if (updateRepForm.ShowDialog() == DialogResult.OK)
-                        {
-                            // Update the representative's name
-                            representative.Name = updateRepForm.RepName;
-
-                            // Serialize the updated representative back to JSON with unchanged format
-                            string updatedJson = JsonConvert.SerializeObject(representative);
-
-                            // Write the updated JSON back to the file
-                            File.WriteAllText(filePath, updatedJson);
-
-                            // Refresh the DataGridView or perform any necessary actions
-                            LoadRepresentatives();
-                            MessageBox.Show("Representative updated successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Failed to deserialize JSON into Representative object.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"An error occurred while updating representative: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                MessageBox.Show("SDHRep.json file not found.", "File Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-
         private void btn_VoidRep_Click(object sender, EventArgs e)
         {
             // Check if a row is selected
@@ -364,6 +311,7 @@ namespace SDH_Voting
         private void button_Refresh_Click(object sender, EventArgs e)
         {
             ReloadData();
+            MessageBox.Show("Refresh successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public void ReloadData()

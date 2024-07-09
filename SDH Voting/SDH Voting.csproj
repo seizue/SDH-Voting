@@ -84,11 +84,11 @@
     <Compile Include="UpdateForm.Designer.cs">
       <DependentUpon>UpdateForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateRepForm.cs">
+    <Compile Include="SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateRepForm.Designer.cs">
-      <DependentUpon>UpdateRepForm.cs</DependentUpon>
+    <Compile Include="SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlVoting.cs">
       <SubType>UserControl</SubType>
@@ -136,8 +136,8 @@
     <EmbeddedResource Include="UpdateForm.resx">
       <DependentUpon>UpdateForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateRepForm.resx">
-      <DependentUpon>UpdateRepForm.cs</DependentUpon>
+    <EmbeddedResource Include="SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlVoting.resx">
       <DependentUpon>UserControlVoting.cs</DependentUpon>
@@ -332,6 +332,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\zombie_hand_thumbs_up_26px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\erase_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\erase_24px1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -20,13 +20,14 @@ namespace SDH_Voting
         private Point lastForm;
 
         private List<InvestorViewModel> originalInvestorList;
+        private List<VoteSelectedData> SDH_VoteSelected = new List<VoteSelectedData>();
 
         public Main()
         {
             InitializeComponent();
             InitializeApplicationData();
             LoadData();
-         
+            UpdateButtonStates();
             txtBoxSearch.TextChanged += txtBoxSearch_TextChanged;
             checkBoxVoted.CheckedChanged += checkBoxVoted_CheckedChanged;
             checkBoxNonVoted.CheckedChanged += checkBoxNonVoted_CheckedChanged;
@@ -233,6 +234,8 @@ namespace SDH_Voting
                 // Set the row height explicitly
                 row.Height = 30;
             }
+
+            UpdateButtonStates();
         }
 
 
@@ -317,6 +320,7 @@ namespace SDH_Voting
             newForm.ShowDialog();
             LoadData();
             SaveDataToSHList();
+            UpdateButtonStates();
         }
 
         private void button_UpdateUser_Click(object sender, EventArgs e)
@@ -587,7 +591,38 @@ namespace SDH_Voting
             }
         }
 
-      
+
+        private void btnClearVote_Click(object sender, EventArgs e)
+        {
+            // Clear data in SDH_VoteSelected
+            SDH_VoteSelected.Clear();
+
+            // Save the cleared data to SDH_VoteSelected.json
+            SaveSDH_VoteSelectedData();
+
+            // Optionally, notify the user or perform additional actions
+            MessageBox.Show("All VOTES are cleared!.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void SaveSDH_VoteSelectedData()
+        {
+            try
+            {
+                string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
+                string filePath = Path.Combine(folderPath, "SDH_VoteSelected.json");
+
+                // Serialize an empty array to JSON format
+                string json = JsonConvert.SerializeObject(new List<VoteSelectedData>(), Formatting.Indented);
+
+                // Write the JSON data to the file
+                File.WriteAllText(filePath, json);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving SDH_VoteSelected data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void btnInvMasterlist_Click(object sender, EventArgs e)
         {
             userControlVoting1.Visible = false;
@@ -636,6 +671,16 @@ namespace SDH_Voting
             ApplyFilters();
             CustomCellHeight();
         }
+
+        private void UpdateButtonStates()
+        {
+            bool hasData = InventoryDataGrid.Rows.Count > 0;
+
+            button_UpdateUser.Enabled = hasData;
+            buttonDelete.Enabled = hasData;
+          
+        }
+
     }
 
 
