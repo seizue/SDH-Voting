@@ -30,8 +30,7 @@ namespace SDH_Voting
             UpdateButtonStates();
             txtBoxSearch.TextChanged += txtBoxSearch_TextChanged;
             checkBoxVoted.CheckedChanged += checkBoxVoted_CheckedChanged;
-            checkBoxNonVoted.CheckedChanged += checkBoxNonVoted_CheckedChanged;
-           
+            checkBoxNonVoted.CheckedChanged += checkBoxNonVoted_CheckedChanged;  
         }
 
         private void InitializeApplicationData()
@@ -705,8 +704,6 @@ namespace SDH_Voting
             }
         }
 
-
-
         private void btnInvMasterlist_Click(object sender, EventArgs e)
         {
             userControlVoting1.Visible = false;
@@ -737,7 +734,6 @@ namespace SDH_Voting
             btnCloseFP.Visible = false;
         }
 
-        // Method to make btnCloseFP visible
         public void ShowCloseButton()
         {
             btnCloseFP.Visible = true;
@@ -760,8 +756,7 @@ namespace SDH_Voting
             bool hasData = InventoryDataGrid.Rows.Count > 0;
 
             button_UpdateUser.Enabled = hasData;
-            buttonDelete.Enabled = hasData;
-          
+            buttonDelete.Enabled = hasData;          
         }
 
     }

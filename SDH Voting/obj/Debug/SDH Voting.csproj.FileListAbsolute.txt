@@ -12,7 +12,6 @@ C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting
 C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.NewForm.resources
 C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.Properties.Resources.resources
 C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.UpdateForm.resources
-C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.UpdateRepForm.resources
 C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.UserControlVoting.resources
 C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.SDHVoForm.resources
 C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.VoterSelectionForm.resources
@@ -79,3 +78,15 @@ D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH Voting.csproj.CoreCompileInpu
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH Voting.csproj.Up2Date
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH Voting.exe
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH Voting.pdb
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.dll
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.pdb
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.xml
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.ChartForm.resources
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.SettingsForm.resources
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.ViewVotersForm.resources

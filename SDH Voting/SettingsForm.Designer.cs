@@ -71,6 +71,9 @@
             this.panelNav.Name = "panelNav";
             this.panelNav.Size = new System.Drawing.Size(663, 29);
             this.panelNav.TabIndex = 477;
+            this.panelNav.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseDown);
+            this.panelNav.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseMove);
+            this.panelNav.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseUp);
             // 
             // buttonClose
             // 

@@ -7,11 +7,15 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace SDH_Voting
 {
     public partial class ChartForm : Form
     {
+        private bool isDragging = false;
+        private Point lastCursor;
+        private Point lastForm;
         public ChartForm()
         {
             InitializeComponent();
@@ -101,13 +105,33 @@ namespace SDH_Voting
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void panelNav_MouseDown(object sender, MouseEventArgs e)
+        {
+            isDragging = true;
+            lastCursor = Cursor.Position;
+            lastForm = this.Location;
+        }
+
+        private void panelNav_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                int deltaX = Cursor.Position.X - lastCursor.X;
+                int deltaY = Cursor.Position.Y - lastCursor.Y;
+                this.Location = new Point(lastForm.X + deltaX, lastForm.Y + deltaY);
+            }
+        }
+
+        private void panelNav_MouseUp(object sender, MouseEventArgs e)
+        {
+            isDragging = false;
+        }
+
         public class Representative
         {
             public string Name { get; set; }
             public long Votes { get; set; }
-         
-        }
 
-       
+        }
     }
 }
