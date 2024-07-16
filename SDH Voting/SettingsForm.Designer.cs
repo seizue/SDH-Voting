@@ -31,7 +31,6 @@
             this.panelNav = new System.Windows.Forms.Panel();
             this.buttonClose = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -55,9 +54,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnDeleteData = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.panel_Indicator = new System.Windows.Forms.Panel();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panelNav.SuspendLayout();
             this.panel15.SuspendLayout();
             this.SuspendLayout();
@@ -89,29 +93,17 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 398);
+            this.panel1.Location = new System.Drawing.Point(0, 421);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(663, 8);
             this.panel1.TabIndex = 488;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 9F);
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(85, 42);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 14);
-            this.label9.TabIndex = 485;
-            this.label9.Text = "FORM";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(17, 38);
+            this.label8.Location = new System.Drawing.Point(13, 42);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(71, 19);
@@ -133,7 +125,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 406);
+            this.panel3.Location = new System.Drawing.Point(0, 429);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(663, 1);
@@ -146,7 +138,7 @@
             this.panel4.Location = new System.Drawing.Point(662, 29);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1, 369);
+            this.panel4.Size = new System.Drawing.Size(1, 392);
             this.panel4.TabIndex = 504;
             // 
             // panel5
@@ -156,7 +148,7 @@
             this.panel5.Location = new System.Drawing.Point(0, 29);
             this.panel5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1, 369);
+            this.panel5.Size = new System.Drawing.Size(1, 392);
             this.panel5.TabIndex = 505;
             // 
             // label2
@@ -178,7 +170,7 @@
             // 
             // 
             this.txtBoxFontSize.CustomButton.Image = null;
-            this.txtBoxFontSize.CustomButton.Location = new System.Drawing.Point(97, 1);
+            this.txtBoxFontSize.CustomButton.Location = new System.Drawing.Point(36, 1);
             this.txtBoxFontSize.CustomButton.Name = "";
             this.txtBoxFontSize.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtBoxFontSize.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -197,7 +189,7 @@
             this.txtBoxFontSize.SelectionLength = 0;
             this.txtBoxFontSize.SelectionStart = 0;
             this.txtBoxFontSize.ShortcutsEnabled = true;
-            this.txtBoxFontSize.Size = new System.Drawing.Size(119, 23);
+            this.txtBoxFontSize.Size = new System.Drawing.Size(58, 23);
             this.txtBoxFontSize.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtBoxFontSize.TabIndex = 508;
             this.txtBoxFontSize.UseCustomBackColor = true;
@@ -213,7 +205,7 @@
             // 
             // 
             this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(97, 1);
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(36, 1);
             this.metroTextBox1.CustomButton.Name = "";
             this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -223,7 +215,7 @@
             this.metroTextBox1.CustomButton.Visible = false;
             this.metroTextBox1.IconRight = true;
             this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(247, 137);
+            this.metroTextBox1.Location = new System.Drawing.Point(196, 137);
             this.metroTextBox1.MaxLength = 32767;
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.PasswordChar = '\0';
@@ -232,7 +224,7 @@
             this.metroTextBox1.SelectionLength = 0;
             this.metroTextBox1.SelectionStart = 0;
             this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(119, 23);
+            this.metroTextBox1.Size = new System.Drawing.Size(58, 23);
             this.metroTextBox1.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroTextBox1.TabIndex = 511;
             this.metroTextBox1.UseCustomBackColor = true;
@@ -246,7 +238,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(244, 112);
+            this.label1.Location = new System.Drawing.Point(193, 112);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 16);
@@ -304,7 +296,7 @@
             this.btnSaveRH.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.75F, System.Drawing.FontStyle.Bold);
             this.btnSaveRH.ForeColor = System.Drawing.Color.MintCream;
             this.btnSaveRH.Image = global::SDH_Voting.Properties.Resources.Done_16px;
-            this.btnSaveRH.Location = new System.Drawing.Point(364, 135);
+            this.btnSaveRH.Location = new System.Drawing.Point(252, 135);
             this.btnSaveRH.Name = "btnSaveRH";
             this.btnSaveRH.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnSaveRH.Size = new System.Drawing.Size(33, 27);
@@ -321,7 +313,7 @@
             this.btnSaveFS.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.75F, System.Drawing.FontStyle.Bold);
             this.btnSaveFS.ForeColor = System.Drawing.Color.MintCream;
             this.btnSaveFS.Image = global::SDH_Voting.Properties.Resources.Done_16px;
-            this.btnSaveFS.Location = new System.Drawing.Point(149, 135);
+            this.btnSaveFS.Location = new System.Drawing.Point(88, 135);
             this.btnSaveFS.Name = "btnSaveFS";
             this.btnSaveFS.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnSaveFS.Size = new System.Drawing.Size(33, 27);
@@ -429,23 +421,24 @@
             this.label4.TabIndex = 522;
             this.label4.Text = "Delete all data?";
             // 
-            // btnCancel
+            // btnDeleteData
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.IndianRed;
-            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnCancel.FlatAppearance.BorderSize = 2;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.ForeColor = System.Drawing.Color.MintCream;
-            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancel.Location = new System.Drawing.Point(32, 345);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnCancel.Size = new System.Drawing.Size(365, 27);
-            this.btnCancel.TabIndex = 523;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnDeleteData.BackColor = System.Drawing.Color.IndianRed;
+            this.btnDeleteData.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDeleteData.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnDeleteData.FlatAppearance.BorderSize = 2;
+            this.btnDeleteData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteData.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
+            this.btnDeleteData.ForeColor = System.Drawing.Color.MintCream;
+            this.btnDeleteData.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDeleteData.Location = new System.Drawing.Point(32, 345);
+            this.btnDeleteData.Name = "btnDeleteData";
+            this.btnDeleteData.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnDeleteData.Size = new System.Drawing.Size(365, 27);
+            this.btnDeleteData.TabIndex = 523;
+            this.btnDeleteData.Text = "DELETE DATA";
+            this.btnDeleteData.UseVisualStyleBackColor = false;
+            this.btnDeleteData.Click += new System.EventHandler(this.btnDeleteData_Click);
             // 
             // label6
             // 
@@ -468,15 +461,109 @@
             this.label7.TabIndex = 525;
             this.label7.Text = "Warning! all data will be deleted permanently!";
             // 
+            // panel_Indicator
+            // 
+            this.panel_Indicator.BackColor = System.Drawing.Color.IndianRed;
+            this.panel_Indicator.Location = new System.Drawing.Point(18, 65);
+            this.panel_Indicator.Name = "panel_Indicator";
+            this.panel_Indicator.Size = new System.Drawing.Size(61, 2);
+            this.panel_Indicator.TabIndex = 527;
+            // 
+            // metroPanel1
+            // 
+            this.metroPanel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.metroPanel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(340, 80);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(1, 98);
+            this.metroPanel1.TabIndex = 528;
+            this.metroPanel1.UseCustomBackColor = true;
+            this.metroPanel1.UseStyleColors = true;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(195)))), ((int)(((byte)(237)))));
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.75F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.MintCream;
+            this.button1.Image = global::SDH_Voting.Properties.Resources.Done_16px;
+            this.button1.Location = new System.Drawing.Point(444, 135);
+            this.button1.Name = "button1";
+            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button1.Size = new System.Drawing.Size(33, 27);
+            this.button1.TabIndex = 531;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // metroTextBox2
+            // 
+            this.metroTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            // 
+            // 
+            // 
+            this.metroTextBox2.CustomButton.Image = null;
+            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(36, 1);
+            this.metroTextBox2.CustomButton.Name = "";
+            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox2.CustomButton.TabIndex = 1;
+            this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox2.CustomButton.UseSelectable = true;
+            this.metroTextBox2.CustomButton.Visible = false;
+            this.metroTextBox2.IconRight = true;
+            this.metroTextBox2.Lines = new string[0];
+            this.metroTextBox2.Location = new System.Drawing.Point(388, 137);
+            this.metroTextBox2.MaxLength = 32767;
+            this.metroTextBox2.Name = "metroTextBox2";
+            this.metroTextBox2.PasswordChar = '\0';
+            this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox2.SelectedText = "";
+            this.metroTextBox2.SelectionLength = 0;
+            this.metroTextBox2.SelectionStart = 0;
+            this.metroTextBox2.ShortcutsEnabled = true;
+            this.metroTextBox2.Size = new System.Drawing.Size(58, 23);
+            this.metroTextBox2.Style = MetroFramework.MetroColorStyle.Silver;
+            this.metroTextBox2.TabIndex = 530;
+            this.metroTextBox2.UseCustomBackColor = true;
+            this.metroTextBox2.UseCustomForeColor = true;
+            this.metroTextBox2.UseSelectable = true;
+            this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(385, 112);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(121, 16);
+            this.label9.TabIndex = 529;
+            this.label9.Text = "Change Max Vote Limit";
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(663, 407);
+            this.ClientSize = new System.Drawing.Size(663, 430);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.metroTextBox2);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.metroPanel1);
+            this.Controls.Add(this.panel_Indicator);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnDeleteData);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.label3);
@@ -494,7 +581,6 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panelNav);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.panel3);
@@ -515,7 +601,6 @@
         private System.Windows.Forms.Panel panelNav;
         private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel3;
@@ -539,8 +624,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnDeleteData;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel_Indicator;
+        private MetroFramework.Controls.MetroPanel metroPanel1;
+        private System.Windows.Forms.Button button1;
+        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private System.Windows.Forms.Label label9;
     }
 }
