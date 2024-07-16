@@ -17,6 +17,10 @@ namespace SDH_Voting
         private List<VoteSelectedData> SDH_VoteSelected = new List<VoteSelectedData>();
         private UserControlVoting userControlVoting;
 
+        private bool isDragging = false;
+        private Point lastCursor;
+        private Point lastForm;
+
         public SettingsForm(UserControlVoting userControl)
         {
             InitializeComponent();
@@ -141,6 +145,28 @@ namespace SDH_Voting
 
             // Close the settings form or perform any other necessary actions
             this.Close();
+        }
+
+        private void panelNav_MouseDown(object sender, MouseEventArgs e)
+        {
+            isDragging = true;
+            lastCursor = Cursor.Position;
+            lastForm = this.Location;
+        }
+
+        private void panelNav_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                int deltaX = Cursor.Position.X - lastCursor.X;
+                int deltaY = Cursor.Position.Y - lastCursor.Y;
+                this.Location = new Point(lastForm.X + deltaX, lastForm.Y + deltaY);
+            }
+        }
+
+        private void panelNav_MouseUp(object sender, MouseEventArgs e)
+        {
+            isDragging = false;
         }
     }
 }

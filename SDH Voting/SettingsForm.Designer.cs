@@ -75,6 +75,9 @@
             this.panelNav.Name = "panelNav";
             this.panelNav.Size = new System.Drawing.Size(663, 29);
             this.panelNav.TabIndex = 477;
+            this.panelNav.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseDown);
+            this.panelNav.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseMove);
+            this.panelNav.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseUp);
             // 
             // buttonClose
             // 
@@ -475,7 +478,7 @@
             // 
             // metroPanel1
             // 
-            this.metroPanel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.metroPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.metroPanel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
