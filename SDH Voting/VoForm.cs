@@ -23,14 +23,13 @@ namespace SDH_Voting
         private string selectedInvestorId;
         private List<Investor> investors;
 
-        public SDHVoForm(string sdhStockHolder)
+        public SDHVoForm(string sdhStockHolder, UserControlVoting userControl)
         {
             InitializeComponent();
             LoadRepresentativesComboRep();
             txtBoxSH.Text = sdhStockHolder;
             LoadInvestorsData();
             userControlVoting = new UserControlVoting();
-            userControlVoting.ReloadData();
         }
 
         private void LoadRepresentativesComboRep()
@@ -153,9 +152,6 @@ namespace SDH_Voting
         private void btnSaveVoters_Click(object sender, EventArgs e)
         {
             SaveRepVoter();
-
-            // Call ReloadData after SaveRepVoter has completed its operations
-            userControlVoting.ReloadData();
         }
 
         public void SaveRepVoter()
@@ -289,8 +285,15 @@ namespace SDH_Voting
 
         private void SDHVoForm_Load(object sender, EventArgs e)
         {
-            userControlVoting.ReloadData();
-            LoadInvestorsData();
+            if (userControlVoting != null)
+            {
+                userControlVoting.ReloadData();
+                LoadInvestorsData();
+            }
+            else
+            {
+                MessageBox.Show("userControlVoting is null. Cannot reload data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 

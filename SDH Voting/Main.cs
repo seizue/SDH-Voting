@@ -31,7 +31,14 @@ namespace SDH_Voting
             txtBoxSearch.TextChanged += txtBoxSearch_TextChanged;
             checkBoxVoted.CheckedChanged += checkBoxVoted_CheckedChanged;
             checkBoxNonVoted.CheckedChanged += checkBoxNonVoted_CheckedChanged;
-           
+
+            // Set the initial window state based on the saved value
+            string savedWindowState = Properties.Settings.Default.MainFormWindowState;
+            if (!string.IsNullOrEmpty(savedWindowState) && Enum.IsDefined(typeof(FormWindowState), savedWindowState))
+            {
+                // Parse the saved value and set the window state
+                this.WindowState = (FormWindowState)Enum.Parse(typeof(FormWindowState), savedWindowState);
+            }
         }
 
         private void InitializeApplicationData()

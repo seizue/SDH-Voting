@@ -38,7 +38,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBoxFontSize = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.txtBoxRowHeight = new MetroFramework.Controls.MetroTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,7 +46,7 @@
             this.btnSaveRH = new System.Windows.Forms.Button();
             this.btnSaveFS = new System.Windows.Forms.Button();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.comboRep = new System.Windows.Forms.ComboBox();
+            this.comBox_WindowState = new System.Windows.Forms.ComboBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
@@ -60,7 +60,7 @@
             this.panel_Indicator = new System.Windows.Forms.Panel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.button1 = new System.Windows.Forms.Button();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.txtBoxMaxVote = new MetroFramework.Controls.MetroTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panelNav.SuspendLayout();
             this.panel15.SuspendLayout();
@@ -198,40 +198,40 @@
             this.txtBoxFontSize.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtBoxFontSize.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroTextBox1
+            // txtBoxRowHeight
             // 
-            this.metroTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            this.txtBoxRowHeight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
             // 
             // 
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(36, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.IconRight = true;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(196, 137);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(58, 23);
-            this.metroTextBox1.Style = MetroFramework.MetroColorStyle.Silver;
-            this.metroTextBox1.TabIndex = 511;
-            this.metroTextBox1.UseCustomBackColor = true;
-            this.metroTextBox1.UseCustomForeColor = true;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtBoxRowHeight.CustomButton.Image = null;
+            this.txtBoxRowHeight.CustomButton.Location = new System.Drawing.Point(36, 1);
+            this.txtBoxRowHeight.CustomButton.Name = "";
+            this.txtBoxRowHeight.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtBoxRowHeight.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtBoxRowHeight.CustomButton.TabIndex = 1;
+            this.txtBoxRowHeight.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtBoxRowHeight.CustomButton.UseSelectable = true;
+            this.txtBoxRowHeight.CustomButton.Visible = false;
+            this.txtBoxRowHeight.IconRight = true;
+            this.txtBoxRowHeight.Lines = new string[0];
+            this.txtBoxRowHeight.Location = new System.Drawing.Point(196, 137);
+            this.txtBoxRowHeight.MaxLength = 32767;
+            this.txtBoxRowHeight.Name = "txtBoxRowHeight";
+            this.txtBoxRowHeight.PasswordChar = '\0';
+            this.txtBoxRowHeight.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtBoxRowHeight.SelectedText = "";
+            this.txtBoxRowHeight.SelectionLength = 0;
+            this.txtBoxRowHeight.SelectionStart = 0;
+            this.txtBoxRowHeight.ShortcutsEnabled = true;
+            this.txtBoxRowHeight.Size = new System.Drawing.Size(58, 23);
+            this.txtBoxRowHeight.Style = MetroFramework.MetroColorStyle.Silver;
+            this.txtBoxRowHeight.TabIndex = 511;
+            this.txtBoxRowHeight.UseCustomBackColor = true;
+            this.txtBoxRowHeight.UseCustomForeColor = true;
+            this.txtBoxRowHeight.UseSelectable = true;
+            this.txtBoxRowHeight.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtBoxRowHeight.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // label1
             // 
@@ -285,6 +285,7 @@
             this.button_Save.TabIndex = 514;
             this.button_Save.Text = "SAVE";
             this.button_Save.UseVisualStyleBackColor = false;
+            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
             // 
             // btnSaveRH
             // 
@@ -296,10 +297,10 @@
             this.btnSaveRH.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.75F, System.Drawing.FontStyle.Bold);
             this.btnSaveRH.ForeColor = System.Drawing.Color.MintCream;
             this.btnSaveRH.Image = global::SDH_Voting.Properties.Resources.Done_16px;
-            this.btnSaveRH.Location = new System.Drawing.Point(252, 135);
+            this.btnSaveRH.Location = new System.Drawing.Point(252, 137);
             this.btnSaveRH.Name = "btnSaveRH";
             this.btnSaveRH.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnSaveRH.Size = new System.Drawing.Size(33, 27);
+            this.btnSaveRH.Size = new System.Drawing.Size(33, 23);
             this.btnSaveRH.TabIndex = 512;
             this.btnSaveRH.UseVisualStyleBackColor = false;
             // 
@@ -313,16 +314,16 @@
             this.btnSaveFS.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.75F, System.Drawing.FontStyle.Bold);
             this.btnSaveFS.ForeColor = System.Drawing.Color.MintCream;
             this.btnSaveFS.Image = global::SDH_Voting.Properties.Resources.Done_16px;
-            this.btnSaveFS.Location = new System.Drawing.Point(88, 135);
+            this.btnSaveFS.Location = new System.Drawing.Point(88, 137);
             this.btnSaveFS.Name = "btnSaveFS";
             this.btnSaveFS.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnSaveFS.Size = new System.Drawing.Size(33, 27);
+            this.btnSaveFS.Size = new System.Drawing.Size(33, 23);
             this.btnSaveFS.TabIndex = 509;
             this.btnSaveFS.UseVisualStyleBackColor = false;
             // 
             // panel15
             // 
-            this.panel15.Controls.Add(this.comboRep);
+            this.panel15.Controls.Add(this.comBox_WindowState);
             this.panel15.Controls.Add(this.panel16);
             this.panel15.Controls.Add(this.panel17);
             this.panel15.Controls.Add(this.panel18);
@@ -332,20 +333,23 @@
             this.panel15.Size = new System.Drawing.Size(225, 26);
             this.panel15.TabIndex = 519;
             // 
-            // comboRep
+            // comBox_WindowState
             // 
-            this.comboRep.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.comBox_WindowState.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboRep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
-            this.comboRep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboRep.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboRep.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.comboRep.FormattingEnabled = true;
-            this.comboRep.Location = new System.Drawing.Point(2, 2);
-            this.comboRep.Name = "comboRep";
-            this.comboRep.Size = new System.Drawing.Size(221, 22);
-            this.comboRep.TabIndex = 388;
-            this.comboRep.Text = "Select";
+            this.comBox_WindowState.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
+            this.comBox_WindowState.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comBox_WindowState.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comBox_WindowState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.comBox_WindowState.FormattingEnabled = true;
+            this.comBox_WindowState.Items.AddRange(new object[] {
+            "Normal",
+            "Maximized"});
+            this.comBox_WindowState.Location = new System.Drawing.Point(2, 2);
+            this.comBox_WindowState.Name = "comBox_WindowState";
+            this.comBox_WindowState.Size = new System.Drawing.Size(221, 22);
+            this.comBox_WindowState.TabIndex = 388;
+            this.comBox_WindowState.Text = "Select";
             // 
             // panel16
             // 
@@ -496,47 +500,47 @@
             this.button1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.75F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.MintCream;
             this.button1.Image = global::SDH_Voting.Properties.Resources.Done_16px;
-            this.button1.Location = new System.Drawing.Point(444, 135);
+            this.button1.Location = new System.Drawing.Point(444, 137);
             this.button1.Name = "button1";
             this.button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button1.Size = new System.Drawing.Size(33, 27);
+            this.button1.Size = new System.Drawing.Size(33, 23);
             this.button1.TabIndex = 531;
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // metroTextBox2
+            // txtBoxMaxVote
             // 
-            this.metroTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            this.txtBoxMaxVote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
             // 
             // 
             // 
-            this.metroTextBox2.CustomButton.Image = null;
-            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(36, 1);
-            this.metroTextBox2.CustomButton.Name = "";
-            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox2.CustomButton.TabIndex = 1;
-            this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox2.CustomButton.UseSelectable = true;
-            this.metroTextBox2.CustomButton.Visible = false;
-            this.metroTextBox2.IconRight = true;
-            this.metroTextBox2.Lines = new string[0];
-            this.metroTextBox2.Location = new System.Drawing.Point(388, 137);
-            this.metroTextBox2.MaxLength = 32767;
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.PasswordChar = '\0';
-            this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox2.SelectedText = "";
-            this.metroTextBox2.SelectionLength = 0;
-            this.metroTextBox2.SelectionStart = 0;
-            this.metroTextBox2.ShortcutsEnabled = true;
-            this.metroTextBox2.Size = new System.Drawing.Size(58, 23);
-            this.metroTextBox2.Style = MetroFramework.MetroColorStyle.Silver;
-            this.metroTextBox2.TabIndex = 530;
-            this.metroTextBox2.UseCustomBackColor = true;
-            this.metroTextBox2.UseCustomForeColor = true;
-            this.metroTextBox2.UseSelectable = true;
-            this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtBoxMaxVote.CustomButton.Image = null;
+            this.txtBoxMaxVote.CustomButton.Location = new System.Drawing.Point(36, 1);
+            this.txtBoxMaxVote.CustomButton.Name = "";
+            this.txtBoxMaxVote.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtBoxMaxVote.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtBoxMaxVote.CustomButton.TabIndex = 1;
+            this.txtBoxMaxVote.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtBoxMaxVote.CustomButton.UseSelectable = true;
+            this.txtBoxMaxVote.CustomButton.Visible = false;
+            this.txtBoxMaxVote.IconRight = true;
+            this.txtBoxMaxVote.Lines = new string[0];
+            this.txtBoxMaxVote.Location = new System.Drawing.Point(388, 137);
+            this.txtBoxMaxVote.MaxLength = 32767;
+            this.txtBoxMaxVote.Name = "txtBoxMaxVote";
+            this.txtBoxMaxVote.PasswordChar = '\0';
+            this.txtBoxMaxVote.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtBoxMaxVote.SelectedText = "";
+            this.txtBoxMaxVote.SelectionLength = 0;
+            this.txtBoxMaxVote.SelectionStart = 0;
+            this.txtBoxMaxVote.ShortcutsEnabled = true;
+            this.txtBoxMaxVote.Size = new System.Drawing.Size(58, 23);
+            this.txtBoxMaxVote.Style = MetroFramework.MetroColorStyle.Silver;
+            this.txtBoxMaxVote.TabIndex = 530;
+            this.txtBoxMaxVote.UseCustomBackColor = true;
+            this.txtBoxMaxVote.UseCustomForeColor = true;
+            this.txtBoxMaxVote.UseSelectable = true;
+            this.txtBoxMaxVote.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtBoxMaxVote.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // label9
             // 
@@ -557,7 +561,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(663, 430);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.metroTextBox2);
+            this.Controls.Add(this.txtBoxMaxVote);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.panel_Indicator);
@@ -572,7 +576,7 @@
             this.Controls.Add(this.button_Save);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnSaveRH);
-            this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.txtBoxRowHeight);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSaveFS);
             this.Controls.Add(this.txtBoxFontSize);
@@ -610,13 +614,13 @@
         private MetroFramework.Controls.MetroTextBox txtBoxFontSize;
         private System.Windows.Forms.Button btnSaveFS;
         private System.Windows.Forms.Button btnSaveRH;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox txtBoxRowHeight;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button_Save;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.ComboBox comboRep;
+        private System.Windows.Forms.ComboBox comBox_WindowState;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panel18;
@@ -630,7 +634,7 @@
         private System.Windows.Forms.Panel panel_Indicator;
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private System.Windows.Forms.Button button1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroTextBox txtBoxMaxVote;
         private System.Windows.Forms.Label label9;
     }
 }

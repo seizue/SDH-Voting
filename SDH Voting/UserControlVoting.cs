@@ -334,7 +334,7 @@ namespace SDH_Voting
 
         private void btnVote_Click(object sender, EventArgs e)
         {
-            SDHVoForm votersForm = new SDHVoForm(sdhStockHolder);
+            SDHVoForm votersForm = new SDHVoForm(sdhStockHolder, this);
             votersForm.ShowDialog();
         }
 

@@ -20,9 +20,15 @@ namespace SDH_Voting
         public SettingsForm(UserControlVoting userControl)
         {
             InitializeComponent();
-            userControlVoting = userControl; 
-        }
+            userControlVoting = userControl;
 
+            // Set the selected item of the ComboBox based on the saved value
+            string savedWindowState = Properties.Settings.Default.MainFormWindowState;
+            if (!string.IsNullOrEmpty(savedWindowState))
+            {
+                comBox_WindowState.SelectedItem = savedWindowState;
+            }
+        }
 
         private void buttonClose_Click_1(object sender, EventArgs e)
         {
@@ -114,6 +120,27 @@ namespace SDH_Voting
             {
                 MessageBox.Show($"Error deleting InvestorMasterlist data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void button_Save_Click(object sender, EventArgs e)
+        {
+            // Save the selected item of the ComboBox to application settings if it's valid
+            if (comBox_WindowState.SelectedItem != null && Enum.IsDefined(typeof(FormWindowState), comBox_WindowState.SelectedItem.ToString()))
+            {
+                Properties.Settings.Default.MainFormWindowState = comBox_WindowState.SelectedItem.ToString();
+                Properties.Settings.Default.Save();
+
+                // Inform the user that changes will reflect after application restart
+                MessageBox.Show("Settings saved. Please close and restart the application for the changes to take effect.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                // Handle invalid state gracefully, for example, by showing a message to the user
+                MessageBox.Show("Invalid window state selected. Please select a valid window state.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            // Close the settings form or perform any other necessary actions
+            this.Close();
         }
     }
 }
