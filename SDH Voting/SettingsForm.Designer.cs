@@ -55,7 +55,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnDelAllData = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panelNav.SuspendLayout();
@@ -432,23 +432,24 @@
             this.label4.TabIndex = 522;
             this.label4.Text = "Delete all data?";
             // 
-            // btnCancel
+            // btnDelAllData
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.IndianRed;
-            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnCancel.FlatAppearance.BorderSize = 2;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.ForeColor = System.Drawing.Color.MintCream;
-            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancel.Location = new System.Drawing.Point(32, 345);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnCancel.Size = new System.Drawing.Size(365, 27);
-            this.btnCancel.TabIndex = 523;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnDelAllData.BackColor = System.Drawing.Color.IndianRed;
+            this.btnDelAllData.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDelAllData.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnDelAllData.FlatAppearance.BorderSize = 2;
+            this.btnDelAllData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelAllData.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
+            this.btnDelAllData.ForeColor = System.Drawing.Color.MintCream;
+            this.btnDelAllData.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelAllData.Location = new System.Drawing.Point(32, 345);
+            this.btnDelAllData.Name = "btnDelAllData";
+            this.btnDelAllData.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnDelAllData.Size = new System.Drawing.Size(365, 27);
+            this.btnDelAllData.TabIndex = 523;
+            this.btnDelAllData.Text = "DELETE ALL DATA";
+            this.btnDelAllData.UseVisualStyleBackColor = false;
+            this.btnDelAllData.Click += new System.EventHandler(this.btnDelAllData_Click);
             // 
             // label6
             // 
@@ -479,7 +480,7 @@
             this.ClientSize = new System.Drawing.Size(663, 407);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnDelAllData);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.label3);
@@ -542,7 +543,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnDelAllData;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
     }

@@ -1,0 +1,119 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ADMIN\\Desktop\\Ven\\Repository\\SDH-Voting\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C4633154-B16B-4829-A7D4-F2F7951AEC31}|SDH Voting\\SDH Voting.csproj|c:\\users\\admin\\desktop\\ven\\repository\\sdh-voting\\sdh voting\\chartform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4633154-B16B-4829-A7D4-F2F7951AEC31}|SDH Voting\\SDH Voting.csproj|solutionrelative:sdh voting\\chartform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4633154-B16B-4829-A7D4-F2F7951AEC31}|SDH Voting\\SDH Voting.csproj|c:\\users\\admin\\desktop\\ven\\repository\\sdh-voting\\sdh voting\\chartform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C4633154-B16B-4829-A7D4-F2F7951AEC31}|SDH Voting\\SDH Voting.csproj|solutionrelative:sdh voting\\chartform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4633154-B16B-4829-A7D4-F2F7951AEC31}|SDH Voting\\SDH Voting.csproj|c:\\users\\admin\\desktop\\ven\\repository\\sdh-voting\\sdh voting\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C4633154-B16B-4829-A7D4-F2F7951AEC31}|SDH Voting\\SDH Voting.csproj|solutionrelative:sdh voting\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4633154-B16B-4829-A7D4-F2F7951AEC31}|SDH Voting\\SDH Voting.csproj|c:\\users\\admin\\desktop\\ven\\repository\\sdh-voting\\sdh voting\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4633154-B16B-4829-A7D4-F2F7951AEC31}|SDH Voting\\SDH Voting.csproj|solutionrelative:sdh voting\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4633154-B16B-4829-A7D4-F2F7951AEC31}|SDH Voting\\SDH Voting.csproj|c:\\users\\admin\\desktop\\ven\\repository\\sdh-voting\\sdh voting\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4633154-B16B-4829-A7D4-F2F7951AEC31}|SDH Voting\\SDH Voting.csproj|solutionrelative:sdh voting\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4633154-B16B-4829-A7D4-F2F7951AEC31}|SDH Voting\\SDH Voting.csproj|c:\\users\\admin\\desktop\\ven\\repository\\sdh-voting\\sdh voting\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C4633154-B16B-4829-A7D4-F2F7951AEC31}|SDH Voting\\SDH Voting.csproj|solutionrelative:sdh voting\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SettingsForm.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Ven\\Repository\\SDH-Voting\\SDH Voting\\SettingsForm.cs",
+              "RelativeDocumentMoniker": "SDH Voting\\SettingsForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Ven\\Repository\\SDH-Voting\\SDH Voting\\SettingsForm.cs",
+              "RelativeToolTip": "SDH Voting\\SettingsForm.cs",
+              "ViewState": "AQIAAH4AAAAAAAAAAAAIwIoAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T04:51:06.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SettingsForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Ven\\Repository\\SDH-Voting\\SDH Voting\\SettingsForm.cs",
+              "RelativeDocumentMoniker": "SDH Voting\\SettingsForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Ven\\Repository\\SDH-Voting\\SDH Voting\\SettingsForm.cs [Design]",
+              "RelativeToolTip": "SDH Voting\\SettingsForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T04:50:52.124Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Main.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Ven\\Repository\\SDH-Voting\\SDH Voting\\Main.cs",
+              "RelativeDocumentMoniker": "SDH Voting\\Main.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Ven\\Repository\\SDH-Voting\\SDH Voting\\Main.cs",
+              "RelativeToolTip": "SDH Voting\\Main.cs",
+              "ViewState": "AQIAAGsCAAAAAAAAAAAswHMCAABaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T04:46:51.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Main.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Ven\\Repository\\SDH-Voting\\SDH Voting\\Main.cs",
+              "RelativeDocumentMoniker": "SDH Voting\\Main.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Ven\\Repository\\SDH-Voting\\SDH Voting\\Main.cs [Design]",
+              "RelativeToolTip": "SDH Voting\\Main.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T04:46:48.369Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChartForm.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Ven\\Repository\\SDH-Voting\\SDH Voting\\ChartForm.cs",
+              "RelativeDocumentMoniker": "SDH Voting\\ChartForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Ven\\Repository\\SDH-Voting\\SDH Voting\\ChartForm.cs",
+              "RelativeToolTip": "SDH Voting\\ChartForm.cs",
+              "ViewState": "AQIAAGwAAAAAAAAAAAAqwIAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T04:46:22.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChartForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\Ven\\Repository\\SDH-Voting\\SDH Voting\\ChartForm.cs",
+              "RelativeDocumentMoniker": "SDH Voting\\ChartForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\Ven\\Repository\\SDH-Voting\\SDH Voting\\ChartForm.cs [Design]",
+              "RelativeToolTip": "SDH Voting\\ChartForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-10T04:41:20.628Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

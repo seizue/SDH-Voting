@@ -24,6 +24,7 @@ namespace SDH_Voting
             UpdateButtonStates();
             SetupDataGridViewColumns();
             dataGridViewRepresentative.DataError += DataGridViewRepresentative_DataError;
+
         }
 
         private void btn_VoidRep_Click(object sender, EventArgs e)
@@ -148,6 +149,9 @@ namespace SDH_Voting
                     }
                 }
 
+                // Calculate the total votes
+                int totalVotes = representatives.Sum(rep => rep.Votes);
+
                 // Clear existing rows
                 dataGridViewRepresentative.Rows.Clear();
 
@@ -171,8 +175,7 @@ namespace SDH_Voting
                         else
                         {
                             // Calculate progress based on TotalVotes
-                            int maxVotes = 1000000000; // Adjust according to MAXIMUM expected votes
-                            int progressValue = (int)(((double)rep.Votes / maxVotes) * 100);
+                            int progressValue = totalVotes > 0 ? (int)(((double)rep.Votes / totalVotes) * 100) : 0;
                             dataGridViewRepresentative.Rows[id].Cells["Progress"].Value = progressValue;
                         }
                     }
@@ -191,6 +194,7 @@ namespace SDH_Voting
 
             UpdateButtonStates();
         }
+
 
         private int CountActiveCells(int rowIndex)
         {
@@ -330,7 +334,7 @@ namespace SDH_Voting
 
         private void btnVote_Click(object sender, EventArgs e)
         {
-            SDHVoForm votersForm = new SDHVoForm(sdhStockHolder);
+            SDHVoForm votersForm = new SDHVoForm(sdhStockHolder, this);
             votersForm.ShowDialog();
         }
 
@@ -500,7 +504,7 @@ namespace SDH_Voting
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            SettingsForm settingsForm = new SettingsForm();
+            SettingsForm settingsForm = new SettingsForm(this);
             settingsForm.ShowDialog();
         }
 

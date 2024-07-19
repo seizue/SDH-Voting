@@ -135,8 +135,6 @@ namespace SDH_Voting
             }
         }
 
-
-
         public void LoadData()
         {
             string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
