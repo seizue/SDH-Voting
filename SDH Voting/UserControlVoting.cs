@@ -279,7 +279,13 @@ namespace SDH_Voting
                 return;
             }
 
+            // Check if the cell value is null, empty, or whitespace
             if (e.Value == null || string.IsNullOrWhiteSpace(e.Value.ToString()))
+            {
+                e.Value = "-";
+                e.FormattingApplied = true;
+            }
+            else if (e.Value is int && (int)e.Value == 0)
             {
                 e.Value = "-";
                 e.FormattingApplied = true;

@@ -255,6 +255,8 @@ namespace SDH_Voting
                 MessageBox.Show("Invalid row height format.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+            // Close the settings form or perform any other necessary actions
+            this.Close();
         }
 
 
@@ -272,6 +274,9 @@ namespace SDH_Voting
 
             // Apply the default row height to UserControlVoting
             userControlVoting.SetDataGridViewRowHeight(defaultRowHeight);
+
+            // Close the settings form or perform any other necessary actions
+            this.Close();
         }
 
     }
