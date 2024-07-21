@@ -31,6 +31,10 @@ namespace SDH_Voting
             {
                 comBox_WindowState.SelectedItem = savedWindowState;
             }
+
+            // Set the font size in txtBoxFontSize based on saved settings
+            float savedFontSize = Properties.Settings.Default.DataGridViewFontSize;
+            txtBoxFontSize.Text = savedFontSize.ToString();
         }
 
         private void buttonClose_Click_1(object sender, EventArgs e)
@@ -165,6 +169,52 @@ namespace SDH_Voting
                 // Handle invalid state gracefully, for example, by showing a message to the user
                 MessageBox.Show("Invalid window state selected. Please select a valid window state.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            // Close the settings form or perform any other necessary actions
+            this.Close();
+        }
+
+        private void btnSaveFS_Click(object sender, EventArgs e)
+        {
+            // Read and parse the font size from the TextBox
+            if (float.TryParse(txtBoxFontSize.Text, out float fontSize))
+            {
+                // Validate font size (optional: add more validation as needed)
+                if (fontSize > 0)
+                {
+                    // Save the font size to application settings
+                    Properties.Settings.Default.DataGridViewFontSize = fontSize;
+                    Properties.Settings.Default.Save();
+
+                    // Apply the font size to UserControlVoting
+                    userControlVoting.SetDataGridViewFontSize(fontSize);
+
+                    MessageBox.Show("Font size saved successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Font size must be greater than 0.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid font size format.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            // Close the settings form or perform any other necessary actions
+            this.Close();
+        }
+
+        private void btnDefaultFS_Click(object sender, EventArgs e)
+        {
+            // Define your default font size 
+            float defaultFontSize = 9.75f; 
+
+            // Update txtBoxFontSize to reflect the default font size
+            txtBoxFontSize.Text = defaultFontSize.ToString();
+
+            // Apply the default font size to UserControlVoting
+            userControlVoting.SetDataGridViewFontSize(defaultFontSize);
 
             // Close the settings form or perform any other necessary actions
             this.Close();

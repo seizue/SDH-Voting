@@ -58,6 +58,8 @@
             this.btnDelAllData = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnDefaultFS = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panelNav.SuspendLayout();
             this.panel15.SuspendLayout();
             this.SuspendLayout();
@@ -181,7 +183,7 @@
             // 
             // 
             this.txtBoxFontSize.CustomButton.Image = null;
-            this.txtBoxFontSize.CustomButton.Location = new System.Drawing.Point(97, 1);
+            this.txtBoxFontSize.CustomButton.Location = new System.Drawing.Point(34, 1);
             this.txtBoxFontSize.CustomButton.Name = "";
             this.txtBoxFontSize.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txtBoxFontSize.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -200,7 +202,7 @@
             this.txtBoxFontSize.SelectionLength = 0;
             this.txtBoxFontSize.SelectionStart = 0;
             this.txtBoxFontSize.ShortcutsEnabled = true;
-            this.txtBoxFontSize.Size = new System.Drawing.Size(119, 23);
+            this.txtBoxFontSize.Size = new System.Drawing.Size(56, 23);
             this.txtBoxFontSize.Style = MetroFramework.MetroColorStyle.Silver;
             this.txtBoxFontSize.TabIndex = 508;
             this.txtBoxFontSize.UseCustomBackColor = true;
@@ -216,7 +218,7 @@
             // 
             // 
             this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(97, 1);
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(34, 1);
             this.metroTextBox1.CustomButton.Name = "";
             this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -226,7 +228,7 @@
             this.metroTextBox1.CustomButton.Visible = false;
             this.metroTextBox1.IconRight = true;
             this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(247, 137);
+            this.metroTextBox1.Location = new System.Drawing.Point(256, 137);
             this.metroTextBox1.MaxLength = 32767;
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.PasswordChar = '\0';
@@ -235,7 +237,7 @@
             this.metroTextBox1.SelectionLength = 0;
             this.metroTextBox1.SelectionStart = 0;
             this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(119, 23);
+            this.metroTextBox1.Size = new System.Drawing.Size(56, 23);
             this.metroTextBox1.Style = MetroFramework.MetroColorStyle.Silver;
             this.metroTextBox1.TabIndex = 511;
             this.metroTextBox1.UseCustomBackColor = true;
@@ -249,7 +251,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(244, 112);
+            this.label1.Location = new System.Drawing.Point(253, 112);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 16);
@@ -292,7 +294,7 @@
             this.button_Save.Location = new System.Drawing.Point(278, 240);
             this.button_Save.Name = "button_Save";
             this.button_Save.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button_Save.Size = new System.Drawing.Size(119, 26);
+            this.button_Save.Size = new System.Drawing.Size(146, 26);
             this.button_Save.TabIndex = 514;
             this.button_Save.Text = "SAVE";
             this.button_Save.UseVisualStyleBackColor = false;
@@ -308,7 +310,7 @@
             this.btnSaveRH.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.75F, System.Drawing.FontStyle.Bold);
             this.btnSaveRH.ForeColor = System.Drawing.Color.MintCream;
             this.btnSaveRH.Image = global::SDH_Voting.Properties.Resources.Done_16px;
-            this.btnSaveRH.Location = new System.Drawing.Point(364, 135);
+            this.btnSaveRH.Location = new System.Drawing.Point(310, 135);
             this.btnSaveRH.Name = "btnSaveRH";
             this.btnSaveRH.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnSaveRH.Size = new System.Drawing.Size(33, 27);
@@ -325,12 +327,13 @@
             this.btnSaveFS.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.75F, System.Drawing.FontStyle.Bold);
             this.btnSaveFS.ForeColor = System.Drawing.Color.MintCream;
             this.btnSaveFS.Image = global::SDH_Voting.Properties.Resources.Done_16px;
-            this.btnSaveFS.Location = new System.Drawing.Point(149, 135);
+            this.btnSaveFS.Location = new System.Drawing.Point(86, 135);
             this.btnSaveFS.Name = "btnSaveFS";
             this.btnSaveFS.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnSaveFS.Size = new System.Drawing.Size(33, 27);
             this.btnSaveFS.TabIndex = 509;
             this.btnSaveFS.UseVisualStyleBackColor = false;
+            this.btnSaveFS.Click += new System.EventHandler(this.btnSaveFS_Click);
             // 
             // panel15
             // 
@@ -449,7 +452,7 @@
             this.btnDelAllData.Location = new System.Drawing.Point(32, 345);
             this.btnDelAllData.Name = "btnDelAllData";
             this.btnDelAllData.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnDelAllData.Size = new System.Drawing.Size(365, 27);
+            this.btnDelAllData.Size = new System.Drawing.Size(392, 27);
             this.btnDelAllData.TabIndex = 523;
             this.btnDelAllData.Text = "DELETE ALL DATA";
             this.btnDelAllData.UseVisualStyleBackColor = false;
@@ -476,12 +479,49 @@
             this.label7.TabIndex = 525;
             this.label7.Text = "Warning! all data will be deleted permanently!";
             // 
+            // btnDefaultFS
+            // 
+            this.btnDefaultFS.BackColor = System.Drawing.Color.Olive;
+            this.btnDefaultFS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDefaultFS.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnDefaultFS.FlatAppearance.BorderSize = 2;
+            this.btnDefaultFS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDefaultFS.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.75F, System.Drawing.FontStyle.Bold);
+            this.btnDefaultFS.ForeColor = System.Drawing.Color.MintCream;
+            this.btnDefaultFS.Location = new System.Drawing.Point(132, 135);
+            this.btnDefaultFS.Name = "btnDefaultFS";
+            this.btnDefaultFS.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnDefaultFS.Size = new System.Drawing.Size(68, 27);
+            this.btnDefaultFS.TabIndex = 526;
+            this.btnDefaultFS.Text = "Default";
+            this.btnDefaultFS.UseVisualStyleBackColor = false;
+            this.btnDefaultFS.Click += new System.EventHandler(this.btnDefaultFS_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Olive;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button2.FlatAppearance.BorderSize = 2;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.75F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.MintCream;
+            this.button2.Location = new System.Drawing.Point(356, 135);
+            this.button2.Name = "button2";
+            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button2.Size = new System.Drawing.Size(68, 27);
+            this.button2.TabIndex = 527;
+            this.button2.Text = "Default";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(663, 407);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnDefaultFS);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnDelAllData);
@@ -550,5 +590,7 @@
         private System.Windows.Forms.Button btnDelAllData;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnDefaultFS;
+        private System.Windows.Forms.Button button2;
     }
 }

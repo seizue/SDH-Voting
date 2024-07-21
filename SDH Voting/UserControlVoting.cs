@@ -25,6 +25,11 @@ namespace SDH_Voting
             SetupDataGridViewColumns();
             dataGridViewRepresentative.DataError += DataGridViewRepresentative_DataError;
 
+            // Load font size from settings
+            if (Properties.Settings.Default.DataGridViewFontSize > 0)
+            {
+                SetDataGridViewFontSize(Properties.Settings.Default.DataGridViewFontSize);
+            }
         }
 
         private void btn_VoidRep_Click(object sender, EventArgs e)
@@ -490,6 +495,19 @@ namespace SDH_Voting
         {
           
         }
+
+        public void SetDataGridViewFontSize(float fontSize)
+        {
+            // Set font size for DefaultCellStyle
+            dataGridViewRepresentative.DefaultCellStyle.Font = new Font(dataGridViewRepresentative.DefaultCellStyle.Font.FontFamily, fontSize);
+
+            // Set font size for AlternatingRowsDefaultCellStyle
+            dataGridViewRepresentative.AlternatingRowsDefaultCellStyle.Font = new Font(dataGridViewRepresentative.AlternatingRowsDefaultCellStyle.Font.FontFamily, fontSize);
+
+            // Set font size for RowsDefaultCellStyle
+            dataGridViewRepresentative.RowsDefaultCellStyle.Font = new Font(dataGridViewRepresentative.RowsDefaultCellStyle.Font.FontFamily, fontSize);
+        }
+
 
         private void UpdateButtonStates()
         {
