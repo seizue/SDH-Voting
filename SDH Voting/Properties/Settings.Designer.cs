@@ -58,5 +58,17 @@ namespace SDH_Voting.Properties {
                 this["DataGridViewRowHeight"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int MaxVoteLimit {
+            get {
+                return ((int)(this["MaxVoteLimit"]));
+            }
+            set {
+                this["MaxVoteLimit"] = value;
+            }
+        }
     }
 }

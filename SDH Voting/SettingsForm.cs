@@ -105,6 +105,7 @@ namespace SDH_Voting
             }
         }
 
+
         private void SaveSDH_VoteSelectedData()
         {
             try
@@ -279,5 +280,42 @@ namespace SDH_Voting
             this.Close();
         }
 
+        private void labelDltData_Click(object sender, EventArgs e)
+        {
+            panelDltData.Visible = true;
+        }
+
+        private void btnCloseDltDataPanel_Click(object sender, EventArgs e)
+        {
+            panelDltData.Visible = false;
+        }
+
+        private void btnSaveMaxVoteLimit_Click(object sender, EventArgs e)
+        {
+            // Validate and save the maximum vote limit
+            if (int.TryParse(txtBoxVoteLimit.Text, out int maxVoteLimit))
+            {
+                if (maxVoteLimit > 0)
+                {
+                    Properties.Settings.Default.MaxVoteLimit = maxVoteLimit;
+                    Properties.Settings.Default.Save();
+
+                    MessageBox.Show("Maximum Vote Limit saved successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("The minimum vote limit is 1. Please enter a value greater than 0.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid input for Maximum Vote Limit. Please enter a valid integer.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+    
     }
+
 }
+
+

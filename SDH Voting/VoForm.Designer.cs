@@ -79,6 +79,7 @@
             this.panel31 = new System.Windows.Forms.Panel();
             this.panel32 = new System.Windows.Forms.Panel();
             this.btnViewVoter = new System.Windows.Forms.Button();
+            this.checkBoxDoneVoting = new MetroFramework.Controls.MetroCheckBox();
             this.panel15.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -150,7 +151,7 @@
             this.btnSaveVoters.Location = new System.Drawing.Point(590, 111);
             this.btnSaveVoters.Name = "btnSaveVoters";
             this.btnSaveVoters.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnSaveVoters.Size = new System.Drawing.Size(194, 28);
+            this.btnSaveVoters.Size = new System.Drawing.Size(166, 28);
             this.btnSaveVoters.TabIndex = 482;
             this.btnSaveVoters.Text = "SAVE CHANGES";
             this.btnSaveVoters.UseVisualStyleBackColor = false;
@@ -324,7 +325,7 @@
             this.label3.Location = new System.Drawing.Point(9, 7);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 16);
+            this.label3.Size = new System.Drawing.Size(87, 16);
             this.label3.TabIndex = 424;
             this.label3.Text = "Available Voters";
             // 
@@ -637,7 +638,7 @@
             this.label5.Location = new System.Drawing.Point(9, 7);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 16);
+            this.label5.Size = new System.Drawing.Size(100, 16);
             this.label5.TabIndex = 424;
             this.label5.Text = "Total Shareholders";
             // 
@@ -699,12 +700,29 @@
             this.btnViewVoter.UseVisualStyleBackColor = false;
             this.btnViewVoter.Click += new System.EventHandler(this.btnViewVoter_Click);
             // 
+            // checkBoxDoneVoting
+            // 
+            this.checkBoxDoneVoting.AutoSize = true;
+            this.checkBoxDoneVoting.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
+            this.checkBoxDoneVoting.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.checkBoxDoneVoting.Location = new System.Drawing.Point(590, 80);
+            this.checkBoxDoneVoting.Name = "checkBoxDoneVoting";
+            this.checkBoxDoneVoting.Size = new System.Drawing.Size(97, 15);
+            this.checkBoxDoneVoting.TabIndex = 519;
+            this.checkBoxDoneVoting.TabStop = false;
+            this.checkBoxDoneVoting.Text = "Done Voting?";
+            this.checkBoxDoneVoting.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkBoxDoneVoting.UseCustomBackColor = true;
+            this.checkBoxDoneVoting.UseCustomForeColor = true;
+            this.checkBoxDoneVoting.UseSelectable = true;
+            // 
             // SDHVoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(913, 515);
+            this.Controls.Add(this.checkBoxDoneVoting);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.label4);
@@ -801,5 +819,6 @@
         private System.Windows.Forms.Panel panel30;
         private System.Windows.Forms.Panel panel31;
         private System.Windows.Forms.Panel panel32;
+        private MetroFramework.Controls.MetroCheckBox checkBoxDoneVoting;
     }
 }
