@@ -484,12 +484,36 @@ namespace SDH_Voting
 
         public void CustomCellHeight()
         {
-            //Custom Row Height of DataGrid
+            // Default row height
+            int defaultHeight = 30;
+
+            // Limit row height to maximum of 80 pixels
+            int maxHeight = 80;
+
+            // Set custom row height for existing rows, ensuring it doesn't exceed maxHeight
             foreach (DataGridViewRow row in dataGridViewRepresentative.Rows)
             {
-                row.Height = 30;
+                row.Height = Math.Min(row.Height, maxHeight);
             }
         }
+
+
+        public void SetDataGridViewRowHeight(int rowHeight)
+        {
+          
+            // Limit row height to maximum of 80 pixels
+            int maxHeight = 80;
+            int actualHeight = Math.Min(rowHeight, maxHeight);
+
+            // Set row height for DataGridView template
+            dataGridViewRepresentative.RowTemplate.Height = actualHeight;
+            dataGridViewRepresentative.DefaultCellStyle.Font = new Font(dataGridViewRepresentative.DefaultCellStyle.Font.FontFamily, actualHeight);
+
+            // Apply custom heights to existing rows
+            CustomCellHeight();
+        }
+
+
 
         private void btnPosted_Click(object sender, EventArgs e)
         {

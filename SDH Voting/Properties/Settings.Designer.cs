@@ -46,5 +46,17 @@ namespace SDH_Voting.Properties {
                 this["DataGridViewFontSize"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int DataGridViewRowHeight {
+            get {
+                return ((int)(this["DataGridViewRowHeight"]));
+            }
+            set {
+                this["DataGridViewRowHeight"] = value;
+            }
+        }
     }
 }

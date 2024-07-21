@@ -39,7 +39,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBoxFontSize = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.txtBoxRH = new MetroFramework.Controls.MetroTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -59,7 +59,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnDefaultFS = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnDefaultRH = new System.Windows.Forms.Button();
             this.panelNav.SuspendLayout();
             this.panel15.SuspendLayout();
             this.SuspendLayout();
@@ -211,40 +211,40 @@
             this.txtBoxFontSize.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtBoxFontSize.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroTextBox1
+            // txtBoxRH
             // 
-            this.metroTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            this.txtBoxRH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
             // 
             // 
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(34, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.IconRight = true;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(256, 137);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(56, 23);
-            this.metroTextBox1.Style = MetroFramework.MetroColorStyle.Silver;
-            this.metroTextBox1.TabIndex = 511;
-            this.metroTextBox1.UseCustomBackColor = true;
-            this.metroTextBox1.UseCustomForeColor = true;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtBoxRH.CustomButton.Image = null;
+            this.txtBoxRH.CustomButton.Location = new System.Drawing.Point(34, 1);
+            this.txtBoxRH.CustomButton.Name = "";
+            this.txtBoxRH.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtBoxRH.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtBoxRH.CustomButton.TabIndex = 1;
+            this.txtBoxRH.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtBoxRH.CustomButton.UseSelectable = true;
+            this.txtBoxRH.CustomButton.Visible = false;
+            this.txtBoxRH.IconRight = true;
+            this.txtBoxRH.Lines = new string[0];
+            this.txtBoxRH.Location = new System.Drawing.Point(256, 137);
+            this.txtBoxRH.MaxLength = 32767;
+            this.txtBoxRH.Name = "txtBoxRH";
+            this.txtBoxRH.PasswordChar = '\0';
+            this.txtBoxRH.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtBoxRH.SelectedText = "";
+            this.txtBoxRH.SelectionLength = 0;
+            this.txtBoxRH.SelectionStart = 0;
+            this.txtBoxRH.ShortcutsEnabled = true;
+            this.txtBoxRH.Size = new System.Drawing.Size(56, 23);
+            this.txtBoxRH.Style = MetroFramework.MetroColorStyle.Silver;
+            this.txtBoxRH.TabIndex = 511;
+            this.txtBoxRH.UseCustomBackColor = true;
+            this.txtBoxRH.UseCustomForeColor = true;
+            this.txtBoxRH.UseSelectable = true;
+            this.txtBoxRH.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtBoxRH.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // label1
             // 
@@ -316,6 +316,7 @@
             this.btnSaveRH.Size = new System.Drawing.Size(33, 27);
             this.btnSaveRH.TabIndex = 512;
             this.btnSaveRH.UseVisualStyleBackColor = false;
+            this.btnSaveRH.Click += new System.EventHandler(this.btnSaveRH_Click);
             // 
             // btnSaveFS
             // 
@@ -497,22 +498,23 @@
             this.btnDefaultFS.UseVisualStyleBackColor = false;
             this.btnDefaultFS.Click += new System.EventHandler(this.btnDefaultFS_Click);
             // 
-            // button2
+            // btnDefaultRH
             // 
-            this.button2.BackColor = System.Drawing.Color.Olive;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.75F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.MintCream;
-            this.button2.Location = new System.Drawing.Point(356, 135);
-            this.button2.Name = "button2";
-            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button2.Size = new System.Drawing.Size(68, 27);
-            this.button2.TabIndex = 527;
-            this.button2.Text = "Default";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnDefaultRH.BackColor = System.Drawing.Color.Olive;
+            this.btnDefaultRH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDefaultRH.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnDefaultRH.FlatAppearance.BorderSize = 2;
+            this.btnDefaultRH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDefaultRH.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.75F, System.Drawing.FontStyle.Bold);
+            this.btnDefaultRH.ForeColor = System.Drawing.Color.MintCream;
+            this.btnDefaultRH.Location = new System.Drawing.Point(356, 135);
+            this.btnDefaultRH.Name = "btnDefaultRH";
+            this.btnDefaultRH.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnDefaultRH.Size = new System.Drawing.Size(68, 27);
+            this.btnDefaultRH.TabIndex = 527;
+            this.btnDefaultRH.Text = "Default";
+            this.btnDefaultRH.UseVisualStyleBackColor = false;
+            this.btnDefaultRH.Click += new System.EventHandler(this.btnDefaultRH_Click);
             // 
             // SettingsForm
             // 
@@ -520,7 +522,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(663, 407);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnDefaultRH);
             this.Controls.Add(this.btnDefaultFS);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -533,7 +535,7 @@
             this.Controls.Add(this.button_Save);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnSaveRH);
-            this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.txtBoxRH);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSaveFS);
             this.Controls.Add(this.txtBoxFontSize);
@@ -573,7 +575,7 @@
         private MetroFramework.Controls.MetroTextBox txtBoxFontSize;
         private System.Windows.Forms.Button btnSaveFS;
         private System.Windows.Forms.Button btnSaveRH;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox txtBoxRH;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
@@ -591,6 +593,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnDefaultFS;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnDefaultRH;
     }
 }

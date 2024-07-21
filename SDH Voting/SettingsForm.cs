@@ -35,6 +35,10 @@ namespace SDH_Voting
             // Set the font size in txtBoxFontSize based on saved settings
             float savedFontSize = Properties.Settings.Default.DataGridViewFontSize;
             txtBoxFontSize.Text = savedFontSize.ToString();
+
+            // Set the row height in txtBoxRH based on saved settings
+            int savedRowHeight = Properties.Settings.Default.DataGridViewRowHeight;
+            txtBoxRH.Text = savedRowHeight.ToString();
         }
 
         private void buttonClose_Click_1(object sender, EventArgs e)
@@ -208,10 +212,14 @@ namespace SDH_Voting
         private void btnDefaultFS_Click(object sender, EventArgs e)
         {
             // Define your default font size 
-            float defaultFontSize = 9.75f; 
+            float defaultFontSize = 9.75f;
 
             // Update txtBoxFontSize to reflect the default font size
             txtBoxFontSize.Text = defaultFontSize.ToString();
+
+            // Save the default font size to application settings
+            Properties.Settings.Default.DataGridViewFontSize = defaultFontSize;
+            Properties.Settings.Default.Save();
 
             // Apply the default font size to UserControlVoting
             userControlVoting.SetDataGridViewFontSize(defaultFontSize);
@@ -219,5 +227,52 @@ namespace SDH_Voting
             // Close the settings form or perform any other necessary actions
             this.Close();
         }
+
+        private void btnSaveRH_Click(object sender, EventArgs e)
+        {
+            // Read and parse the row height from the TextBox
+            if (int.TryParse(txtBoxRH.Text, out int rowHeight))
+            {
+                // Validate row height (optional: add more validation as needed)
+                if (rowHeight > 0)
+                {
+                    // Save the row height to application settings
+                    Properties.Settings.Default.DataGridViewRowHeight = rowHeight;
+                    Properties.Settings.Default.Save();
+
+                    // Apply the row height to UserControlVoting
+                    userControlVoting.SetDataGridViewRowHeight(rowHeight);
+
+                    MessageBox.Show("Row height saved successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Row height must be greater than 0.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid row height format.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+
+        private void btnDefaultRH_Click(object sender, EventArgs e)
+        {
+            // Define your default row height
+            int defaultRowHeight = 30;
+
+            // Update txtBoxRH to reflect the default row height
+            txtBoxRH.Text = defaultRowHeight.ToString();
+
+            // Save the default row height to application settings
+            Properties.Settings.Default.DataGridViewRowHeight = defaultRowHeight;
+            Properties.Settings.Default.Save();
+
+            // Apply the default row height to UserControlVoting
+            userControlVoting.SetDataGridViewRowHeight(defaultRowHeight);
+        }
+
     }
 }
