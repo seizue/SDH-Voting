@@ -125,7 +125,6 @@ namespace SDH_Voting
             UpdateButtonStates();
         }
 
-
         public void LoadRepresentatives()
         {
             string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");

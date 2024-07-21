@@ -47,7 +47,7 @@
             this.btnSaveRH = new System.Windows.Forms.Button();
             this.btnSaveFS = new System.Windows.Forms.Button();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.comboRep = new System.Windows.Forms.ComboBox();
+            this.comBox_WindowState = new System.Windows.Forms.ComboBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
@@ -296,6 +296,7 @@
             this.button_Save.TabIndex = 514;
             this.button_Save.Text = "SAVE";
             this.button_Save.UseVisualStyleBackColor = false;
+            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
             // 
             // btnSaveRH
             // 
@@ -333,7 +334,7 @@
             // 
             // panel15
             // 
-            this.panel15.Controls.Add(this.comboRep);
+            this.panel15.Controls.Add(this.comBox_WindowState);
             this.panel15.Controls.Add(this.panel16);
             this.panel15.Controls.Add(this.panel17);
             this.panel15.Controls.Add(this.panel18);
@@ -343,20 +344,23 @@
             this.panel15.Size = new System.Drawing.Size(225, 26);
             this.panel15.TabIndex = 519;
             // 
-            // comboRep
+            // comBox_WindowState
             // 
-            this.comboRep.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.comBox_WindowState.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboRep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
-            this.comboRep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboRep.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboRep.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.comboRep.FormattingEnabled = true;
-            this.comboRep.Location = new System.Drawing.Point(2, 2);
-            this.comboRep.Name = "comboRep";
-            this.comboRep.Size = new System.Drawing.Size(221, 22);
-            this.comboRep.TabIndex = 388;
-            this.comboRep.Text = "Select";
+            this.comBox_WindowState.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
+            this.comBox_WindowState.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comBox_WindowState.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comBox_WindowState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.comBox_WindowState.FormattingEnabled = true;
+            this.comBox_WindowState.Items.AddRange(new object[] {
+            "Normal",
+            "Maximized"});
+            this.comBox_WindowState.Location = new System.Drawing.Point(2, 2);
+            this.comBox_WindowState.Name = "comBox_WindowState";
+            this.comBox_WindowState.Size = new System.Drawing.Size(221, 22);
+            this.comBox_WindowState.TabIndex = 388;
+            this.comBox_WindowState.Text = "Select";
             // 
             // panel16
             // 
@@ -535,7 +539,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button_Save;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.ComboBox comboRep;
+        private System.Windows.Forms.ComboBox comBox_WindowState;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panel18;

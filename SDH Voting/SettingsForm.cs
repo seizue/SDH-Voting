@@ -14,12 +14,23 @@ namespace SDH_Voting
 {
     public partial class SettingsForm : Form
     {
+        private List<VoteSelectedData> SDH_VoteSelected = new List<VoteSelectedData>();
+        private UserControlVoting userControlVoting;
+
         private bool isDragging = false;
         private Point lastCursor;
         private Point lastForm;
-        public SettingsForm()
+        public SettingsForm(UserControlVoting userControl)
         {
             InitializeComponent();
+            userControlVoting = userControl;
+
+            // Set the selected item of the ComboBox based on the saved value
+            string savedWindowState = Properties.Settings.Default.MainFormWindowState;
+            if (!string.IsNullOrEmpty(savedWindowState))
+            {
+                comBox_WindowState.SelectedItem = savedWindowState;
+            }
         }
 
         private void buttonClose_Click_1(object sender, EventArgs e)
@@ -51,19 +62,39 @@ namespace SDH_Voting
 
         private void btnDelAllData_Click(object sender, EventArgs e)
         {
-         
-            // Save the cleared data to SDH_VoteSelected.json
-            SaveSDH_VoteSelectedData();
 
-            // Update the status and reset VoteCount in InvestorMasterlist.json
-            UpdateInvestorMasterlistStatus();
+            if (userControlVoting != null)
+            {
+                // Ask for confirmation before proceeding
+                DialogResult result = MessageBox.Show("Are you sure you want to delete all data? This action cannot be undone.",
+                                                      "Confirm Data Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            // Empty the data in SDHRep.json
-            EmptySDHRepData();
+                if (result == DialogResult.Yes)
+                {
+                    // Clear data in SDH_VoteSelected
+                    SDH_VoteSelected.Clear();
 
-       
-            // Optionally, notify the user or perform additional actions
-            MessageBox.Show("ALL DATA ARE DELETED PERMANENTLY!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Save the cleared data to SDH_VoteSelected.json
+                    SaveSDH_VoteSelectedData();
+
+                    DeleteInvestorMasterlistData();
+
+                    // Empty the data in SDHRep.json
+                    EmptySDHRepData();
+
+                    // Optionally, notify the user or perform additional actions
+                    MessageBox.Show("All data are deleted!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Reload data in UserControlVoting
+                    userControlVoting.ReloadData();
+
+                    this.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("UserControlVoting instance is null.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void SaveSDH_VoteSelectedData()
@@ -85,6 +116,7 @@ namespace SDH_Voting
             }
         }
 
+
         private void EmptySDHRepData()
         {
             try
@@ -101,43 +133,41 @@ namespace SDH_Voting
             }
         }
 
-        private void UpdateInvestorMasterlistStatus()
+        private void DeleteInvestorMasterlistData()
         {
             try
             {
                 string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
                 string masterListFilePath = Path.Combine(folderPath, "InvestorMasterlist.json");
 
-                if (File.Exists(masterListFilePath))
-                {
-                    // Read the JSON data from the file
-                    string json = File.ReadAllText(masterListFilePath);
-
-                    // Deserialize the JSON data into a list of investors
-                    List<Investor> investors = JsonConvert.DeserializeObject<List<Investor>>(json);
-
-                    // Update the status and reset the VoteCount of all investors
-                    foreach (var investor in investors)
-                    {
-                        investor.Status = "NO";
-                        investor.VoteCount = 0;
-                    }
-
-                    // Serialize the updated list of investors back to JSON format
-                    string updatedJson = JsonConvert.SerializeObject(investors, Formatting.Indented);
-
-                    // Write the updated JSON data back to the file
-                    File.WriteAllText(masterListFilePath, updatedJson);
-                }
-                else
-                {
-                    MessageBox.Show("InvestorMasterlist.json file not found.", "File Not Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                // Write an empty array to the file to clear its content
+                File.WriteAllText(masterListFilePath, "[]");
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error updating InvestorMasterlist status: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error deleting InvestorMasterlist data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void button_Save_Click(object sender, EventArgs e)
+        {
+            // Save the selected item of the ComboBox to application settings if it's valid
+            if (comBox_WindowState.SelectedItem != null && Enum.IsDefined(typeof(FormWindowState), comBox_WindowState.SelectedItem.ToString()))
+            {
+                Properties.Settings.Default.MainFormWindowState = comBox_WindowState.SelectedItem.ToString();
+                Properties.Settings.Default.Save();
+
+                // Inform the user that changes will reflect after application restart
+                MessageBox.Show("Settings saved. Please close and restart the application for the changes to take effect.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                // Handle invalid state gracefully, for example, by showing a message to the user
+                MessageBox.Show("Invalid window state selected. Please select a valid window state.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            // Close the settings form or perform any other necessary actions
+            this.Close();
         }
     }
 }
