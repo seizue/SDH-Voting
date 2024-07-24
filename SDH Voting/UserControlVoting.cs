@@ -520,11 +520,97 @@ namespace SDH_Voting
         }
 
 
-
         private void btnPosted_Click(object sender, EventArgs e)
         {
-          
+            try
+            {
+                // Ensure the "Posted" folder exists
+                string postedFolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting", "Posted");
+                if (!Directory.Exists(postedFolderPath))
+                {
+                    Directory.CreateDirectory(postedFolderPath);
+                }
+
+                // Create a folder with current date inside "Posted" folder
+                string currentDateFolderName = DateTime.Now.ToString("yyyy-MM-dd");
+                string currentDateFolderPath = Path.Combine(postedFolderPath, currentDateFolderName);
+                if (!Directory.Exists(currentDateFolderPath))
+                {
+                    Directory.CreateDirectory(currentDateFolderPath);
+                }
+
+                // Save representative data inside the dated folder
+                SaveRepresentativeData(currentDateFolderPath);
+
+                // Save SDH_VoteSelected.json inside the dated folder
+                string sdhVoteSelectedFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting", "SDH_VoteSelected.json");
+                string destinationFilePath = Path.Combine(currentDateFolderPath, "SDH_VoteSelected.json");
+                File.Copy(sdhVoteSelectedFilePath, destinationFilePath, true);
+
+                MessageBox.Show("Data saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
+        private void SaveRepresentativeData(string folderPath)
+        {
+            try
+            {
+                List<object> representativeData = new List<object>();
+
+                foreach (DataGridViewRow row in dataGridViewRepresentative.Rows)
+                {
+                    if (!row.IsNewRow)
+                    {
+                        string representativeName = Convert.ToString(row.Cells["Representative"].Value);
+
+                        // Validate and convert TotalVotes
+                        int totalVotes;
+                        if (row.Cells["TotalVotes"].Value != null && int.TryParse(row.Cells["TotalVotes"].Value.ToString().Replace(",", ""), out totalVotes))
+                        {
+                            // Successfully parsed to int
+                        }
+                        else
+                        {
+                            totalVotes = 0; // Default to 0 or handle differently based on your logic
+                        }
+
+                        // Validate and convert No_PV
+                        int pv;
+                        if (row.Cells["No_PV"].Value != null && int.TryParse(row.Cells["No_PV"].Value.ToString(), out pv))
+                        {
+                            // Successfully parsed to int
+                        }
+                        else
+                        {
+                            pv = 0; // Default to 0 or handle differently based on your logic
+                        }
+
+                        var data = new
+                        {
+                            Representative = representativeName,
+                            TotalVotes = totalVotes,
+                            No_PV = pv
+                        };
+
+                        representativeData.Add(data);
+                    }
+                }
+
+                string json = JsonConvert.SerializeObject(representativeData, Formatting.Indented);
+                string filePath = Path.Combine(folderPath, "representative_result.json");
+                File.WriteAllText(filePath, json);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving representative data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
         public void SetDataGridViewFontSize(float fontSize)
         {

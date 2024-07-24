@@ -667,9 +667,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.userControlVoting1.BackColor = System.Drawing.Color.White;
-            this.userControlVoting1.Location = new System.Drawing.Point(9, 86);
+            this.userControlVoting1.Location = new System.Drawing.Point(9, 83);
             this.userControlVoting1.Name = "userControlVoting1";
-            this.userControlVoting1.Size = new System.Drawing.Size(893, 379);
+            this.userControlVoting1.Size = new System.Drawing.Size(893, 382);
             this.userControlVoting1.TabIndex = 437;
             // 
             // Main
