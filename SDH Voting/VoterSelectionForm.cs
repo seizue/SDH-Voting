@@ -209,5 +209,79 @@ namespace SDH_Voting
                 GridVoters.DataSource = new BindingList<Investor>(filteredInvestors);
             }
         }
+
+        private void checkBoxShowShareholdersVoted_CheckedChanged(object sender, EventArgs e)
+        {
+            LoadFilteredData();
+        }
+
+        private void LoadFilteredData()
+        {
+            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
+            string filePath = Path.Combine(folderPath, "InvestorMasterlist.json");
+            List<Investor> investors = new List<Investor>();
+
+            try
+            {
+                if (File.Exists(filePath))
+                {
+                    string json = File.ReadAllText(filePath);
+
+                    if (!string.IsNullOrWhiteSpace(json))
+                    {
+                        var deserializedInvestors = JsonConvert.DeserializeObject<List<Investor>>(json) ?? new List<Investor>();
+
+                        if (checkBoxShowShareholdersVoted.Checked)
+                        {
+                            // Include only investors who have voted (Status == "YES")
+                            investors = deserializedInvestors
+                                            .Where(i => i.Status == "YES")
+                                            .ToList();
+                        }
+                        else
+                        {
+                            // Include all investors who haven't reached the vote limit and whose status is not "YES"
+                            investors = deserializedInvestors
+                                            .Where(i => i.VoteCount < 5 && i.Status != "YES")
+                                            .ToList();
+                        }
+                    }
+                }
+
+                // Ensure AutoGenerateColumns is false to prevent automatic column creation
+                GridVoters.AutoGenerateColumns = false;
+
+                // Set the data source
+                GridVoters.DataSource = new BindingList<Investor>(investors);
+
+                // Map existing columns to properties
+                if (GridVoters.Columns["sdhID"] != null)
+                {
+                    GridVoters.Columns["sdhID"].DataPropertyName = "Id";
+                    GridVoters.Columns["sdhID"].Visible = false; // Hide the Id column
+                }
+
+                if (GridVoters.Columns["sdhStockHolder"] != null) GridVoters.Columns["sdhStockHolder"].DataPropertyName = "Name";
+
+                // Format Shares column with commas
+                if (GridVoters.Columns["sdhShares"] != null)
+                {
+                    GridVoters.Columns["sdhShares"].DataPropertyName = "Shares";
+                    GridVoters.Columns["sdhShares"].DefaultCellStyle.Format = "N0";
+                }
+
+                // Format Total Votes column with commas
+                if (GridVoters.Columns["sdhTotalVotes"] != null)
+                {
+                    GridVoters.Columns["sdhTotalVotes"].DataPropertyName = "Votes";
+                    GridVoters.Columns["sdhTotalVotes"].DefaultCellStyle.Format = "N0";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }

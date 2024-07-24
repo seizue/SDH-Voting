@@ -85,7 +85,7 @@ namespace SDH_Voting
                 int notVotedCount = investors.Count(i => i.Status == "NO");
 
                 // Display counts
-                txtBoxVoted.Text = votedCount.ToString();
+                txtBoxVoted.Text = votedCount.ToString(); 
                 txtBoxAVoters.Text = notVotedCount.ToString();
             }
             else
@@ -309,9 +309,127 @@ namespace SDH_Voting
             }
         }
 
+        private void checkBoxDoneVoting_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxDoneVoting.Checked)
+            {
+                if (string.IsNullOrEmpty(txtBoxSH.Text))
+                {
+                    MessageBox.Show("Please select an Shareholder.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    checkBoxDoneVoting.Checked = false; // Uncheck the checkbox
+                    return;
+                }
 
+                // Find the investor with the matching Name (assuming Name is the property to match)
+                var investorToUpdate = investors.FirstOrDefault(i => i.Name == txtBoxSH.Text);
+
+                if (investorToUpdate != null)
+                {
+                    // Confirm with the user before proceeding
+                    DialogResult result = MessageBox.Show("Are you sure you want to mark this Shareholder as voted? You cannot vote again.",
+                        "Confirm Vote", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        // Update the Status to "YES"
+                        investorToUpdate.Status = "YES";
+
+                        // Update the displayed count of voted investors
+                        int votedCount = investors.Count(i => i.Status == "YES");
+                        txtBoxVoted.Text = votedCount.ToString();
+
+                        // Update the displayed count of not voted investors
+                        int notVotedCount = investors.Count(i => i.Status == "NO");
+                        txtBoxAVoters.Text = notVotedCount.ToString();
+
+                        // Save updated investors list to file
+                        try
+                        {
+                            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
+                            string investorFilePath = Path.Combine(folderPath, "InvestorMasterlist.json");
+
+                            string updatedInvestorJson = JsonConvert.SerializeObject(investors, Formatting.Indented);
+                            File.WriteAllText(investorFilePath, updatedInvestorJson);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Failed to save Shareholder data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        // User clicked No, so uncheck the checkbox
+                        checkBoxDoneVoting.Checked = false;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Shareholder not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void checkBoxUndoVote_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxUndoVote.Checked)
+            {
+                if (string.IsNullOrEmpty(txtBoxSH.Text))
+                {
+                    MessageBox.Show("Please select an Shareholder.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    checkBoxUndoVote.Checked = false; // Uncheck the checkbox
+                    return;
+                }
+
+                // Find the investor with the matching Name (assuming Name is the property to match)
+                var investorToUpdate = investors.FirstOrDefault(i => i.Name == txtBoxSH.Text);
+
+                if (investorToUpdate != null)
+                {
+                    // Confirm with the user before proceeding
+                    DialogResult result = MessageBox.Show("Are you sure you want to undo this Shareholder vote?",
+                        "Confirm Undo Vote", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        // Update the Status to "NO"
+                        investorToUpdate.Status = "NO";
+
+                        // Update the displayed count of voted investors
+                        int votedCount = investors.Count(i => i.Status == "YES");
+                        txtBoxVoted.Text = votedCount.ToString();
+
+                        // Update the displayed count of not voted investors
+                        int notVotedCount = investors.Count(i => i.Status == "NO");
+                        txtBoxAVoters.Text = notVotedCount.ToString();
+
+                        // Save updated investors list to file
+                        try
+                        {
+                            string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
+                            string investorFilePath = Path.Combine(folderPath, "InvestorMasterlist.json");
+
+                            string updatedInvestorJson = JsonConvert.SerializeObject(investors, Formatting.Indented);
+                            File.WriteAllText(investorFilePath, updatedInvestorJson);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Failed to save Shareholder data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        // User clicked No, so uncheck the checkbox
+                        checkBoxUndoVote.Checked = false;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Shareholder not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
 
     }
 
-    
+
 }

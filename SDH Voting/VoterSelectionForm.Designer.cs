@@ -53,6 +53,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.checkBoxShowShareholdersVoted = new MetroFramework.Controls.MetroCheckBox();
             this.panelNav.SuspendLayout();
             this.panelGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridVoters)).BeginInit();
@@ -344,12 +345,30 @@
             this.panel13.Size = new System.Drawing.Size(769, 1);
             this.panel13.TabIndex = 522;
             // 
+            // checkBoxShowShareholdersVoted
+            // 
+            this.checkBoxShowShareholdersVoted.AutoSize = true;
+            this.checkBoxShowShareholdersVoted.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
+            this.checkBoxShowShareholdersVoted.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.checkBoxShowShareholdersVoted.Location = new System.Drawing.Point(283, 81);
+            this.checkBoxShowShareholdersVoted.Name = "checkBoxShowShareholdersVoted";
+            this.checkBoxShowShareholdersVoted.Size = new System.Drawing.Size(171, 15);
+            this.checkBoxShowShareholdersVoted.TabIndex = 525;
+            this.checkBoxShowShareholdersVoted.TabStop = false;
+            this.checkBoxShowShareholdersVoted.Text = "Show Shareholders voted?";
+            this.checkBoxShowShareholdersVoted.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkBoxShowShareholdersVoted.UseCustomBackColor = true;
+            this.checkBoxShowShareholdersVoted.UseCustomForeColor = true;
+            this.checkBoxShowShareholdersVoted.UseSelectable = true;
+            this.checkBoxShowShareholdersVoted.CheckedChanged += new System.EventHandler(this.checkBoxShowShareholdersVoted_CheckedChanged);
+            // 
             // VoterSelectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(763, 616);
+            this.Controls.Add(this.checkBoxShowShareholdersVoted);
             this.Controls.Add(this.txtBoxSearch);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -395,5 +414,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel13;
+        private MetroFramework.Controls.MetroCheckBox checkBoxShowShareholdersVoted;
     }
 }

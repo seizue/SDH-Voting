@@ -80,6 +80,8 @@
             this.panel32 = new System.Windows.Forms.Panel();
             this.btnViewVoter = new System.Windows.Forms.Button();
             this.checkBoxDoneVoting = new MetroFramework.Controls.MetroCheckBox();
+            this.checkBoxUndoVote = new MetroFramework.Controls.MetroCheckBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel15.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -290,7 +292,7 @@
             this.panel4.Controls.Add(this.panel7);
             this.panel4.Controls.Add(this.panel8);
             this.panel4.Controls.Add(this.panel9);
-            this.panel4.Location = new System.Drawing.Point(28, 248);
+            this.panel4.Location = new System.Drawing.Point(28, 250);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(202, 78);
             this.panel4.TabIndex = 495;
@@ -374,7 +376,7 @@
             this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel10.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel10.Location = new System.Drawing.Point(28, 212);
+            this.panel10.Location = new System.Drawing.Point(28, 214);
             this.panel10.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(857, 1);
@@ -390,7 +392,7 @@
             this.panel11.Controls.Add(this.panel14);
             this.panel11.Controls.Add(this.panel25);
             this.panel11.Controls.Add(this.panel26);
-            this.panel11.Location = new System.Drawing.Point(262, 247);
+            this.panel11.Location = new System.Drawing.Point(262, 249);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(202, 79);
             this.panel11.TabIndex = 497;
@@ -520,7 +522,7 @@
             this.labelStatus.AutoSize = true;
             this.labelStatus.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelStatus.Location = new System.Drawing.Point(26, 190);
+            this.labelStatus.Location = new System.Drawing.Point(26, 192);
             this.labelStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelStatus.Name = "labelStatus";
             this.labelStatus.Size = new System.Drawing.Size(53, 18);
@@ -603,7 +605,7 @@
             this.panel21.Controls.Add(this.panel30);
             this.panel21.Controls.Add(this.panel31);
             this.panel21.Controls.Add(this.panel32);
-            this.panel21.Location = new System.Drawing.Point(496, 248);
+            this.panel21.Location = new System.Drawing.Point(496, 250);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(202, 79);
             this.panel21.TabIndex = 518;
@@ -705,7 +707,7 @@
             this.checkBoxDoneVoting.AutoSize = true;
             this.checkBoxDoneVoting.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
             this.checkBoxDoneVoting.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.checkBoxDoneVoting.Location = new System.Drawing.Point(590, 80);
+            this.checkBoxDoneVoting.Location = new System.Drawing.Point(288, 151);
             this.checkBoxDoneVoting.Name = "checkBoxDoneVoting";
             this.checkBoxDoneVoting.Size = new System.Drawing.Size(97, 15);
             this.checkBoxDoneVoting.TabIndex = 519;
@@ -715,6 +717,35 @@
             this.checkBoxDoneVoting.UseCustomBackColor = true;
             this.checkBoxDoneVoting.UseCustomForeColor = true;
             this.checkBoxDoneVoting.UseSelectable = true;
+            this.checkBoxDoneVoting.CheckedChanged += new System.EventHandler(this.checkBoxDoneVoting_CheckedChanged);
+            // 
+            // checkBoxUndoVote
+            // 
+            this.checkBoxUndoVote.AutoSize = true;
+            this.checkBoxUndoVote.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
+            this.checkBoxUndoVote.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.checkBoxUndoVote.Location = new System.Drawing.Point(418, 151);
+            this.checkBoxUndoVote.Name = "checkBoxUndoVote";
+            this.checkBoxUndoVote.Size = new System.Drawing.Size(90, 15);
+            this.checkBoxUndoVote.TabIndex = 520;
+            this.checkBoxUndoVote.TabStop = false;
+            this.checkBoxUndoVote.Text = "Undo Vote ?";
+            this.checkBoxUndoVote.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkBoxUndoVote.UseCustomBackColor = true;
+            this.checkBoxUndoVote.UseCustomForeColor = true;
+            this.checkBoxUndoVote.UseSelectable = true;
+            this.checkBoxUndoVote.CheckedChanged += new System.EventHandler(this.checkBoxUndoVote_CheckedChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 8.75F, System.Drawing.FontStyle.Italic);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label10.Location = new System.Drawing.Point(27, 151);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(201, 14);
+            this.label10.TabIndex = 521;
+            this.label10.Text = "Select Representative  you want to vote";
             // 
             // SDHVoForm
             // 
@@ -722,6 +753,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(913, 515);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.checkBoxUndoVote);
             this.Controls.Add(this.checkBoxDoneVoting);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel6);
@@ -820,5 +853,7 @@
         private System.Windows.Forms.Panel panel31;
         private System.Windows.Forms.Panel panel32;
         private MetroFramework.Controls.MetroCheckBox checkBoxDoneVoting;
+        private MetroFramework.Controls.MetroCheckBox checkBoxUndoVote;
+        private System.Windows.Forms.Label label10;
     }
 }
