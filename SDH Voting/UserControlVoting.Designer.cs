@@ -37,6 +37,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelUserGrid = new System.Windows.Forms.Panel();
             this.dataGridViewRepresentative = new MetroFramework.Controls.MetroGrid();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Representative = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TotalVotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Progress = new SDH_Voting.UserControlVoting.DataGridViewProgressColumn();
+            this.No_PV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.View = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -58,12 +64,8 @@
             this.btnVote = new System.Windows.Forms.Button();
             this.metroPanel16 = new MetroFramework.Controls.MetroPanel();
             this.button_Refresh = new System.Windows.Forms.Button();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Representative = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalVotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Progress = new SDH_Voting.UserControlVoting.DataGridViewProgressColumn();
-            this.No_PV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.View = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnHistory = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panelUserGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRepresentative)).BeginInit();
             this.panelMenu.SuspendLayout();
@@ -154,6 +156,62 @@
             this.dataGridViewRepresentative.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewRepresentative_CellContentClick);
             this.dataGridViewRepresentative.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewRepresentative_CellFormatting);
             // 
+            // ID
+            // 
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ID.FillWeight = 19.42796F;
+            this.ID.Frozen = true;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Width = 132;
+            // 
+            // Representative
+            // 
+            this.Representative.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Representative.FillWeight = 50F;
+            this.Representative.HeaderText = "Representative";
+            this.Representative.Name = "Representative";
+            // 
+            // TotalVotes
+            // 
+            this.TotalVotes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TotalVotes.FillWeight = 50F;
+            this.TotalVotes.HeaderText = "Total Votes";
+            this.TotalVotes.Name = "TotalVotes";
+            // 
+            // Progress
+            // 
+            this.Progress.HeaderText = "Progress";
+            this.Progress.Name = "Progress";
+            this.Progress.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Progress.Width = 180;
+            // 
+            // No_PV
+            // 
+            this.No_PV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.No_PV.DefaultCellStyle = dataGridViewCellStyle3;
+            this.No_PV.FillWeight = 19.42796F;
+            this.No_PV.HeaderText = "No. PV";
+            this.No_PV.Name = "No_PV";
+            this.No_PV.Width = 150;
+            // 
+            // View
+            // 
+            this.View.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.View.DefaultCellStyle = dataGridViewCellStyle4;
+            this.View.FillWeight = 13F;
+            this.View.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.View.HeaderText = "View PV";
+            this.View.Name = "View";
+            this.View.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.View.Text = "View";
+            this.View.ToolTipText = "View People Voted";
+            this.View.UseColumnTextForButtonValue = true;
+            this.View.Width = 115;
+            // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -231,6 +289,8 @@
             // 
             // panelMenu
             // 
+            this.panelMenu.Controls.Add(this.panel4);
+            this.panelMenu.Controls.Add(this.btnHistory);
             this.panelMenu.Controls.Add(this.panel3);
             this.panelMenu.Controls.Add(this.metroPanel1);
             this.panelMenu.Controls.Add(this.btnPosted);
@@ -506,61 +566,35 @@
             this.button_Refresh.UseVisualStyleBackColor = false;
             this.button_Refresh.Click += new System.EventHandler(this.button_Refresh_Click);
             // 
-            // ID
+            // btnHistory
             // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ID.FillWeight = 19.42796F;
-            this.ID.Frozen = true;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Width = 132;
+            this.btnHistory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHistory.BackColor = System.Drawing.Color.Transparent;
+            this.btnHistory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnHistory.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnHistory.FlatAppearance.BorderSize = 0;
+            this.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistory.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
+            this.btnHistory.ForeColor = System.Drawing.Color.Black;
+            this.btnHistory.Image = global::SDH_Voting.Properties.Resources.approval_24px;
+            this.btnHistory.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnHistory.Location = new System.Drawing.Point(476, 7);
+            this.btnHistory.Name = "btnHistory";
+            this.btnHistory.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnHistory.Size = new System.Drawing.Size(71, 51);
+            this.btnHistory.TabIndex = 470;
+            this.btnHistory.Text = "HISTORY";
+            this.btnHistory.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnHistory.UseVisualStyleBackColor = false;
             // 
-            // Representative
+            // panel4
             // 
-            this.Representative.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Representative.FillWeight = 50F;
-            this.Representative.HeaderText = "Representative";
-            this.Representative.Name = "Representative";
-            // 
-            // TotalVotes
-            // 
-            this.TotalVotes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TotalVotes.FillWeight = 50F;
-            this.TotalVotes.HeaderText = "Total Votes";
-            this.TotalVotes.Name = "TotalVotes";
-            // 
-            // Progress
-            // 
-            this.Progress.HeaderText = "Progress";
-            this.Progress.Name = "Progress";
-            this.Progress.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Progress.Width = 180;
-            // 
-            // No_PV
-            // 
-            this.No_PV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.No_PV.DefaultCellStyle = dataGridViewCellStyle3;
-            this.No_PV.FillWeight = 19.42796F;
-            this.No_PV.HeaderText = "No. PV";
-            this.No_PV.Name = "No_PV";
-            this.No_PV.Width = 150;
-            // 
-            // View
-            // 
-            this.View.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.View.DefaultCellStyle = dataGridViewCellStyle4;
-            this.View.FillWeight = 13F;
-            this.View.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.View.HeaderText = "View PV";
-            this.View.Name = "View";
-            this.View.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.View.Text = "View";
-            this.View.ToolTipText = "View People Voted";
-            this.View.UseColumnTextForButtonValue = true;
-            this.View.Width = 115;
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel4.Location = new System.Drawing.Point(557, 7);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1, 46);
+            this.panel4.TabIndex = 471;
             // 
             // UserControlVoting
             // 
@@ -609,5 +643,7 @@
         private DataGridViewProgressColumn Progress;
         private System.Windows.Forms.DataGridViewTextBoxColumn No_PV;
         private System.Windows.Forms.DataGridViewButtonColumn View;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnHistory;
     }
 }

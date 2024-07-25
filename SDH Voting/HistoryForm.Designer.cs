@@ -1,6 +1,6 @@
 ﻿namespace SDH_Voting
 {
-    partial class VoterSelectionForm
+    partial class HistoryForm
     {
         /// <summary>
         /// Required designer variable.
@@ -34,10 +34,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelNav = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
             this.buttonClose = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.checkBoxShowShareholdersVoted = new MetroFramework.Controls.MetroCheckBox();
+            this.txtBoxSearch = new MetroFramework.Controls.MetroTextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.panelGrid = new System.Windows.Forms.Panel();
             this.GridVoters = new MetroFramework.Controls.MetroGrid();
             this.sdhID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,11 +52,7 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
-            this.txtBoxSearch = new MetroFramework.Controls.MetroTextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.checkBoxShowShareholdersVoted = new MetroFramework.Controls.MetroCheckBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panelNav.SuspendLayout();
             this.panelGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridVoters)).BeginInit();
@@ -62,15 +61,26 @@
             // panelNav
             // 
             this.panelNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(87)))), ((int)(((byte)(64)))));
+            this.panelNav.Controls.Add(this.panel20);
             this.panelNav.Controls.Add(this.buttonClose);
             this.panelNav.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelNav.Location = new System.Drawing.Point(0, 0);
             this.panelNav.Name = "panelNav";
-            this.panelNav.Size = new System.Drawing.Size(763, 29);
-            this.panelNav.TabIndex = 1;
+            this.panelNav.Size = new System.Drawing.Size(1104, 29);
+            this.panelNav.TabIndex = 478;
             this.panelNav.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseDown);
             this.panelNav.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseMove);
             this.panelNav.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseUp);
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel20.Location = new System.Drawing.Point(0, 0);
+            this.panel20.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(1104, 1);
+            this.panel20.TabIndex = 512;
             // 
             // buttonClose
             // 
@@ -78,39 +88,98 @@
             this.buttonClose.BackColor = System.Drawing.Color.IndianRed;
             this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Location = new System.Drawing.Point(737, 7);
+            this.buttonClose.Location = new System.Drawing.Point(1078, 7);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(14, 14);
             this.buttonClose.TabIndex = 4;
             this.buttonClose.UseVisualStyleBackColor = false;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
-            // panel6
+            // checkBoxShowShareholdersVoted
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(762, 29);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1, 587);
-            this.panel6.TabIndex = 517;
+            this.checkBoxShowShareholdersVoted.AutoSize = true;
+            this.checkBoxShowShareholdersVoted.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
+            this.checkBoxShowShareholdersVoted.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.checkBoxShowShareholdersVoted.Location = new System.Drawing.Point(289, 87);
+            this.checkBoxShowShareholdersVoted.Name = "checkBoxShowShareholdersVoted";
+            this.checkBoxShowShareholdersVoted.Size = new System.Drawing.Size(132, 15);
+            this.checkBoxShowShareholdersVoted.TabIndex = 531;
+            this.checkBoxShowShareholdersVoted.TabStop = false;
+            this.checkBoxShowShareholdersVoted.Text = "Shareholders Voted";
+            this.checkBoxShowShareholdersVoted.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkBoxShowShareholdersVoted.UseCustomBackColor = true;
+            this.checkBoxShowShareholdersVoted.UseCustomForeColor = true;
+            this.checkBoxShowShareholdersVoted.UseSelectable = true;
             // 
-            // panel1
+            // txtBoxSearch
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 29);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1, 587);
-            this.panel1.TabIndex = 518;
+            this.txtBoxSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
             // 
-            // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(1, 608);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(761, 8);
-            this.panel2.TabIndex = 519;
+            // 
+            this.txtBoxSearch.CustomButton.Image = null;
+            this.txtBoxSearch.CustomButton.Location = new System.Drawing.Point(211, 1);
+            this.txtBoxSearch.CustomButton.Name = "";
+            this.txtBoxSearch.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtBoxSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtBoxSearch.CustomButton.TabIndex = 1;
+            this.txtBoxSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtBoxSearch.CustomButton.UseSelectable = true;
+            this.txtBoxSearch.Lines = new string[0];
+            this.txtBoxSearch.Location = new System.Drawing.Point(26, 83);
+            this.txtBoxSearch.MaxLength = 32767;
+            this.txtBoxSearch.Name = "txtBoxSearch";
+            this.txtBoxSearch.PasswordChar = '\0';
+            this.txtBoxSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtBoxSearch.SelectedText = "";
+            this.txtBoxSearch.SelectionLength = 0;
+            this.txtBoxSearch.SelectionStart = 0;
+            this.txtBoxSearch.ShortcutsEnabled = true;
+            this.txtBoxSearch.ShowButton = true;
+            this.txtBoxSearch.ShowClearButton = true;
+            this.txtBoxSearch.Size = new System.Drawing.Size(233, 23);
+            this.txtBoxSearch.Style = MetroFramework.MetroColorStyle.Silver;
+            this.txtBoxSearch.TabIndex = 527;
+            this.txtBoxSearch.UseCustomBackColor = true;
+            this.txtBoxSearch.UseCustomForeColor = true;
+            this.txtBoxSearch.UseSelectable = true;
+            this.txtBoxSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtBoxSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 9F);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label9.Location = new System.Drawing.Point(135, 44);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(28, 14);
+            this.label9.TabIndex = 530;
+            this.label9.Text = "LIST";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(19, 40);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(114, 19);
+            this.label8.TabIndex = 529;
+            this.label8.Text = "SHAREHOLDERS";
+            // 
+            // panel13
+            // 
+            this.panel13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel13.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel13.Location = new System.Drawing.Point(2, 70);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(1100, 1);
+            this.panel13.TabIndex = 528;
             // 
             // panelGrid
             // 
@@ -122,10 +191,10 @@
             this.panelGrid.Controls.Add(this.panel10);
             this.panelGrid.Controls.Add(this.panel9);
             this.panelGrid.Controls.Add(this.panel24);
-            this.panelGrid.Location = new System.Drawing.Point(12, 113);
+            this.panelGrid.Location = new System.Drawing.Point(18, 119);
             this.panelGrid.Name = "panelGrid";
-            this.panelGrid.Size = new System.Drawing.Size(739, 487);
-            this.panelGrid.TabIndex = 521;
+            this.panelGrid.Size = new System.Drawing.Size(1074, 547);
+            this.panelGrid.TabIndex = 526;
             // 
             // GridVoters
             // 
@@ -192,13 +261,11 @@
             this.GridVoters.RowTemplate.Height = 23;
             this.GridVoters.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.GridVoters.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridVoters.Size = new System.Drawing.Size(733, 477);
+            this.GridVoters.Size = new System.Drawing.Size(1068, 537);
             this.GridVoters.TabIndex = 437;
             this.GridVoters.UseCustomBackColor = true;
             this.GridVoters.UseCustomForeColor = true;
             this.GridVoters.UseStyleColors = true;
-            this.GridVoters.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridVoters_CellContentClick);
-            this.GridVoters.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridVoters_CellDoubleClick);
             // 
             // sdhID
             // 
@@ -236,10 +303,10 @@
             // 
             this.panel11.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel11.Location = new System.Drawing.Point(738, 1);
+            this.panel11.Location = new System.Drawing.Point(1073, 1);
             this.panel11.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1, 485);
+            this.panel11.Size = new System.Drawing.Size(1, 545);
             this.panel11.TabIndex = 436;
             // 
             // panel10
@@ -249,17 +316,17 @@
             this.panel10.Location = new System.Drawing.Point(0, 1);
             this.panel10.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1, 485);
+            this.panel10.Size = new System.Drawing.Size(1, 545);
             this.panel10.TabIndex = 435;
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(0, 486);
+            this.panel9.Location = new System.Drawing.Point(0, 546);
             this.panel9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(739, 1);
+            this.panel9.Size = new System.Drawing.Size(1074, 1);
             this.panel9.TabIndex = 434;
             // 
             // panel24
@@ -269,121 +336,37 @@
             this.panel24.Location = new System.Drawing.Point(0, 0);
             this.panel24.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(739, 1);
+            this.panel24.Size = new System.Drawing.Size(1074, 1);
             this.panel24.TabIndex = 433;
             // 
-            // txtBoxSearch
+            // panel2
             // 
-            this.txtBoxSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 672);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1104, 8);
+            this.panel2.TabIndex = 532;
             // 
-            // 
-            // 
-            this.txtBoxSearch.CustomButton.Image = null;
-            this.txtBoxSearch.CustomButton.Location = new System.Drawing.Point(211, 1);
-            this.txtBoxSearch.CustomButton.Name = "";
-            this.txtBoxSearch.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtBoxSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtBoxSearch.CustomButton.TabIndex = 1;
-            this.txtBoxSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtBoxSearch.CustomButton.UseSelectable = true;
-            this.txtBoxSearch.Lines = new string[0];
-            this.txtBoxSearch.Location = new System.Drawing.Point(20, 77);
-            this.txtBoxSearch.MaxLength = 32767;
-            this.txtBoxSearch.Name = "txtBoxSearch";
-            this.txtBoxSearch.PasswordChar = '\0';
-            this.txtBoxSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtBoxSearch.SelectedText = "";
-            this.txtBoxSearch.SelectionLength = 0;
-            this.txtBoxSearch.SelectionStart = 0;
-            this.txtBoxSearch.ShortcutsEnabled = true;
-            this.txtBoxSearch.ShowButton = true;
-            this.txtBoxSearch.ShowClearButton = true;
-            this.txtBoxSearch.Size = new System.Drawing.Size(233, 23);
-            this.txtBoxSearch.Style = MetroFramework.MetroColorStyle.Silver;
-            this.txtBoxSearch.TabIndex = 522;
-            this.txtBoxSearch.UseCustomBackColor = true;
-            this.txtBoxSearch.UseCustomForeColor = true;
-            this.txtBoxSearch.UseSelectable = true;
-            this.txtBoxSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtBoxSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txtBoxSearch.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.txtBoxSearch_ButtonClick);
-            this.txtBoxSearch.ClearClicked += new MetroFramework.Controls.MetroTextBox.LUClear(this.txtBoxSearch_ClearClicked);
-            this.txtBoxSearch.TextChanged += new System.EventHandler(this.txtBoxSearch_TextChanged);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 9F);
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(129, 42);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(28, 14);
-            this.label9.TabIndex = 524;
-            this.label9.Text = "LIST";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(13, 38);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(114, 19);
-            this.label8.TabIndex = 523;
-            this.label8.Text = "SHAREHOLDERS";
-            // 
-            // panel13
-            // 
-            this.panel13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel13.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel13.Location = new System.Drawing.Point(-4, 64);
-            this.panel13.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(769, 1);
-            this.panel13.TabIndex = 522;
-            // 
-            // checkBoxShowShareholdersVoted
-            // 
-            this.checkBoxShowShareholdersVoted.AutoSize = true;
-            this.checkBoxShowShareholdersVoted.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
-            this.checkBoxShowShareholdersVoted.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.checkBoxShowShareholdersVoted.Location = new System.Drawing.Point(283, 81);
-            this.checkBoxShowShareholdersVoted.Name = "checkBoxShowShareholdersVoted";
-            this.checkBoxShowShareholdersVoted.Size = new System.Drawing.Size(132, 15);
-            this.checkBoxShowShareholdersVoted.TabIndex = 525;
-            this.checkBoxShowShareholdersVoted.TabStop = false;
-            this.checkBoxShowShareholdersVoted.Text = "Shareholders Voted";
-            this.checkBoxShowShareholdersVoted.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBoxShowShareholdersVoted.UseCustomBackColor = true;
-            this.checkBoxShowShareholdersVoted.UseCustomForeColor = true;
-            this.checkBoxShowShareholdersVoted.UseSelectable = true;
-            this.checkBoxShowShareholdersVoted.CheckedChanged += new System.EventHandler(this.checkBoxShowShareholdersVoted_CheckedChanged);
-            // 
-            // VoterSelectionForm
+            // HistoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(763, 616);
+            this.ClientSize = new System.Drawing.Size(1104, 680);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.checkBoxShowShareholdersVoted);
             this.Controls.Add(this.txtBoxSearch);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.panelGrid);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panelNav);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "VoterSelectionForm";
-            this.Opacity = 0.99D;
+            this.Name = "HistoryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Voter Selection DataGrid";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VoterSelectionForm_FormClosed);
+            this.Text = "History";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelNav.ResumeLayout(false);
             this.panelGrid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GridVoters)).EndInit();
@@ -395,25 +378,24 @@
         #endregion
 
         private System.Windows.Forms.Panel panelNav;
+        private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Button buttonClose;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private MetroFramework.Controls.MetroCheckBox checkBoxShowShareholdersVoted;
+        private MetroFramework.Controls.MetroTextBox txtBoxSearch;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panelGrid;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel24;
         private MetroFramework.Controls.MetroGrid GridVoters;
         private System.Windows.Forms.DataGridViewTextBoxColumn sdhID;
         private System.Windows.Forms.DataGridViewTextBoxColumn sdhStockHolder;
         private System.Windows.Forms.DataGridViewTextBoxColumn sdhShares;
         private System.Windows.Forms.DataGridViewTextBoxColumn sdhTotalVotes;
         private System.Windows.Forms.DataGridViewButtonColumn sdhSelect;
-        private MetroFramework.Controls.MetroTextBox txtBoxSearch;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel13;
-        private MetroFramework.Controls.MetroCheckBox checkBoxShowShareholdersVoted;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.Panel panel2;
     }
 }
