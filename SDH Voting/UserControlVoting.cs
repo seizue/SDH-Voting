@@ -646,6 +646,13 @@ namespace SDH_Voting
             ChartForm chartForm = new ChartForm();
             chartForm.ShowDialog();
         }
+
+        private void btnHistory_Click(object sender, EventArgs e)
+        {
+            HistoryForm historyForm = new HistoryForm();
+            historyForm.ShowDialog();
+               
+        }
     }
 }
 

@@ -151,7 +151,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 9F);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(135, 44);
+            this.label9.Location = new System.Drawing.Point(140, 44);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(28, 14);
@@ -166,9 +166,9 @@
             this.label8.Location = new System.Drawing.Point(19, 40);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(114, 19);
+            this.label8.Size = new System.Drawing.Size(122, 19);
             this.label8.TabIndex = 529;
-            this.label8.Text = "SHAREHOLDERS";
+            this.label8.Text = "VOTING HISTORY";
             // 
             // panel13
             // 

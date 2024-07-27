@@ -51,6 +51,8 @@
             this.metroPanel11 = new MetroFramework.Controls.MetroPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnHistory = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.btnPosted = new System.Windows.Forms.Button();
@@ -64,8 +66,6 @@
             this.btnVote = new System.Windows.Forms.Button();
             this.metroPanel16 = new MetroFramework.Controls.MetroPanel();
             this.button_Refresh = new System.Windows.Forms.Button();
-            this.btnHistory = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panelUserGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRepresentative)).BeginInit();
             this.panelMenu.SuspendLayout();
@@ -312,6 +312,37 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(893, 77);
             this.panelMenu.TabIndex = 465;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel4.Location = new System.Drawing.Point(557, 7);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1, 46);
+            this.panel4.TabIndex = 471;
+            // 
+            // btnHistory
+            // 
+            this.btnHistory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHistory.BackColor = System.Drawing.Color.Transparent;
+            this.btnHistory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnHistory.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnHistory.FlatAppearance.BorderSize = 0;
+            this.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistory.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
+            this.btnHistory.ForeColor = System.Drawing.Color.Black;
+            this.btnHistory.Image = global::SDH_Voting.Properties.Resources.order_history_24px;
+            this.btnHistory.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnHistory.Location = new System.Drawing.Point(476, 7);
+            this.btnHistory.Name = "btnHistory";
+            this.btnHistory.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnHistory.Size = new System.Drawing.Size(71, 51);
+            this.btnHistory.TabIndex = 470;
+            this.btnHistory.Text = "HISTORY";
+            this.btnHistory.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnHistory.UseVisualStyleBackColor = false;
+            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
             // 
             // panel3
             // 
@@ -565,36 +596,6 @@
             this.button_Refresh.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button_Refresh.UseVisualStyleBackColor = false;
             this.button_Refresh.Click += new System.EventHandler(this.button_Refresh_Click);
-            // 
-            // btnHistory
-            // 
-            this.btnHistory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHistory.BackColor = System.Drawing.Color.Transparent;
-            this.btnHistory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnHistory.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnHistory.FlatAppearance.BorderSize = 0;
-            this.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistory.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
-            this.btnHistory.ForeColor = System.Drawing.Color.Black;
-            this.btnHistory.Image = global::SDH_Voting.Properties.Resources.approval_24px;
-            this.btnHistory.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnHistory.Location = new System.Drawing.Point(476, 7);
-            this.btnHistory.Name = "btnHistory";
-            this.btnHistory.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnHistory.Size = new System.Drawing.Size(71, 51);
-            this.btnHistory.TabIndex = 470;
-            this.btnHistory.Text = "HISTORY";
-            this.btnHistory.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnHistory.UseVisualStyleBackColor = false;
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel4.Location = new System.Drawing.Point(557, 7);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1, 46);
-            this.panel4.TabIndex = 471;
             // 
             // UserControlVoting
             // 
