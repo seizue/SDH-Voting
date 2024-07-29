@@ -91,3 +91,4 @@ C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting
 C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.SettingsForm.resources
 C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.ViewVotersForm.resources
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.HistoryForm.resources
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.HistoryForm.resources

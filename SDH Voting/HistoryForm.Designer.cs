@@ -28,34 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelNav = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.buttonClose = new System.Windows.Forms.Button();
-            this.checkBoxShowShareholdersVoted = new MetroFramework.Controls.MetroCheckBox();
-            this.txtBoxSearch = new MetroFramework.Controls.MetroTextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
             this.panelGrid = new System.Windows.Forms.Panel();
-            this.GridVoters = new MetroFramework.Controls.MetroGrid();
-            this.sdhID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdhStockHolder = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdhShares = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdhTotalVotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdhSelect = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.GridHistory = new MetroFramework.Controls.MetroGrid();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxName = new MetroFramework.Controls.MetroTextBox();
+            this.btnSaveRep = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button_Export = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.metroDateTime1 = new MetroFramework.Controls.MetroDateTime();
+            this.button1 = new System.Windows.Forms.Button();
+            this.sdhID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdhPosted = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdhDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelNav.SuspendLayout();
             this.panelGrid.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GridVoters)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridHistory)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelNav
@@ -95,218 +104,98 @@
             this.buttonClose.UseVisualStyleBackColor = false;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
-            // checkBoxShowShareholdersVoted
-            // 
-            this.checkBoxShowShareholdersVoted.AutoSize = true;
-            this.checkBoxShowShareholdersVoted.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
-            this.checkBoxShowShareholdersVoted.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.checkBoxShowShareholdersVoted.Location = new System.Drawing.Point(289, 87);
-            this.checkBoxShowShareholdersVoted.Name = "checkBoxShowShareholdersVoted";
-            this.checkBoxShowShareholdersVoted.Size = new System.Drawing.Size(132, 15);
-            this.checkBoxShowShareholdersVoted.TabIndex = 531;
-            this.checkBoxShowShareholdersVoted.TabStop = false;
-            this.checkBoxShowShareholdersVoted.Text = "Shareholders Voted";
-            this.checkBoxShowShareholdersVoted.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBoxShowShareholdersVoted.UseCustomBackColor = true;
-            this.checkBoxShowShareholdersVoted.UseCustomForeColor = true;
-            this.checkBoxShowShareholdersVoted.UseSelectable = true;
-            // 
-            // txtBoxSearch
-            // 
-            this.txtBoxSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
-            // 
-            // 
-            // 
-            this.txtBoxSearch.CustomButton.Image = null;
-            this.txtBoxSearch.CustomButton.Location = new System.Drawing.Point(211, 1);
-            this.txtBoxSearch.CustomButton.Name = "";
-            this.txtBoxSearch.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtBoxSearch.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtBoxSearch.CustomButton.TabIndex = 1;
-            this.txtBoxSearch.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtBoxSearch.CustomButton.UseSelectable = true;
-            this.txtBoxSearch.Lines = new string[0];
-            this.txtBoxSearch.Location = new System.Drawing.Point(26, 83);
-            this.txtBoxSearch.MaxLength = 32767;
-            this.txtBoxSearch.Name = "txtBoxSearch";
-            this.txtBoxSearch.PasswordChar = '\0';
-            this.txtBoxSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtBoxSearch.SelectedText = "";
-            this.txtBoxSearch.SelectionLength = 0;
-            this.txtBoxSearch.SelectionStart = 0;
-            this.txtBoxSearch.ShortcutsEnabled = true;
-            this.txtBoxSearch.ShowButton = true;
-            this.txtBoxSearch.ShowClearButton = true;
-            this.txtBoxSearch.Size = new System.Drawing.Size(233, 23);
-            this.txtBoxSearch.Style = MetroFramework.MetroColorStyle.Silver;
-            this.txtBoxSearch.TabIndex = 527;
-            this.txtBoxSearch.UseCustomBackColor = true;
-            this.txtBoxSearch.UseCustomForeColor = true;
-            this.txtBoxSearch.UseSelectable = true;
-            this.txtBoxSearch.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtBoxSearch.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calibri", 9F);
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(140, 44);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(28, 14);
-            this.label9.TabIndex = 530;
-            this.label9.Text = "LIST";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(19, 40);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(122, 19);
-            this.label8.TabIndex = 529;
-            this.label8.Text = "VOTING HISTORY";
-            // 
-            // panel13
-            // 
-            this.panel13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel13.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel13.Location = new System.Drawing.Point(2, 70);
-            this.panel13.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(1100, 1);
-            this.panel13.TabIndex = 528;
-            // 
             // panelGrid
             // 
             this.panelGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelGrid.Controls.Add(this.GridVoters);
+            this.panelGrid.Controls.Add(this.GridHistory);
             this.panelGrid.Controls.Add(this.panel11);
             this.panelGrid.Controls.Add(this.panel10);
             this.panelGrid.Controls.Add(this.panel9);
             this.panelGrid.Controls.Add(this.panel24);
-            this.panelGrid.Location = new System.Drawing.Point(18, 119);
+            this.panelGrid.Location = new System.Drawing.Point(292, 86);
             this.panelGrid.Name = "panelGrid";
-            this.panelGrid.Size = new System.Drawing.Size(1074, 547);
+            this.panelGrid.Size = new System.Drawing.Size(800, 585);
             this.panelGrid.TabIndex = 526;
             // 
-            // GridVoters
+            // GridHistory
             // 
-            this.GridVoters.AllowUserToAddRows = false;
-            this.GridVoters.AllowUserToResizeColumns = false;
-            this.GridVoters.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.GridVoters.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.GridVoters.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.GridHistory.AllowUserToAddRows = false;
+            this.GridHistory.AllowUserToResizeColumns = false;
+            this.GridHistory.AllowUserToResizeRows = false;
+            dataGridViewCellStyle31.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
+            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.GridHistory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle31;
+            this.GridHistory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.GridVoters.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.GridVoters.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
-            this.GridVoters.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.GridVoters.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.GridVoters.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridVoters.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.GridVoters.ColumnHeadersHeight = 48;
-            this.GridVoters.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.GridHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GridHistory.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
+            this.GridHistory.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GridHistory.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.GridHistory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridHistory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle32;
+            this.GridHistory.ColumnHeadersHeight = 48;
+            this.GridHistory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.sdhID,
-            this.sdhStockHolder,
-            this.sdhShares,
-            this.sdhTotalVotes,
-            this.sdhSelect});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.GridVoters.DefaultCellStyle = dataGridViewCellStyle3;
-            this.GridVoters.EnableHeadersVisualStyles = false;
-            this.GridVoters.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.GridVoters.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.GridVoters.Location = new System.Drawing.Point(3, 3);
-            this.GridVoters.MultiSelect = false;
-            this.GridVoters.Name = "GridVoters";
-            this.GridVoters.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.GridVoters.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.GridVoters.RowHeadersWidth = 5;
-            this.GridVoters.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
-            this.GridVoters.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.GridVoters.RowTemplate.Height = 23;
-            this.GridVoters.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.GridVoters.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridVoters.Size = new System.Drawing.Size(1068, 537);
-            this.GridVoters.TabIndex = 437;
-            this.GridVoters.UseCustomBackColor = true;
-            this.GridVoters.UseCustomForeColor = true;
-            this.GridVoters.UseStyleColors = true;
-            // 
-            // sdhID
-            // 
-            this.sdhID.FillWeight = 21.7786F;
-            this.sdhID.HeaderText = "ID";
-            this.sdhID.Name = "sdhID";
-            // 
-            // sdhStockHolder
-            // 
-            this.sdhStockHolder.FillWeight = 34.84576F;
-            this.sdhStockHolder.HeaderText = "Stock Holder Name";
-            this.sdhStockHolder.Name = "sdhStockHolder";
-            // 
-            // sdhShares
-            // 
-            this.sdhShares.FillWeight = 26.13432F;
-            this.sdhShares.HeaderText = "Shares";
-            this.sdhShares.Name = "sdhShares";
-            // 
-            // sdhTotalVotes
-            // 
-            this.sdhTotalVotes.FillWeight = 30.49004F;
-            this.sdhTotalVotes.HeaderText = "Equal Votes";
-            this.sdhTotalVotes.Name = "sdhTotalVotes";
-            // 
-            // sdhSelect
-            // 
-            this.sdhSelect.FillWeight = 20F;
-            this.sdhSelect.HeaderText = "Select";
-            this.sdhSelect.Name = "sdhSelect";
-            this.sdhSelect.Text = "Select";
-            this.sdhSelect.UseColumnTextForButtonValue = true;
+            this.sdhPosted,
+            this.sdhDate});
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.GridHistory.DefaultCellStyle = dataGridViewCellStyle33;
+            this.GridHistory.EnableHeadersVisualStyles = false;
+            this.GridHistory.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.GridHistory.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.GridHistory.Location = new System.Drawing.Point(3, 3);
+            this.GridHistory.MultiSelect = false;
+            this.GridHistory.Name = "GridHistory";
+            this.GridHistory.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.GridHistory.RowHeadersDefaultCellStyle = dataGridViewCellStyle34;
+            this.GridHistory.RowHeadersWidth = 5;
+            this.GridHistory.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle35.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
+            this.GridHistory.RowsDefaultCellStyle = dataGridViewCellStyle35;
+            this.GridHistory.RowTemplate.Height = 23;
+            this.GridHistory.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.GridHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GridHistory.Size = new System.Drawing.Size(794, 575);
+            this.GridHistory.TabIndex = 437;
+            this.GridHistory.UseCustomBackColor = true;
+            this.GridHistory.UseCustomForeColor = true;
+            this.GridHistory.UseStyleColors = true;
             // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel11.Location = new System.Drawing.Point(1073, 1);
+            this.panel11.Location = new System.Drawing.Point(799, 1);
             this.panel11.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1, 545);
+            this.panel11.Size = new System.Drawing.Size(1, 583);
             this.panel11.TabIndex = 436;
             // 
             // panel10
@@ -316,17 +205,17 @@
             this.panel10.Location = new System.Drawing.Point(0, 1);
             this.panel10.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1, 545);
+            this.panel10.Size = new System.Drawing.Size(1, 583);
             this.panel10.TabIndex = 435;
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(0, 546);
+            this.panel9.Location = new System.Drawing.Point(0, 584);
             this.panel9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1074, 1);
+            this.panel9.Size = new System.Drawing.Size(800, 1);
             this.panel9.TabIndex = 434;
             // 
             // panel24
@@ -336,7 +225,7 @@
             this.panel24.Location = new System.Drawing.Point(0, 0);
             this.panel24.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(1074, 1);
+            this.panel24.Size = new System.Drawing.Size(800, 1);
             this.panel24.TabIndex = 433;
             // 
             // panel2
@@ -348,30 +237,255 @@
             this.panel2.Size = new System.Drawing.Size(1104, 8);
             this.panel2.TabIndex = 532;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.button_Export);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 29);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1104, 46);
+            this.panel1.TabIndex = 533;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 45);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1104, 1);
+            this.panel3.TabIndex = 534;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.metroDateTime1);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.textBoxName);
+            this.panel4.Controls.Add(this.btnSaveRep);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 75);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(280, 597);
+            this.panel4.TabIndex = 534;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(25, 126);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 15);
+            this.label3.TabIndex = 513;
+            this.label3.Text = "SEARCH";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label6.Location = new System.Drawing.Point(71, 125);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(52, 15);
+            this.label6.TabIndex = 514;
+            this.label6.Text = "(History)";
+            // 
+            // textBoxName
+            // 
+            this.textBoxName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            // 
+            // 
+            // 
+            this.textBoxName.CustomButton.Image = null;
+            this.textBoxName.CustomButton.Location = new System.Drawing.Point(213, 1);
+            this.textBoxName.CustomButton.Name = "";
+            this.textBoxName.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.textBoxName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.textBoxName.CustomButton.TabIndex = 1;
+            this.textBoxName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.textBoxName.CustomButton.UseSelectable = true;
+            this.textBoxName.Lines = new string[0];
+            this.textBoxName.Location = new System.Drawing.Point(26, 148);
+            this.textBoxName.MaxLength = 32767;
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.PasswordChar = '\0';
+            this.textBoxName.ReadOnly = true;
+            this.textBoxName.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.textBoxName.SelectedText = "";
+            this.textBoxName.SelectionLength = 0;
+            this.textBoxName.SelectionStart = 0;
+            this.textBoxName.ShortcutsEnabled = true;
+            this.textBoxName.ShowButton = true;
+            this.textBoxName.Size = new System.Drawing.Size(235, 23);
+            this.textBoxName.Style = MetroFramework.MetroColorStyle.Silver;
+            this.textBoxName.TabIndex = 512;
+            this.textBoxName.UseCustomBackColor = true;
+            this.textBoxName.UseCustomForeColor = true;
+            this.textBoxName.UseSelectable = true;
+            this.textBoxName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.textBoxName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // btnSaveRep
+            // 
+            this.btnSaveRep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(142)))), ((int)(((byte)(141)))));
+            this.btnSaveRep.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSaveRep.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(189)))), ((int)(((byte)(188)))));
+            this.btnSaveRep.FlatAppearance.BorderSize = 2;
+            this.btnSaveRep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveRep.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7F, System.Drawing.FontStyle.Bold);
+            this.btnSaveRep.ForeColor = System.Drawing.Color.MintCream;
+            this.btnSaveRep.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSaveRep.Location = new System.Drawing.Point(26, 192);
+            this.btnSaveRep.Name = "btnSaveRep";
+            this.btnSaveRep.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnSaveRep.Size = new System.Drawing.Size(235, 29);
+            this.btnSaveRep.TabIndex = 511;
+            this.btnSaveRep.Text = "SAVE";
+            this.btnSaveRep.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(25, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 15);
+            this.label1.TabIndex = 516;
+            this.label1.Text = "FILTER DATE";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel5.Location = new System.Drawing.Point(26, 98);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(235, 1);
+            this.panel5.TabIndex = 517;
+            // 
+            // button_Export
+            // 
+            this.button_Export.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_Export.BackColor = System.Drawing.Color.Transparent;
+            this.button_Export.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_Export.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_Export.FlatAppearance.BorderSize = 0;
+            this.button_Export.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Export.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
+            this.button_Export.ForeColor = System.Drawing.Color.Black;
+            this.button_Export.Image = global::SDH_Voting.Properties.Resources.send_file_24px;
+            this.button_Export.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_Export.Location = new System.Drawing.Point(980, 10);
+            this.button_Export.Name = "button_Export";
+            this.button_Export.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button_Export.Size = new System.Drawing.Size(84, 33);
+            this.button_Export.TabIndex = 535;
+            this.button_Export.Text = "EXPORT";
+            this.button_Export.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_Export.UseVisualStyleBackColor = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 9F);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label9.Location = new System.Drawing.Point(145, 16);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(28, 14);
+            this.label9.TabIndex = 537;
+            this.label9.Text = "LIST";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(24, 12);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(122, 19);
+            this.label8.TabIndex = 536;
+            this.label8.Text = "VOTING HISTORY";
+            // 
+            // metroDateTime1
+            // 
+            this.metroDateTime1.FontSize = MetroFramework.MetroDateTimeSize.Small;
+            this.metroDateTime1.FontWeight = MetroFramework.MetroDateTimeWeight.Bold;
+            this.metroDateTime1.Location = new System.Drawing.Point(28, 43);
+            this.metroDateTime1.MinimumSize = new System.Drawing.Size(0, 25);
+            this.metroDateTime1.Name = "metroDateTime1";
+            this.metroDateTime1.Size = new System.Drawing.Size(233, 25);
+            this.metroDateTime1.TabIndex = 515;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = global::SDH_Voting.Properties.Resources.send_file_24px;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(295, 6);
+            this.button1.Name = "button1";
+            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button1.Size = new System.Drawing.Size(100, 33);
+            this.button1.TabIndex = 538;
+            this.button1.Text = "VIEW DATA";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // sdhID
+            // 
+            this.sdhID.DividerWidth = 2;
+            this.sdhID.FillWeight = 21.7786F;
+            this.sdhID.HeaderText = "ID";
+            this.sdhID.Name = "sdhID";
+            // 
+            // sdhPosted
+            // 
+            this.sdhPosted.FillWeight = 34.84576F;
+            this.sdhPosted.HeaderText = "Posted";
+            this.sdhPosted.Name = "sdhPosted";
+            // 
+            // sdhDate
+            // 
+            this.sdhDate.FillWeight = 26.13432F;
+            this.sdhDate.HeaderText = "Date";
+            this.sdhDate.Name = "sdhDate";
+            // 
             // HistoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1104, 680);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.checkBoxShowShareholdersVoted);
-            this.Controls.Add(this.txtBoxSearch);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.panel13);
             this.Controls.Add(this.panelGrid);
             this.Controls.Add(this.panelNav);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HistoryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "History";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.HistoryForm_Load);
             this.panelNav.ResumeLayout(false);
             this.panelGrid.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.GridVoters)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridHistory)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -380,22 +494,29 @@
         private System.Windows.Forms.Panel panelNav;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Button buttonClose;
-        private MetroFramework.Controls.MetroCheckBox checkBoxShowShareholdersVoted;
-        private MetroFramework.Controls.MetroTextBox txtBoxSearch;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panelGrid;
-        private MetroFramework.Controls.MetroGrid GridVoters;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sdhID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sdhStockHolder;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sdhShares;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sdhTotalVotes;
-        private System.Windows.Forms.DataGridViewButtonColumn sdhSelect;
+        private MetroFramework.Controls.MetroGrid GridHistory;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
+        private MetroFramework.Controls.MetroTextBox textBoxName;
+        private System.Windows.Forms.Button btnSaveRep;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button button_Export;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private MetroFramework.Controls.MetroDateTime metroDateTime1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sdhID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sdhPosted;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sdhDate;
     }
 }
