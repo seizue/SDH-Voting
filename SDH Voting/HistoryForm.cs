@@ -96,5 +96,66 @@ namespace SDH_Voting
 
             WindowState = FormWindowState.Maximized;
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string searchTerm = textBoxSearch.Text.Trim().ToLower();
+
+            // Loop through all rows in the DataGridView
+            foreach (DataGridViewRow row in GridHistory.Rows)
+            {
+                // Check if the row is a new row (the row used for adding new data, not a data row)
+                if (row.IsNewRow) continue;
+
+                // Assuming you want to search in all columns. Adjust as necessary.
+                bool rowVisible = false;
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    if (cell.Value != null && cell.Value.ToString().ToLower().Contains(searchTerm))
+                    {
+                        rowVisible = true;
+                        break;
+                    }
+                }
+
+                // Set the row's visibility
+                row.Visible = rowVisible;
+            }
+        }
+
+        private void textBoxSearch_ClearClicked()
+        {
+            foreach (DataGridViewRow row in GridHistory.Rows)
+            {
+                if (!row.IsNewRow)
+                {
+                    row.Visible = true;
+                }
+            }
+        }
+
+        private void historyDate_ValueChanged(object sender, EventArgs e)
+        {
+            FilterByDate(historyDate.Value);
+        }
+
+        private void FilterByDate(DateTime selectedDate)
+        {
+            foreach (DataGridViewRow row in GridHistory.Rows)
+            {
+                if (row.IsNewRow) continue;
+
+                // Assuming the date is in the format "yyyyMMdd" or similar. Adjust parsing as necessary.
+                if (DateTime.TryParse(row.Cells["sdhDate"].Value?.ToString(), out DateTime rowDate))
+                {
+                    // Check if the row's date matches the selected date
+                    row.Visible = rowDate.Date == selectedDate.Date;
+                }
+                else
+                {
+                    row.Visible = false; // Hide rows with invalid or missing dates
+                }
+            }
+        }
     }
 }
