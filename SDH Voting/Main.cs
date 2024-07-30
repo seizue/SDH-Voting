@@ -31,13 +31,15 @@ namespace SDH_Voting
             txtBoxSearch.TextChanged += txtBoxSearch_TextChanged;
             checkBoxVoted.CheckedChanged += checkBoxVoted_CheckedChanged;
             checkBoxNonVoted.CheckedChanged += checkBoxNonVoted_CheckedChanged;
+            this.Resize += Main_Resize;
+            this.StartPosition = FormStartPosition.Manual;
 
             // Set the initial window state based on the saved value
             string savedWindowState = Properties.Settings.Default.MainFormWindowState;
             if (!string.IsNullOrEmpty(savedWindowState) && Enum.IsDefined(typeof(FormWindowState), savedWindowState))
             {
                 // Parse the saved value and set the window state
-                this.WindowState = (FormWindowState)Enum.Parse(typeof(FormWindowState), savedWindowState);
+                 this.WindowState = (FormWindowState)Enum.Parse(typeof(FormWindowState), savedWindowState);
             }
         }
 
@@ -140,6 +142,15 @@ namespace SDH_Voting
             {
                 Debug.WriteLine($"Error in InitializeApplicationData(): {ex.Message}");
                 MessageBox.Show($"An error occurred while initializing application data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Main_Resize(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                Rectangle workingArea = Screen.GetWorkingArea(this);
+                this.MaximizedBounds = new Rectangle(workingArea.X, workingArea.Y, workingArea.Width, workingArea.Height);
             }
         }
 

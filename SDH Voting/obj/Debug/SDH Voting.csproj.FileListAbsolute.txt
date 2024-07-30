@@ -44,6 +44,20 @@ C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH Voting.
 C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH Voting.exe
 C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH Voting.pdb
 C:\Users\Asus\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.ViewVotersForm.resources
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.dll
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.pdb
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.xml
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.ChartForm.resources
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.SettingsForm.resources
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.ViewVotersForm.resources
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.HistoryForm.resources
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.HistoryDetailedForm.resources
 D:\Venus\Repos\SDH Voting\SDH Voting\bin\Debug\SDH Voting.exe.config
 D:\Venus\Repos\SDH Voting\SDH Voting\bin\Debug\SDH Voting.exe
 D:\Venus\Repos\SDH Voting\SDH Voting\bin\Debug\SDH Voting.pdb
@@ -64,6 +78,8 @@ D:\Venus\Repos\SDH Voting\SDH Voting\bin\Debug\Newtonsoft.Json.xml
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH Voting.csproj.AssemblyReference.cache
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.AddRepForm.resources
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.ChartForm.resources
+D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.HistoryDetailedForm.resources
+D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.HistoryForm.resources
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.Main.resources
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.NewForm.resources
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.Properties.Resources.resources
@@ -78,18 +94,3 @@ D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH Voting.csproj.CoreCompileInpu
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH Voting.csproj.Up2Date
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH Voting.exe
 D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH Voting.pdb
-C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.dll
-C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.WinForms.dll
-C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.Wpf.dll
-C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.pdb
-C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.xml
-C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.WinForms.pdb
-C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.WinForms.xml
-C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.Wpf.pdb
-C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Debug\LiveCharts.Wpf.xml
-C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.ChartForm.resources
-C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.SettingsForm.resources
-C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.ViewVotersForm.resources
-D:\Venus\Repos\SDH Voting\SDH Voting\obj\Debug\SDH_Voting.HistoryForm.resources
-C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.HistoryForm.resources
-C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH_Voting.HistoryDetailedForm.resources

@@ -695,6 +695,7 @@
             this.Opacity = 0.96D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Representative Form";
+            this.Load += new System.EventHandler(this.SettingsForm_Load);
             this.panelNav.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panelDltData.ResumeLayout(false);

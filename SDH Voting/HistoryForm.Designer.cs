@@ -293,7 +293,7 @@
             this.btnViewData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewData.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
             this.btnViewData.ForeColor = System.Drawing.Color.Black;
-            this.btnViewData.Image = global::SDH_Voting.Properties.Resources.binoculars_24px;
+            this.btnViewData.Image = global::SDH_Voting.Properties.Resources.binoculars_24px2;
             this.btnViewData.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnViewData.Location = new System.Drawing.Point(295, 9);
             this.btnViewData.Name = "btnViewData";

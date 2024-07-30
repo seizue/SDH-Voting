@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace SDH_Voting
 {
@@ -82,9 +83,10 @@ namespace SDH_Voting
                     row.Cells["sdhPosted"].Value = formattedPostedName; 
                 }
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
-                MessageBox.Show("An error occurred while loading folders: " + ex.Message);
+                Debug.WriteLine($"An error occurred: {ex.Message}\n{ex.StackTrace}");
+                return;
             }
         }
 

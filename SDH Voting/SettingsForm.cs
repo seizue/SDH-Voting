@@ -20,6 +20,7 @@ namespace SDH_Voting
         private bool isDragging = false;
         private Point lastCursor;
         private Point lastForm;
+
         public SettingsForm(UserControlVoting userControl)
         {
             InitializeComponent();
@@ -39,7 +40,32 @@ namespace SDH_Voting
             // Set the row height in txtBoxRH based on saved settings
             int savedRowHeight = Properties.Settings.Default.DataGridViewRowHeight;
             txtBoxRH.Text = savedRowHeight.ToString();
+
+            // Apply the initial window state
+            ApplyInitialWindowState();
+
         }
+
+        private void ApplyInitialWindowState()
+        {
+            string savedWindowState = Properties.Settings.Default.MainFormWindowState;
+
+            if (!string.IsNullOrEmpty(savedWindowState) && Enum.IsDefined(typeof(FormWindowState), savedWindowState))
+            {
+                this.WindowState = (FormWindowState)Enum.Parse(typeof(FormWindowState), savedWindowState);
+
+                if (this.WindowState == FormWindowState.Maximized)
+                {
+                    Rectangle workingArea = Screen.GetWorkingArea(this);
+                    this.MaximizedBounds = new Rectangle(workingArea.X, workingArea.Y, workingArea.Width, workingArea.Height);
+                }
+                else
+                {
+                    this.MaximizedBounds = Screen.PrimaryScreen.Bounds; // Default bounds
+                }
+            }
+        }
+
 
         private void buttonClose_Click_1(object sender, EventArgs e)
         {
@@ -160,24 +186,35 @@ namespace SDH_Voting
 
         private void button_Save_Click(object sender, EventArgs e)
         {
-            // Save the selected item of the ComboBox to application settings if it's valid
             if (comBox_WindowState.SelectedItem != null && Enum.IsDefined(typeof(FormWindowState), comBox_WindowState.SelectedItem.ToString()))
             {
-                Properties.Settings.Default.MainFormWindowState = comBox_WindowState.SelectedItem.ToString();
+                string selectedWindowState = comBox_WindowState.SelectedItem.ToString();
+                Properties.Settings.Default.MainFormWindowState = selectedWindowState;
+
+                // Save the settings
                 Properties.Settings.Default.Save();
 
-                // Inform the user that changes will reflect after application restart
+                if (selectedWindowState == FormWindowState.Maximized.ToString())
+                {
+                    Rectangle workingArea = Screen.GetWorkingArea(this);
+                    this.MaximizedBounds = new Rectangle(workingArea.X, workingArea.Y, workingArea.Width, workingArea.Height);
+                }
+                else
+                {
+                    this.MaximizedBounds = Screen.PrimaryScreen.Bounds; 
+                }
+
                 MessageBox.Show("Settings saved. Please close and restart the application for the changes to take effect.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                // Handle invalid state gracefully, for example, by showing a message to the user
                 MessageBox.Show("Invalid window state selected. Please select a valid window state.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            // Close the settings form or perform any other necessary actions
             this.Close();
         }
+
+
 
         private void btnSaveFS_Click(object sender, EventArgs e)
         {
@@ -313,7 +350,10 @@ namespace SDH_Voting
             }
         }
 
-    
+        private void SettingsForm_Load(object sender, EventArgs e)
+        {
+            ApplyInitialWindowState();
+        }
     }
 
 }
