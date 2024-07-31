@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelNav = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
             this.buttonClose = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -63,11 +64,10 @@
             this.btnSaveMaxVoteLimit = new System.Windows.Forms.Button();
             this.txtBoxVoteLimit = new MetroFramework.Controls.MetroTextBox();
             this.panelDltData = new System.Windows.Forms.Panel();
+            this.btnCloseDltDataPanel = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.btnDelAllData = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.btnCloseDltDataPanel = new System.Windows.Forms.Button();
             this.panelNav.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panelDltData.SuspendLayout();
@@ -87,6 +87,16 @@
             this.panelNav.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseMove);
             this.panelNav.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseUp);
             // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel20.Location = new System.Drawing.Point(0, 0);
+            this.panel20.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(663, 1);
+            this.panel20.TabIndex = 512;
+            // 
             // buttonClose
             // 
             this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -102,7 +112,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 447);
             this.panel1.Name = "panel1";
@@ -585,6 +595,24 @@
             this.panelDltData.TabIndex = 535;
             this.panelDltData.Visible = false;
             // 
+            // btnCloseDltDataPanel
+            // 
+            this.btnCloseDltDataPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(142)))), ((int)(((byte)(141)))));
+            this.btnCloseDltDataPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCloseDltDataPanel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(189)))), ((int)(((byte)(188)))));
+            this.btnCloseDltDataPanel.FlatAppearance.BorderSize = 2;
+            this.btnCloseDltDataPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseDltDataPanel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloseDltDataPanel.ForeColor = System.Drawing.Color.MintCream;
+            this.btnCloseDltDataPanel.Location = new System.Drawing.Point(32, 294);
+            this.btnCloseDltDataPanel.Name = "btnCloseDltDataPanel";
+            this.btnCloseDltDataPanel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnCloseDltDataPanel.Size = new System.Drawing.Size(39, 30);
+            this.btnCloseDltDataPanel.TabIndex = 529;
+            this.btnCloseDltDataPanel.Text = "X";
+            this.btnCloseDltDataPanel.UseVisualStyleBackColor = false;
+            this.btnCloseDltDataPanel.Click += new System.EventHandler(this.btnCloseDltDataPanel_Click);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -626,34 +654,6 @@
             this.label4.Size = new System.Drawing.Size(84, 16);
             this.label4.TabIndex = 526;
             this.label4.Text = "Delete all data?";
-            // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel20.Location = new System.Drawing.Point(0, 0);
-            this.panel20.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(663, 1);
-            this.panel20.TabIndex = 512;
-            // 
-            // btnCloseDltDataPanel
-            // 
-            this.btnCloseDltDataPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(142)))), ((int)(((byte)(141)))));
-            this.btnCloseDltDataPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCloseDltDataPanel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(189)))), ((int)(((byte)(188)))));
-            this.btnCloseDltDataPanel.FlatAppearance.BorderSize = 2;
-            this.btnCloseDltDataPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseDltDataPanel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCloseDltDataPanel.ForeColor = System.Drawing.Color.MintCream;
-            this.btnCloseDltDataPanel.Location = new System.Drawing.Point(32, 294);
-            this.btnCloseDltDataPanel.Name = "btnCloseDltDataPanel";
-            this.btnCloseDltDataPanel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnCloseDltDataPanel.Size = new System.Drawing.Size(39, 30);
-            this.btnCloseDltDataPanel.TabIndex = 529;
-            this.btnCloseDltDataPanel.Text = "X";
-            this.btnCloseDltDataPanel.UseVisualStyleBackColor = false;
-            this.btnCloseDltDataPanel.Click += new System.EventHandler(this.btnCloseDltDataPanel_Click);
             // 
             // SettingsForm
             // 
