@@ -39,33 +39,8 @@ namespace SDH_Voting
 
             // Set the row height in txtBoxRH based on saved settings
             int savedRowHeight = Properties.Settings.Default.DataGridViewRowHeight;
-            txtBoxRH.Text = savedRowHeight.ToString();
-
-            // Apply the initial window state
-            ApplyInitialWindowState();
-
-        }
-
-        private void ApplyInitialWindowState()
-        {
-            string savedWindowState = Properties.Settings.Default.MainFormWindowState;
-
-            if (!string.IsNullOrEmpty(savedWindowState) && Enum.IsDefined(typeof(FormWindowState), savedWindowState))
-            {
-                this.WindowState = (FormWindowState)Enum.Parse(typeof(FormWindowState), savedWindowState);
-
-                if (this.WindowState == FormWindowState.Maximized)
-                {
-                    Rectangle workingArea = Screen.GetWorkingArea(this);
-                    this.MaximizedBounds = new Rectangle(workingArea.X, workingArea.Y, workingArea.Width, workingArea.Height);
-                }
-                else
-                {
-                    this.MaximizedBounds = Screen.PrimaryScreen.Bounds; // Default bounds
-                }
-            }
-        }
-
+            txtBoxRH.Text = savedRowHeight.ToString();        
+        }    
 
         private void buttonClose_Click_1(object sender, EventArgs e)
         {
@@ -214,8 +189,6 @@ namespace SDH_Voting
             this.Close();
         }
 
-
-
         private void btnSaveFS_Click(object sender, EventArgs e)
         {
             // Read and parse the font size from the TextBox
@@ -350,10 +323,6 @@ namespace SDH_Voting
             }
         }
 
-        private void SettingsForm_Load(object sender, EventArgs e)
-        {
-            ApplyInitialWindowState();
-        }
     }
 
 }

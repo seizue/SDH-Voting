@@ -21,7 +21,7 @@ namespace SDH_Voting
         public HistoryForm()
         {
             InitializeComponent();
-            LoadFoldersIntoGrid();
+            LoadFoldersIntoGrid();      
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
@@ -81,6 +81,11 @@ namespace SDH_Voting
                     row.Cells["sdhID"].Value = id++; 
                     row.Cells["sdhDate"].Value = di.Name; 
                     row.Cells["sdhPosted"].Value = formattedPostedName; 
+                }
+
+                foreach (DataGridViewRow row in GridHistory.Rows)
+                {
+                    row.Height = 30;
                 }
             }
             catch (Exception ex) 

@@ -212,7 +212,6 @@ namespace SDH_Voting
             }
         }
 
-
         private void UpdateDataGridView(List<InvestorViewModel> investors)
         {
             // Clear the existing rows and columns
@@ -272,7 +271,6 @@ namespace SDH_Voting
 
             UpdateButtonStates();
         }
-
 
         private void ApplyFilters()
         {

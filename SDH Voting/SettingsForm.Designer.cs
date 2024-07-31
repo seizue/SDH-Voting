@@ -302,7 +302,6 @@
             // 
             // button_Save
             // 
-            this.button_Save.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.button_Save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button_Save.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(195)))), ((int)(((byte)(237)))));
@@ -694,8 +693,7 @@
             this.Name = "SettingsForm";
             this.Opacity = 0.96D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Update Representative Form";
-            this.Load += new System.EventHandler(this.SettingsForm_Load);
+            this.Text = "Update Representative Form";  
             this.panelNav.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panelDltData.ResumeLayout(false);

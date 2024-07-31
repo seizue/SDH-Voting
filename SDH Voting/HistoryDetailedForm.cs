@@ -18,7 +18,13 @@ namespace SDH_Voting
         public HistoryDetailedForm()
         {
             InitializeComponent();
+
+            foreach (DataGridViewRow row in GridDetailedHistory.Rows)
+            {
+                row.Height = 30;
+            }
         }
+
 
         private void HistoryDetailedForm_Load(object sender, EventArgs e)
         {
@@ -31,8 +37,10 @@ namespace SDH_Voting
             labelDate.Text = FolderTitle;
 
             // Load representatives data
-            LoadRepresentatives();
+            LoadRepresentatives();   
         }
+
+
         public void LoadRepresentatives()
         {
             // Base path for the posted folder
@@ -173,6 +181,33 @@ namespace SDH_Voting
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void GridDetailedHistory_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Check if the click is on the View Voters button column
+            if (e.RowIndex >= 0 && e.ColumnIndex == GridDetailedHistory.Columns["View"].Index)
+            {
+                // Get the representative name from the clicked row
+                string representativeName = GridDetailedHistory.Rows[e.RowIndex].Cells["Representative"].Value.ToString();
+
+                // Show the ViewVotersForm with the selected representative's voters
+                ShowViewVotersForm(representativeName);
+            }
+        }
+
+        private void ShowViewVotersForm(string representativeName)
+        {
+            try
+            {
+                // Instantiate ViewVotersForm with the selected representative's name
+                ViewVotersForm viewVotersForm = new ViewVotersForm(representativeName);
+                viewVotersForm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error showing voters: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

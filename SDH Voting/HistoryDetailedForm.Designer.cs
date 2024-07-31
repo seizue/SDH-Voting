@@ -43,7 +43,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnExportCSV = new System.Windows.Forms.Button();
             this.labelDate = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelGrid = new System.Windows.Forms.Panel();
@@ -58,6 +57,7 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
+            this.btnExportCSV = new System.Windows.Forms.Button();
             this.panelNav.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelGrid.SuspendLayout();
@@ -155,25 +155,6 @@
             this.label1.Size = new System.Drawing.Size(101, 18);
             this.label1.TabIndex = 539;
             this.label1.Text = "Voting History";
-            // 
-            // btnExportCSV
-            // 
-            this.btnExportCSV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExportCSV.BackColor = System.Drawing.Color.Transparent;
-            this.btnExportCSV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnExportCSV.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnExportCSV.FlatAppearance.BorderSize = 0;
-            this.btnExportCSV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportCSV.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.65F, System.Drawing.FontStyle.Bold);
-            this.btnExportCSV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(42)))));
-            this.btnExportCSV.Image = global::SDH_Voting.Properties.Resources.export_csv_24px1;
-            this.btnExportCSV.Location = new System.Drawing.Point(915, 9);
-            this.btnExportCSV.Name = "btnExportCSV";
-            this.btnExportCSV.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnExportCSV.Size = new System.Drawing.Size(24, 25);
-            this.btnExportCSV.TabIndex = 538;
-            this.btnExportCSV.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnExportCSV.UseVisualStyleBackColor = false;
             // 
             // labelDate
             // 
@@ -280,6 +261,7 @@
             this.GridDetailedHistory.UseCustomBackColor = true;
             this.GridDetailedHistory.UseCustomForeColor = true;
             this.GridDetailedHistory.UseStyleColors = true;
+            this.GridDetailedHistory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridDetailedHistory_CellContentClick);
             // 
             // ID
             // 
@@ -376,6 +358,25 @@
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(944, 1);
             this.panel24.TabIndex = 433;
+            // 
+            // btnExportCSV
+            // 
+            this.btnExportCSV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExportCSV.BackColor = System.Drawing.Color.Transparent;
+            this.btnExportCSV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExportCSV.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnExportCSV.FlatAppearance.BorderSize = 0;
+            this.btnExportCSV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportCSV.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.65F, System.Drawing.FontStyle.Bold);
+            this.btnExportCSV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(42)))));
+            this.btnExportCSV.Image = global::SDH_Voting.Properties.Resources.export_csv_24px1;
+            this.btnExportCSV.Location = new System.Drawing.Point(915, 9);
+            this.btnExportCSV.Name = "btnExportCSV";
+            this.btnExportCSV.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnExportCSV.Size = new System.Drawing.Size(24, 25);
+            this.btnExportCSV.TabIndex = 538;
+            this.btnExportCSV.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnExportCSV.UseVisualStyleBackColor = false;
             // 
             // HistoryDetailedForm
             // 
