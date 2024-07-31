@@ -209,5 +209,52 @@ namespace SDH_Voting
                 MessageBox.Show($"Error showing voters: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnExportCSV_Click(object sender, EventArgs e)
+        {
+            // Open a SaveFileDialog to select the location and file name for the CSV file
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "CSV Files (*.csv)|*.csv";
+                saveFileDialog.Title = "Save as CSV";
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        using (StreamWriter writer = new StreamWriter(saveFileDialog.FileName))
+                        {
+                            // Define columns to exclude
+                            HashSet<string> columnsToExclude = new HashSet<string> { "Progress" };
+
+                            // Write column headers, excluding specified columns
+                            var columnsToWrite = GridDetailedHistory.Columns
+                                                 .Cast<DataGridViewColumn>()
+                                                 .Where(column => !columnsToExclude.Contains(column.HeaderText.Trim()))
+                                                 .ToList();
+
+                            string[] columnHeaders = columnsToWrite.Select(column => column.HeaderText).ToArray();
+                            writer.WriteLine(string.Join(",", columnHeaders));
+
+                            // Write rows, excluding data from specified columns
+                            foreach (DataGridViewRow row in GridDetailedHistory.Rows)
+                            {
+                                if (row.IsNewRow) continue;
+
+                                string[] cells = columnsToWrite.Select(column => row.Cells[column.Index].Value?.ToString().Replace(",", string.Empty)).ToArray();
+                                writer.WriteLine(string.Join(",", cells));
+                            }
+                        }
+                        MessageBox.Show("Data exported successfully!", "Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred while exporting data: " + ex.Message);
+                    }
+                }
+            }
+        }
+
+
     }
 }
+
