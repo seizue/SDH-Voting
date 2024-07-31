@@ -157,5 +157,45 @@ namespace SDH_Voting
                 }
             }
         }
+
+        private void button_Export_Click(object sender, EventArgs e)
+        {
+            // Open a SaveFileDialog to select the location and file name for the CSV file
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "CSV Files (*.csv)|*.csv";
+                saveFileDialog.Title = "Save as CSV";
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        using (StreamWriter writer = new StreamWriter(saveFileDialog.FileName))
+                        {
+                            // Write column headers
+                            string[] columnHeaders = GridHistory.Columns.Cast<DataGridViewColumn>()
+                                                    .Select(column => column.HeaderText)
+                                                    .ToArray();
+                            writer.WriteLine(string.Join(",", columnHeaders));
+
+                            // Write rows
+                            foreach (DataGridViewRow row in GridHistory.Rows)
+                            {
+                                if (row.IsNewRow) continue;
+
+                                string[] cells = row.Cells.Cast<DataGridViewCell>()
+                                                       .Select(cell => cell.Value?.ToString().Replace(",", string.Empty))
+                                                       .ToArray();
+                                writer.WriteLine(string.Join(",", cells));
+                            }
+                        }
+                        MessageBox.Show("Data exported successfully!", "Export", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred while exporting data: " + ex.Message);
+                    }
+                }
+            }
+        }
     }
 }
