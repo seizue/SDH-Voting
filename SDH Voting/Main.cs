@@ -792,13 +792,19 @@ namespace SDH_Voting
         public string Name { get; set; }
         public int Votes { get; set; } 
         public int Shares { get; set; }
-      
-
     }
 
     public class VoteSelectedData
     {
         public string Representative { get; set; }
         public string StockHolder { get; set; }
+    }
+
+    public class History
+    {
+        public int ID { get; set; }
+        public string Representative { get; set; }
+        public int TotalVotes { get; set; }
+        public int No_PV { get; set; }
     }
 }

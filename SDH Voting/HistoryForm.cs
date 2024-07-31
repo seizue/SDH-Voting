@@ -200,9 +200,33 @@ namespace SDH_Voting
 
         private void btnViewData_Click(object sender, EventArgs e)
         {
-            HistoryDetailedForm historyDetailedForm = new HistoryDetailedForm();
-            historyDetailedForm.ShowDialog();
+            if (GridHistory.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = GridHistory.SelectedRows[0];
+                string postedDate = selectedRow.Cells["sdhDate"].Value?.ToString(); 
+
+                if (string.IsNullOrWhiteSpace(postedDate))
+                {
+                    MessageBox.Show("Selected row does not have a valid posted date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Construct the FolderTitle based on the expected format "yyyy-MM-dd"
+                string folderTitle = postedDate;
+
+                HistoryDetailedForm historyDetailedForm = new HistoryDetailedForm
+                {
+                    FolderTitle = folderTitle
+                };
+                historyDetailedForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to view details.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
+
+
 
         private void buttonMaximize_Click(object sender, EventArgs e)
         {

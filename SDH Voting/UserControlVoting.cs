@@ -338,8 +338,7 @@ namespace SDH_Voting
 
         private void DataGridViewRepresentative_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
-            MessageBox.Show($"Error in DataGridView: {e.Exception.Message}", "Data Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            // Optionally handle the error or provide user feedback
+            MessageBox.Show($"Error in DataGridView: {e.Exception.Message}", "Data Error", MessageBoxButtons.OK, MessageBoxIcon.Error);          
         }
 
         private void btnVote_Click(object sender, EventArgs e)
