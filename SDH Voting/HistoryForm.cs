@@ -197,5 +197,28 @@ namespace SDH_Voting
                 }
             }
         }
+
+        private void btnViewData_Click(object sender, EventArgs e)
+        {
+            HistoryDetailedForm historyDetailedForm = new HistoryDetailedForm();
+            historyDetailedForm.ShowDialog();
+        }
+
+        private void buttonMaximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Maximized)
+            {
+                // Restore to normal size
+                WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                // Maximize the form considering the taskbar height
+                Rectangle workingArea = Screen.GetWorkingArea(this);
+                MaximizedBounds = new Rectangle(0, 0, workingArea.Width, workingArea.Height);
+
+                WindowState = FormWindowState.Maximized;
+            }
+        }
     }
 }
