@@ -72,6 +72,7 @@
             this.buttonDelete = new System.Windows.Forms.Button();
             this.button_Export = new System.Windows.Forms.Button();
             this.userControlVoting1 = new SDH_Voting.UserControlVoting();
+            this.panel20 = new System.Windows.Forms.Panel();
             this.panelNav.SuspendLayout();
             this.panelGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryDataGrid)).BeginInit();
@@ -81,6 +82,7 @@
             // panelNav
             // 
             this.panelNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(87)))), ((int)(((byte)(64)))));
+            this.panelNav.Controls.Add(this.panel20);
             this.panelNav.Controls.Add(this.btnCloseFP);
             this.panelNav.Controls.Add(this.buttonMinimize);
             this.panelNav.Controls.Add(this.buttonMaximize);
@@ -672,6 +674,16 @@
             this.userControlVoting1.Size = new System.Drawing.Size(893, 382);
             this.userControlVoting1.TabIndex = 437;
             // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel20.Location = new System.Drawing.Point(0, 0);
+            this.panel20.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(911, 1);
+            this.panel20.TabIndex = 513;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -755,6 +767,7 @@
         private MetroFramework.Controls.MetroCheckBox checkBoxNonVoted;
         private System.Windows.Forms.Button btnClearVote;
         private MetroFramework.Controls.MetroPanel metroPanel2;
+        private System.Windows.Forms.Panel panel20;
     }
 }
 

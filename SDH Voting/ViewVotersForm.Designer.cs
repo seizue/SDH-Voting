@@ -41,6 +41,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelGrid = new System.Windows.Forms.Panel();
             this.ViewGridVoters = new MetroFramework.Controls.MetroGrid();
+            this.sdhID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdhVoters = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -49,8 +51,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.btnExportCSV = new System.Windows.Forms.Button();
-            this.sdhID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdhVoters = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel20 = new System.Windows.Forms.Panel();
             this.panelNav.SuspendLayout();
             this.panelGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ViewGridVoters)).BeginInit();
@@ -59,6 +60,7 @@
             // panelNav
             // 
             this.panelNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(87)))), ((int)(((byte)(64)))));
+            this.panelNav.Controls.Add(this.panel20);
             this.panelNav.Controls.Add(this.buttonMaximize);
             this.panelNav.Controls.Add(this.buttonClose);
             this.panelNav.Dock = System.Windows.Forms.DockStyle.Top;
@@ -204,6 +206,21 @@
             this.ViewGridVoters.UseCustomForeColor = true;
             this.ViewGridVoters.UseStyleColors = true;
             // 
+            // sdhID
+            // 
+            this.sdhID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sdhID.DividerWidth = 2;
+            this.sdhID.FillWeight = 99.7962F;
+            this.sdhID.HeaderText = "ID";
+            this.sdhID.Name = "sdhID";
+            // 
+            // sdhVoters
+            // 
+            this.sdhVoters.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sdhVoters.FillWeight = 420F;
+            this.sdhVoters.HeaderText = "Shareholders that have Voted";
+            this.sdhVoters.Name = "sdhVoters";
+            // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -299,20 +316,15 @@
             this.btnExportCSV.UseVisualStyleBackColor = false;
             this.btnExportCSV.Click += new System.EventHandler(this.btnExportCSV_Click);
             // 
-            // sdhID
+            // panel20
             // 
-            this.sdhID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.sdhID.DividerWidth = 2;
-            this.sdhID.FillWeight = 99.7962F;
-            this.sdhID.HeaderText = "ID";
-            this.sdhID.Name = "sdhID";
-            // 
-            // sdhVoters
-            // 
-            this.sdhVoters.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.sdhVoters.FillWeight = 420F;
-            this.sdhVoters.HeaderText = "Shareholders that have Voted";
-            this.sdhVoters.Name = "sdhVoters";
+            this.panel20.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel20.Location = new System.Drawing.Point(0, 0);
+            this.panel20.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(767, 1);
+            this.panel20.TabIndex = 513;
             // 
             // ViewVotersForm
             // 
@@ -362,5 +374,6 @@
         private System.Windows.Forms.Button buttonMaximize;
         private System.Windows.Forms.DataGridViewTextBoxColumn sdhID;
         private System.Windows.Forms.DataGridViewTextBoxColumn sdhVoters;
+        private System.Windows.Forms.Panel panel20;
     }
 }

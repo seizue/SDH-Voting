@@ -32,8 +32,7 @@ namespace SDH_Voting
             checkBoxVoted.CheckedChanged += checkBoxVoted_CheckedChanged;
             checkBoxNonVoted.CheckedChanged += checkBoxNonVoted_CheckedChanged;
             this.Resize += Main_Resize;
-            this.StartPosition = FormStartPosition.Manual;
-
+  
             // Set the initial window state based on the saved value
             string savedWindowState = Properties.Settings.Default.MainFormWindowState;
             if (!string.IsNullOrEmpty(savedWindowState) && Enum.IsDefined(typeof(FormWindowState), savedWindowState))

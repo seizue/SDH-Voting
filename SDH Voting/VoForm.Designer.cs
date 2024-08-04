@@ -82,6 +82,7 @@
             this.checkBoxDoneVoting = new MetroFramework.Controls.MetroCheckBox();
             this.checkBoxUndoVote = new MetroFramework.Controls.MetroCheckBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.panel22 = new System.Windows.Forms.Panel();
             this.panel15.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -543,6 +544,7 @@
             // panelNav
             // 
             this.panelNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(87)))), ((int)(((byte)(64)))));
+            this.panelNav.Controls.Add(this.panel22);
             this.panelNav.Controls.Add(this.buttonClose);
             this.panelNav.Controls.Add(this.buttonMaximize);
             this.panelNav.Controls.Add(this.buttonMinimize);
@@ -747,6 +749,16 @@
             this.label10.TabIndex = 521;
             this.label10.Text = "Select Representative  you want to vote";
             // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel22.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel22.Location = new System.Drawing.Point(0, 0);
+            this.panel22.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(913, 1);
+            this.panel22.TabIndex = 513;
+            // 
             // SDHVoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -855,5 +867,6 @@
         private MetroFramework.Controls.MetroCheckBox checkBoxDoneVoting;
         private MetroFramework.Controls.MetroCheckBox checkBoxUndoVote;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel22;
     }
 }

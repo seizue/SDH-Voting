@@ -42,6 +42,7 @@
             this.metroPanel34 = new MetroFramework.Controls.MetroPanel();
             this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
             this.panelNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.metroPanel14.SuspendLayout();
@@ -69,6 +70,7 @@
             // panelNav
             // 
             this.panelNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(87)))), ((int)(((byte)(64)))));
+            this.panelNav.Controls.Add(this.panel20);
             this.panelNav.Controls.Add(this.buttonMinimize);
             this.panelNav.Controls.Add(this.buttonClose);
             this.panelNav.Dock = System.Windows.Forms.DockStyle.Top;
@@ -213,6 +215,16 @@
             this.panel13.Size = new System.Drawing.Size(929, 1);
             this.panel13.TabIndex = 498;
             // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel20.Location = new System.Drawing.Point(0, 0);
+            this.panel20.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(926, 1);
+            this.panel20.TabIndex = 513;
+            // 
             // ChartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,5 +270,6 @@
         private MetroFramework.Controls.MetroPanel metroPanel34;
         private LiveCharts.WinForms.CartesianChart cartesianChart1;
         private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel20;
     }
 }
