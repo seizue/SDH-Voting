@@ -57,10 +57,8 @@ namespace SDH_Voting
                     foreach (string voter in voters)
                     {
                         int index = ViewGridVoters.Rows.Add();
-                        ViewGridVoters.Rows[index].Cells["sdhID"].Value = id++; // Generate and assign ID
+                        ViewGridVoters.Rows[index].Cells["sdhID"].Value = id++; 
                         ViewGridVoters.Rows[index].Cells["sdhVoters"].Value = voter;
-                        // Remove setting the representative's name in the grid as it's now displayed in the label
-                        // ViewGridVoters.Rows[index].Cells["sdhRepresentative"].Value = representativeName;
                     }
                 }
                 else

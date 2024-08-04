@@ -25,7 +25,6 @@ namespace SDH_Voting
             }
         }
 
-
         private void HistoryDetailedForm_Load(object sender, EventArgs e)
         {
             Rectangle workingArea = Screen.GetWorkingArea(this);
@@ -185,16 +184,24 @@ namespace SDH_Voting
 
         private void GridDetailedHistory_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Check if the click is on the View Voters button column
-            if (e.RowIndex >= 0 && e.ColumnIndex == GridDetailedHistory.Columns["View"].Index)
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
-                // Get the representative name from the clicked row
+                // Ensure FolderTitle is set
+                if (string.IsNullOrWhiteSpace(FolderTitle))
+                {
+                    MessageBox.Show("No folder title specified. Unable to load data.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Get the representative's name from the clicked row
                 string representativeName = GridDetailedHistory.Rows[e.RowIndex].Cells["Representative"].Value.ToString();
 
-                // Show the ViewVotersForm with the selected representative's voters
-                ShowViewVotersForm(representativeName);
+                // Create and show the HistoryVotingSelectionForm
+                HistoryVotingSelectionForm votingSelectionForm = new HistoryVotingSelectionForm(representativeName, FolderTitle);
+                votingSelectionForm.ShowDialog(); // Use ShowDialog for modal display
             }
         }
+
 
         private void ShowViewVotersForm(string representativeName)
         {
