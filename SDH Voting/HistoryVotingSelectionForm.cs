@@ -116,5 +116,56 @@ namespace SDH_Voting
                 WindowState = FormWindowState.Maximized;
             }
         }
+
+        private void btnExportCSV_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                StringBuilder csv = new StringBuilder();
+
+                // Get representative's name from the label
+                string representativeName = labelRepresentative.Text.Replace("Representative: ", "").Trim();
+
+                // Add header with representative name
+                csv.AppendLine($"Representative:,{representativeName}");
+
+                // Add header for voters
+                csv.AppendLine("ID,Voter");
+
+                // Add rows
+                foreach (DataGridViewRow row in ViewGridVoters.Rows)
+                {
+                    if (row.Cells["sdhID"].Value != null && row.Cells["sdhVoters"].Value != null)
+                    {
+                        string id = row.Cells["sdhID"].Value.ToString();
+                        string voter = row.Cells["sdhVoters"].Value.ToString();
+                        csv.AppendLine($"{id},{voter}");
+                    }
+                }
+
+                // Generate file name with the representative's name and current date
+                string fileName = $"{representativeName}_{DateTime.Now.ToString("yyyy-MM-dd")}.csv";
+
+                // Use SaveFileDialog to choose custom save location
+                SaveFileDialog saveFileDialog = new SaveFileDialog
+                {
+                    FileName = fileName,
+                    Filter = "CSV files (*.csv)|*.csv",
+                    Title = "Save Voters List as CSV"
+                };
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    // Save to the selected file path
+                    File.WriteAllText(saveFileDialog.FileName, csv.ToString());
+
+                    MessageBox.Show($"CSV file saved to {saveFileDialog.FileName}", "Export Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error exporting CSV: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
