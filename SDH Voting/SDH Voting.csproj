@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8_zombie_hand_thumbs_up.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
@@ -403,6 +406,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\collapse_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons8_zombie_hand_thumbs_up.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
