@@ -33,15 +33,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panelNav = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.btnCloseFP = new System.Windows.Forms.Button();
-            this.buttonMinimize = new System.Windows.Forms.Button();
-            this.buttonMaximize = new System.Windows.Forms.Button();
-            this.buttonClose = new System.Windows.Forms.Button();
-            this.btnVoting = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnInvMasterlist = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panelGrid = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -61,6 +56,8 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnVoting = new System.Windows.Forms.Button();
+            this.btnInvMasterlist = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.checkBoxVoted = new MetroFramework.Controls.MetroCheckBox();
             this.checkBoxNonVoted = new MetroFramework.Controls.MetroCheckBox();
@@ -72,29 +69,12 @@
             this.buttonDelete = new System.Windows.Forms.Button();
             this.button_Export = new System.Windows.Forms.Button();
             this.userControlVoting1 = new SDH_Voting.UserControlVoting();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.panelNav.SuspendLayout();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panelGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryDataGrid)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panelNav
-            // 
-            this.panelNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(87)))), ((int)(((byte)(64)))));
-            this.panelNav.Controls.Add(this.panel20);
-            this.panelNav.Controls.Add(this.btnCloseFP);
-            this.panelNav.Controls.Add(this.buttonMinimize);
-            this.panelNav.Controls.Add(this.buttonMaximize);
-            this.panelNav.Controls.Add(this.buttonClose);
-            this.panelNav.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelNav.Location = new System.Drawing.Point(0, 0);
-            this.panelNav.Name = "panelNav";
-            this.panelNav.Size = new System.Drawing.Size(911, 29);
-            this.panelNav.TabIndex = 0;
-            this.panelNav.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseDown);
-            this.panelNav.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseMove);
-            this.panelNav.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseUp);
             // 
             // btnCloseFP
             // 
@@ -104,74 +84,14 @@
             this.btnCloseFP.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnCloseFP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnCloseFP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseFP.Image = global::SDH_Voting.Properties.Resources.restore_window_24px4;
-            this.btnCloseFP.Location = new System.Drawing.Point(6, 2);
+            this.btnCloseFP.Image = global::SDH_Voting.Properties.Resources.collapse_16px;
+            this.btnCloseFP.Location = new System.Drawing.Point(3, 7);
             this.btnCloseFP.Name = "btnCloseFP";
-            this.btnCloseFP.Size = new System.Drawing.Size(23, 22);
+            this.btnCloseFP.Size = new System.Drawing.Size(23, 18);
             this.btnCloseFP.TabIndex = 7;
             this.btnCloseFP.UseVisualStyleBackColor = false;
             this.btnCloseFP.Visible = false;
             this.btnCloseFP.Click += new System.EventHandler(this.btnCloseFP_Click);
-            // 
-            // buttonMinimize
-            // 
-            this.buttonMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.buttonMinimize.FlatAppearance.BorderColor = System.Drawing.Color.ForestGreen;
-            this.buttonMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMinimize.Location = new System.Drawing.Point(816, 7);
-            this.buttonMinimize.Name = "buttonMinimize";
-            this.buttonMinimize.Size = new System.Drawing.Size(14, 14);
-            this.buttonMinimize.TabIndex = 6;
-            this.buttonMinimize.UseVisualStyleBackColor = false;
-            this.buttonMinimize.Click += new System.EventHandler(this.buttonMinimize_Click);
-            // 
-            // buttonMaximize
-            // 
-            this.buttonMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(103)))));
-            this.buttonMaximize.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(180)))), ((int)(((byte)(90)))));
-            this.buttonMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMaximize.Location = new System.Drawing.Point(851, 7);
-            this.buttonMaximize.Name = "buttonMaximize";
-            this.buttonMaximize.Size = new System.Drawing.Size(14, 14);
-            this.buttonMaximize.TabIndex = 5;
-            this.buttonMaximize.UseVisualStyleBackColor = false;
-            this.buttonMaximize.Click += new System.EventHandler(this.buttonMaximize_Click);
-            // 
-            // buttonClose
-            // 
-            this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClose.BackColor = System.Drawing.Color.IndianRed;
-            this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Location = new System.Drawing.Point(885, 7);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(14, 14);
-            this.buttonClose.TabIndex = 4;
-            this.buttonClose.UseVisualStyleBackColor = false;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
-            // 
-            // btnVoting
-            // 
-            this.btnVoting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(123)))), ((int)(((byte)(108)))));
-            this.btnVoting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnVoting.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnVoting.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(145)))), ((int)(((byte)(128)))));
-            this.btnVoting.FlatAppearance.BorderSize = 0;
-            this.btnVoting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnVoting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(123)))), ((int)(((byte)(108)))));
-            this.btnVoting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoting.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9F, System.Drawing.FontStyle.Bold);
-            this.btnVoting.ForeColor = System.Drawing.Color.Beige;
-            this.btnVoting.Location = new System.Drawing.Point(3, 3);
-            this.btnVoting.Name = "btnVoting";
-            this.btnVoting.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnVoting.Size = new System.Drawing.Size(449, 47);
-            this.btnVoting.TabIndex = 433;
-            this.btnVoting.Text = "VOTING";
-            this.btnVoting.UseVisualStyleBackColor = false;
-            this.btnVoting.Click += new System.EventHandler(this.btnVoting_Click);
             // 
             // panel2
             // 
@@ -183,32 +103,13 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(87)))), ((int)(((byte)(64)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(162)))), ((int)(((byte)(143)))));
             this.panel3.Location = new System.Drawing.Point(0, 476);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(911, 11);
             this.panel3.TabIndex = 2;
-            // 
-            // btnInvMasterlist
-            // 
-            this.btnInvMasterlist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(162)))), ((int)(((byte)(143)))));
-            this.btnInvMasterlist.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnInvMasterlist.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnInvMasterlist.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(145)))), ((int)(((byte)(128)))));
-            this.btnInvMasterlist.FlatAppearance.BorderSize = 0;
-            this.btnInvMasterlist.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(123)))), ((int)(((byte)(108)))));
-            this.btnInvMasterlist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInvMasterlist.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9F, System.Drawing.FontStyle.Bold);
-            this.btnInvMasterlist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(42)))));
-            this.btnInvMasterlist.Location = new System.Drawing.Point(458, 3);
-            this.btnInvMasterlist.Name = "btnInvMasterlist";
-            this.btnInvMasterlist.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnInvMasterlist.Size = new System.Drawing.Size(450, 47);
-            this.btnInvMasterlist.TabIndex = 432;
-            this.btnInvMasterlist.Text = "INVESTORS MASTERLIST";
-            this.btnInvMasterlist.UseVisualStyleBackColor = false;
-            this.btnInvMasterlist.Click += new System.EventHandler(this.btnInvMasterlist_Click);
             // 
             // panel6
             // 
@@ -473,7 +374,7 @@
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(145)))), ((int)(((byte)(128)))));
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -483,13 +384,55 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(911, 53);
             this.tableLayoutPanel1.TabIndex = 438;
+            // 
+            // btnVoting
+            // 
+            this.btnVoting.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnVoting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVoting.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnVoting.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btnVoting.FlatAppearance.BorderSize = 0;
+            this.btnVoting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnVoting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnVoting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoting.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9F, System.Drawing.FontStyle.Bold);
+            this.btnVoting.ForeColor = System.Drawing.Color.Sienna;
+            this.btnVoting.Location = new System.Drawing.Point(3, 3);
+            this.btnVoting.Name = "btnVoting";
+            this.btnVoting.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnVoting.Size = new System.Drawing.Size(449, 47);
+            this.btnVoting.TabIndex = 433;
+            this.btnVoting.Text = "VOTING";
+            this.btnVoting.UseVisualStyleBackColor = false;
+            this.btnVoting.Click += new System.EventHandler(this.btnVoting_Click);
+            // 
+            // btnInvMasterlist
+            // 
+            this.btnInvMasterlist.BackColor = System.Drawing.Color.White;
+            this.btnInvMasterlist.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnInvMasterlist.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnInvMasterlist.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btnInvMasterlist.FlatAppearance.BorderSize = 0;
+            this.btnInvMasterlist.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnInvMasterlist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInvMasterlist.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9F, System.Drawing.FontStyle.Bold);
+            this.btnInvMasterlist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(42)))));
+            this.btnInvMasterlist.Location = new System.Drawing.Point(458, 3);
+            this.btnInvMasterlist.Name = "btnInvMasterlist";
+            this.btnInvMasterlist.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnInvMasterlist.Size = new System.Drawing.Size(450, 47);
+            this.btnInvMasterlist.TabIndex = 432;
+            this.btnInvMasterlist.Text = "INVESTORS MASTERLIST";
+            this.btnInvMasterlist.UseVisualStyleBackColor = false;
+            this.btnInvMasterlist.Click += new System.EventHandler(this.btnInvMasterlist_Click);
             // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(95)))), ((int)(((byte)(84)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel1.Location = new System.Drawing.Point(454, 28);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1, 52);
@@ -669,28 +612,42 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.userControlVoting1.BackColor = System.Drawing.Color.White;
-            this.userControlVoting1.Location = new System.Drawing.Point(9, 83);
+            this.userControlVoting1.Location = new System.Drawing.Point(9, 79);
             this.userControlVoting1.Name = "userControlVoting1";
-            this.userControlVoting1.Size = new System.Drawing.Size(893, 382);
+            this.userControlVoting1.Size = new System.Drawing.Size(893, 386);
             this.userControlVoting1.TabIndex = 437;
             // 
-            // panel20
+            // panel4
             // 
-            this.panel20.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel20.Location = new System.Drawing.Point(0, 0);
-            this.panel20.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(911, 1);
-            this.panel20.TabIndex = 513;
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel4.Location = new System.Drawing.Point(-1, 27);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(915, 1);
+            this.panel4.TabIndex = 496;
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel5.Location = new System.Drawing.Point(-1, 79);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(915, 1);
+            this.panel5.TabIndex = 497;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(911, 487);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.userControlVoting1);
+            this.Controls.Add(this.btnCloseFP);
             this.Controls.Add(this.metroPanel2);
             this.Controls.Add(this.btnClearVote);
             this.Controls.Add(this.checkBoxNonVoted);
@@ -712,12 +669,11 @@
             this.Controls.Add(this.button_Export);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panelNav);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.Green;
             this.Text = "Main";
-            this.panelNav.ResumeLayout(false);
             this.panelGrid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.InventoryDataGrid)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -727,18 +683,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelNav;
-        private System.Windows.Forms.Button buttonMinimize;
-        private System.Windows.Forms.Button buttonMaximize;
-        private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button_UpdateUser;
         private System.Windows.Forms.Button button_AddNewUser;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button button_Export;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnVoting;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panelGrid;
         private System.Windows.Forms.Panel panel11;
@@ -752,7 +702,6 @@
         private MetroFramework.Controls.MetroPanel metroPanel16;
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button btnInvMasterlist;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
@@ -767,7 +716,10 @@
         private MetroFramework.Controls.MetroCheckBox checkBoxNonVoted;
         private System.Windows.Forms.Button btnClearVote;
         private MetroFramework.Controls.MetroPanel metroPanel2;
-        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Button btnVoting;
+        private System.Windows.Forms.Button btnInvMasterlist;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
     }
 }
 

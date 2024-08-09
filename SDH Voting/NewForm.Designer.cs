@@ -28,11 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelNav = new System.Windows.Forms.Panel();
-            this.buttonClose = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewForm));
             this.panel4 = new System.Windows.Forms.Panel();
             this.textBoxShares = new MetroFramework.Controls.MetroTextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -47,65 +43,11 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panelNav.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panelNav
-            // 
-            this.panelNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(87)))), ((int)(((byte)(64)))));
-            this.panelNav.Controls.Add(this.buttonClose);
-            this.panelNav.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelNav.Location = new System.Drawing.Point(0, 0);
-            this.panelNav.Name = "panelNav";
-            this.panelNav.Size = new System.Drawing.Size(575, 29);
-            this.panelNav.TabIndex = 1;
-            // 
-            // buttonClose
-            // 
-            this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClose.BackColor = System.Drawing.Color.IndianRed;
-            this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Location = new System.Drawing.Point(549, 7);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(14, 14);
-            this.buttonClose.TabIndex = 4;
-            this.buttonClose.UseVisualStyleBackColor = false;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(574, 29);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1, 298);
-            this.panel1.TabIndex = 434;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 29);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1, 298);
-            this.panel2.TabIndex = 435;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 290);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1, 8);
-            this.panel3.TabIndex = 477;
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.BackColor = System.Drawing.Color.Silver;
             this.panel4.Location = new System.Drawing.Point(1, 319);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(573, 8);
@@ -348,7 +290,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(575, 327);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -364,28 +305,19 @@
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panelNav);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "NewForm";
             this.Opacity = 0.96D;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NewForm";
-            this.panelNav.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.Green;
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelNav;
-        private System.Windows.Forms.Button buttonClose;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private MetroFramework.Controls.MetroTextBox textBoxShares;
         private System.Windows.Forms.Label label6;

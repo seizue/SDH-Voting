@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace SDH_Voting
 {
-    public partial class AddRepForm : Form
+    public partial class AddRepForm : MetroFramework.Forms.MetroForm
     {
         private List<Investor> investors;
         private string folderPath;
@@ -151,12 +151,6 @@ namespace SDH_Voting
             {
                 MessageBox.Show($"An error occurred while saving investor data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-
-        private void buttonClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void buttonRemoveLicense_Click(object sender, EventArgs e)

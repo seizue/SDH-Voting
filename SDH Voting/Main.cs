@@ -13,12 +13,8 @@ using System.Threading.Tasks;
 
 namespace SDH_Voting
 {
-    public partial class Main : Form
-    {
-        private bool isDragging = false;
-        private Point lastCursor;
-        private Point lastForm;
-
+    public partial class Main : MetroFramework.Forms.MetroForm
+    {   
         private List<InvestorViewModel> originalInvestorList;
         private List<VoteSelectedData> SDH_VoteSelected = new List<VoteSelectedData>();
 
@@ -322,28 +318,6 @@ namespace SDH_Voting
         private void buttonMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
-        }
-
-        private void panelNav_MouseDown(object sender, MouseEventArgs e)
-        {
-            isDragging = true;
-            lastCursor = Cursor.Position;
-            lastForm = this.Location;
-        }
-
-        private void panelNav_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (isDragging)
-            {
-                int deltaX = Cursor.Position.X - lastCursor.X;
-                int deltaY = Cursor.Position.Y - lastCursor.Y;
-                this.Location = new Point(lastForm.X + deltaX, lastForm.Y + deltaY);
-            }
-        }
-
-        private void panelNav_MouseUp(object sender, MouseEventArgs e)
-        {
-            isDragging = false;
         }
 
         private void button_AddNewUser_Click(object sender, EventArgs e)
@@ -723,11 +697,11 @@ namespace SDH_Voting
             userControlVoting1.Visible = false;
             LoadData();
             CustomCellHeight();
-            btnInvMasterlist.BackColor = Color.FromArgb(95, 123, 108);
-            btnInvMasterlist.ForeColor = Color.Beige;
-            tableLayoutPanel1.BackColor = Color.FromArgb(113, 145, 128);
-            btnVoting.BackColor = Color.FromArgb(126, 162, 143);
-            btnVoting.ForeColor = Color.FromArgb(30, 58, 42);
+            btnInvMasterlist.BackColor = Color.WhiteSmoke;
+            btnInvMasterlist.ForeColor = Color.Sienna;
+            tableLayoutPanel1.BackColor = Color.White;
+            btnVoting.BackColor = Color.White;
+            btnVoting.ForeColor = Color.DarkSlateGray;
         }
 
 
@@ -735,11 +709,11 @@ namespace SDH_Voting
         {
             userControlVoting1.Visible = true;
             userControlVoting1.ReloadData();
-            btnVoting.BackColor = Color.FromArgb(95, 123, 108);
-            btnVoting.ForeColor = Color.Beige;
-            tableLayoutPanel1.BackColor = Color.FromArgb(113, 145, 128);
-            btnInvMasterlist.BackColor = Color.FromArgb(126, 162, 143);
-            btnInvMasterlist.ForeColor = Color.FromArgb(30, 58, 42);
+            btnVoting.BackColor = Color.WhiteSmoke;
+            btnVoting.ForeColor = Color.Sienna;
+            tableLayoutPanel1.BackColor = Color.White;
+            btnInvMasterlist.BackColor = Color.White;
+            btnInvMasterlist.ForeColor = Color.DarkSlateGray;
         }
 
         private void btnCloseFP_Click(object sender, EventArgs e)

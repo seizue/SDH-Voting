@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonMinimize = new System.Windows.Forms.Button();
-            this.buttonMaximize = new System.Windows.Forms.Button();
-            this.buttonClose = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SDHVoForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSaveVoters = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -43,7 +41,6 @@
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtBoxAVoters = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -64,12 +61,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtBoxSH = new MetroFramework.Controls.MetroTextBox();
             this.labelStatus = new System.Windows.Forms.Label();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.panelNav = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
             this.textBoxAllSH = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -82,60 +75,20 @@
             this.checkBoxDoneVoting = new MetroFramework.Controls.MetroCheckBox();
             this.checkBoxUndoVote = new MetroFramework.Controls.MetroCheckBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.panel22 = new System.Windows.Forms.Panel();
             this.panel15.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panelNav.SuspendLayout();
             this.panel21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
-            // buttonMinimize
-            // 
-            this.buttonMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.buttonMinimize.FlatAppearance.BorderColor = System.Drawing.Color.Green;
-            this.buttonMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMinimize.Location = new System.Drawing.Point(819, 7);
-            this.buttonMinimize.Name = "buttonMinimize";
-            this.buttonMinimize.Size = new System.Drawing.Size(14, 14);
-            this.buttonMinimize.TabIndex = 6;
-            this.buttonMinimize.UseVisualStyleBackColor = false;
-            this.buttonMinimize.Click += new System.EventHandler(this.buttonMinimize_Click);
-            // 
-            // buttonMaximize
-            // 
-            this.buttonMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(103)))));
-            this.buttonMaximize.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(180)))), ((int)(((byte)(90)))));
-            this.buttonMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMaximize.Location = new System.Drawing.Point(853, 7);
-            this.buttonMaximize.Name = "buttonMaximize";
-            this.buttonMaximize.Size = new System.Drawing.Size(14, 14);
-            this.buttonMaximize.TabIndex = 5;
-            this.buttonMaximize.UseVisualStyleBackColor = false;
-            this.buttonMaximize.Click += new System.EventHandler(this.buttonMaximize_Click);
-            // 
-            // buttonClose
-            // 
-            this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClose.BackColor = System.Drawing.Color.IndianRed;
-            this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Location = new System.Drawing.Point(888, 7);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(14, 14);
-            this.buttonClose.TabIndex = 4;
-            this.buttonClose.UseVisualStyleBackColor = false;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
-            // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Location = new System.Drawing.Point(0, 507);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(913, 8);
@@ -273,16 +226,6 @@
             this.panel19.Size = new System.Drawing.Size(235, 1);
             this.panel19.TabIndex = 384;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 506);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(913, 1);
-            this.panel3.TabIndex = 493;
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
@@ -328,7 +271,7 @@
             this.label3.Location = new System.Drawing.Point(9, 7);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 16);
+            this.label3.Size = new System.Drawing.Size(88, 16);
             this.label3.TabIndex = 424;
             this.label3.Text = "Available Voters";
             // 
@@ -531,32 +474,6 @@
             this.labelStatus.Text = "STATUS";
             this.labelStatus.Click += new System.EventHandler(this.labelStatus_Click);
             // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(59)))), ((int)(((byte)(43)))));
-            this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel20.Location = new System.Drawing.Point(0, 0);
-            this.panel20.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(913, 1);
-            this.panel20.TabIndex = 511;
-            // 
-            // panelNav
-            // 
-            this.panelNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(87)))), ((int)(((byte)(64)))));
-            this.panelNav.Controls.Add(this.panel22);
-            this.panelNav.Controls.Add(this.buttonClose);
-            this.panelNav.Controls.Add(this.buttonMaximize);
-            this.panelNav.Controls.Add(this.buttonMinimize);
-            this.panelNav.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelNav.Location = new System.Drawing.Point(0, 1);
-            this.panelNav.Name = "panelNav";
-            this.panelNav.Size = new System.Drawing.Size(913, 29);
-            this.panelNav.TabIndex = 512;
-            this.panelNav.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseDown);
-            this.panelNav.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseMove);
-            this.panelNav.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseUp);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -578,24 +495,6 @@
             this.label4.Size = new System.Drawing.Size(13, 15);
             this.label4.TabIndex = 515;
             this.label4.Text = "*";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(912, 30);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1, 476);
-            this.panel6.TabIndex = 516;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 30);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1, 476);
-            this.panel2.TabIndex = 517;
             // 
             // panel21
             // 
@@ -642,7 +541,7 @@
             this.label5.Location = new System.Drawing.Point(9, 7);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 16);
+            this.label5.Size = new System.Drawing.Size(101, 16);
             this.label5.TabIndex = 424;
             this.label5.Text = "Total Shareholders";
             // 
@@ -749,31 +648,16 @@
             this.label10.TabIndex = 521;
             this.label10.Text = "Select Representative  you want to vote";
             // 
-            // panel22
-            // 
-            this.panel22.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel22.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel22.Location = new System.Drawing.Point(0, 0);
-            this.panel22.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(913, 1);
-            this.panel22.TabIndex = 513;
-            // 
             // SDHVoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(913, 515);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.checkBoxUndoVote);
             this.Controls.Add(this.checkBoxDoneVoting);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.panelNav);
-            this.Controls.Add(this.panel20);
             this.Controls.Add(this.labelStatus);
             this.Controls.Add(this.btnViewVoter);
             this.Controls.Add(this.txtBoxSH);
@@ -781,7 +665,6 @@
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel15);
             this.Controls.Add(this.panel1);
@@ -790,10 +673,13 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.panel21);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimizeBox = false;
             this.Name = "SDHVoForm";
             this.Opacity = 0.99D;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.Green;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SDHVoForm_FormClosed);
             this.Load += new System.EventHandler(this.SDHVoForm_Load);
             this.panel15.ResumeLayout(false);
@@ -803,7 +689,6 @@
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panelNav.ResumeLayout(false);
             this.panel21.ResumeLayout(false);
             this.panel21.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -813,9 +698,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button buttonMinimize;
-        private System.Windows.Forms.Button buttonMaximize;
-        private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSaveVoters;
         private System.Windows.Forms.Label label9;
@@ -829,7 +711,6 @@
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Button btnViewVoter;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtBoxAVoters;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -850,12 +731,8 @@
         private System.Windows.Forms.Label label6;
         private MetroFramework.Controls.MetroTextBox txtBoxSH;
         private System.Windows.Forms.Label labelStatus;
-        private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.Panel panelNav;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.TextBox textBoxAllSH;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -867,6 +744,5 @@
         private MetroFramework.Controls.MetroCheckBox checkBoxDoneVoting;
         private MetroFramework.Controls.MetroCheckBox checkBoxUndoVote;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel22;
     }
 }

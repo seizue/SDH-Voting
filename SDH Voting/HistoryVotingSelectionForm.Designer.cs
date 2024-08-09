@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HistoryVotingSelectionForm));
             this.btnExportCSV = new System.Windows.Forms.Button();
             this.labelRepresentative = new System.Windows.Forms.Label();
             this.labelRep = new System.Windows.Forms.Label();
@@ -45,16 +46,9 @@
             this.panelGrid = new System.Windows.Forms.Panel();
             this.ViewGridVoters = new MetroFramework.Controls.MetroGrid();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.buttonMaximize = new System.Windows.Forms.Button();
-            this.buttonClose = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.panelNav = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
             this.panelGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ViewGridVoters)).BeginInit();
-            this.panelNav.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnExportCSV
@@ -108,7 +102,7 @@
             this.panel11.Location = new System.Drawing.Point(742, 1);
             this.panel11.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1, 503);
+            this.panel11.Size = new System.Drawing.Size(1, 514);
             this.panel11.TabIndex = 436;
             // 
             // panel10
@@ -118,14 +112,14 @@
             this.panel10.Location = new System.Drawing.Point(0, 1);
             this.panel10.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1, 503);
+            this.panel10.Size = new System.Drawing.Size(1, 514);
             this.panel10.TabIndex = 435;
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(0, 504);
+            this.panel9.Location = new System.Drawing.Point(0, 515);
             this.panel9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(743, 1);
@@ -168,7 +162,7 @@
             this.panelGrid.Controls.Add(this.panel24);
             this.panelGrid.Location = new System.Drawing.Point(9, 77);
             this.panelGrid.Name = "panelGrid";
-            this.panelGrid.Size = new System.Drawing.Size(743, 505);
+            this.panelGrid.Size = new System.Drawing.Size(743, 516);
             this.panelGrid.TabIndex = 541;
             // 
             // ViewGridVoters
@@ -182,7 +176,6 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ViewGridVoters.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.ViewGridVoters.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ViewGridVoters.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
             this.ViewGridVoters.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ViewGridVoters.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -231,7 +224,7 @@
             this.ViewGridVoters.RowTemplate.Height = 23;
             this.ViewGridVoters.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.ViewGridVoters.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ViewGridVoters.Size = new System.Drawing.Size(741, 503);
+            this.ViewGridVoters.Size = new System.Drawing.Size(741, 514);
             this.ViewGridVoters.TabIndex = 438;
             this.ViewGridVoters.UseCustomBackColor = true;
             this.ViewGridVoters.UseCustomForeColor = true;
@@ -239,56 +232,13 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(1, 608);
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.Location = new System.Drawing.Point(-3, 608);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(761, 8);
+            this.panel2.Size = new System.Drawing.Size(768, 10);
             this.panel2.TabIndex = 540;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 29);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1, 587);
-            this.panel1.TabIndex = 539;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(762, 29);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1, 587);
-            this.panel6.TabIndex = 538;
-            // 
-            // buttonMaximize
-            // 
-            this.buttonMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(103)))));
-            this.buttonMaximize.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(180)))), ((int)(((byte)(90)))));
-            this.buttonMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMaximize.Location = new System.Drawing.Point(705, 7);
-            this.buttonMaximize.Name = "buttonMaximize";
-            this.buttonMaximize.Size = new System.Drawing.Size(14, 14);
-            this.buttonMaximize.TabIndex = 6;
-            this.buttonMaximize.UseVisualStyleBackColor = false;
-            this.buttonMaximize.Click += new System.EventHandler(this.buttonMaximize_Click);
-            // 
-            // buttonClose
-            // 
-            this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClose.BackColor = System.Drawing.Color.IndianRed;
-            this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Location = new System.Drawing.Point(737, 7);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(14, 14);
-            this.buttonClose.TabIndex = 4;
-            this.buttonClose.UseVisualStyleBackColor = false;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // panel13
             // 
@@ -301,49 +251,24 @@
             this.panel13.Size = new System.Drawing.Size(769, 1);
             this.panel13.TabIndex = 542;
             // 
-            // panelNav
-            // 
-            this.panelNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(87)))), ((int)(((byte)(64)))));
-            this.panelNav.Controls.Add(this.panel20);
-            this.panelNav.Controls.Add(this.buttonMaximize);
-            this.panelNav.Controls.Add(this.buttonClose);
-            this.panelNav.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelNav.Location = new System.Drawing.Point(0, 0);
-            this.panelNav.Name = "panelNav";
-            this.panelNav.Size = new System.Drawing.Size(763, 29);
-            this.panelNav.TabIndex = 537;
-            // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel20.Location = new System.Drawing.Point(0, 0);
-            this.panel20.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(763, 1);
-            this.panel20.TabIndex = 513;
-            // 
             // HistoryVotingSelectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(763, 616);
             this.Controls.Add(this.btnExportCSV);
             this.Controls.Add(this.labelRepresentative);
             this.Controls.Add(this.labelRep);
             this.Controls.Add(this.panelGrid);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel13);
-            this.Controls.Add(this.panelNav);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimizeBox = false;
             this.Name = "HistoryVotingSelectionForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.Green;
             this.panelGrid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ViewGridVoters)).EndInit();
-            this.panelNav.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -363,12 +288,6 @@
         private System.Windows.Forms.Panel panelGrid;
         private MetroFramework.Controls.MetroGrid ViewGridVoters;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button buttonMaximize;
-        private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Panel panelNav;
-        private System.Windows.Forms.Panel panel20;
     }
 }

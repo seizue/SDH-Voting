@@ -12,7 +12,7 @@ using System.IO;
 
 namespace SDH_Voting
 {
-    public partial class HistoryVotingSelectionForm : Form
+    public partial class HistoryVotingSelectionForm : MetroFramework.Forms.MetroForm
     {
         public string FolderTitle { get; set; }
 
@@ -91,29 +91,6 @@ namespace SDH_Voting
             catch (Exception ex)
             {
                 MessageBox.Show($"Error loading voters: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-
-        private void buttonClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void buttonMaximize_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Maximized)
-            {
-                // Restore to normal size
-                WindowState = FormWindowState.Normal;
-            }
-            else
-            {
-                // Maximize the form considering the taskbar height
-                Rectangle workingArea = Screen.GetWorkingArea(this);
-                MaximizedBounds = new Rectangle(0, 0, workingArea.Width, workingArea.Height);
-
-                WindowState = FormWindowState.Maximized;
             }
         }
 

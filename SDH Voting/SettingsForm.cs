@@ -12,14 +12,10 @@ using System.IO;
 
 namespace SDH_Voting
 {
-    public partial class SettingsForm : Form
+    public partial class SettingsForm : MetroFramework.Forms.MetroForm
     {
         private List<VoteSelectedData> SDH_VoteSelected = new List<VoteSelectedData>();
         private UserControlVoting userControlVoting;
-
-        private bool isDragging = false;
-        private Point lastCursor;
-        private Point lastForm;
 
         public SettingsForm(UserControlVoting userControl)
         {
@@ -45,29 +41,7 @@ namespace SDH_Voting
         private void buttonClose_Click_1(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void panelNav_MouseDown(object sender, MouseEventArgs e)
-        {
-            isDragging = true;
-            lastCursor = Cursor.Position;
-            lastForm = this.Location;
-        }
-
-        private void panelNav_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (isDragging)
-            {
-                int deltaX = Cursor.Position.X - lastCursor.X;
-                int deltaY = Cursor.Position.Y - lastCursor.Y;
-                this.Location = new Point(lastForm.X + deltaX, lastForm.Y + deltaY);
-            }
-        }
-
-        private void panelNav_MouseUp(object sender, MouseEventArgs e)
-        {
-            isDragging = false;
-        }
+        }   
 
         private void btnDelAllData_Click(object sender, EventArgs e)
         {

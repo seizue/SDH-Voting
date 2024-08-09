@@ -33,11 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panelNav = new System.Windows.Forms.Panel();
-            this.buttonMaximize = new System.Windows.Forms.Button();
-            this.buttonClose = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewVotersForm));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelGrid = new System.Windows.Forms.Panel();
             this.ViewGridVoters = new MetroFramework.Controls.MetroGrid();
@@ -51,78 +47,18 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.btnExportCSV = new System.Windows.Forms.Button();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.panelNav.SuspendLayout();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panelGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ViewGridVoters)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panelNav
-            // 
-            this.panelNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(87)))), ((int)(((byte)(64)))));
-            this.panelNav.Controls.Add(this.panel20);
-            this.panelNav.Controls.Add(this.buttonMaximize);
-            this.panelNav.Controls.Add(this.buttonClose);
-            this.panelNav.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelNav.Location = new System.Drawing.Point(0, 0);
-            this.panelNav.Name = "panelNav";
-            this.panelNav.Size = new System.Drawing.Size(767, 29);
-            this.panelNav.TabIndex = 527;
-            this.panelNav.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseDown);
-            this.panelNav.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseMove);
-            this.panelNav.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseUp);
-            // 
-            // buttonMaximize
-            // 
-            this.buttonMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(215)))), ((int)(((byte)(103)))));
-            this.buttonMaximize.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(180)))), ((int)(((byte)(90)))));
-            this.buttonMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMaximize.Location = new System.Drawing.Point(709, 7);
-            this.buttonMaximize.Name = "buttonMaximize";
-            this.buttonMaximize.Size = new System.Drawing.Size(14, 14);
-            this.buttonMaximize.TabIndex = 6;
-            this.buttonMaximize.UseVisualStyleBackColor = false;
-            this.buttonMaximize.Click += new System.EventHandler(this.buttonMaximize_Click);
-            // 
-            // buttonClose
-            // 
-            this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClose.BackColor = System.Drawing.Color.IndianRed;
-            this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Location = new System.Drawing.Point(741, 7);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(14, 14);
-            this.buttonClose.TabIndex = 4;
-            this.buttonClose.UseVisualStyleBackColor = false;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(766, 29);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1, 571);
-            this.panel6.TabIndex = 528;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 29);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1, 571);
-            this.panel1.TabIndex = 529;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(1, 592);
+            this.panel2.Location = new System.Drawing.Point(20, 572);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(765, 8);
+            this.panel2.Size = new System.Drawing.Size(727, 8);
             this.panel2.TabIndex = 530;
             // 
             // panelGrid
@@ -316,37 +252,34 @@
             this.btnExportCSV.UseVisualStyleBackColor = false;
             this.btnExportCSV.Click += new System.EventHandler(this.btnExportCSV_Click);
             // 
-            // panel20
+            // panel3
             // 
-            this.panel20.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel20.Location = new System.Drawing.Point(0, 0);
-            this.panel20.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(767, 1);
-            this.panel20.TabIndex = 513;
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.Color.Silver;
+            this.panel3.Location = new System.Drawing.Point(-1, 592);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(772, 10);
+            this.panel3.TabIndex = 537;
             // 
             // ViewVotersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(767, 600);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnExportCSV);
             this.Controls.Add(this.labelRepresentative);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel13);
             this.Controls.Add(this.panelGrid);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panelNav);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimizeBox = false;
             this.Name = "ViewVotersForm";
             this.Opacity = 0.99D;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "View Voters Form";
-            this.panelNav.ResumeLayout(false);
+            this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.Green;
             this.panelGrid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ViewGridVoters)).EndInit();
             this.ResumeLayout(false);
@@ -355,11 +288,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelNav;
-        private System.Windows.Forms.Button buttonClose;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelGrid;
         private System.Windows.Forms.Panel panel11;
@@ -371,9 +299,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Button btnExportCSV;
-        private System.Windows.Forms.Button buttonMaximize;
         private System.Windows.Forms.DataGridViewTextBoxColumn sdhID;
         private System.Windows.Forms.DataGridViewTextBoxColumn sdhVoters;
-        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Panel panel3;
     }
 }

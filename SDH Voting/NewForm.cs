@@ -8,12 +8,12 @@ using System.Windows.Forms;
 
 namespace SDH_Voting
 {
-    public partial class NewForm : Form
+    public partial class NewForm : MetroFramework.Forms.MetroForm
     {
         public NewForm()
         {
             InitializeComponent();
-            textBoxVotes.TextChanged += textBoxVotes_TextChanged; // Add event handler
+            textBoxVotes.TextChanged += textBoxVotes_TextChanged; 
         }
 
         private void textBoxVotes_TextChanged(object sender, EventArgs e)
@@ -21,14 +21,13 @@ namespace SDH_Voting
             string input = textBoxVotes.Text;
             if (TryConvertToNumber(input, out int votes))
             {
-                textBoxShares.Text = votes.ToString("N0"); // Reflect the number of votes in shares with formatting
+                textBoxShares.Text = votes.ToString("N0"); 
             }
             else
             {
-                textBoxShares.Text = "0"; // Handle invalid input
+                textBoxShares.Text = "0"; 
             }
         }
-
 
         private string GenerateId()
         {
@@ -41,7 +40,7 @@ namespace SDH_Voting
 
         private bool TryConvertToNumber(string input, out int result)
         {
-            input = input.ToUpper().Trim(); // Standardize input to uppercase and trim whitespace
+            input = input.ToUpper().Trim(); 
             result = 0;
             Regex regex = new Regex(@"^(\d+(\.\d+)?)([KM]?)$");
             Match match = regex.Match(input);
@@ -68,10 +67,6 @@ namespace SDH_Voting
             return false;
         }
 
-        private void buttonClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {

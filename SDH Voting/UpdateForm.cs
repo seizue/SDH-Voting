@@ -7,10 +7,9 @@ using System.Windows.Forms;
 
 namespace SDH_Voting
 {
-    public partial class UpdateForm : Form
+    public partial class UpdateForm : MetroFramework.Forms.MetroForm
     {
         private Investor _investor;
-
 
         public UpdateForm(Investor investor)
         {
@@ -33,11 +32,11 @@ namespace SDH_Voting
             string input = textBoxVotes.Text;
             if (TryConvertToNumber(input, out int votes))
             {
-                textBoxShares.Text = votes.ToString("N0"); // Reflect the number of votes in shares with formatting
+                textBoxShares.Text = votes.ToString("N0"); 
             }
             else
             {
-                textBoxShares.Text = "0"; // Handle invalid input
+                textBoxShares.Text = "0"; 
             }
         }
 
@@ -68,11 +67,6 @@ namespace SDH_Voting
             }
 
             return false;
-        }
-
-        private void buttonClose_Click(object sender, EventArgs e)
-        {
-            this.Close();        
         }
 
         private void btnSave_Click(object sender, EventArgs e)

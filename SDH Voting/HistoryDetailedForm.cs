@@ -11,7 +11,7 @@ using System.IO;
 
 namespace SDH_Voting
 {
-    public partial class HistoryDetailedForm : Form
+    public partial class HistoryDetailedForm : MetroFramework.Forms.MetroForm
     {
         public string FolderTitle { get; set; }
 

@@ -13,12 +13,8 @@ using System.Windows.Forms;
 
 namespace SDH_Voting
 {
-    public partial class SDHVoForm : Form
+    public partial class SDHVoForm : MetroFramework.Forms.MetroForm
     {
-
-        private bool isDragging = false;
-        private Point lastCursor;
-        private Point lastForm;
         private UserControlVoting userControlVoting;
         private string selectedInvestorId;
         private List<Investor> investors;
@@ -272,28 +268,6 @@ namespace SDH_Voting
             // Save updated vote selected data
             string updatedVoteSelectedJson = JsonConvert.SerializeObject(voteSelectedList, Formatting.Indented);
             File.WriteAllText(voteSelectedFilePath, updatedVoteSelectedJson);
-        }
-
-        private void panelNav_MouseDown(object sender, MouseEventArgs e)
-        {
-            isDragging = true;
-            lastCursor = Cursor.Position;
-            lastForm = this.Location;
-        }
-
-        private void panelNav_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (isDragging)
-            {
-                int deltaX = Cursor.Position.X - lastCursor.X;
-                int deltaY = Cursor.Position.Y - lastCursor.Y;
-                this.Location = new Point(lastForm.X + deltaX, lastForm.Y + deltaY);
-            }
-        }
-
-        private void panelNav_MouseUp(object sender, MouseEventArgs e)
-        {
-            isDragging = false;
         }
 
         private void SDHVoForm_Load(object sender, EventArgs e)

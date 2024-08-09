@@ -143,6 +143,16 @@ namespace SDH_Voting.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap collapse_16px {
+            get {
+                object obj = ResourceManager.GetObject("collapse_16px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap combo_chart_24px11 {
             get {
                 object obj = ResourceManager.GetObject("combo_chart_24px11", resourceCulture);

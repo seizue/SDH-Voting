@@ -9,12 +9,8 @@ using System.Windows.Forms;
 
 namespace SDH_Voting
 {
-    public partial class ViewVotersForm : Form
+    public partial class ViewVotersForm : MetroFramework.Forms.MetroForm
     {
-        private bool isDragging = false;
-        private Point lastCursor;
-        private Point lastForm;
-
         public ViewVotersForm(string representativeName)
         {
             InitializeComponent();
@@ -70,33 +66,6 @@ namespace SDH_Voting
             {
                 MessageBox.Show($"Error loading voters: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void buttonClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void panelNav_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (isDragging)
-            {
-                int deltaX = Cursor.Position.X - lastCursor.X;
-                int deltaY = Cursor.Position.Y - lastCursor.Y;
-                this.Location = new Point(lastForm.X + deltaX, lastForm.Y + deltaY);
-            }
-        }
-
-        private void panelNav_MouseDown(object sender, MouseEventArgs e)
-        {
-            isDragging = true;
-            lastCursor = Cursor.Position;
-            lastForm = this.Location;
-        }
-
-        private void panelNav_MouseUp(object sender, MouseEventArgs e)
-        {
-            isDragging = false;
         }
 
         private void buttonMaximize_Click(object sender, EventArgs e)

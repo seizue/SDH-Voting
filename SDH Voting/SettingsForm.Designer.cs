@@ -28,16 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelNav = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.buttonClose = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBoxFontSize = new MetroFramework.Controls.MetroTextBox();
             this.txtBoxRH = new MetroFramework.Controls.MetroTextBox();
@@ -68,55 +63,18 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btnDelAllData = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.panelNav.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panelDltData.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelNav
-            // 
-            this.panelNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(87)))), ((int)(((byte)(64)))));
-            this.panelNav.Controls.Add(this.panel20);
-            this.panelNav.Controls.Add(this.buttonClose);
-            this.panelNav.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelNav.Location = new System.Drawing.Point(0, 0);
-            this.panelNav.Name = "panelNav";
-            this.panelNav.Size = new System.Drawing.Size(663, 29);
-            this.panelNav.TabIndex = 477;
-            this.panelNav.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseDown);
-            this.panelNav.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseMove);
-            this.panelNav.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelNav_MouseUp);
-            // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.DarkGreen;
-            this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel20.Location = new System.Drawing.Point(0, 0);
-            this.panel20.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(663, 1);
-            this.panel20.TabIndex = 512;
-            // 
-            // buttonClose
-            // 
-            this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonClose.BackColor = System.Drawing.Color.IndianRed;
-            this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Location = new System.Drawing.Point(637, 7);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(14, 14);
-            this.buttonClose.TabIndex = 4;
-            this.buttonClose.UseVisualStyleBackColor = false;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click_1);
-            // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 447);
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Location = new System.Drawing.Point(-1, 447);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(663, 8);
+            this.panel1.Size = new System.Drawing.Size(665, 11);
             this.panel1.TabIndex = 488;
             // 
             // label9
@@ -153,36 +111,6 @@
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(665, 1);
             this.panel13.TabIndex = 483;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 455);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(663, 1);
-            this.panel3.TabIndex = 480;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(662, 29);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1, 418);
-            this.panel4.TabIndex = 504;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 29);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1, 418);
-            this.panel5.TabIndex = 505;
             // 
             // label2
             // 
@@ -498,7 +426,7 @@
             this.labelDltData.AutoSize = true;
             this.labelDltData.Font = new System.Drawing.Font("Calibri", 11F);
             this.labelDltData.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.labelDltData.Location = new System.Drawing.Point(527, 39);
+            this.labelDltData.Location = new System.Drawing.Point(545, 39);
             this.labelDltData.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDltData.Name = "labelDltData";
             this.labelDltData.Size = new System.Drawing.Size(93, 18);
@@ -658,7 +586,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(663, 456);
             this.Controls.Add(this.panelDltData);
             this.Controls.Add(this.btnSaveMaxVoteLimit);
@@ -681,20 +608,17 @@
             this.Controls.Add(this.btnSaveFS);
             this.Controls.Add(this.txtBoxFontSize);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panelNav);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel13);
-            this.Controls.Add(this.panel3);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SettingsForm";
             this.Opacity = 0.96D;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Update Representative Form";  
-            this.panelNav.ResumeLayout(false);
+            this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.Green;
             this.panel15.ResumeLayout(false);
             this.panelDltData.ResumeLayout(false);
             this.panelDltData.PerformLayout();
@@ -704,16 +628,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelNav;
-        private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label2;
         private MetroFramework.Controls.MetroTextBox txtBoxFontSize;
         private System.Windows.Forms.Button btnSaveFS;
@@ -743,7 +661,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnDelAllData;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Button btnCloseDltDataPanel;
     }
 }

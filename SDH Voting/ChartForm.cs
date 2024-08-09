@@ -11,11 +11,8 @@ using System.Drawing;
 
 namespace SDH_Voting
 {
-    public partial class ChartForm : Form
+    public partial class ChartForm : MetroFramework.Forms.MetroForm
     {
-        private bool isDragging = false;
-        private Point lastCursor;
-        private Point lastForm;
         public ChartForm()
         {
             InitializeComponent();
@@ -103,28 +100,6 @@ namespace SDH_Voting
         private void buttonMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void panelNav_MouseDown(object sender, MouseEventArgs e)
-        {
-            isDragging = true;
-            lastCursor = Cursor.Position;
-            lastForm = this.Location;
-        }
-
-        private void panelNav_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (isDragging)
-            {
-                int deltaX = Cursor.Position.X - lastCursor.X;
-                int deltaY = Cursor.Position.Y - lastCursor.Y;
-                this.Location = new Point(lastForm.X + deltaX, lastForm.Y + deltaY);
-            }
-        }
-
-        private void panelNav_MouseUp(object sender, MouseEventArgs e)
-        {
-            isDragging = false;
         }
 
         public class Representative
