@@ -41,12 +41,11 @@ namespace SDH_Voting
             BindInvestorsToComboBox();
         }
 
-
         private void LoadInvestorsFromFile()
         {
             try
             {
-                if (File.Exists(repFilePath))
+                if (File.Exists(masterListFilePath))
                 {
                     string json = File.ReadAllText(masterListFilePath);
                     investors = JsonConvert.DeserializeObject<List<Investor>>(json) ?? new List<Investor>();
@@ -120,6 +119,9 @@ namespace SDH_Voting
                 // Save the new investor to SDHRep.json
                 SaveInvestorsToFile(newInvestor);
 
+                // Update the status of the investor in the InvestorMasterlist.json
+                UpdateInvestorStatus(repName, "YES");
+
                 MessageBox.Show("Entry saved successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Clear text boxes for next entry
@@ -139,7 +141,7 @@ namespace SDH_Voting
         {
             try
             {
-                Directory.CreateDirectory(folderPath); 
+                Directory.CreateDirectory(folderPath);
 
                 // Serialize the new investor to JSON
                 string json = JsonConvert.SerializeObject(newInvestor);
@@ -150,6 +152,33 @@ namespace SDH_Voting
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred while saving investor data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void UpdateInvestorStatus(string investorName, string status)
+        {
+            try
+            {
+                if (File.Exists(masterListFilePath))
+                {
+                    string json = File.ReadAllText(masterListFilePath);
+                    var investorList = JsonConvert.DeserializeObject<List<Investor>>(json) ?? new List<Investor>();
+
+                    // Find the investor and update status
+                    var investor = investorList.FirstOrDefault(inv => inv.Name.Equals(investorName, StringComparison.OrdinalIgnoreCase));
+                    if (investor != null)
+                    {
+                        investor.Status = status;
+
+                        // Save updated list back to the file
+                        string updatedJson = JsonConvert.SerializeObject(investorList, Formatting.Indented);
+                        File.WriteAllText(masterListFilePath, updatedJson);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred while updating investor status: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -166,7 +195,7 @@ namespace SDH_Voting
             // Display details for the selected investor
             DisplayInvestorDetails(selectedIndex);
         }
-
-      
     }
+
+  
 }
