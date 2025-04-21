@@ -1,0 +1,37 @@
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Release\SDH Voting.exe.config
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Release\SDH Voting.exe
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Release\SDH Voting.pdb
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Release\LiveCharts.dll
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Release\LiveCharts.WinForms.dll
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Release\LiveCharts.Wpf.dll
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Release\MetroFramework.Design.dll
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Release\MetroFramework.dll
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Release\MetroFramework.Fonts.dll
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Release\Newtonsoft.Json.dll
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Release\LiveCharts.pdb
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Release\LiveCharts.xml
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Release\LiveCharts.WinForms.pdb
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Release\LiveCharts.WinForms.xml
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Release\LiveCharts.Wpf.pdb
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Release\LiveCharts.Wpf.xml
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\bin\Release\Newtonsoft.Json.xml
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Release\SDH Voting.csproj.AssemblyReference.cache
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Release\SDH_Voting.AddRepForm.resources
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Release\SDH_Voting.ChartForm.resources
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Release\SDH_Voting.HistoryDetailedForm.resources
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Release\SDH_Voting.HistoryForm.resources
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Release\SDH_Voting.HistoryVotingSelectionForm.resources
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Release\SDH_Voting.Main.resources
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Release\SDH_Voting.NewForm.resources
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Release\SDH_Voting.Properties.Resources.resources
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Release\SDH_Voting.UpdateForm.resources
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Release\SDH_Voting.SettingsForm.resources
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Release\SDH_Voting.UserControlVoting.resources
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Release\SDH_Voting.ViewVotersForm.resources
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Release\SDH_Voting.SDHVoForm.resources
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Release\SDH_Voting.VoterSelectionForm.resources
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Release\SDH Voting.csproj.GenerateResource.cache
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Release\SDH Voting.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Release\SDH Voting.csproj.Up2Date
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Release\SDH Voting.exe
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Release\SDH Voting.pdb
