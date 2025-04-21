@@ -25,7 +25,7 @@ namespace SDH_Voting
             LoadRepresentativesComboRep();
             txtBoxSH.Text = sdhStockHolder;
             LoadInvestorsData();
-            userControlVoting = new UserControlVoting();
+            userControlVoting = userControl;
         }
 
         private void LoadRepresentativesComboRep()
@@ -148,7 +148,9 @@ namespace SDH_Voting
         private void btnSaveVoters_Click(object sender, EventArgs e)
         {
             SaveRepVoter();
+            userControlVoting.ReloadData(); // Refresh the DataGridView
         }
+
 
         public void SaveRepVoter()
         {
@@ -186,21 +188,16 @@ namespace SDH_Voting
                 var investor = investors.FirstOrDefault(i => i.Id == selectedInvestorId);
                 if (investor != null)
                 {
-                    // Initialize default vote count to 1 if it's 0 or null
                     if (investor.VoteCount <= 0)
                     {
                         investor.VoteCount = 1;
                     }
                     else
                     {
-                        // Increment vote count only if it's not empty or null
                         investor.VoteCount++;
                     }
 
-                    // Retrieve MaxVoteLimit from settings
                     int maxVoteLimit = Properties.Settings.Default.MaxVoteLimit;
-
-                    // Check against MaxVoteLimit
                     if (investor.VoteCount >= maxVoteLimit)
                     {
                         investor.Status = "YES";
@@ -237,6 +234,7 @@ namespace SDH_Voting
 
                 SaveSelectedVoteData(folderPath);
 
+                // Refresh the DataGridView in UserControlVoting
                 userControlVoting.ReloadData();
 
                 this.Close();
@@ -246,6 +244,7 @@ namespace SDH_Voting
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void SaveSelectedVoteData(string folderPath)
         {
