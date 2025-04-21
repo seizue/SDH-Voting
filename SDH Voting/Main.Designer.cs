@@ -106,7 +106,7 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(162)))), ((int)(((byte)(143)))));
-            this.panel3.Location = new System.Drawing.Point(0, 476);
+            this.panel3.Location = new System.Drawing.Point(0, 568);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(911, 11);
             this.panel3.TabIndex = 2;
@@ -118,7 +118,7 @@
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.panel6.Location = new System.Drawing.Point(910, 90);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1, 382);
+            this.panel6.Size = new System.Drawing.Size(1, 474);
             this.panel6.TabIndex = 432;
             // 
             // panelGrid
@@ -133,7 +133,7 @@
             this.panelGrid.Controls.Add(this.InventoryDataGrid);
             this.panelGrid.Location = new System.Drawing.Point(12, 165);
             this.panelGrid.Name = "panelGrid";
-            this.panelGrid.Size = new System.Drawing.Size(887, 294);
+            this.panelGrid.Size = new System.Drawing.Size(887, 386);
             this.panelGrid.TabIndex = 434;
             // 
             // panel11
@@ -143,7 +143,7 @@
             this.panel11.Location = new System.Drawing.Point(886, 1);
             this.panel11.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1, 292);
+            this.panel11.Size = new System.Drawing.Size(1, 384);
             this.panel11.TabIndex = 436;
             // 
             // panel10
@@ -153,14 +153,14 @@
             this.panel10.Location = new System.Drawing.Point(0, 1);
             this.panel10.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1, 292);
+            this.panel10.Size = new System.Drawing.Size(1, 384);
             this.panel10.TabIndex = 435;
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(0, 293);
+            this.panel9.Location = new System.Drawing.Point(0, 385);
             this.panel9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(887, 1);
@@ -239,7 +239,7 @@
             this.InventoryDataGrid.RowTemplate.Height = 23;
             this.InventoryDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.InventoryDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.InventoryDataGrid.Size = new System.Drawing.Size(887, 294);
+            this.InventoryDataGrid.Size = new System.Drawing.Size(887, 386);
             this.InventoryDataGrid.TabIndex = 432;
             this.InventoryDataGrid.UseCustomBackColor = true;
             this.InventoryDataGrid.UseCustomForeColor = true;
@@ -359,7 +359,7 @@
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.panel7.Location = new System.Drawing.Point(0, 90);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1, 382);
+            this.panel7.Size = new System.Drawing.Size(1, 474);
             this.panel7.TabIndex = 460;
             // 
             // panel8
@@ -384,7 +384,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(911, 53);
             this.tableLayoutPanel1.TabIndex = 438;
             // 
@@ -614,7 +614,7 @@
             this.userControlVoting1.BackColor = System.Drawing.Color.White;
             this.userControlVoting1.Location = new System.Drawing.Point(9, 79);
             this.userControlVoting1.Name = "userControlVoting1";
-            this.userControlVoting1.Size = new System.Drawing.Size(893, 386);
+            this.userControlVoting1.Size = new System.Drawing.Size(893, 478);
             this.userControlVoting1.TabIndex = 437;
             // 
             // panel4
@@ -643,7 +643,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(911, 487);
+            this.ClientSize = new System.Drawing.Size(911, 579);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.userControlVoting1);
