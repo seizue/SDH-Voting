@@ -1,5 +1,5 @@
 # SDH-Voting
- Shareholders voting application for SD'H
+ Shareholders voting application
 
 ## Download
 * You can download the installer in [Release Page](https://github.com/seizue/SDH-Voting/releases)
