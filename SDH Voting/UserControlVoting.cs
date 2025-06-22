@@ -30,6 +30,12 @@ namespace SDH_Voting
             {
                 SetDataGridViewFontSize(Properties.Settings.Default.DataGridViewFontSize);
             }
+
+            // Load row height from settings
+            if (Properties.Settings.Default.DataGridViewRowHeight > 0)
+            {
+                SetDataGridViewRowHeight(Properties.Settings.Default.DataGridViewRowHeight);
+            }
         }
 
         private void btn_VoidRep_Click(object sender, EventArgs e)
@@ -489,34 +495,37 @@ namespace SDH_Voting
 
         public void CustomCellHeight()
         {
-            // Default row height
-            int defaultHeight = 30;
+            // Use the current row height from RowTemplate
+            int currentHeight = dataGridViewRepresentative.RowTemplate.Height;
 
-            // Limit row height to maximum of 80 pixels
-            int maxHeight = 80;
-
-            // Set custom row height for existing rows, ensuring it doesn't exceed maxHeight
+            // Apply the height to all rows
             foreach (DataGridViewRow row in dataGridViewRepresentative.Rows)
             {
-                row.Height = Math.Min(row.Height, maxHeight);
+                row.Height = currentHeight;
             }
         }
 
 
+
         public void SetDataGridViewRowHeight(int rowHeight)
         {
-          
             // Limit row height to maximum of 80 pixels
             int maxHeight = 80;
             int actualHeight = Math.Min(rowHeight, maxHeight);
 
             // Set row height for DataGridView template
             dataGridViewRepresentative.RowTemplate.Height = actualHeight;
-            dataGridViewRepresentative.DefaultCellStyle.Font = new Font(dataGridViewRepresentative.DefaultCellStyle.Font.FontFamily, actualHeight);
 
-            // Apply custom heights to existing rows
-            CustomCellHeight();
+            // Apply the height to all existing rows
+            foreach (DataGridViewRow row in dataGridViewRepresentative.Rows)
+            {
+                row.Height = actualHeight;
+            }
+
+            // Update font size based on row height (optional)
+            dataGridViewRepresentative.DefaultCellStyle.Font = new Font(dataGridViewRepresentative.DefaultCellStyle.Font.FontFamily, actualHeight / 2f);
         }
+
 
 
         private void btnPosted_Click(object sender, EventArgs e)
