@@ -16,6 +16,7 @@ namespace SDH_Voting
     {
         private string sdhStockHolder;
         private List<VoteSelectedData> SDH_VoteSelected = new List<VoteSelectedData>();
+        private int _selectedRowIndex = -1;
 
         public UserControlVoting()
         {
@@ -24,6 +25,7 @@ namespace SDH_Voting
             UpdateButtonStates();
             SetupDataGridViewColumns();
             dataGridViewRepresentative.DataError += DataGridViewRepresentative_DataError;
+            dataGridViewRepresentative.MouseDown += dataGridViewRepresentative_MouseDown;
 
             // Load font size from settings
             if (Properties.Settings.Default.DataGridViewFontSize > 0)
@@ -131,9 +133,9 @@ namespace SDH_Voting
             // Pass the existing representatives to AddRepForm
             AddRepForm addRepForm = new AddRepForm(existingRepresentatives);
             addRepForm.ShowDialog();
-            LoadRepresentatives();
-            AddViewButtonColumn();
+            LoadRepresentatives();         
             UpdateButtonStates();
+            CustomCellHeight();
         }
 
         public void LoadRepresentatives()
@@ -451,19 +453,6 @@ namespace SDH_Voting
             ReloadData();
         }
 
-        private void AddViewButtonColumn()
-        {
-            // Clear existing button columns (if any)
-            dataGridViewRepresentative.Columns.Remove("View");
-
-            // Add a new DataGridViewButtonColumn for viewing voters
-            DataGridViewButtonColumn viewButtonColumn = new DataGridViewButtonColumn();
-            viewButtonColumn.Name = "View";
-            viewButtonColumn.HeaderText = "View Voters";
-            viewButtonColumn.Text = "View";
-            viewButtonColumn.UseColumnTextForButtonValue = true;
-            dataGridViewRepresentative.Columns.Add(viewButtonColumn);
-        }
 
         private void dataGridViewRepresentative_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -660,6 +649,35 @@ namespace SDH_Voting
             HistoryForm historyForm = new HistoryForm();
             historyForm.ShowDialog();
                
+        }
+
+        private void dataGridViewRepresentative_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                var hit = dataGridViewRepresentative.HitTest(e.X, e.Y);
+                if (hit.Type == DataGridViewHitTestType.Cell)
+                {
+                    _selectedRowIndex = hit.RowIndex;
+                    dataGridViewRepresentative.ClearSelection();
+                    dataGridViewRepresentative.Rows[_selectedRowIndex].Selected = true;
+                    dataGridViewRepresentative.CurrentCell = dataGridViewRepresentative.Rows[_selectedRowIndex].Cells[hit.ColumnIndex];
+                }
+            }
+        }
+
+        private void viewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (_selectedRowIndex >= 0)
+            {
+                // Safely get the "Representative" cell value
+                var cellValue = dataGridViewRepresentative.Rows[_selectedRowIndex].Cells["Representative"].Value;
+                if (cellValue != null)
+                {
+                    string representativeName = cellValue.ToString();
+                    ShowViewVotersForm(representativeName);
+                }
+            }
         }
     }
 }

@@ -516,9 +516,9 @@
             this.panelDltData.Controls.Add(this.label7);
             this.panelDltData.Controls.Add(this.btnDelAllData);
             this.panelDltData.Controls.Add(this.label4);
-            this.panelDltData.Location = new System.Drawing.Point(412, 83);
+            this.panelDltData.Location = new System.Drawing.Point(-1, 83);
             this.panelDltData.Name = "panelDltData";
-            this.panelDltData.Size = new System.Drawing.Size(250, 347);
+            this.panelDltData.Size = new System.Drawing.Size(663, 347);
             this.panelDltData.TabIndex = 535;
             this.panelDltData.Visible = false;
             // 
