@@ -91,6 +91,7 @@
             // dataGridViewRepresentative
             // 
             this.dataGridViewRepresentative.AllowUserToAddRows = false;
+            this.dataGridViewRepresentative.AllowUserToDeleteRows = false;
             this.dataGridViewRepresentative.AllowUserToResizeColumns = false;
             this.dataGridViewRepresentative.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -136,6 +137,7 @@
             this.dataGridViewRepresentative.Location = new System.Drawing.Point(1, 1);
             this.dataGridViewRepresentative.MultiSelect = false;
             this.dataGridViewRepresentative.Name = "dataGridViewRepresentative";
+            this.dataGridViewRepresentative.ReadOnly = true;
             this.dataGridViewRepresentative.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(240)))));
@@ -568,29 +570,33 @@
             this.ID.Frozen = true;
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             this.ID.Visible = false;
             this.ID.Width = 132;
             // 
             // Representative
             // 
             this.Representative.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Representative.FillWeight = 25F;
+            this.Representative.FillWeight = 27F;
             this.Representative.HeaderText = "Representative";
             this.Representative.Name = "Representative";
+            this.Representative.ReadOnly = true;
             // 
             // TotalVotes
             // 
             this.TotalVotes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TotalVotes.FillWeight = 23F;
+            this.TotalVotes.FillWeight = 28F;
             this.TotalVotes.HeaderText = "Total Votes";
             this.TotalVotes.Name = "TotalVotes";
+            this.TotalVotes.ReadOnly = true;
             // 
             // Progress
             // 
             this.Progress.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Progress.FillWeight = 32F;
+            this.Progress.FillWeight = 20F;
             this.Progress.HeaderText = "Progress";
             this.Progress.Name = "Progress";
+            this.Progress.ReadOnly = true;
             this.Progress.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // No_PV
@@ -601,6 +607,7 @@
             this.No_PV.FillWeight = 10F;
             this.No_PV.HeaderText = "No. PV";
             this.No_PV.Name = "No_PV";
+            this.No_PV.ReadOnly = true;
             this.No_PV.Width = 150;
             // 
             // View
@@ -613,6 +620,7 @@
             this.View.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.View.HeaderText = "View PV";
             this.View.Name = "View";
+            this.View.ReadOnly = true;
             this.View.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.View.Text = "View";
             this.View.ToolTipText = "View People Voted";

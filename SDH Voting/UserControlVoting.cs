@@ -135,7 +135,7 @@ namespace SDH_Voting
             addRepForm.ShowDialog();
             LoadRepresentatives();         
             UpdateButtonStates();
-            CustomCellHeight();
+      
         }
 
         public void LoadRepresentatives()
@@ -203,7 +203,7 @@ namespace SDH_Voting
             {
                 MessageBox.Show($"Error loading representatives: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            CustomCellHeight();
             UpdateButtonStates();
         }
 
@@ -324,21 +324,20 @@ namespace SDH_Voting
         {
             protected override void Paint(Graphics graphics, Rectangle clipBounds, Rectangle cellBounds, int rowIndex, DataGridViewElementStates cellState, object value, object formattedValue, string errorText, DataGridViewCellStyle cellStyle, DataGridViewAdvancedBorderStyle advancedBorderStyle, DataGridViewPaintParts paintParts)
             {
-                base.Paint(graphics, clipBounds, cellBounds, rowIndex, cellState, value, formattedValue, errorText, cellStyle, advancedBorderStyle, paintParts);
+                // Paint the cell background and borders only
+                base.Paint(graphics, clipBounds, cellBounds, rowIndex, cellState, null, null, errorText, cellStyle, advancedBorderStyle, paintParts & ~(DataGridViewPaintParts.ContentForeground));
 
                 if (value != null && value is int)
                 {
                     int progressVal = (int)value;
-
-                    // Calculate progress bar percentage
                     float percentage = progressVal / 100.0f;
-
-                    // Determine the width of the progress bar
                     int progressBarWidth = (int)(cellBounds.Width * percentage);
 
                     // Draw the progress bar
-                    Brush brush = new SolidBrush(Color.FromArgb(0, 122, 204)); // Choose your progress bar color
-                    graphics.FillRectangle(brush, cellBounds.X + 2, cellBounds.Y + 2, progressBarWidth, cellBounds.Height - 4);
+                    using (Brush brush = new SolidBrush(Color.FromArgb(0, 122, 204)))
+                    {
+                        graphics.FillRectangle(brush, cellBounds.X + 2, cellBounds.Y + 2, progressBarWidth, cellBounds.Height - 4);
+                    }
                 }
             }
         }
