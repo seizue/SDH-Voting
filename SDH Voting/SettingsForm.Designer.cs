@@ -40,8 +40,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.button_Save = new System.Windows.Forms.Button();
-            this.btnSaveRH = new System.Windows.Forms.Button();
-            this.btnSaveFS = new System.Windows.Forms.Button();
             this.panel15 = new System.Windows.Forms.Panel();
             this.comBox_WindowState = new System.Windows.Forms.ComboBox();
             this.panel16 = new System.Windows.Forms.Panel();
@@ -56,13 +54,18 @@
             this.labelDltData = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.btnSaveMaxVoteLimit = new System.Windows.Forms.Button();
             this.txtBoxVoteLimit = new MetroFramework.Controls.MetroTextBox();
             this.panelDltData = new System.Windows.Forms.Panel();
             this.btnCloseDltDataPanel = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.btnDelAllData = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnGithub = new System.Windows.Forms.Button();
+            this.btnSaveMaxVoteLimit = new System.Windows.Forms.Button();
+            this.btnSaveRH = new System.Windows.Forms.Button();
+            this.btnSaveFS = new System.Windows.Forms.Button();
             this.panel15.SuspendLayout();
             this.panelDltData.SuspendLayout();
             this.SuspendLayout();
@@ -72,7 +75,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Silver;
-            this.panel1.Location = new System.Drawing.Point(-1, 447);
+            this.panel1.Location = new System.Drawing.Point(-1, 539);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(665, 11);
             this.panel1.TabIndex = 488;
@@ -176,7 +179,7 @@
             this.txtBoxRH.CustomButton.Visible = false;
             this.txtBoxRH.IconRight = true;
             this.txtBoxRH.Lines = new string[0];
-            this.txtBoxRH.Location = new System.Drawing.Point(256, 138);
+            this.txtBoxRH.Location = new System.Drawing.Point(319, 138);
             this.txtBoxRH.MaxLength = 32767;
             this.txtBoxRH.Name = "txtBoxRH";
             this.txtBoxRH.PasswordChar = '\0';
@@ -199,7 +202,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(253, 113);
+            this.label1.Location = new System.Drawing.Point(316, 113);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 16);
@@ -211,7 +214,7 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Location = new System.Drawing.Point(0, 193);
+            this.panel2.Location = new System.Drawing.Point(0, 187);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(665, 1);
@@ -222,7 +225,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 9F);
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(29, 344);
+            this.label5.Location = new System.Drawing.Point(29, 332);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(268, 14);
             this.label5.TabIndex = 516;
@@ -238,50 +241,14 @@
             this.button_Save.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
             this.button_Save.ForeColor = System.Drawing.Color.MintCream;
             this.button_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_Save.Location = new System.Drawing.Point(278, 376);
+            this.button_Save.Location = new System.Drawing.Point(319, 364);
             this.button_Save.Name = "button_Save";
             this.button_Save.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button_Save.Size = new System.Drawing.Size(146, 26);
+            this.button_Save.Size = new System.Drawing.Size(168, 26);
             this.button_Save.TabIndex = 514;
             this.button_Save.Text = "SAVE";
             this.button_Save.UseVisualStyleBackColor = false;
             this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
-            // 
-            // btnSaveRH
-            // 
-            this.btnSaveRH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(142)))), ((int)(((byte)(141)))));
-            this.btnSaveRH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSaveRH.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(189)))), ((int)(((byte)(188)))));
-            this.btnSaveRH.FlatAppearance.BorderSize = 2;
-            this.btnSaveRH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveRH.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.75F, System.Drawing.FontStyle.Bold);
-            this.btnSaveRH.ForeColor = System.Drawing.Color.MintCream;
-            this.btnSaveRH.Image = global::SDH_Voting.Properties.Resources.Done_16px;
-            this.btnSaveRH.Location = new System.Drawing.Point(310, 136);
-            this.btnSaveRH.Name = "btnSaveRH";
-            this.btnSaveRH.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnSaveRH.Size = new System.Drawing.Size(33, 27);
-            this.btnSaveRH.TabIndex = 512;
-            this.btnSaveRH.UseVisualStyleBackColor = false;
-            this.btnSaveRH.Click += new System.EventHandler(this.btnSaveRH_Click);
-            // 
-            // btnSaveFS
-            // 
-            this.btnSaveFS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(142)))), ((int)(((byte)(141)))));
-            this.btnSaveFS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSaveFS.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(189)))), ((int)(((byte)(188)))));
-            this.btnSaveFS.FlatAppearance.BorderSize = 2;
-            this.btnSaveFS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveFS.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.75F, System.Drawing.FontStyle.Bold);
-            this.btnSaveFS.ForeColor = System.Drawing.Color.MintCream;
-            this.btnSaveFS.Image = global::SDH_Voting.Properties.Resources.Done_16px;
-            this.btnSaveFS.Location = new System.Drawing.Point(86, 136);
-            this.btnSaveFS.Name = "btnSaveFS";
-            this.btnSaveFS.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnSaveFS.Size = new System.Drawing.Size(33, 27);
-            this.btnSaveFS.TabIndex = 509;
-            this.btnSaveFS.UseVisualStyleBackColor = false;
-            this.btnSaveFS.Click += new System.EventHandler(this.btnSaveFS_Click);
             // 
             // panel15
             // 
@@ -290,7 +257,7 @@
             this.panel15.Controls.Add(this.panel17);
             this.panel15.Controls.Add(this.panel18);
             this.panel15.Controls.Add(this.panel19);
-            this.panel15.Location = new System.Drawing.Point(32, 376);
+            this.panel15.Location = new System.Drawing.Point(32, 364);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(225, 26);
             this.panel15.TabIndex = 519;
@@ -369,7 +336,7 @@
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel6.Location = new System.Drawing.Point(0, 324);
+            this.panel6.Location = new System.Drawing.Point(0, 312);
             this.panel6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(665, 1);
@@ -380,7 +347,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 9F);
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(409, 365);
+            this.label6.Location = new System.Drawing.Point(409, 350);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(0, 14);
             this.label6.TabIndex = 524;
@@ -412,7 +379,7 @@
             this.btnDefaultRH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDefaultRH.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.75F, System.Drawing.FontStyle.Bold);
             this.btnDefaultRH.ForeColor = System.Drawing.Color.MintCream;
-            this.btnDefaultRH.Location = new System.Drawing.Point(356, 136);
+            this.btnDefaultRH.Location = new System.Drawing.Point(419, 136);
             this.btnDefaultRH.Name = "btnDefaultRH";
             this.btnDefaultRH.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnDefaultRH.Size = new System.Drawing.Size(68, 27);
@@ -439,7 +406,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 9F);
             this.label10.ForeColor = System.Drawing.Color.DimGray;
-            this.label10.Location = new System.Drawing.Point(31, 238);
+            this.label10.Location = new System.Drawing.Point(31, 232);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(211, 14);
             this.label10.TabIndex = 530;
@@ -450,30 +417,12 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(31, 210);
+            this.label12.Location = new System.Drawing.Point(31, 204);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(81, 16);
             this.label12.TabIndex = 531;
             this.label12.Text = "Max Vote Limit";
-            // 
-            // btnSaveMaxVoteLimit
-            // 
-            this.btnSaveMaxVoteLimit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(142)))), ((int)(((byte)(141)))));
-            this.btnSaveMaxVoteLimit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSaveMaxVoteLimit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(189)))), ((int)(((byte)(188)))));
-            this.btnSaveMaxVoteLimit.FlatAppearance.BorderSize = 2;
-            this.btnSaveMaxVoteLimit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveMaxVoteLimit.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.75F, System.Drawing.FontStyle.Bold);
-            this.btnSaveMaxVoteLimit.ForeColor = System.Drawing.Color.MintCream;
-            this.btnSaveMaxVoteLimit.Image = global::SDH_Voting.Properties.Resources.Done_16px;
-            this.btnSaveMaxVoteLimit.Location = new System.Drawing.Point(86, 267);
-            this.btnSaveMaxVoteLimit.Name = "btnSaveMaxVoteLimit";
-            this.btnSaveMaxVoteLimit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnSaveMaxVoteLimit.Size = new System.Drawing.Size(33, 27);
-            this.btnSaveMaxVoteLimit.TabIndex = 533;
-            this.btnSaveMaxVoteLimit.UseVisualStyleBackColor = false;
-            this.btnSaveMaxVoteLimit.Click += new System.EventHandler(this.btnSaveMaxVoteLimit_Click);
             // 
             // txtBoxVoteLimit
             // 
@@ -492,7 +441,7 @@
             this.txtBoxVoteLimit.CustomButton.Visible = false;
             this.txtBoxVoteLimit.IconRight = true;
             this.txtBoxVoteLimit.Lines = new string[0];
-            this.txtBoxVoteLimit.Location = new System.Drawing.Point(32, 269);
+            this.txtBoxVoteLimit.Location = new System.Drawing.Point(32, 263);
             this.txtBoxVoteLimit.MaxLength = 32767;
             this.txtBoxVoteLimit.Name = "txtBoxVoteLimit";
             this.txtBoxVoteLimit.PasswordChar = '\0';
@@ -516,9 +465,9 @@
             this.panelDltData.Controls.Add(this.label7);
             this.panelDltData.Controls.Add(this.btnDelAllData);
             this.panelDltData.Controls.Add(this.label4);
-            this.panelDltData.Location = new System.Drawing.Point(-1, 83);
+            this.panelDltData.Location = new System.Drawing.Point(0, 83);
             this.panelDltData.Name = "panelDltData";
-            this.panelDltData.Size = new System.Drawing.Size(663, 347);
+            this.panelDltData.Size = new System.Drawing.Size(662, 430);
             this.panelDltData.TabIndex = 535;
             this.panelDltData.Visible = false;
             // 
@@ -531,7 +480,7 @@
             this.btnCloseDltDataPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCloseDltDataPanel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCloseDltDataPanel.ForeColor = System.Drawing.Color.MintCream;
-            this.btnCloseDltDataPanel.Location = new System.Drawing.Point(32, 294);
+            this.btnCloseDltDataPanel.Location = new System.Drawing.Point(23, 370);
             this.btnCloseDltDataPanel.Name = "btnCloseDltDataPanel";
             this.btnCloseDltDataPanel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnCloseDltDataPanel.Size = new System.Drawing.Size(39, 30);
@@ -582,12 +531,113 @@
             this.label4.TabIndex = 526;
             this.label4.Text = "Delete all data?";
             // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel3.Location = new System.Drawing.Point(0, 416);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(665, 1);
+            this.panel3.TabIndex = 536;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(31, 434);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(246, 16);
+            this.label11.TabIndex = 539;
+            this.label11.Text = "Need Help and Found Issues? Report it in Github";
+            // 
+            // btnGithub
+            // 
+            this.btnGithub.BackColor = System.Drawing.Color.Transparent;
+            this.btnGithub.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnGithub.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnGithub.FlatAppearance.BorderSize = 0;
+            this.btnGithub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGithub.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
+            this.btnGithub.ForeColor = System.Drawing.Color.Black;
+            this.btnGithub.Image = global::SDH_Voting.Properties.Resources.github_24px;
+            this.btnGithub.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGithub.Location = new System.Drawing.Point(32, 463);
+            this.btnGithub.Name = "btnGithub";
+            this.btnGithub.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnGithub.Size = new System.Drawing.Size(64, 50);
+            this.btnGithub.TabIndex = 538;
+            this.btnGithub.Text = "Github";
+            this.btnGithub.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnGithub.UseVisualStyleBackColor = false;
+            this.btnGithub.Click += new System.EventHandler(this.btnGithub_Click);
+            // 
+            // btnSaveMaxVoteLimit
+            // 
+            this.btnSaveMaxVoteLimit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(142)))), ((int)(((byte)(141)))));
+            this.btnSaveMaxVoteLimit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSaveMaxVoteLimit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(189)))), ((int)(((byte)(188)))));
+            this.btnSaveMaxVoteLimit.FlatAppearance.BorderSize = 2;
+            this.btnSaveMaxVoteLimit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveMaxVoteLimit.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.75F, System.Drawing.FontStyle.Bold);
+            this.btnSaveMaxVoteLimit.ForeColor = System.Drawing.Color.MintCream;
+            this.btnSaveMaxVoteLimit.Image = global::SDH_Voting.Properties.Resources.Done_16px;
+            this.btnSaveMaxVoteLimit.Location = new System.Drawing.Point(86, 261);
+            this.btnSaveMaxVoteLimit.Name = "btnSaveMaxVoteLimit";
+            this.btnSaveMaxVoteLimit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnSaveMaxVoteLimit.Size = new System.Drawing.Size(33, 27);
+            this.btnSaveMaxVoteLimit.TabIndex = 533;
+            this.btnSaveMaxVoteLimit.UseVisualStyleBackColor = false;
+            this.btnSaveMaxVoteLimit.Click += new System.EventHandler(this.btnSaveMaxVoteLimit_Click);
+            // 
+            // btnSaveRH
+            // 
+            this.btnSaveRH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(142)))), ((int)(((byte)(141)))));
+            this.btnSaveRH.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSaveRH.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(189)))), ((int)(((byte)(188)))));
+            this.btnSaveRH.FlatAppearance.BorderSize = 2;
+            this.btnSaveRH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveRH.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.75F, System.Drawing.FontStyle.Bold);
+            this.btnSaveRH.ForeColor = System.Drawing.Color.MintCream;
+            this.btnSaveRH.Image = global::SDH_Voting.Properties.Resources.Done_16px;
+            this.btnSaveRH.Location = new System.Drawing.Point(373, 136);
+            this.btnSaveRH.Name = "btnSaveRH";
+            this.btnSaveRH.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnSaveRH.Size = new System.Drawing.Size(33, 27);
+            this.btnSaveRH.TabIndex = 512;
+            this.btnSaveRH.UseVisualStyleBackColor = false;
+            this.btnSaveRH.Click += new System.EventHandler(this.btnSaveRH_Click);
+            // 
+            // btnSaveFS
+            // 
+            this.btnSaveFS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(142)))), ((int)(((byte)(141)))));
+            this.btnSaveFS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSaveFS.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(189)))), ((int)(((byte)(188)))));
+            this.btnSaveFS.FlatAppearance.BorderSize = 2;
+            this.btnSaveFS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveFS.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.75F, System.Drawing.FontStyle.Bold);
+            this.btnSaveFS.ForeColor = System.Drawing.Color.MintCream;
+            this.btnSaveFS.Image = global::SDH_Voting.Properties.Resources.Done_16px;
+            this.btnSaveFS.Location = new System.Drawing.Point(86, 136);
+            this.btnSaveFS.Name = "btnSaveFS";
+            this.btnSaveFS.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnSaveFS.Size = new System.Drawing.Size(33, 27);
+            this.btnSaveFS.TabIndex = 509;
+            this.btnSaveFS.UseVisualStyleBackColor = false;
+            this.btnSaveFS.Click += new System.EventHandler(this.btnSaveFS_Click);
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 456);
+            this.ClientSize = new System.Drawing.Size(663, 548);
             this.Controls.Add(this.panelDltData);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.btnGithub);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnSaveMaxVoteLimit);
             this.Controls.Add(this.txtBoxVoteLimit);
             this.Controls.Add(this.label12);
@@ -662,5 +712,8 @@
         private System.Windows.Forms.Button btnDelAllData;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnCloseDltDataPanel;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnGithub;
+        private System.Windows.Forms.Label label11;
     }
 }

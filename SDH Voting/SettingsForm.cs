@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace SDH_Voting
 {
@@ -294,6 +295,24 @@ namespace SDH_Voting
             else
             {
                 MessageBox.Show("Invalid input for Maximum Vote Limit. Please enter a valid integer.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnGithub_Click(object sender, EventArgs e)
+        {
+            string url = "https://github.com/seizue/SDH-Voting/issues";
+
+            try
+            {             
+                System.Diagnostics.Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unable to open the link. " + ex.Message);
             }
         }
 

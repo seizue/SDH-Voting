@@ -182,6 +182,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -206,6 +214,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -523,7 +539,7 @@
             }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_427E9B679812496E9CC21E13746EBE31"
             {
-            "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
+            "DefaultLocation" = "8:[ProgramFiles64Folder][Manufacturer]\\[ProductName]"
             "Name" = "8:#1925"
             "AlwaysCreate" = "11:FALSE"
             "Condition" = "8:"
@@ -560,15 +576,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SDHVoting"
-        "ProductCode" = "8:{A4742535-2282-4735-88A1-F5466062A481}"
-        "PackageCode" = "8:{DE42C87F-3AE3-4245-AF72-1147A8534296}"
+        "ProductCode" = "8:{A0596A17-059C-4CB6-9EDB-2266993502B8}"
+        "PackageCode" = "8:{E863ED98-6642-4123-9FBC-3A1A1DA0FA35}"
         "UpgradeCode" = "8:{B5EB71DF-FD46-4F04-8B83-0F0E795AA52E}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.1"
         "Manufacturer" = "8:Seizue"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:https://github.com/seizue/SDH-Voting/issues"
@@ -577,12 +593,12 @@
         "ARPCONTACT" = "8:github.com/seizue"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
-        "ARPURLINFOABOUT" = "8:"
+        "ARPURLINFOABOUT" = "8:      CustomCellHeight();"
         "ARPPRODUCTICON" = "8:_B1CAF2AC589F40F89D87F5EB42276DE4"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
-        "TargetPlatform" = "3:0"
+        "TargetPlatform" = "3:1"
         "PreBuildEvent" = "8:"
         "PostBuildEvent" = "8:"
         "RunPostBuildEvent" = "3:0"
@@ -1124,7 +1140,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_14ACC44110D041D8BC1E90C12FE53F77"
             {
-            "SourcePath" = "8:..\\SDH Voting\\obj\\Debug\\SDH Voting.exe"
+            "SourcePath" = "8:..\\SDH Voting\\obj\\Release\\SDH Voting.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_427E9B679812496E9CC21E13746EBE31"

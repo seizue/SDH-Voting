@@ -283,6 +283,16 @@ namespace SDH_Voting.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap github_24px {
+            get {
+                object obj = ResourceManager.GetObject("github_24px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap meeting_room_24px {
             get {
                 object obj = ResourceManager.GetObject("meeting_room_24px", resourceCulture);
