@@ -74,8 +74,6 @@ namespace SDH_Voting
         {
             Rectangle workingArea = Screen.GetWorkingArea(this);
             MaximizedBounds = new Rectangle(0, 0, workingArea.Width, workingArea.Height);
-
-            WindowState = FormWindowState.Maximized;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

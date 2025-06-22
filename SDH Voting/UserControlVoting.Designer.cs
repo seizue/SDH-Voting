@@ -564,39 +564,41 @@
             // ID
             // 
             this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ID.FillWeight = 19.42796F;
+            this.ID.FillWeight = 10F;
             this.ID.Frozen = true;
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
+            this.ID.Visible = false;
             this.ID.Width = 132;
             // 
             // Representative
             // 
             this.Representative.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Representative.FillWeight = 50F;
+            this.Representative.FillWeight = 25F;
             this.Representative.HeaderText = "Representative";
             this.Representative.Name = "Representative";
             // 
             // TotalVotes
             // 
             this.TotalVotes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TotalVotes.FillWeight = 50F;
+            this.TotalVotes.FillWeight = 23F;
             this.TotalVotes.HeaderText = "Total Votes";
             this.TotalVotes.Name = "TotalVotes";
             // 
             // Progress
             // 
+            this.Progress.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Progress.FillWeight = 32F;
             this.Progress.HeaderText = "Progress";
             this.Progress.Name = "Progress";
             this.Progress.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Progress.Width = 180;
             // 
             // No_PV
             // 
             this.No_PV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.No_PV.DefaultCellStyle = dataGridViewCellStyle3;
-            this.No_PV.FillWeight = 19.42796F;
+            this.No_PV.FillWeight = 10F;
             this.No_PV.HeaderText = "No. PV";
             this.No_PV.Name = "No_PV";
             this.No_PV.Width = 150;
