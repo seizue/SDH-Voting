@@ -17,7 +17,7 @@ namespace SDH_Voting
     {   
         private List<InvestorViewModel> originalInvestorList;
         private List<VoteSelectedData> SDH_VoteSelected = new List<VoteSelectedData>();
-
+        private string sdhStockHolder;
         public Main()
         {
             InitializeComponent();
@@ -747,6 +747,21 @@ namespace SDH_Voting
             buttonDelete.Enabled = hasData;          
         }
 
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.Control | Keys.V))
+            {
+                if (userControlVoting1.Visible)
+                {
+                    SDHVoForm votersForm = new SDHVoForm(sdhStockHolder, userControlVoting1);
+                    votersForm.ShowDialog();
+                }
+
+                return true; // Shortcut handled
+            }
+
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
     }
 
 

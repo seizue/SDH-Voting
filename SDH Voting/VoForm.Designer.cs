@@ -91,7 +91,7 @@
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Location = new System.Drawing.Point(0, 507);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(913, 8);
+            this.panel1.Size = new System.Drawing.Size(783, 8);
             this.panel1.TabIndex = 484;
             // 
             // btnSaveVoters
@@ -145,7 +145,7 @@
             this.panel13.Location = new System.Drawing.Point(2, 62);
             this.panel13.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(911, 1);
+            this.panel13.Size = new System.Drawing.Size(781, 1);
             this.panel13.TabIndex = 479;
             // 
             // label7
@@ -323,7 +323,7 @@
             this.panel10.Location = new System.Drawing.Point(28, 214);
             this.panel10.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(857, 1);
+            this.panel10.Size = new System.Drawing.Size(727, 1);
             this.panel10.TabIndex = 496;
             // 
             // panel11
@@ -652,7 +652,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 515);
+            this.ClientSize = new System.Drawing.Size(783, 515);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.checkBoxUndoVote);
             this.Controls.Add(this.checkBoxDoneVoting);
@@ -679,7 +679,6 @@
             this.Opacity = 0.99D;
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Green;
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SDHVoForm_FormClosed);
             this.Load += new System.EventHandler(this.SDHVoForm_Load);
             this.panel15.ResumeLayout(false);
