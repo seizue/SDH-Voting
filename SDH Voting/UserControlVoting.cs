@@ -17,7 +17,7 @@ namespace SDH_Voting
         private string sdhStockHolder;
         private List<VoteSelectedData> SDH_VoteSelected = new List<VoteSelectedData>();
         private int _selectedRowIndex = -1;
-
+        
         public UserControlVoting()
         {
             InitializeComponent();
@@ -520,6 +520,17 @@ namespace SDH_Voting
         {
             try
             {
+                // Ask for confirmation before proceeding
+                DialogResult confirmResult = MessageBox.Show(
+                    "Are you sure you want to post and save the current data?",
+                    "Confirm Posting",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (confirmResult != DialogResult.Yes)
+                    return;
+
                 // Ensure the "Posted" folder exists
                 string postedFolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting", "Posted");
                 if (!Directory.Exists(postedFolderPath))
@@ -543,13 +554,24 @@ namespace SDH_Voting
                 string destinationFilePath = Path.Combine(currentDateFolderPath, "SDH_VoteSelected.json");
                 File.Copy(sdhVoteSelectedFilePath, destinationFilePath, true);
 
-                MessageBox.Show("Data saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Clear the DataGridView after successful posting
+                dataGridViewRepresentative.Rows.Clear();
+
+                Main mainForm = this.FindForm() as Main;
+                if (mainForm != null)
+                {
+                    mainForm.UpdateVotes();
+                }
+
+
+                MessageBox.Show("Data posted and saved successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error saving data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void SaveRepresentativeData(string folderPath)
         {

@@ -168,7 +168,7 @@
             this.panel15.Controls.Add(this.panel19);
             this.panel15.Location = new System.Drawing.Point(28, 113);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(235, 26);
+            this.panel15.Size = new System.Drawing.Size(235, 27);
             this.panel15.TabIndex = 485;
             // 
             // comboRep
@@ -177,12 +177,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboRep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(247)))), ((int)(((byte)(249)))));
             this.comboRep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboRep.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboRep.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.comboRep.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboRep.ForeColor = System.Drawing.Color.Black;
             this.comboRep.FormattingEnabled = true;
+            this.comboRep.ItemHeight = 16;
             this.comboRep.Location = new System.Drawing.Point(2, 2);
             this.comboRep.Name = "comboRep";
-            this.comboRep.Size = new System.Drawing.Size(231, 22);
+            this.comboRep.Size = new System.Drawing.Size(231, 24);
             this.comboRep.TabIndex = 388;
             this.comboRep.Text = "Select";
             // 
@@ -193,7 +194,7 @@
             this.panel16.Location = new System.Drawing.Point(234, 1);
             this.panel16.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(1, 24);
+            this.panel16.Size = new System.Drawing.Size(1, 25);
             this.panel16.TabIndex = 387;
             // 
             // panel17
@@ -203,14 +204,14 @@
             this.panel17.Location = new System.Drawing.Point(0, 1);
             this.panel17.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(1, 24);
+            this.panel17.Size = new System.Drawing.Size(1, 25);
             this.panel17.TabIndex = 386;
             // 
             // panel18
             // 
             this.panel18.BackColor = System.Drawing.Color.Gainsboro;
             this.panel18.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel18.Location = new System.Drawing.Point(0, 25);
+            this.panel18.Location = new System.Drawing.Point(0, 26);
             this.panel18.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(235, 1);
@@ -236,7 +237,7 @@
             this.panel4.Controls.Add(this.panel7);
             this.panel4.Controls.Add(this.panel8);
             this.panel4.Controls.Add(this.panel9);
-            this.panel4.Location = new System.Drawing.Point(28, 250);
+            this.panel4.Location = new System.Drawing.Point(28, 268);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(202, 78);
             this.panel4.TabIndex = 495;
@@ -271,7 +272,7 @@
             this.label3.Location = new System.Drawing.Point(9, 7);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 16);
+            this.label3.Size = new System.Drawing.Size(87, 16);
             this.label3.TabIndex = 424;
             this.label3.Text = "Available Voters";
             // 
@@ -320,7 +321,7 @@
             this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel10.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel10.Location = new System.Drawing.Point(28, 214);
+            this.panel10.Location = new System.Drawing.Point(28, 232);
             this.panel10.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(727, 1);
@@ -336,7 +337,7 @@
             this.panel11.Controls.Add(this.panel14);
             this.panel11.Controls.Add(this.panel25);
             this.panel11.Controls.Add(this.panel26);
-            this.panel11.Location = new System.Drawing.Point(262, 249);
+            this.panel11.Location = new System.Drawing.Point(262, 267);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(202, 79);
             this.panel11.TabIndex = 497;
@@ -440,6 +441,8 @@
             this.txtBoxSH.CustomButton.TabIndex = 1;
             this.txtBoxSH.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtBoxSH.CustomButton.UseSelectable = true;
+            this.txtBoxSH.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtBoxSH.ForeColor = System.Drawing.Color.Black;
             this.txtBoxSH.IconRight = true;
             this.txtBoxSH.Lines = new string[0];
             this.txtBoxSH.Location = new System.Drawing.Point(288, 114);
@@ -466,7 +469,7 @@
             this.labelStatus.AutoSize = true;
             this.labelStatus.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelStatus.Location = new System.Drawing.Point(26, 192);
+            this.labelStatus.Location = new System.Drawing.Point(26, 210);
             this.labelStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelStatus.Name = "labelStatus";
             this.labelStatus.Size = new System.Drawing.Size(53, 18);
@@ -506,7 +509,7 @@
             this.panel21.Controls.Add(this.panel30);
             this.panel21.Controls.Add(this.panel31);
             this.panel21.Controls.Add(this.panel32);
-            this.panel21.Location = new System.Drawing.Point(496, 250);
+            this.panel21.Location = new System.Drawing.Point(496, 268);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(202, 79);
             this.panel21.TabIndex = 518;
@@ -541,7 +544,7 @@
             this.label5.Location = new System.Drawing.Point(9, 7);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 16);
+            this.label5.Size = new System.Drawing.Size(100, 16);
             this.label5.TabIndex = 424;
             this.label5.Text = "Total Shareholders";
             // 

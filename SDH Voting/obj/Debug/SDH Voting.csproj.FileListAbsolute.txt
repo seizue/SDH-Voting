@@ -133,3 +133,4 @@ C:\Users\Ven\Documents\GitHub\SDH-Voting\SDH Voting\obj\Debug\SDH Voting.csproj.
 C:\Users\Ven\Documents\GitHub\SDH-Voting\SDH Voting\obj\Debug\SDH Voting.csproj.Up2Date
 C:\Users\Ven\Documents\GitHub\SDH-Voting\SDH Voting\obj\Debug\SDH Voting.exe
 C:\Users\Ven\Documents\GitHub\SDH-Voting\SDH Voting\obj\Debug\SDH Voting.pdb
+C:\Users\ADMIN\Desktop\Ven\Repository\SDH-Voting\SDH Voting\obj\Debug\SDH Voting.exe.config

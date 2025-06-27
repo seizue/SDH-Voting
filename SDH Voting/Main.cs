@@ -216,40 +216,50 @@ namespace SDH_Voting
             // Add columns without formatting for ID
             DataGridViewTextBoxColumn idColumn = new DataGridViewTextBoxColumn
             {
+                Name = "ID",
                 HeaderText = "ID",
-                DataPropertyName = "Id"
+                DataPropertyName = "Id",
+                FillWeight = 15,
             };
             InventoryDataGrid.Columns.Add(idColumn);
 
             // Add columns with formatting for Votes and Shares
             DataGridViewTextBoxColumn nameColumn = new DataGridViewTextBoxColumn
             {
+                Name = "Name",
                 HeaderText = "Name",
-                DataPropertyName = "Name"
+                DataPropertyName = "Name",
+                FillWeight = 35,
             };
             InventoryDataGrid.Columns.Add(nameColumn);
 
             DataGridViewTextBoxColumn votesColumn = new DataGridViewTextBoxColumn
             {
+                Name = "Votes",
                 HeaderText = "Votes",
                 DataPropertyName = "Votes",
-                DefaultCellStyle = new DataGridViewCellStyle { Format = "N0" }
+                DefaultCellStyle = new DataGridViewCellStyle { Format = "N0" },
+                FillWeight = 25
             };
             InventoryDataGrid.Columns.Add(votesColumn);
 
             DataGridViewTextBoxColumn sharesColumn = new DataGridViewTextBoxColumn
             {
+                Name = "Shares",
                 HeaderText = "Shares",
                 DataPropertyName = "Shares",
-                DefaultCellStyle = new DataGridViewCellStyle { Format = "N0" }
+                DefaultCellStyle = new DataGridViewCellStyle { Format = "N0" },
+                FillWeight = 25
             };
             InventoryDataGrid.Columns.Add(sharesColumn);
 
             // Add the new VtrStatus column
             DataGridViewTextBoxColumn statusColumn = new DataGridViewTextBoxColumn
             {
+                Name = "VotingStatus",
                 HeaderText = "Voting Status",
-                DataPropertyName = "VtrStatus"
+                DataPropertyName = "VtrStatus",
+                FillWeight = 15,
             };
             InventoryDataGrid.Columns.Add(statusColumn);
 
@@ -597,8 +607,7 @@ namespace SDH_Voting
             }
         }
 
-
-        private void btnClearVote_Click(object sender, EventArgs e)
+        public void UpdateVotes() 
         {
             // Clear data in SDH_VoteSelected
             SDH_VoteSelected.Clear();
@@ -613,6 +622,12 @@ namespace SDH_Voting
             EmptySDHRepData();
 
             LoadData();
+        }
+
+
+        private void btnClearVote_Click(object sender, EventArgs e)
+        {
+            UpdateVotes();
 
             // Optionally, notify the user or perform additional actions
             MessageBox.Show("All VOTES are cleared!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -697,6 +712,7 @@ namespace SDH_Voting
             userControlVoting1.Visible = false;
             LoadData();
             CustomCellHeight();
+            UpdateTotalShares();
             btnInvMasterlist.BackColor = Color.WhiteSmoke;
             btnInvMasterlist.ForeColor = Color.Sienna;
             tableLayoutPanel1.BackColor = Color.White;
@@ -762,6 +778,31 @@ namespace SDH_Voting
 
             return base.ProcessCmdKey(ref msg, keyData);
         }
+
+        private void UpdateTotalShares()
+        {
+            int totalShares = 0;
+            int totalShareholders = 0;
+
+            foreach (DataGridViewRow row in InventoryDataGrid.Rows)
+            {
+                // Skip the new row placeholder if present
+                if (row.IsNewRow)
+                    continue;
+
+                // Check if the Shares cell has a value
+                if (row.Cells["Shares"].Value != null && int.TryParse(row.Cells["Shares"].Value.ToString(), out int shares))
+                {
+                    totalShares += shares;
+                    totalShareholders++;
+                }
+            }
+
+            txtboxTotalShares.Text = totalShares.ToString("N0");
+            txtboxTotalShareholders.Text = totalShareholders.ToString("N0");
+        }
+
+
     }
 
 

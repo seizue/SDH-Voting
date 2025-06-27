@@ -21,12 +21,10 @@ namespace SDH_Voting
         public VoterSelectionForm()
         {
             InitializeComponent();
-            LoadData();
 
-            foreach (DataGridViewRow row in GridVoters.Rows)
-            {
-                row.Height = 25;
-            }
+            GridVoters.RowTemplate.Height = 30;
+
+            LoadData();
 
             // Attach event handler
             GridVoters.CellDoubleClick += GridVoters_CellDoubleClick;
@@ -82,6 +80,7 @@ namespace SDH_Voting
                 GridVoters.Columns["sdhTotalVotes"].DataPropertyName = "Votes";
                 GridVoters.Columns["sdhTotalVotes"].DefaultCellStyle.Format = "N0";
             }
+
         }
 
 

@@ -30,15 +30,20 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.btnCloseFP = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panelGrid = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtboxTotalShares = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -68,10 +73,14 @@
             this.button_UpdateUser = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.button_Export = new System.Windows.Forms.Button();
-            this.userControlVoting1 = new SDH_Voting.UserControlVoting();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtboxTotalShareholders = new System.Windows.Forms.TextBox();
+            this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
+            this.userControlVoting1 = new SDH_Voting.UserControlVoting();
             this.panelGrid.SuspendLayout();
+            this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryDataGrid)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -105,10 +114,10 @@
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(162)))), ((int)(((byte)(143)))));
-            this.panel3.Location = new System.Drawing.Point(0, 568);
+            this.panel3.BackColor = System.Drawing.Color.SeaGreen;
+            this.panel3.Location = new System.Drawing.Point(0, 652);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(911, 11);
+            this.panel3.Size = new System.Drawing.Size(1013, 10);
             this.panel3.TabIndex = 2;
             // 
             // panel6
@@ -116,9 +125,9 @@
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel6.Location = new System.Drawing.Point(910, 90);
+            this.panel6.Location = new System.Drawing.Point(1012, 90);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1, 474);
+            this.panel6.Size = new System.Drawing.Size(1, 557);
             this.panel6.TabIndex = 432;
             // 
             // panelGrid
@@ -126,6 +135,7 @@
             this.panelGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelGrid.Controls.Add(this.panel12);
             this.panelGrid.Controls.Add(this.panel11);
             this.panelGrid.Controls.Add(this.panel10);
             this.panelGrid.Controls.Add(this.panel9);
@@ -133,17 +143,66 @@
             this.panelGrid.Controls.Add(this.InventoryDataGrid);
             this.panelGrid.Location = new System.Drawing.Point(12, 165);
             this.panelGrid.Name = "panelGrid";
-            this.panelGrid.Size = new System.Drawing.Size(887, 386);
+            this.panelGrid.Size = new System.Drawing.Size(989, 484);
             this.panelGrid.TabIndex = 434;
+            // 
+            // panel12
+            // 
+            this.panel12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.Controls.Add(this.metroPanel3);
+            this.panel12.Controls.Add(this.label1);
+            this.panel12.Controls.Add(this.txtboxTotalShareholders);
+            this.panel12.Controls.Add(this.panel13);
+            this.panel12.Controls.Add(this.label7);
+            this.panel12.Controls.Add(this.txtboxTotalShares);
+            this.panel12.Location = new System.Drawing.Point(-11, 452);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(1017, 33);
+            this.panel12.TabIndex = 437;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(1017, 1);
+            this.panel13.TabIndex = 497;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label7.Location = new System.Drawing.Point(782, 11);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(123, 14);
+            this.label7.TabIndex = 487;
+            this.label7.Text = "Total Number of Shares";
+            // 
+            // txtboxTotalShares
+            // 
+            this.txtboxTotalShares.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtboxTotalShares.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxTotalShares.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxTotalShares.Location = new System.Drawing.Point(922, 8);
+            this.txtboxTotalShares.Name = "txtboxTotalShares";
+            this.txtboxTotalShares.Size = new System.Drawing.Size(79, 19);
+            this.txtboxTotalShares.TabIndex = 0;
+            this.txtboxTotalShares.Text = "-";
             // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel11.Location = new System.Drawing.Point(886, 1);
+            this.panel11.Location = new System.Drawing.Point(988, 1);
             this.panel11.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1, 384);
+            this.panel11.Size = new System.Drawing.Size(1, 482);
             this.panel11.TabIndex = 436;
             // 
             // panel10
@@ -153,17 +212,17 @@
             this.panel10.Location = new System.Drawing.Point(0, 1);
             this.panel10.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1, 384);
+            this.panel10.Size = new System.Drawing.Size(1, 482);
             this.panel10.TabIndex = 435;
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(0, 385);
+            this.panel9.Location = new System.Drawing.Point(0, 483);
             this.panel9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(887, 1);
+            this.panel9.Size = new System.Drawing.Size(989, 1);
             this.panel9.TabIndex = 434;
             // 
             // panel24
@@ -173,20 +232,24 @@
             this.panel24.Location = new System.Drawing.Point(0, 0);
             this.panel24.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(887, 1);
+            this.panel24.Size = new System.Drawing.Size(989, 1);
             this.panel24.TabIndex = 433;
             // 
             // InventoryDataGrid
             // 
             this.InventoryDataGrid.AllowUserToAddRows = false;
+            this.InventoryDataGrid.AllowUserToDeleteRows = false;
             this.InventoryDataGrid.AllowUserToResizeColumns = false;
             this.InventoryDataGrid.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.InventoryDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.InventoryDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.InventoryDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.InventoryDataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(252)))), ((int)(((byte)(253)))));
             this.InventoryDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -201,21 +264,21 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.InventoryDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.InventoryDataGrid.ColumnHeadersHeight = 48;
+            this.InventoryDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.InventoryDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.invID,
             this.invName,
             this.invVotes,
             this.invShares,
             this.invStatus});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.InventoryDataGrid.DefaultCellStyle = dataGridViewCellStyle3;
-            this.InventoryDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.InventoryDataGrid.DefaultCellStyle = dataGridViewCellStyle4;
             this.InventoryDataGrid.EnableHeadersVisualStyles = false;
             this.InventoryDataGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.InventoryDataGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -223,23 +286,23 @@
             this.InventoryDataGrid.MultiSelect = false;
             this.InventoryDataGrid.Name = "InventoryDataGrid";
             this.InventoryDataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.InventoryDataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.InventoryDataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.InventoryDataGrid.RowHeadersWidth = 5;
             this.InventoryDataGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
-            this.InventoryDataGrid.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InventoryDataGrid.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.InventoryDataGrid.RowTemplate.Height = 23;
             this.InventoryDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.InventoryDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.InventoryDataGrid.Size = new System.Drawing.Size(887, 386);
+            this.InventoryDataGrid.Size = new System.Drawing.Size(989, 448);
             this.InventoryDataGrid.TabIndex = 432;
             this.InventoryDataGrid.UseCustomBackColor = true;
             this.InventoryDataGrid.UseCustomForeColor = true;
@@ -247,28 +310,45 @@
             // 
             // invID
             // 
+            this.invID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.invID.FillWeight = 20F;
             this.invID.HeaderText = "ID";
             this.invID.Name = "invID";
+            this.invID.Width = 77;
             // 
             // invName
             // 
+            this.invName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.invName.DefaultCellStyle = dataGridViewCellStyle3;
+            this.invName.FillWeight = 35F;
             this.invName.HeaderText = "Name";
             this.invName.Name = "invName";
+            this.invName.Width = 268;
             // 
             // invVotes
             // 
+            this.invVotes.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.invVotes.FillWeight = 30F;
             this.invVotes.HeaderText = "Votes";
             this.invVotes.Name = "invVotes";
+            this.invVotes.Width = 230;
             // 
             // invShares
             // 
+            this.invShares.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.invShares.FillWeight = 30F;
             this.invShares.HeaderText = "Equal Shares";
             this.invShares.Name = "invShares";
+            this.invShares.Width = 230;
             // 
             // invStatus
             // 
+            this.invStatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.invStatus.FillWeight = 10F;
             this.invStatus.HeaderText = "Status";
             this.invStatus.Name = "invStatus";
+            this.invStatus.Width = 77;
             // 
             // txtBoxSearch
             // 
@@ -359,7 +439,7 @@
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.panel7.Location = new System.Drawing.Point(0, 90);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1, 474);
+            this.panel7.Size = new System.Drawing.Size(1, 557);
             this.panel7.TabIndex = 460;
             // 
             // panel8
@@ -385,7 +465,7 @@
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(911, 53);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1013, 53);
             this.tableLayoutPanel1.TabIndex = 438;
             // 
             // btnVoting
@@ -403,7 +483,7 @@
             this.btnVoting.Location = new System.Drawing.Point(3, 3);
             this.btnVoting.Name = "btnVoting";
             this.btnVoting.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnVoting.Size = new System.Drawing.Size(449, 47);
+            this.btnVoting.Size = new System.Drawing.Size(500, 47);
             this.btnVoting.TabIndex = 433;
             this.btnVoting.Text = "VOTING";
             this.btnVoting.UseVisualStyleBackColor = false;
@@ -420,10 +500,10 @@
             this.btnInvMasterlist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInvMasterlist.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9F, System.Drawing.FontStyle.Bold);
             this.btnInvMasterlist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(42)))));
-            this.btnInvMasterlist.Location = new System.Drawing.Point(458, 3);
+            this.btnInvMasterlist.Location = new System.Drawing.Point(509, 3);
             this.btnInvMasterlist.Name = "btnInvMasterlist";
             this.btnInvMasterlist.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnInvMasterlist.Size = new System.Drawing.Size(450, 47);
+            this.btnInvMasterlist.Size = new System.Drawing.Size(501, 47);
             this.btnInvMasterlist.TabIndex = 432;
             this.btnInvMasterlist.Text = "INVESTORS MASTERLIST";
             this.btnInvMasterlist.UseVisualStyleBackColor = false;
@@ -433,7 +513,7 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel1.Location = new System.Drawing.Point(454, 28);
+            this.panel1.Location = new System.Drawing.Point(505, 28);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1, 52);
             this.panel1.TabIndex = 464;
@@ -606,17 +686,6 @@
             this.button_Export.UseVisualStyleBackColor = false;
             this.button_Export.Click += new System.EventHandler(this.button_Export_Click);
             // 
-            // userControlVoting1
-            // 
-            this.userControlVoting1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.userControlVoting1.BackColor = System.Drawing.Color.White;
-            this.userControlVoting1.Location = new System.Drawing.Point(9, 79);
-            this.userControlVoting1.Name = "userControlVoting1";
-            this.userControlVoting1.Size = new System.Drawing.Size(893, 478);
-            this.userControlVoting1.TabIndex = 437;
-            // 
             // panel4
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -625,7 +694,7 @@
             this.panel4.Location = new System.Drawing.Point(-1, 27);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(915, 1);
+            this.panel4.Size = new System.Drawing.Size(1017, 1);
             this.panel4.TabIndex = 496;
             // 
             // panel5
@@ -636,14 +705,66 @@
             this.panel5.Location = new System.Drawing.Point(-1, 79);
             this.panel5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(915, 1);
+            this.panel5.Size = new System.Drawing.Size(1017, 1);
             this.panel5.TabIndex = 497;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(524, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(154, 14);
+            this.label1.TabIndex = 499;
+            this.label1.Text = "Total Number of Shareholders";
+            // 
+            // txtboxTotalShareholders
+            // 
+            this.txtboxTotalShareholders.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtboxTotalShareholders.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxTotalShareholders.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxTotalShareholders.Location = new System.Drawing.Point(695, 8);
+            this.txtboxTotalShareholders.Name = "txtboxTotalShareholders";
+            this.txtboxTotalShareholders.Size = new System.Drawing.Size(42, 19);
+            this.txtboxTotalShareholders.TabIndex = 498;
+            this.txtboxTotalShareholders.Text = "-";
+            // 
+            // metroPanel3
+            // 
+            this.metroPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroPanel3.BackColor = System.Drawing.Color.Gainsboro;
+            this.metroPanel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.metroPanel3.HorizontalScrollbarBarColor = true;
+            this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel3.HorizontalScrollbarSize = 10;
+            this.metroPanel3.Location = new System.Drawing.Point(743, -1);
+            this.metroPanel3.Name = "metroPanel3";
+            this.metroPanel3.Size = new System.Drawing.Size(1, 35);
+            this.metroPanel3.TabIndex = 500;
+            this.metroPanel3.UseCustomBackColor = true;
+            this.metroPanel3.UseStyleColors = true;
+            this.metroPanel3.VerticalScrollbarBarColor = true;
+            this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel3.VerticalScrollbarSize = 10;
+            // 
+            // userControlVoting1
+            // 
+            this.userControlVoting1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userControlVoting1.BackColor = System.Drawing.Color.White;
+            this.userControlVoting1.Location = new System.Drawing.Point(9, 79);
+            this.userControlVoting1.Name = "userControlVoting1";
+            this.userControlVoting1.Size = new System.Drawing.Size(995, 570);
+            this.userControlVoting1.TabIndex = 437;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(911, 579);
+            this.ClientSize = new System.Drawing.Size(1013, 662);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.userControlVoting1);
@@ -675,6 +796,8 @@
             this.Style = MetroFramework.MetroColorStyle.Green;
             this.Text = "Main";
             this.panelGrid.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryDataGrid)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -705,11 +828,6 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn invID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn invName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn invVotes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn invShares;
-        private System.Windows.Forms.DataGridViewTextBoxColumn invStatus;
         private System.Windows.Forms.Button btnCloseFP;
         private System.Windows.Forms.Button btnSearch;
         private MetroFramework.Controls.MetroCheckBox checkBoxVoted;
@@ -720,6 +838,18 @@
         private System.Windows.Forms.Button btnInvMasterlist;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn invID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn invName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn invVotes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn invShares;
+        private System.Windows.Forms.DataGridViewTextBoxColumn invStatus;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.TextBox txtboxTotalShares;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtboxTotalShareholders;
+        private MetroFramework.Controls.MetroPanel metroPanel3;
     }
 }
 

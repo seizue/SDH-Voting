@@ -37,11 +37,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelGrid = new System.Windows.Forms.Panel();
             this.GridVoters = new MetroFramework.Controls.MetroGrid();
-            this.sdhID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdhStockHolder = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdhShares = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdhTotalVotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdhSelect = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -51,6 +46,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.checkBoxShowShareholdersVoted = new MetroFramework.Controls.MetroCheckBox();
+            this.sdhID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdhStockHolder = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdhShares = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdhTotalVotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdhSelect = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panelGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridVoters)).BeginInit();
             this.SuspendLayout();
@@ -82,10 +82,11 @@
             // GridVoters
             // 
             this.GridVoters.AllowUserToAddRows = false;
+            this.GridVoters.AllowUserToDeleteRows = false;
             this.GridVoters.AllowUserToResizeColumns = false;
             this.GridVoters.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(235)))), ((int)(((byte)(249)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -127,10 +128,11 @@
             this.GridVoters.Location = new System.Drawing.Point(3, 3);
             this.GridVoters.MultiSelect = false;
             this.GridVoters.Name = "GridVoters";
+            this.GridVoters.ReadOnly = true;
             this.GridVoters.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(237)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 11.25F);
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
@@ -139,7 +141,7 @@
             this.GridVoters.RowHeadersWidth = 5;
             this.GridVoters.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift SemiLight SemiConde", 9.75F);
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 11.25F);
             this.GridVoters.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.GridVoters.RowTemplate.Height = 23;
             this.GridVoters.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -151,38 +153,6 @@
             this.GridVoters.UseStyleColors = true;
             this.GridVoters.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridVoters_CellContentClick);
             this.GridVoters.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridVoters_CellDoubleClick);
-            // 
-            // sdhID
-            // 
-            this.sdhID.FillWeight = 21.7786F;
-            this.sdhID.HeaderText = "ID";
-            this.sdhID.Name = "sdhID";
-            // 
-            // sdhStockHolder
-            // 
-            this.sdhStockHolder.FillWeight = 34.84576F;
-            this.sdhStockHolder.HeaderText = "Stock Holder Name";
-            this.sdhStockHolder.Name = "sdhStockHolder";
-            // 
-            // sdhShares
-            // 
-            this.sdhShares.FillWeight = 26.13432F;
-            this.sdhShares.HeaderText = "Shares";
-            this.sdhShares.Name = "sdhShares";
-            // 
-            // sdhTotalVotes
-            // 
-            this.sdhTotalVotes.FillWeight = 30.49004F;
-            this.sdhTotalVotes.HeaderText = "Equal Votes";
-            this.sdhTotalVotes.Name = "sdhTotalVotes";
-            // 
-            // sdhSelect
-            // 
-            this.sdhSelect.FillWeight = 20F;
-            this.sdhSelect.HeaderText = "Select";
-            this.sdhSelect.Name = "sdhSelect";
-            this.sdhSelect.Text = "Select";
-            this.sdhSelect.UseColumnTextForButtonValue = true;
             // 
             // panel11
             // 
@@ -314,6 +284,43 @@
             this.checkBoxShowShareholdersVoted.UseSelectable = true;
             this.checkBoxShowShareholdersVoted.CheckedChanged += new System.EventHandler(this.checkBoxShowShareholdersVoted_CheckedChanged);
             // 
+            // sdhID
+            // 
+            this.sdhID.FillWeight = 15F;
+            this.sdhID.HeaderText = "ID";
+            this.sdhID.Name = "sdhID";
+            this.sdhID.ReadOnly = true;
+            // 
+            // sdhStockHolder
+            // 
+            this.sdhStockHolder.FillWeight = 34.84576F;
+            this.sdhStockHolder.HeaderText = "Stock Holder Name";
+            this.sdhStockHolder.Name = "sdhStockHolder";
+            this.sdhStockHolder.ReadOnly = true;
+            // 
+            // sdhShares
+            // 
+            this.sdhShares.FillWeight = 26.13432F;
+            this.sdhShares.HeaderText = "Shares";
+            this.sdhShares.Name = "sdhShares";
+            this.sdhShares.ReadOnly = true;
+            // 
+            // sdhTotalVotes
+            // 
+            this.sdhTotalVotes.FillWeight = 30.49004F;
+            this.sdhTotalVotes.HeaderText = "Equal Votes";
+            this.sdhTotalVotes.Name = "sdhTotalVotes";
+            this.sdhTotalVotes.ReadOnly = true;
+            // 
+            // sdhSelect
+            // 
+            this.sdhSelect.FillWeight = 15F;
+            this.sdhSelect.HeaderText = "Select";
+            this.sdhSelect.Name = "sdhSelect";
+            this.sdhSelect.ReadOnly = true;
+            this.sdhSelect.Text = "Select";
+            this.sdhSelect.UseColumnTextForButtonValue = true;
+            // 
             // VoterSelectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -348,15 +355,15 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel24;
         private MetroFramework.Controls.MetroGrid GridVoters;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sdhID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sdhStockHolder;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sdhShares;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sdhTotalVotes;
-        private System.Windows.Forms.DataGridViewButtonColumn sdhSelect;
         private MetroFramework.Controls.MetroTextBox txtBoxSearch;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel13;
         private MetroFramework.Controls.MetroCheckBox checkBoxShowShareholdersVoted;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sdhID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sdhStockHolder;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sdhShares;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sdhTotalVotes;
+        private System.Windows.Forms.DataGridViewButtonColumn sdhSelect;
     }
 }

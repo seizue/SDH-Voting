@@ -204,7 +204,15 @@ namespace SDH_Voting
                     }
                 }
 
+                // Validate representative selection
+                if (comboRep.SelectedItem == null)
+                {
+                    MessageBox.Show("Please select a Representative to Vote.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 var selectedRepName = comboRep.SelectedItem.ToString();
+
                 var rep = representatives.FirstOrDefault(r => r.Name == selectedRepName);
                 if (rep != null)
                 {
