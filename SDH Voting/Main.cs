@@ -629,6 +629,8 @@ namespace SDH_Voting
         {
             UpdateVotes();
 
+            UpdateTotalShares(); 
+
             // Optionally, notify the user or perform additional actions
             MessageBox.Show("All VOTES are cleared!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -783,6 +785,8 @@ namespace SDH_Voting
         {
             int totalShares = 0;
             int totalShareholders = 0;
+            int registerShares = 0;
+            int registerShareholders = 0;
 
             foreach (DataGridViewRow row in InventoryDataGrid.Rows)
             {
@@ -795,14 +799,88 @@ namespace SDH_Voting
                 {
                     totalShares += shares;
                     totalShareholders++;
+
+                    // Check status for registered/YES
+                    var statusCell = row.Cells["VotingStatus"].Value;
+                    if (statusCell != null)
+                    {
+                        string status = statusCell.ToString();
+                        if (status.Equals("Register", StringComparison.OrdinalIgnoreCase) ||
+                            status.Equals("YES", StringComparison.OrdinalIgnoreCase))
+                        {
+                            registerShares += shares;
+                            registerShareholders++;
+                        }
+                    }
                 }
             }
 
             txtboxTotalShares.Text = totalShares.ToString("N0");
             txtboxTotalShareholders.Text = totalShareholders.ToString("N0");
+            txtboxRegisterShares.Text = registerShares.ToString("N0");
+            txtboxRegisteredShareholders.Text = registerShareholders.ToString("N0");
         }
 
 
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            // Ensure a row is selected
+            if (InventoryDataGrid.SelectedRows.Count > 0)
+            {
+                int selectedIndex = InventoryDataGrid.SelectedRows[0].Index;
+
+                // Ensure the selected row index is within bounds
+                if (selectedIndex >= 0 && selectedIndex < originalInvestorList.Count)
+                {
+                    InvestorViewModel selectedInvestorViewModel = originalInvestorList[selectedIndex];
+
+                    // Find the corresponding Investor object in the JSON file
+                    string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting", "InvestorMasterlist.json");
+
+                    if (File.Exists(filePath))
+                    {
+                        string json = File.ReadAllText(filePath);
+                        List<Investor> investors = JsonConvert.DeserializeObject<List<Investor>>(json) ?? new List<Investor>();
+
+                        // Find the investor by name
+                        Investor selectedInvestor = investors.Find(i => i.Name == selectedInvestorViewModel.Name);
+
+                        if (selectedInvestor != null)
+                        {
+                            // Update the status
+                            selectedInvestor.Status = "Register";
+
+                            // Save the updated list back to the file
+                            string updatedJson = JsonConvert.SerializeObject(investors, Formatting.Indented);
+                            File.WriteAllText(filePath, updatedJson);
+
+                            // Optionally update the view model and refresh the grid
+                            selectedInvestorViewModel.Status = "Register";
+                            LoadData();
+                            UpdateTotalShares();
+
+                            MessageBox.Show("Investor status updated to 'Register'.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Selected investor not found in the list.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Investor data file not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Selected row index is out of bounds.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a row to register.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 
 

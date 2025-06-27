@@ -36,8 +36,12 @@ namespace SDH_Voting
 
             // Set the row height in txtBoxRH based on saved settings
             int savedRowHeight = Properties.Settings.Default.DataGridViewRowHeight;
-            txtBoxRH.Text = savedRowHeight.ToString();        
-        }    
+            txtBoxRH.Text = savedRowHeight.ToString();
+
+            // Set the max vote limit in txtBoxVoteLimit based on saved settings
+            int savedMaxVoteLimit = Properties.Settings.Default.MaxVoteLimit;
+            txtBoxVoteLimit.Text = savedMaxVoteLimit.ToString();
+        }
 
         private void buttonClose_Click_1(object sender, EventArgs e)
         {

@@ -50,6 +50,7 @@
             this.textBoxName = new MetroFramework.Controls.MetroTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.checkBoxVoteStatus = new System.Windows.Forms.CheckBox();
             this.panel15.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +59,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Silver;
-            this.panel1.Location = new System.Drawing.Point(-1, 299);
+            this.panel1.Location = new System.Drawing.Point(-1, 350);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(578, 10);
             this.panel1.TabIndex = 476;
@@ -68,7 +69,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(33, 73);
+            this.label1.Location = new System.Drawing.Point(33, 84);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 15);
             this.label1.TabIndex = 469;
@@ -89,7 +90,7 @@
             this.textBoxShares.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.textBoxShares.CustomButton.UseSelectable = true;
             this.textBoxShares.Lines = new string[0];
-            this.textBoxShares.Location = new System.Drawing.Point(306, 169);
+            this.textBoxShares.Location = new System.Drawing.Point(306, 180);
             this.textBoxShares.MaxLength = 32767;
             this.textBoxShares.Name = "textBoxShares";
             this.textBoxShares.PasswordChar = '\0';
@@ -154,7 +155,7 @@
             this.btnSaveRep.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7F, System.Drawing.FontStyle.Bold);
             this.btnSaveRep.ForeColor = System.Drawing.Color.MintCream;
             this.btnSaveRep.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSaveRep.Location = new System.Drawing.Point(34, 229);
+            this.btnSaveRep.Location = new System.Drawing.Point(34, 285);
             this.btnSaveRep.Name = "btnSaveRep";
             this.btnSaveRep.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnSaveRep.Size = new System.Drawing.Size(235, 27);
@@ -173,7 +174,7 @@
             this.btnExit.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8F, System.Drawing.FontStyle.Bold);
             this.btnExit.ForeColor = System.Drawing.Color.MintCream;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExit.Location = new System.Drawing.Point(306, 229);
+            this.btnExit.Location = new System.Drawing.Point(306, 285);
             this.btnExit.Name = "btnExit";
             this.btnExit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnExit.Size = new System.Drawing.Size(235, 27);
@@ -187,7 +188,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(124, 74);
+            this.label2.Location = new System.Drawing.Point(124, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(13, 15);
             this.label2.TabIndex = 502;
@@ -198,7 +199,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(304, 79);
+            this.label5.Location = new System.Drawing.Point(308, 85);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 15);
             this.label5.TabIndex = 503;
@@ -219,7 +220,7 @@
             this.textBoxVotes.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.textBoxVotes.CustomButton.UseSelectable = true;
             this.textBoxVotes.Lines = new string[0];
-            this.textBoxVotes.Location = new System.Drawing.Point(306, 101);
+            this.textBoxVotes.Location = new System.Drawing.Point(306, 113);
             this.textBoxVotes.MaxLength = 32767;
             this.textBoxVotes.Name = "textBoxVotes";
             this.textBoxVotes.PasswordChar = '\0';
@@ -302,7 +303,7 @@
             this.panel15.Controls.Add(this.panel17);
             this.panel15.Controls.Add(this.panel18);
             this.panel15.Controls.Add(this.panel19);
-            this.panel15.Location = new System.Drawing.Point(34, 101);
+            this.panel15.Location = new System.Drawing.Point(34, 112);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(235, 26);
             this.panel15.TabIndex = 506;
@@ -312,7 +313,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(303, 147);
+            this.label4.Location = new System.Drawing.Point(303, 154);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 15);
             this.label4.TabIndex = 507;
@@ -333,7 +334,7 @@
             this.textBoxName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.textBoxName.CustomButton.UseSelectable = true;
             this.textBoxName.Lines = new string[0];
-            this.textBoxName.Location = new System.Drawing.Point(34, 169);
+            this.textBoxName.Location = new System.Drawing.Point(34, 180);
             this.textBoxName.MaxLength = 32767;
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.PasswordChar = '\0';
@@ -358,7 +359,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(120, 144);
+            this.label6.Location = new System.Drawing.Point(120, 155);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 15);
             this.label6.TabIndex = 510;
@@ -369,17 +370,32 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(33, 143);
+            this.label3.Location = new System.Drawing.Point(33, 154);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 15);
             this.label3.TabIndex = 509;
             this.label3.Text = "Representative";
             // 
+            // checkBoxVoteStatus
+            // 
+            this.checkBoxVoteStatus.AutoSize = true;
+            this.checkBoxVoteStatus.Checked = true;
+            this.checkBoxVoteStatus.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxVoteStatus.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxVoteStatus.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.checkBoxVoteStatus.Location = new System.Drawing.Point(36, 230);
+            this.checkBoxVoteStatus.Name = "checkBoxVoteStatus";
+            this.checkBoxVoteStatus.Size = new System.Drawing.Size(188, 19);
+            this.checkBoxVoteStatus.TabIndex = 513;
+            this.checkBoxVoteStatus.Text = "Does not assign votes to itself";
+            this.checkBoxVoteStatus.UseVisualStyleBackColor = true;
+            // 
             // AddRepForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(574, 308);
+            this.ClientSize = new System.Drawing.Size(574, 359);
+            this.Controls.Add(this.checkBoxVoteStatus);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBoxName);
@@ -431,5 +447,6 @@
         private MetroFramework.Controls.MetroTextBox textBoxName;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox checkBoxVoteStatus;
     }
 }

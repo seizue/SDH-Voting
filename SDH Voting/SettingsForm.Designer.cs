@@ -550,7 +550,7 @@
             this.label11.Location = new System.Drawing.Point(31, 434);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(246, 16);
+            this.label11.Size = new System.Drawing.Size(243, 16);
             this.label11.TabIndex = 539;
             this.label11.Text = "Need Help and Found Issues? Report it in Github";
             // 

@@ -78,7 +78,7 @@ namespace SDH_Voting
 
                 // Calculate counts based on Status
                 int votedCount = investors.Count(i => i.Status == "YES");
-                int notVotedCount = investors.Count(i => i.Status == "NO");
+                int notVotedCount = investors.Count(i => i.Status == "Register");
 
                 // Display counts
                 txtBoxVoted.Text = votedCount.ToString(); 

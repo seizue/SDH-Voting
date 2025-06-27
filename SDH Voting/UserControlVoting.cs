@@ -24,6 +24,7 @@ namespace SDH_Voting
             ReloadData();
             UpdateButtonStates();
             SetupDataGridViewColumns();
+   
             dataGridViewRepresentative.DataError += DataGridViewRepresentative_DataError;
             dataGridViewRepresentative.MouseDown += dataGridViewRepresentative_MouseDown;
 
@@ -135,7 +136,6 @@ namespace SDH_Voting
             addRepForm.ShowDialog();
             LoadRepresentatives();         
             UpdateButtonStates();
-      
         }
 
         public void LoadRepresentatives()
@@ -203,8 +203,11 @@ namespace SDH_Voting
             {
                 MessageBox.Show($"Error loading representatives: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
             CustomCellHeight();
             UpdateButtonStates();
+            LoadSHSelected();
+            UpdateRepresentativeSummary();
         }
 
 
@@ -238,33 +241,30 @@ namespace SDH_Voting
                     string json = File.ReadAllText(filePath);
                     JArray voteData = JArray.Parse(json);
 
-                    // Dictionary to store representative and unique stockholders who voted for them
-                    var representativeData = new Dictionary<string, HashSet<string>>();
+                    // Dictionary to store representative and total votes (including duplicates)
+                    var representativeVoteCount = new Dictionary<string, int>();
 
                     foreach (JObject vote in voteData)
                     {
                         string representativeName = vote["Representative"].ToString();
-                        string stockHolder = vote["StockHolder"].ToString();
 
-                        if (representativeData.ContainsKey(representativeName))
+                        if (representativeVoteCount.ContainsKey(representativeName))
                         {
-                            representativeData[representativeName].Add(stockHolder); // Add stockholder if not already added
+                            representativeVoteCount[representativeName]++;
                         }
                         else
                         {
-                            var stockHolders = new HashSet<string>();
-                            stockHolders.Add(stockHolder);
-                            representativeData.Add(representativeName, stockHolders);
+                            representativeVoteCount[representativeName] = 1;
                         }
                     }
 
-                    // Update No_PV column with count of unique stockholders who voted for each representative
+                    // Update No_PV column with total votes for each representative
                     foreach (DataGridViewRow row in dataGridViewRepresentative.Rows)
                     {
                         string representativeName = row.Cells["Representative"].Value.ToString();
-                        if (representativeData.ContainsKey(representativeName))
+                        if (representativeVoteCount.ContainsKey(representativeName))
                         {
-                            row.Cells["No_PV"].Value = representativeData[representativeName].Count;
+                            row.Cells["No_PV"].Value = representativeVoteCount[representativeName];
                         }
                         else
                         {
@@ -277,6 +277,8 @@ namespace SDH_Voting
             {
                 MessageBox.Show($"Error loading data from SDH_VoteSelected.json: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            UpdateRepresentativeSummary();
         }
 
         private void dataGridViewRepresentative_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -700,8 +702,37 @@ namespace SDH_Voting
                 }
             }
         }
-       
 
+        private void UpdateRepresentativeSummary()
+        {
+            int totalVotes = 0;
+            int peopleVoted = 0;
+
+            foreach (DataGridViewRow row in dataGridViewRepresentative.Rows)
+            {
+                if (row.IsNewRow)
+                    continue;
+
+                // Sum TotalVotes column
+                var cellValue = row.Cells["TotalVotes"].Value;
+                int votes = 0;
+                if (cellValue != null && int.TryParse(cellValue.ToString().Replace(",", ""), out votes))
+                {
+                    totalVotes += votes;
+                }
+
+                // Sum No_PV column (do NOT add representatives)
+                var noPvValue = row.Cells["No_PV"].Value;
+                int noPv = 0;
+                if (noPvValue != null && int.TryParse(noPvValue.ToString(), out noPv))
+                {
+                    peopleVoted += noPv;
+                }
+            }
+
+            txtboxTotalVotes.Text = totalVotes.ToString("N0");
+            textBoxPeopleVoted.Text = peopleVoted.ToString("N0");
+        }
     }
 }
 

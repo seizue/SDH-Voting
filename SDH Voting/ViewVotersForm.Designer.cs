@@ -37,8 +37,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelGrid = new System.Windows.Forms.Panel();
             this.ViewGridVoters = new MetroFramework.Controls.MetroGrid();
-            this.sdhID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdhVoters = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -48,6 +46,8 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.btnExportCSV = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.sdhID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdhVoters = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelGrid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ViewGridVoters)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +58,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(20, 572);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(727, 8);
+            this.panel2.Size = new System.Drawing.Size(657, 8);
             this.panel2.TabIndex = 530;
             // 
             // panelGrid
@@ -73,7 +73,7 @@
             this.panelGrid.Controls.Add(this.panel24);
             this.panelGrid.Location = new System.Drawing.Point(12, 77);
             this.panelGrid.Name = "panelGrid";
-            this.panelGrid.Size = new System.Drawing.Size(743, 505);
+            this.panelGrid.Size = new System.Drawing.Size(673, 505);
             this.panelGrid.TabIndex = 531;
             // 
             // ViewGridVoters
@@ -136,32 +136,17 @@
             this.ViewGridVoters.RowTemplate.Height = 23;
             this.ViewGridVoters.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.ViewGridVoters.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ViewGridVoters.Size = new System.Drawing.Size(741, 503);
+            this.ViewGridVoters.Size = new System.Drawing.Size(671, 503);
             this.ViewGridVoters.TabIndex = 438;
             this.ViewGridVoters.UseCustomBackColor = true;
             this.ViewGridVoters.UseCustomForeColor = true;
             this.ViewGridVoters.UseStyleColors = true;
             // 
-            // sdhID
-            // 
-            this.sdhID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.sdhID.DividerWidth = 2;
-            this.sdhID.FillWeight = 99.7962F;
-            this.sdhID.HeaderText = "ID";
-            this.sdhID.Name = "sdhID";
-            // 
-            // sdhVoters
-            // 
-            this.sdhVoters.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.sdhVoters.FillWeight = 420F;
-            this.sdhVoters.HeaderText = "Shareholders that have Voted";
-            this.sdhVoters.Name = "sdhVoters";
-            // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel11.Location = new System.Drawing.Point(742, 1);
+            this.panel11.Location = new System.Drawing.Point(672, 1);
             this.panel11.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(1, 503);
@@ -184,7 +169,7 @@
             this.panel9.Location = new System.Drawing.Point(0, 504);
             this.panel9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(743, 1);
+            this.panel9.Size = new System.Drawing.Size(673, 1);
             this.panel9.TabIndex = 434;
             // 
             // panel24
@@ -194,7 +179,7 @@
             this.panel24.Location = new System.Drawing.Point(0, 0);
             this.panel24.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(743, 1);
+            this.panel24.Size = new System.Drawing.Size(673, 1);
             this.panel24.TabIndex = 433;
             // 
             // labelRepresentative
@@ -229,7 +214,7 @@
             this.panel13.Location = new System.Drawing.Point(0, 66);
             this.panel13.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(769, 1);
+            this.panel13.Size = new System.Drawing.Size(699, 1);
             this.panel13.TabIndex = 532;
             // 
             // btnExportCSV
@@ -243,7 +228,7 @@
             this.btnExportCSV.Font = new System.Drawing.Font("Bahnschrift SemiBold", 7.65F, System.Drawing.FontStyle.Bold);
             this.btnExportCSV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(42)))));
             this.btnExportCSV.Image = global::SDH_Voting.Properties.Resources.export_csv_24px1;
-            this.btnExportCSV.Location = new System.Drawing.Point(719, 34);
+            this.btnExportCSV.Location = new System.Drawing.Point(649, 34);
             this.btnExportCSV.Name = "btnExportCSV";
             this.btnExportCSV.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnExportCSV.Size = new System.Drawing.Size(24, 25);
@@ -259,14 +244,29 @@
             this.panel3.BackColor = System.Drawing.Color.Silver;
             this.panel3.Location = new System.Drawing.Point(-1, 592);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(772, 10);
+            this.panel3.Size = new System.Drawing.Size(702, 10);
             this.panel3.TabIndex = 537;
+            // 
+            // sdhID
+            // 
+            this.sdhID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sdhID.DividerWidth = 2;
+            this.sdhID.FillWeight = 99.7962F;
+            this.sdhID.HeaderText = "ID";
+            this.sdhID.Name = "sdhID";
+            // 
+            // sdhVoters
+            // 
+            this.sdhVoters.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sdhVoters.FillWeight = 420F;
+            this.sdhVoters.HeaderText = "Shareholders that have Voted";
+            this.sdhVoters.Name = "sdhVoters";
             // 
             // ViewVotersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(767, 600);
+            this.ClientSize = new System.Drawing.Size(697, 600);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnExportCSV);
             this.Controls.Add(this.labelRepresentative);
@@ -299,8 +299,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Button btnExportCSV;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridViewTextBoxColumn sdhID;
         private System.Windows.Forms.DataGridViewTextBoxColumn sdhVoters;
-        private System.Windows.Forms.Panel panel3;
     }
 }

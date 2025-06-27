@@ -59,7 +59,6 @@
             this.panel25 = new System.Windows.Forms.Panel();
             this.panel26 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtBoxSH = new MetroFramework.Controls.MetroTextBox();
             this.labelStatus = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -75,6 +74,9 @@
             this.checkBoxDoneVoting = new MetroFramework.Controls.MetroCheckBox();
             this.checkBoxUndoVote = new MetroFramework.Controls.MetroCheckBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.txtBoxSH = new MetroFramework.Controls.MetroTextBox();
+            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel15.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -237,7 +239,7 @@
             this.panel4.Controls.Add(this.panel7);
             this.panel4.Controls.Add(this.panel8);
             this.panel4.Controls.Add(this.panel9);
-            this.panel4.Location = new System.Drawing.Point(28, 268);
+            this.panel4.Location = new System.Drawing.Point(28, 314);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(202, 78);
             this.panel4.TabIndex = 495;
@@ -321,7 +323,7 @@
             this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel10.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel10.Location = new System.Drawing.Point(28, 232);
+            this.panel10.Location = new System.Drawing.Point(28, 278);
             this.panel10.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(727, 1);
@@ -337,7 +339,7 @@
             this.panel11.Controls.Add(this.panel14);
             this.panel11.Controls.Add(this.panel25);
             this.panel11.Controls.Add(this.panel26);
-            this.panel11.Location = new System.Drawing.Point(262, 267);
+            this.panel11.Location = new System.Drawing.Point(262, 313);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(202, 79);
             this.panel11.TabIndex = 497;
@@ -427,49 +429,12 @@
             this.label6.TabIndex = 503;
             this.label6.Text = "*";
             // 
-            // txtBoxSH
-            // 
-            this.txtBoxSH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
-            // 
-            // 
-            // 
-            this.txtBoxSH.CustomButton.Image = null;
-            this.txtBoxSH.CustomButton.Location = new System.Drawing.Point(213, 1);
-            this.txtBoxSH.CustomButton.Name = "";
-            this.txtBoxSH.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtBoxSH.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtBoxSH.CustomButton.TabIndex = 1;
-            this.txtBoxSH.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtBoxSH.CustomButton.UseSelectable = true;
-            this.txtBoxSH.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.txtBoxSH.ForeColor = System.Drawing.Color.Black;
-            this.txtBoxSH.IconRight = true;
-            this.txtBoxSH.Lines = new string[0];
-            this.txtBoxSH.Location = new System.Drawing.Point(288, 114);
-            this.txtBoxSH.MaxLength = 32767;
-            this.txtBoxSH.Name = "txtBoxSH";
-            this.txtBoxSH.PasswordChar = '\0';
-            this.txtBoxSH.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtBoxSH.SelectedText = "";
-            this.txtBoxSH.SelectionLength = 0;
-            this.txtBoxSH.SelectionStart = 0;
-            this.txtBoxSH.ShortcutsEnabled = true;
-            this.txtBoxSH.ShowButton = true;
-            this.txtBoxSH.Size = new System.Drawing.Size(235, 23);
-            this.txtBoxSH.Style = MetroFramework.MetroColorStyle.Silver;
-            this.txtBoxSH.TabIndex = 504;
-            this.txtBoxSH.UseCustomBackColor = true;
-            this.txtBoxSH.UseCustomForeColor = true;
-            this.txtBoxSH.UseSelectable = true;
-            this.txtBoxSH.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtBoxSH.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // labelStatus
             // 
             this.labelStatus.AutoSize = true;
             this.labelStatus.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelStatus.Location = new System.Drawing.Point(26, 210);
+            this.labelStatus.Location = new System.Drawing.Point(26, 256);
             this.labelStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelStatus.Name = "labelStatus";
             this.labelStatus.Size = new System.Drawing.Size(53, 18);
@@ -509,7 +474,7 @@
             this.panel21.Controls.Add(this.panel30);
             this.panel21.Controls.Add(this.panel31);
             this.panel21.Controls.Add(this.panel32);
-            this.panel21.Location = new System.Drawing.Point(496, 268);
+            this.panel21.Location = new System.Drawing.Point(496, 314);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(202, 79);
             this.panel21.TabIndex = 518;
@@ -651,11 +616,98 @@
             this.label10.TabIndex = 521;
             this.label10.Text = "Select Representative  you want to vote";
             // 
+            // txtBoxSH
+            // 
+            this.txtBoxSH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            // 
+            // 
+            // 
+            this.txtBoxSH.CustomButton.Image = null;
+            this.txtBoxSH.CustomButton.Location = new System.Drawing.Point(213, 1);
+            this.txtBoxSH.CustomButton.Name = "";
+            this.txtBoxSH.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtBoxSH.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtBoxSH.CustomButton.TabIndex = 1;
+            this.txtBoxSH.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtBoxSH.CustomButton.UseSelectable = true;
+            this.txtBoxSH.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtBoxSH.ForeColor = System.Drawing.Color.Black;
+            this.txtBoxSH.IconRight = true;
+            this.txtBoxSH.Lines = new string[0];
+            this.txtBoxSH.Location = new System.Drawing.Point(288, 114);
+            this.txtBoxSH.MaxLength = 32767;
+            this.txtBoxSH.Name = "txtBoxSH";
+            this.txtBoxSH.PasswordChar = '\0';
+            this.txtBoxSH.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtBoxSH.SelectedText = "";
+            this.txtBoxSH.SelectionLength = 0;
+            this.txtBoxSH.SelectionStart = 0;
+            this.txtBoxSH.ShortcutsEnabled = true;
+            this.txtBoxSH.ShowButton = true;
+            this.txtBoxSH.Size = new System.Drawing.Size(235, 23);
+            this.txtBoxSH.Style = MetroFramework.MetroColorStyle.Silver;
+            this.txtBoxSH.TabIndex = 504;
+            this.txtBoxSH.UseCustomBackColor = true;
+            this.txtBoxSH.UseCustomForeColor = true;
+            this.txtBoxSH.UseSelectable = true;
+            this.txtBoxSH.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtBoxSH.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // metroTextBox1
+            // 
+            this.metroTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            // 
+            // 
+            // 
+            this.metroTextBox1.CustomButton.Image = null;
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(107, 1);
+            this.metroTextBox1.CustomButton.Name = "";
+            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox1.CustomButton.TabIndex = 1;
+            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox1.CustomButton.UseSelectable = true;
+            this.metroTextBox1.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.metroTextBox1.ForeColor = System.Drawing.Color.Black;
+            this.metroTextBox1.IconRight = true;
+            this.metroTextBox1.Lines = new string[0];
+            this.metroTextBox1.Location = new System.Drawing.Point(29, 210);
+            this.metroTextBox1.MaxLength = 32767;
+            this.metroTextBox1.Name = "metroTextBox1";
+            this.metroTextBox1.PasswordChar = '\0';
+            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox1.SelectedText = "";
+            this.metroTextBox1.SelectionLength = 0;
+            this.metroTextBox1.SelectionStart = 0;
+            this.metroTextBox1.ShortcutsEnabled = true;
+            this.metroTextBox1.ShowButton = true;
+            this.metroTextBox1.Size = new System.Drawing.Size(129, 23);
+            this.metroTextBox1.Style = MetroFramework.MetroColorStyle.Silver;
+            this.metroTextBox1.TabIndex = 522;
+            this.metroTextBox1.UseCustomBackColor = true;
+            this.metroTextBox1.UseCustomForeColor = true;
+            this.metroTextBox1.UseSelectable = true;
+            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label11.Location = new System.Drawing.Point(27, 183);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(123, 15);
+            this.label11.TabIndex = 523;
+            this.label11.Text = "Current Vote Chances";
+            // 
             // SDHVoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 515);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.metroTextBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.checkBoxUndoVote);
             this.Controls.Add(this.checkBoxDoneVoting);
@@ -731,7 +783,6 @@
         private System.Windows.Forms.Panel panel25;
         private System.Windows.Forms.Panel panel26;
         private System.Windows.Forms.Label label6;
-        private MetroFramework.Controls.MetroTextBox txtBoxSH;
         private System.Windows.Forms.Label labelStatus;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
@@ -746,5 +797,8 @@
         private MetroFramework.Controls.MetroCheckBox checkBoxDoneVoting;
         private MetroFramework.Controls.MetroCheckBox checkBoxUndoVote;
         private System.Windows.Forms.Label label10;
+        private MetroFramework.Controls.MetroTextBox txtBoxSH;
+        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private System.Windows.Forms.Label label11;
     }
 }

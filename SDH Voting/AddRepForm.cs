@@ -105,6 +105,13 @@ namespace SDH_Voting
                     return;
                 }
 
+                // If checkBoxVoteStatus is checked, set votes and shares to 0
+                if (checkBoxVoteStatus.Checked)
+                {
+                    votes = 0;
+                    shares = 0;
+                }
+
                 // Create a new investor
                 var newInvestor = new Investor
                 {
@@ -120,7 +127,7 @@ namespace SDH_Voting
                 SaveInvestorsToFile(newInvestor);
 
                 // Update the status of the investor in the InvestorMasterlist.json
-                UpdateInvestorStatus(repName, "YES");
+                UpdateInvestorStatus(repName, "NO");
 
                 MessageBox.Show("Entry saved successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
