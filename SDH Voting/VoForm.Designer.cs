@@ -43,7 +43,6 @@
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtBoxAVoters = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -52,7 +51,6 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.txtBoxVoted = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -64,25 +62,27 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel21 = new System.Windows.Forms.Panel();
             this.textBoxAllSH = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel29 = new System.Windows.Forms.Panel();
             this.panel30 = new System.Windows.Forms.Panel();
             this.panel31 = new System.Windows.Forms.Panel();
             this.panel32 = new System.Windows.Forms.Panel();
-            this.btnViewVoter = new System.Windows.Forms.Button();
             this.checkBoxDoneVoting = new MetroFramework.Controls.MetroCheckBox();
             this.checkBoxUndoVote = new MetroFramework.Controls.MetroCheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtBoxSH = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.txtBoxVoteLimit = new MetroFramework.Controls.MetroTextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.btnViewVoter = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel15.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -239,7 +239,7 @@
             this.panel4.Controls.Add(this.panel7);
             this.panel4.Controls.Add(this.panel8);
             this.panel4.Controls.Add(this.panel9);
-            this.panel4.Location = new System.Drawing.Point(28, 314);
+            this.panel4.Location = new System.Drawing.Point(28, 341);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(202, 78);
             this.panel4.TabIndex = 495;
@@ -255,16 +255,6 @@
             this.txtBoxAVoters.ReadOnly = true;
             this.txtBoxAVoters.Size = new System.Drawing.Size(52, 29);
             this.txtBoxAVoters.TabIndex = 429;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SDH_Voting.Properties.Resources.account_24px2;
-            this.pictureBox1.Location = new System.Drawing.Point(155, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 426;
-            this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
@@ -323,7 +313,7 @@
             this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel10.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel10.Location = new System.Drawing.Point(28, 278);
+            this.panel10.Location = new System.Drawing.Point(28, 305);
             this.panel10.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(727, 1);
@@ -339,7 +329,7 @@
             this.panel11.Controls.Add(this.panel14);
             this.panel11.Controls.Add(this.panel25);
             this.panel11.Controls.Add(this.panel26);
-            this.panel11.Location = new System.Drawing.Point(262, 313);
+            this.panel11.Location = new System.Drawing.Point(262, 340);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(202, 79);
             this.panel11.TabIndex = 497;
@@ -355,16 +345,6 @@
             this.txtBoxVoted.ReadOnly = true;
             this.txtBoxVoted.Size = new System.Drawing.Size(52, 29);
             this.txtBoxVoted.TabIndex = 429;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::SDH_Voting.Properties.Resources.account_24px;
-            this.pictureBox2.Location = new System.Drawing.Point(156, 14);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 426;
-            this.pictureBox2.TabStop = false;
             // 
             // label1
             // 
@@ -434,7 +414,7 @@
             this.labelStatus.AutoSize = true;
             this.labelStatus.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelStatus.Location = new System.Drawing.Point(26, 256);
+            this.labelStatus.Location = new System.Drawing.Point(26, 283);
             this.labelStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelStatus.Name = "labelStatus";
             this.labelStatus.Size = new System.Drawing.Size(53, 18);
@@ -474,7 +454,7 @@
             this.panel21.Controls.Add(this.panel30);
             this.panel21.Controls.Add(this.panel31);
             this.panel21.Controls.Add(this.panel32);
-            this.panel21.Location = new System.Drawing.Point(496, 314);
+            this.panel21.Location = new System.Drawing.Point(496, 341);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(202, 79);
             this.panel21.TabIndex = 518;
@@ -490,16 +470,6 @@
             this.textBoxAllSH.ReadOnly = true;
             this.textBoxAllSH.Size = new System.Drawing.Size(52, 29);
             this.textBoxAllSH.TabIndex = 429;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::SDH_Voting.Properties.Resources.meeting_room_24px;
-            this.pictureBox3.Location = new System.Drawing.Point(156, 14);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 426;
-            this.pictureBox3.TabStop = false;
             // 
             // label5
             // 
@@ -552,24 +522,6 @@
             this.panel32.Name = "panel32";
             this.panel32.Size = new System.Drawing.Size(202, 1);
             this.panel32.TabIndex = 382;
-            // 
-            // btnViewVoter
-            // 
-            this.btnViewVoter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
-            this.btnViewVoter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnViewVoter.FlatAppearance.BorderSize = 2;
-            this.btnViewVoter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewVoter.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewVoter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnViewVoter.Image = global::SDH_Voting.Properties.Resources.opera_glasses_24px;
-            this.btnViewVoter.Location = new System.Drawing.Point(501, 111);
-            this.btnViewVoter.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnViewVoter.Name = "btnViewVoter";
-            this.btnViewVoter.Size = new System.Drawing.Size(44, 29);
-            this.btnViewVoter.TabIndex = 490;
-            this.btnViewVoter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnViewVoter.UseVisualStyleBackColor = false;
-            this.btnViewVoter.Click += new System.EventHandler(this.btnViewVoter_Click);
             // 
             // checkBoxDoneVoting
             // 
@@ -653,53 +605,102 @@
             this.txtBoxSH.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtBoxSH.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroTextBox1
+            // txtBoxVoteLimit
             // 
-            this.metroTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
+            this.txtBoxVoteLimit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(253)))));
             // 
             // 
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(107, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
-            this.metroTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.metroTextBox1.IconRight = true;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(29, 210);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.ShowButton = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(129, 23);
-            this.metroTextBox1.Style = MetroFramework.MetroColorStyle.Silver;
-            this.metroTextBox1.TabIndex = 522;
-            this.metroTextBox1.UseCustomBackColor = true;
-            this.metroTextBox1.UseCustomForeColor = true;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txtBoxVoteLimit.CustomButton.Image = null;
+            this.txtBoxVoteLimit.CustomButton.Location = new System.Drawing.Point(94, 1);
+            this.txtBoxVoteLimit.CustomButton.Name = "";
+            this.txtBoxVoteLimit.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtBoxVoteLimit.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtBoxVoteLimit.CustomButton.TabIndex = 1;
+            this.txtBoxVoteLimit.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtBoxVoteLimit.CustomButton.UseSelectable = true;
+            this.txtBoxVoteLimit.FontWeight = MetroFramework.MetroTextBoxWeight.Bold;
+            this.txtBoxVoteLimit.ForeColor = System.Drawing.Color.Black;
+            this.txtBoxVoteLimit.IconRight = true;
+            this.txtBoxVoteLimit.Lines = new string[0];
+            this.txtBoxVoteLimit.Location = new System.Drawing.Point(29, 221);
+            this.txtBoxVoteLimit.MaxLength = 32767;
+            this.txtBoxVoteLimit.Name = "txtBoxVoteLimit";
+            this.txtBoxVoteLimit.PasswordChar = '\0';
+            this.txtBoxVoteLimit.ReadOnly = true;
+            this.txtBoxVoteLimit.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtBoxVoteLimit.SelectedText = "";
+            this.txtBoxVoteLimit.SelectionLength = 0;
+            this.txtBoxVoteLimit.SelectionStart = 0;
+            this.txtBoxVoteLimit.ShortcutsEnabled = true;
+            this.txtBoxVoteLimit.ShowButton = true;
+            this.txtBoxVoteLimit.Size = new System.Drawing.Size(116, 23);
+            this.txtBoxVoteLimit.Style = MetroFramework.MetroColorStyle.Silver;
+            this.txtBoxVoteLimit.TabIndex = 522;
+            this.txtBoxVoteLimit.UseCustomBackColor = true;
+            this.txtBoxVoteLimit.UseCustomForeColor = true;
+            this.txtBoxVoteLimit.UseSelectable = true;
+            this.txtBoxVoteLimit.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtBoxVoteLimit.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label11.Location = new System.Drawing.Point(27, 183);
+            this.label11.Location = new System.Drawing.Point(27, 194);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(123, 15);
+            this.label11.Size = new System.Drawing.Size(119, 15);
             this.label11.TabIndex = 523;
             this.label11.Text = "Current Vote Chances";
+            // 
+            // btnViewVoter
+            // 
+            this.btnViewVoter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(85)))), ((int)(((byte)(85)))));
+            this.btnViewVoter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnViewVoter.FlatAppearance.BorderSize = 2;
+            this.btnViewVoter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewVoter.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewVoter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnViewVoter.Image = global::SDH_Voting.Properties.Resources.opera_glasses_24px;
+            this.btnViewVoter.Location = new System.Drawing.Point(501, 111);
+            this.btnViewVoter.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnViewVoter.Name = "btnViewVoter";
+            this.btnViewVoter.Size = new System.Drawing.Size(44, 29);
+            this.btnViewVoter.TabIndex = 490;
+            this.btnViewVoter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnViewVoter.UseVisualStyleBackColor = false;
+            this.btnViewVoter.Click += new System.EventHandler(this.btnViewVoter_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::SDH_Voting.Properties.Resources.account_24px;
+            this.pictureBox2.Location = new System.Drawing.Point(156, 14);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 426;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SDH_Voting.Properties.Resources.account_24px2;
+            this.pictureBox1.Location = new System.Drawing.Point(155, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 426;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::SDH_Voting.Properties.Resources.meeting_room_24px;
+            this.pictureBox3.Location = new System.Drawing.Point(156, 14);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 426;
+            this.pictureBox3.TabStop = false;
             // 
             // SDHVoForm
             // 
@@ -707,7 +708,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 515);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.txtBoxVoteLimit);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.checkBoxUndoVote);
             this.Controls.Add(this.checkBoxDoneVoting);
@@ -739,12 +740,12 @@
             this.panel15.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel21.ResumeLayout(false);
             this.panel21.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -798,7 +799,7 @@
         private MetroFramework.Controls.MetroCheckBox checkBoxUndoVote;
         private System.Windows.Forms.Label label10;
         private MetroFramework.Controls.MetroTextBox txtBoxSH;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox txtBoxVoteLimit;
         private System.Windows.Forms.Label label11;
     }
 }

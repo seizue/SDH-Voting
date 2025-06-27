@@ -26,6 +26,10 @@ namespace SDH_Voting
             txtBoxSH.Text = sdhStockHolder;
             LoadInvestorsData();
             userControlVoting = userControl;
+
+            // Set the max vote limit in txtBoxVoteLimit based on saved settings
+            int savedMaxVoteLimit = Properties.Settings.Default.MaxVoteLimit;
+            txtBoxVoteLimit.Text = savedMaxVoteLimit.ToString();
         }
 
         private void LoadRepresentativesComboRep()
@@ -318,10 +322,6 @@ namespace SDH_Voting
                         // Update the displayed count of voted investors
                         int votedCount = investors.Count(i => i.Status == "YES");
                         txtBoxVoted.Text = votedCount.ToString();
-
-                        // Update the displayed count of not voted investors
-                        int notVotedCount = investors.Count(i => i.Status == "NO");
-                        txtBoxAVoters.Text = notVotedCount.ToString();
 
                         // Save updated investors list to file
                         try
