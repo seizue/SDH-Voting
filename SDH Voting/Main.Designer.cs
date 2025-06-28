@@ -35,11 +35,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panelGrid = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtboxRegisterShares = new System.Windows.Forms.TextBox();
+            this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtboxRegisteredShareholders = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtboxTotalShareholders = new System.Windows.Forms.TextBox();
             this.panel13 = new System.Windows.Forms.Panel();
@@ -57,20 +61,15 @@
             this.invStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtBoxSearch = new MetroFramework.Controls.MetroTextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.metroPanel16 = new MetroFramework.Controls.MetroPanel();
-            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnVoting = new System.Windows.Forms.Button();
             this.btnInvMasterlist = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.checkBoxVoted = new MetroFramework.Controls.MetroCheckBox();
             this.checkBoxNonVoted = new MetroFramework.Controls.MetroCheckBox();
-            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnCloseFP = new System.Windows.Forms.Button();
             this.btnClearVote = new System.Windows.Forms.Button();
@@ -79,34 +78,23 @@
             this.button_UpdateUser = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.button_Export = new System.Windows.Forms.Button();
-            this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtboxRegisteredShareholders = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtboxRegisterShares = new System.Windows.Forms.TextBox();
             this.userControlVoting1 = new SDH_Voting.UserControlVoting();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panelGrid.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryDataGrid)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Location = new System.Drawing.Point(831, 101);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1, 46);
-            this.panel2.TabIndex = 2;
             // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.SeaGreen;
-            this.panel3.Location = new System.Drawing.Point(0, 652);
+            this.panel3.Location = new System.Drawing.Point(0, 648);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1013, 10);
+            this.panel3.Size = new System.Drawing.Size(959, 10);
             this.panel3.TabIndex = 2;
             // 
             // panel6
@@ -114,9 +102,9 @@
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panel6.Location = new System.Drawing.Point(1012, 90);
+            this.panel6.Location = new System.Drawing.Point(958, 90);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1, 557);
+            this.panel6.Size = new System.Drawing.Size(1, 553);
             this.panel6.TabIndex = 432;
             // 
             // panelGrid
@@ -132,7 +120,7 @@
             this.panelGrid.Controls.Add(this.InventoryDataGrid);
             this.panelGrid.Location = new System.Drawing.Point(12, 165);
             this.panelGrid.Name = "panelGrid";
-            this.panelGrid.Size = new System.Drawing.Size(989, 484);
+            this.panelGrid.Size = new System.Drawing.Size(935, 480);
             this.panelGrid.TabIndex = 434;
             // 
             // panel12
@@ -150,10 +138,74 @@
             this.panel12.Controls.Add(this.panel13);
             this.panel12.Controls.Add(this.label7);
             this.panel12.Controls.Add(this.txtboxTotalShares);
-            this.panel12.Location = new System.Drawing.Point(-11, 452);
+            this.panel12.Location = new System.Drawing.Point(-11, 448);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1017, 33);
+            this.panel12.Size = new System.Drawing.Size(963, 33);
             this.panel12.TabIndex = 437;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(26, 10);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(96, 14);
+            this.label3.TabIndex = 505;
+            this.label3.Text = "Registered Shares";
+            // 
+            // txtboxRegisterShares
+            // 
+            this.txtboxRegisterShares.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtboxRegisterShares.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxRegisterShares.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxRegisterShares.Location = new System.Drawing.Point(139, 7);
+            this.txtboxRegisterShares.Name = "txtboxRegisterShares";
+            this.txtboxRegisterShares.Size = new System.Drawing.Size(79, 19);
+            this.txtboxRegisterShares.TabIndex = 504;
+            this.txtboxRegisterShares.Text = "-";
+            // 
+            // metroPanel4
+            // 
+            this.metroPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroPanel4.BackColor = System.Drawing.Color.Gainsboro;
+            this.metroPanel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.metroPanel4.HorizontalScrollbarBarColor = true;
+            this.metroPanel4.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel4.HorizontalScrollbarSize = 10;
+            this.metroPanel4.Location = new System.Drawing.Point(450, 1);
+            this.metroPanel4.Name = "metroPanel4";
+            this.metroPanel4.Size = new System.Drawing.Size(1, 35);
+            this.metroPanel4.TabIndex = 503;
+            this.metroPanel4.UseCustomBackColor = true;
+            this.metroPanel4.UseStyleColors = true;
+            this.metroPanel4.VerticalScrollbarBarColor = true;
+            this.metroPanel4.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel4.VerticalScrollbarSize = 10;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(237, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(127, 14);
+            this.label2.TabIndex = 502;
+            this.label2.Text = "Registered Shareholders";
+            // 
+            // txtboxRegisteredShareholders
+            // 
+            this.txtboxRegisteredShareholders.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtboxRegisteredShareholders.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxRegisteredShareholders.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxRegisteredShareholders.Location = new System.Drawing.Point(387, 8);
+            this.txtboxRegisteredShareholders.Name = "txtboxRegisteredShareholders";
+            this.txtboxRegisteredShareholders.Size = new System.Drawing.Size(42, 19);
+            this.txtboxRegisteredShareholders.TabIndex = 501;
+            this.txtboxRegisteredShareholders.Text = "-";
             // 
             // label1
             // 
@@ -161,7 +213,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(548, 11);
+            this.label1.Location = new System.Drawing.Point(494, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 14);
             this.label1.TabIndex = 499;
@@ -172,7 +224,7 @@
             this.txtboxTotalShareholders.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtboxTotalShareholders.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtboxTotalShareholders.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxTotalShareholders.Location = new System.Drawing.Point(719, 8);
+            this.txtboxTotalShareholders.Location = new System.Drawing.Point(665, 8);
             this.txtboxTotalShareholders.Name = "txtboxTotalShareholders";
             this.txtboxTotalShareholders.Size = new System.Drawing.Size(42, 19);
             this.txtboxTotalShareholders.TabIndex = 498;
@@ -185,7 +237,7 @@
             this.panel13.Location = new System.Drawing.Point(0, 0);
             this.panel13.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(1017, 1);
+            this.panel13.Size = new System.Drawing.Size(963, 1);
             this.panel13.TabIndex = 497;
             // 
             // label7
@@ -194,7 +246,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(782, 11);
+            this.label7.Location = new System.Drawing.Point(728, 11);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(123, 14);
             this.label7.TabIndex = 487;
@@ -205,7 +257,7 @@
             this.txtboxTotalShares.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtboxTotalShares.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtboxTotalShares.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxTotalShares.Location = new System.Drawing.Point(922, 8);
+            this.txtboxTotalShares.Location = new System.Drawing.Point(868, 8);
             this.txtboxTotalShares.Name = "txtboxTotalShares";
             this.txtboxTotalShares.Size = new System.Drawing.Size(79, 19);
             this.txtboxTotalShares.TabIndex = 0;
@@ -215,10 +267,10 @@
             // 
             this.panel11.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel11.Location = new System.Drawing.Point(988, 1);
+            this.panel11.Location = new System.Drawing.Point(934, 1);
             this.panel11.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1, 482);
+            this.panel11.Size = new System.Drawing.Size(1, 478);
             this.panel11.TabIndex = 436;
             // 
             // panel10
@@ -228,17 +280,17 @@
             this.panel10.Location = new System.Drawing.Point(0, 1);
             this.panel10.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1, 482);
+            this.panel10.Size = new System.Drawing.Size(1, 478);
             this.panel10.TabIndex = 435;
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(0, 483);
+            this.panel9.Location = new System.Drawing.Point(0, 479);
             this.panel9.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(989, 1);
+            this.panel9.Size = new System.Drawing.Size(935, 1);
             this.panel9.TabIndex = 434;
             // 
             // panel24
@@ -248,7 +300,7 @@
             this.panel24.Location = new System.Drawing.Point(0, 0);
             this.panel24.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(989, 1);
+            this.panel24.Size = new System.Drawing.Size(935, 1);
             this.panel24.TabIndex = 433;
             // 
             // InventoryDataGrid
@@ -318,7 +370,7 @@
             this.InventoryDataGrid.RowTemplate.Height = 23;
             this.InventoryDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.InventoryDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.InventoryDataGrid.Size = new System.Drawing.Size(989, 448);
+            this.InventoryDataGrid.Size = new System.Drawing.Size(935, 444);
             this.InventoryDataGrid.TabIndex = 432;
             this.InventoryDataGrid.UseCustomBackColor = true;
             this.InventoryDataGrid.UseCustomForeColor = true;
@@ -414,40 +466,6 @@
             this.label12.TabIndex = 436;
             this.label12.Text = "SEARCH";
             // 
-            // metroPanel16
-            // 
-            this.metroPanel16.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroPanel16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.metroPanel16.HorizontalScrollbarBarColor = true;
-            this.metroPanel16.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel16.HorizontalScrollbarSize = 10;
-            this.metroPanel16.Location = new System.Drawing.Point(746, 106);
-            this.metroPanel16.Name = "metroPanel16";
-            this.metroPanel16.Size = new System.Drawing.Size(1, 29);
-            this.metroPanel16.TabIndex = 456;
-            this.metroPanel16.UseCustomBackColor = true;
-            this.metroPanel16.UseStyleColors = true;
-            this.metroPanel16.VerticalScrollbarBarColor = true;
-            this.metroPanel16.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel16.VerticalScrollbarSize = 10;
-            // 
-            // metroPanel1
-            // 
-            this.metroPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroPanel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.metroPanel1.HorizontalScrollbarBarColor = true;
-            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(669, 106);
-            this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(1, 29);
-            this.metroPanel1.TabIndex = 457;
-            this.metroPanel1.UseCustomBackColor = true;
-            this.metroPanel1.UseStyleColors = true;
-            this.metroPanel1.VerticalScrollbarBarColor = true;
-            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel1.VerticalScrollbarSize = 10;
-            // 
             // panel7
             // 
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -455,16 +473,8 @@
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.panel7.Location = new System.Drawing.Point(0, 90);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1, 557);
+            this.panel7.Size = new System.Drawing.Size(1, 553);
             this.panel7.TabIndex = 460;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel8.Location = new System.Drawing.Point(472, 101);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1, 46);
-            this.panel8.TabIndex = 462;
             // 
             // tableLayoutPanel1
             // 
@@ -481,7 +491,7 @@
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1013, 53);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(959, 53);
             this.tableLayoutPanel1.TabIndex = 438;
             // 
             // btnVoting
@@ -499,7 +509,7 @@
             this.btnVoting.Location = new System.Drawing.Point(3, 3);
             this.btnVoting.Name = "btnVoting";
             this.btnVoting.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnVoting.Size = new System.Drawing.Size(500, 47);
+            this.btnVoting.Size = new System.Drawing.Size(473, 47);
             this.btnVoting.TabIndex = 433;
             this.btnVoting.Text = "VOTING";
             this.btnVoting.UseVisualStyleBackColor = false;
@@ -516,10 +526,10 @@
             this.btnInvMasterlist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInvMasterlist.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9F, System.Drawing.FontStyle.Bold);
             this.btnInvMasterlist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(58)))), ((int)(((byte)(42)))));
-            this.btnInvMasterlist.Location = new System.Drawing.Point(509, 3);
+            this.btnInvMasterlist.Location = new System.Drawing.Point(482, 3);
             this.btnInvMasterlist.Name = "btnInvMasterlist";
             this.btnInvMasterlist.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnInvMasterlist.Size = new System.Drawing.Size(501, 47);
+            this.btnInvMasterlist.Size = new System.Drawing.Size(474, 47);
             this.btnInvMasterlist.TabIndex = 432;
             this.btnInvMasterlist.Text = "INVESTORS MASTERLIST";
             this.btnInvMasterlist.UseVisualStyleBackColor = false;
@@ -529,7 +539,7 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel1.Location = new System.Drawing.Point(505, 28);
+            this.panel1.Location = new System.Drawing.Point(478, 28);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1, 52);
             this.panel1.TabIndex = 464;
@@ -562,23 +572,6 @@
             this.checkBoxNonVoted.UseSelectable = true;
             this.checkBoxNonVoted.CheckedChanged += new System.EventHandler(this.checkBoxNonVoted_CheckedChanged);
             // 
-            // metroPanel2
-            // 
-            this.metroPanel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroPanel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.metroPanel2.HorizontalScrollbarBarColor = true;
-            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(927, 106);
-            this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(1, 29);
-            this.metroPanel2.TabIndex = 495;
-            this.metroPanel2.UseCustomBackColor = true;
-            this.metroPanel2.UseStyleColors = true;
-            this.metroPanel2.VerticalScrollbarBarColor = true;
-            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
-            // 
             // panel4
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -587,7 +580,7 @@
             this.panel4.Location = new System.Drawing.Point(-1, 27);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1017, 1);
+            this.panel4.Size = new System.Drawing.Size(963, 1);
             this.panel4.TabIndex = 496;
             // 
             // panel5
@@ -598,21 +591,14 @@
             this.panel5.Location = new System.Drawing.Point(-1, 79);
             this.panel5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1017, 1);
+            this.panel5.Size = new System.Drawing.Size(963, 1);
             this.panel5.TabIndex = 497;
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel14.Location = new System.Drawing.Point(580, 101);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(1, 46);
-            this.panel14.TabIndex = 499;
             // 
             // btnRegister
             // 
             this.btnRegister.BackColor = System.Drawing.Color.Transparent;
             this.btnRegister.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRegister.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnRegister.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnRegister.FlatAppearance.BorderSize = 0;
             this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -620,10 +606,10 @@
             this.btnRegister.ForeColor = System.Drawing.Color.Black;
             this.btnRegister.Image = global::SDH_Voting.Properties.Resources.registration_24px;
             this.btnRegister.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnRegister.Location = new System.Drawing.Point(494, 97);
+            this.btnRegister.Location = new System.Drawing.Point(3, 3);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnRegister.Size = new System.Drawing.Size(64, 50);
+            this.btnRegister.Size = new System.Drawing.Size(74, 47);
             this.btnRegister.TabIndex = 498;
             this.btnRegister.Text = "Register";
             this.btnRegister.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -651,6 +637,7 @@
             // 
             this.btnClearVote.BackColor = System.Drawing.Color.Transparent;
             this.btnClearVote.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClearVote.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnClearVote.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnClearVote.FlatAppearance.BorderSize = 0;
             this.btnClearVote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -658,10 +645,10 @@
             this.btnClearVote.ForeColor = System.Drawing.Color.Black;
             this.btnClearVote.Image = global::SDH_Voting.Properties.Resources.erase_24px1;
             this.btnClearVote.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnClearVote.Location = new System.Drawing.Point(838, 97);
+            this.btnClearVote.Location = new System.Drawing.Point(323, 3);
             this.btnClearVote.Name = "btnClearVote";
             this.btnClearVote.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnClearVote.Size = new System.Drawing.Size(82, 50);
+            this.btnClearVote.Size = new System.Drawing.Size(74, 47);
             this.btnClearVote.TabIndex = 494;
             this.btnClearVote.Text = "CLR VOTE ";
             this.btnClearVote.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -690,6 +677,7 @@
             // 
             this.button_AddNewUser.BackColor = System.Drawing.Color.Transparent;
             this.button_AddNewUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_AddNewUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_AddNewUser.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button_AddNewUser.FlatAppearance.BorderSize = 0;
             this.button_AddNewUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -697,10 +685,10 @@
             this.button_AddNewUser.ForeColor = System.Drawing.Color.Black;
             this.button_AddNewUser.Image = global::SDH_Voting.Properties.Resources.add_user_male_24px;
             this.button_AddNewUser.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_AddNewUser.Location = new System.Drawing.Point(599, 97);
+            this.button_AddNewUser.Location = new System.Drawing.Point(83, 3);
             this.button_AddNewUser.Name = "button_AddNewUser";
             this.button_AddNewUser.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button_AddNewUser.Size = new System.Drawing.Size(64, 50);
+            this.button_AddNewUser.Size = new System.Drawing.Size(74, 47);
             this.button_AddNewUser.TabIndex = 376;
             this.button_AddNewUser.Text = "ADD NEW";
             this.button_AddNewUser.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -711,6 +699,7 @@
             // 
             this.button_UpdateUser.BackColor = System.Drawing.Color.Transparent;
             this.button_UpdateUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_UpdateUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_UpdateUser.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button_UpdateUser.FlatAppearance.BorderSize = 0;
             this.button_UpdateUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -718,10 +707,10 @@
             this.button_UpdateUser.ForeColor = System.Drawing.Color.Black;
             this.button_UpdateUser.Image = global::SDH_Voting.Properties.Resources.edit_profile_24px;
             this.button_UpdateUser.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_UpdateUser.Location = new System.Drawing.Point(676, 96);
+            this.button_UpdateUser.Location = new System.Drawing.Point(163, 3);
             this.button_UpdateUser.Name = "button_UpdateUser";
             this.button_UpdateUser.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button_UpdateUser.Size = new System.Drawing.Size(64, 50);
+            this.button_UpdateUser.Size = new System.Drawing.Size(74, 47);
             this.button_UpdateUser.TabIndex = 377;
             this.button_UpdateUser.Text = "UPDATE ";
             this.button_UpdateUser.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -732,6 +721,7 @@
             // 
             this.buttonDelete.BackColor = System.Drawing.Color.Transparent;
             this.buttonDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.buttonDelete.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonDelete.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonDelete.FlatAppearance.BorderSize = 0;
             this.buttonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -739,10 +729,10 @@
             this.buttonDelete.ForeColor = System.Drawing.Color.Black;
             this.buttonDelete.Image = global::SDH_Voting.Properties.Resources.waste_24px;
             this.buttonDelete.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.buttonDelete.Location = new System.Drawing.Point(753, 97);
+            this.buttonDelete.Location = new System.Drawing.Point(243, 3);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.buttonDelete.Size = new System.Drawing.Size(64, 50);
+            this.buttonDelete.Size = new System.Drawing.Size(74, 47);
             this.buttonDelete.TabIndex = 378;
             this.buttonDelete.Text = "DELETE";
             this.buttonDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -753,6 +743,7 @@
             // 
             this.button_Export.BackColor = System.Drawing.Color.Transparent;
             this.button_Export.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button_Export.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button_Export.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button_Export.FlatAppearance.BorderSize = 0;
             this.button_Export.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -760,79 +751,15 @@
             this.button_Export.ForeColor = System.Drawing.Color.Black;
             this.button_Export.Image = global::SDH_Voting.Properties.Resources.send_file_24px;
             this.button_Export.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button_Export.Location = new System.Drawing.Point(935, 97);
+            this.button_Export.Location = new System.Drawing.Point(403, 3);
             this.button_Export.Name = "button_Export";
             this.button_Export.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button_Export.Size = new System.Drawing.Size(64, 50);
+            this.button_Export.Size = new System.Drawing.Size(74, 47);
             this.button_Export.TabIndex = 379;
             this.button_Export.Text = "EXPORT";
             this.button_Export.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button_Export.UseVisualStyleBackColor = false;
             this.button_Export.Click += new System.EventHandler(this.button_Export_Click);
-            // 
-            // metroPanel4
-            // 
-            this.metroPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroPanel4.BackColor = System.Drawing.Color.Gainsboro;
-            this.metroPanel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.metroPanel4.HorizontalScrollbarBarColor = true;
-            this.metroPanel4.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel4.HorizontalScrollbarSize = 10;
-            this.metroPanel4.Location = new System.Drawing.Point(504, 1);
-            this.metroPanel4.Name = "metroPanel4";
-            this.metroPanel4.Size = new System.Drawing.Size(1, 35);
-            this.metroPanel4.TabIndex = 503;
-            this.metroPanel4.UseCustomBackColor = true;
-            this.metroPanel4.UseStyleColors = true;
-            this.metroPanel4.VerticalScrollbarBarColor = true;
-            this.metroPanel4.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel4.VerticalScrollbarSize = 10;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(291, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 14);
-            this.label2.TabIndex = 502;
-            this.label2.Text = "Registered Shareholders";
-            // 
-            // txtboxRegisteredShareholders
-            // 
-            this.txtboxRegisteredShareholders.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtboxRegisteredShareholders.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtboxRegisteredShareholders.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxRegisteredShareholders.Location = new System.Drawing.Point(441, 8);
-            this.txtboxRegisteredShareholders.Name = "txtboxRegisteredShareholders";
-            this.txtboxRegisteredShareholders.Size = new System.Drawing.Size(42, 19);
-            this.txtboxRegisteredShareholders.TabIndex = 501;
-            this.txtboxRegisteredShareholders.Text = "-";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(80, 10);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 14);
-            this.label3.TabIndex = 505;
-            this.label3.Text = "Registered Shares";
-            // 
-            // txtboxRegisterShares
-            // 
-            this.txtboxRegisterShares.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtboxRegisterShares.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtboxRegisterShares.Font = new System.Drawing.Font("Bahnschrift SemiBold Condensed", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxRegisterShares.Location = new System.Drawing.Point(193, 7);
-            this.txtboxRegisterShares.Name = "txtboxRegisterShares";
-            this.txtboxRegisterShares.Size = new System.Drawing.Size(79, 19);
-            this.txtboxRegisterShares.TabIndex = 504;
-            this.txtboxRegisterShares.Text = "-";
             // 
             // userControlVoting1
             // 
@@ -840,43 +767,55 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.userControlVoting1.BackColor = System.Drawing.Color.White;
-            this.userControlVoting1.Location = new System.Drawing.Point(9, 83);
+            this.userControlVoting1.Location = new System.Drawing.Point(4, 79);
             this.userControlVoting1.Name = "userControlVoting1";
-            this.userControlVoting1.Size = new System.Drawing.Size(995, 567);
+            this.userControlVoting1.Size = new System.Drawing.Size(949, 570);
             this.userControlVoting1.TabIndex = 437;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.White;
+            this.tableLayoutPanel2.ColumnCount = 6;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel2.Controls.Add(this.btnRegister, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button_AddNewUser, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button_UpdateUser, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.buttonDelete, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnClearVote, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button_Export, 5, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(475, 97);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(474, 53);
+            this.tableLayoutPanel2.TabIndex = 439;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1013, 662);
-            this.Controls.Add(this.panel14);
+            this.ClientSize = new System.Drawing.Size(959, 658);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.userControlVoting1);
             this.Controls.Add(this.btnCloseFP);
-            this.Controls.Add(this.metroPanel2);
-            this.Controls.Add(this.btnClearVote);
             this.Controls.Add(this.checkBoxNonVoted);
             this.Controls.Add(this.checkBoxVoted);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.metroPanel1);
-            this.Controls.Add(this.metroPanel16);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtBoxSearch);
             this.Controls.Add(this.panelGrid);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.button_AddNewUser);
-            this.Controls.Add(this.button_UpdateUser);
-            this.Controls.Add(this.buttonDelete);
-            this.Controls.Add(this.button_Export);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.btnRegister);
+            this.Controls.Add(this.tableLayoutPanel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Main";
             this.Resizable = false;
@@ -887,13 +826,13 @@
             this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryDataGrid)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button_UpdateUser;
         private System.Windows.Forms.Button button_AddNewUser;
         private System.Windows.Forms.Button buttonDelete;
@@ -909,10 +848,7 @@
         private MetroFramework.Controls.MetroTextBox txtBoxSearch;
         private System.Windows.Forms.Label label12;
         private UserControlVoting userControlVoting1;
-        private MetroFramework.Controls.MetroPanel metroPanel16;
-        private MetroFramework.Controls.MetroPanel metroPanel1;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnCloseFP;
@@ -920,7 +856,6 @@
         private MetroFramework.Controls.MetroCheckBox checkBoxVoted;
         private MetroFramework.Controls.MetroCheckBox checkBoxNonVoted;
         private System.Windows.Forms.Button btnClearVote;
-        private MetroFramework.Controls.MetroPanel metroPanel2;
         private System.Windows.Forms.Button btnVoting;
         private System.Windows.Forms.Button btnInvMasterlist;
         private System.Windows.Forms.Panel panel4;
@@ -937,12 +872,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtboxTotalShareholders;
         private System.Windows.Forms.Button btnRegister;
-        private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtboxRegisterShares;
         private MetroFramework.Controls.MetroPanel metroPanel4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtboxRegisteredShareholders;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
     }
 }
 

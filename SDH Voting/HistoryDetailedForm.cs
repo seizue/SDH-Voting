@@ -36,7 +36,10 @@ namespace SDH_Voting
             labelDate.Text = FolderTitle;
 
             // Load representatives data
-            LoadRepresentatives();   
+            LoadRepresentatives();
+
+            // Load summary data into textboxes
+            LoadSummaryData();
         }
 
 
@@ -261,6 +264,34 @@ namespace SDH_Voting
             }
         }
 
+        private void LoadSummaryData()
+        {
+            string postedFolderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting", "Posted");
+
+            if (string.IsNullOrWhiteSpace(FolderTitle))
+                return;
+
+            string folderPath = Path.Combine(postedFolderPath, FolderTitle);
+            string summaryFilePath = Path.Combine(folderPath, "summary_result.json");
+
+            if (!File.Exists(summaryFilePath))
+                return;
+
+            try
+            {
+                string json = File.ReadAllText(summaryFilePath);
+                dynamic summary = JsonConvert.DeserializeObject(json);
+
+                txtboxTotalShares.Text = summary.TotalShares != null ? summary.TotalShares.ToString() : "";
+                txtboxTotalShareholders.Text = summary.TotalShareholders != null ? summary.TotalShareholders.ToString() : "";
+                txtboxRegisterShares.Text = summary.RegisterShares != null ? summary.RegisterShares.ToString() : "";
+                txtboxRegisteredShareholders.Text = summary.RegisteredShareholders != null ? summary.RegisteredShareholders.ToString() : "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading summary data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
     }
 }

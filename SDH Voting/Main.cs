@@ -821,6 +821,15 @@ namespace SDH_Voting
             txtboxRegisteredShareholders.Text = registerShareholders.ToString("N0");
         }
 
+        public (string TotalShares, string TotalShareholders, string RegisterShares, string RegisteredShareholders) GetSummaryTextBoxValues()
+        {
+            return (
+                txtboxTotalShares.Text,
+                txtboxTotalShareholders.Text,
+                txtboxRegisterShares.Text,
+                txtboxRegisteredShareholders.Text
+            );
+        }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {

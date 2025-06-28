@@ -556,6 +556,9 @@ namespace SDH_Voting
                 string destinationFilePath = Path.Combine(currentDateFolderPath, "SDH_VoteSelected.json");
                 File.Copy(sdhVoteSelectedFilePath, destinationFilePath, true);
 
+                // Save summary data from Main form
+                SaveSummaryDataFromMain(currentDateFolderPath);
+
                 // Clear the DataGridView after successful posting
                 dataGridViewRepresentative.Rows.Clear();
 
@@ -631,6 +634,34 @@ namespace SDH_Voting
             }
         }
 
+        private void SaveSummaryDataFromMain(string folderPath)
+        {
+            try
+            {
+                // Get the parent form and cast to Main
+                Main mainForm = this.FindForm() as Main;
+                if (mainForm == null)
+                    return;
+
+                var summary = mainForm.GetSummaryTextBoxValues();
+
+                var summaryObj = new
+                {
+                    TotalShares = summary.TotalShares,
+                    TotalShareholders = summary.TotalShareholders,
+                    RegisterShares = summary.RegisterShares,
+                    RegisteredShareholders = summary.RegisteredShareholders
+                };
+
+                string json = JsonConvert.SerializeObject(summaryObj, Formatting.Indented);
+                string filePath = Path.Combine(folderPath, "summary_result.json");
+                File.WriteAllText(filePath, json);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving summary data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
         public void SetDataGridViewFontSize(float fontSize)
         {
