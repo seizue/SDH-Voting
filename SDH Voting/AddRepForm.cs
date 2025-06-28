@@ -127,7 +127,7 @@ namespace SDH_Voting
                 SaveInvestorsToFile(newInvestor);
 
                 // Update the status of the investor in the InvestorMasterlist.json
-                UpdateInvestorStatus(repName, "NO");
+                UpdateInvestorStatus(repName, "Register");
 
                 MessageBox.Show("Entry saved successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

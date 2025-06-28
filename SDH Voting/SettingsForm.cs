@@ -291,6 +291,7 @@ namespace SDH_Voting
 
                     MessageBox.Show("Maximum Vote Limit saved successfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+
                 else
                 {
                     MessageBox.Show("The minimum vote limit is 1. Please enter a value greater than 0.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

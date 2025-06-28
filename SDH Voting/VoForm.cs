@@ -19,6 +19,9 @@ namespace SDH_Voting
         private string selectedInvestorId;
         private List<Investor> investors;
 
+        // --- Add this flag for exception logic ---
+        private bool forceDoneVoting = false;
+
         public SDHVoForm(string sdhStockHolder, UserControlVoting userControl)
         {
             InitializeComponent();
@@ -31,7 +34,6 @@ namespace SDH_Voting
             int savedMaxVoteLimit = Properties.Settings.Default.MaxVoteLimit;
             txtBoxVoteLimit.Text = savedMaxVoteLimit.ToString();
         }
-
         private void LoadRepresentativesComboRep()
         {
             string folderPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting");
@@ -50,15 +52,15 @@ namespace SDH_Voting
                         // Deserialize each JSON line into a Representative object
                         Representative rep = JsonConvert.DeserializeObject<Representative>(json);
                         representatives.Add(rep);
-                    }
+                    }           
 
-                    // Populate the ComboBox with the representatives' names
-                    comboRep.Items.Clear(); // Clear any existing items
+                    // Populate the metroGridRep with representatives' names in the voRep column
+                    metroGridRep.Rows.Clear(); // Clear existing rows
                     foreach (var rep in representatives)
                     {
-                        comboRep.Items.Add(rep.Name);
+                        int rowIndex = metroGridRep.Rows.Add();
+                        metroGridRep.Rows[rowIndex].Cells["voRep"].Value = rep.Name;
                     }
-
                 }
             }
             catch (Exception ex)
@@ -66,6 +68,7 @@ namespace SDH_Voting
                 MessageBox.Show($"Error loading representatives: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void LoadInvestorsData()
         {
@@ -190,39 +193,65 @@ namespace SDH_Voting
                 }
 
                 var investor = investors.FirstOrDefault(i => i.Id == selectedInvestorId);
-                if (investor != null)
-                {
-                    if (investor.VoteCount <= 0)
-                    {
-                        investor.VoteCount = 1;
-                    }
-                    else
-                    {
-                        investor.VoteCount++;
-                    }
 
-                    int maxVoteLimit = Properties.Settings.Default.MaxVoteLimit;
-                    if (investor.VoteCount >= maxVoteLimit)
+                // --- Get selected representatives from metroGridRep ---
+                var selectedRepNames = new List<string>();
+                foreach (DataGridViewRow row in metroGridRep.Rows)
+                {
+                    if (!row.IsNewRow && row.Cells["voSelection"]?.Value is bool isChecked && isChecked)
                     {
-                        investor.Status = "YES";
+                        var repName = row.Cells["voRep"]?.Value?.ToString();
+                        if (!string.IsNullOrEmpty(repName))
+                            selectedRepNames.Add(repName);
                     }
                 }
 
-                // Validate representative selection
-                if (comboRep.SelectedItem == null)
+                // Enforce selection limit based on txtBoxVoteLimit
+                int voteLimit = 0;
+                int.TryParse(txtBoxVoteLimit.Text, out voteLimit);
+                if (voteLimit <= 0) voteLimit = 1; // fallback to 1 if invalid
+
+                if (selectedRepNames.Count == 0)
                 {
-                    MessageBox.Show("Please select a Representative to Vote.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Please select at least one Representative to Vote (using the checkboxes).", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (selectedRepNames.Count > voteLimit)
+                {
+                    MessageBox.Show($"You can only select up to {voteLimit} representative(s). Please uncheck extra selections.", "Selection Limit", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                var selectedRepName = comboRep.SelectedItem.ToString();
-
-                var rep = representatives.FirstOrDefault(r => r.Name == selectedRepName);
-                if (rep != null)
+                // --- Exception: If forceDoneVoting is set, always set status to YES ---
+                if (investor != null)
                 {
-                    var selectedInvestorVotes = investor?.Votes ?? 0;
-                    rep.Votes += selectedInvestorVotes;
-                    rep.Shares += selectedInvestorVotes;
+                    investor.VoteCount = selectedRepNames.Count;
+                    if (forceDoneVoting)
+                    {
+                        investor.Status = "YES";
+                    }
+                    else
+                    {
+                        if (investor.VoteCount == voteLimit)
+                        {
+                            investor.Status = "YES";
+                        }
+                        else
+                        {
+                            investor.Status = "Register";
+                        }
+                    }
+                }
+
+                var selectedInvestorVotes = investor?.Votes ?? 0;
+                foreach (var selectedRepName in selectedRepNames)
+                {
+                    var rep = representatives.FirstOrDefault(r => r.Name == selectedRepName);
+                    if (rep != null)
+                    {
+                        rep.Votes += selectedInvestorVotes;
+                        rep.Shares += selectedInvestorVotes;
+                    }
                 }
 
                 string updatedInvestorJson = JsonConvert.SerializeObject(investors, Formatting.Indented);
@@ -244,10 +273,13 @@ namespace SDH_Voting
 
                 File.WriteAllLines(repFilePath, updatedRepJsonLines);
 
-                SaveSelectedVoteData(folderPath);
+                SaveSelectedVoteData(folderPath, selectedRepNames);
 
                 // Refresh the DataGridView in UserControlVoting
                 userControlVoting.ReloadData();
+
+                // --- Reset the force flag after save ---
+                forceDoneVoting = false;
 
                 this.Close();
             }
@@ -257,8 +289,8 @@ namespace SDH_Voting
             }
         }
 
-
-        private void SaveSelectedVoteData(string folderPath)
+        // --- UPDATED: Accepts selectedRepNames as parameter ---
+        private void SaveSelectedVoteData(string folderPath, List<string> selectedRepNames)
         {
             string voteSelectedFilePath = Path.Combine(folderPath, "SDH_VoteSelected.json");
             List<VoteSelectedData> voteSelectedList = new List<VoteSelectedData>();
@@ -269,12 +301,15 @@ namespace SDH_Voting
                 voteSelectedList = JsonConvert.DeserializeObject<List<VoteSelectedData>>(voteSelectedJson) ?? new List<VoteSelectedData>();
             }
 
-            // Add new entry for the selected vote
-            voteSelectedList.Add(new VoteSelectedData
+            // Add new entry for each selected representative
+            foreach (var repName in selectedRepNames)
             {
-                Representative = comboRep.SelectedItem.ToString(),
-                StockHolder = txtBoxSH.Text
-            });
+                voteSelectedList.Add(new VoteSelectedData
+                {
+                    Representative = repName,
+                    StockHolder = txtBoxSH.Text
+                });
+            }
 
             // Save updated vote selected data
             string updatedVoteSelectedJson = JsonConvert.SerializeObject(voteSelectedList, Formatting.Indented);
@@ -316,7 +351,9 @@ namespace SDH_Voting
 
                     if (result == DialogResult.Yes)
                     {
-                        // Update the Status to "YES"
+                        // --- Set the force flag for SaveRepVoter ---
+                        forceDoneVoting = true;
+                        // Optionally, update UI immediately if needed
                         investorToUpdate.Status = "YES";
 
                         // Update the displayed count of voted investors
@@ -409,7 +446,6 @@ namespace SDH_Voting
                 }
             }
         }
-
     }
 
 
