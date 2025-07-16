@@ -359,7 +359,9 @@ namespace SDH_Voting
                         // Update the displayed count of voted investors
                         int votedCount = investors.Count(i => i.Status == "YES");
                         txtBoxVoted.Text = votedCount.ToString();
+                        txtBoxSH.Text = "";
 
+                        checkBoxDoneVoting.Checked = false;
                         // Save updated investors list to file
                         try
                         {
