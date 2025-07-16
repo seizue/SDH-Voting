@@ -198,6 +198,8 @@ namespace SDH_Voting
                 {
                     row.Height = 30;
                 }
+
+
             }
             catch (Exception ex)
             {
@@ -283,6 +285,7 @@ namespace SDH_Voting
 
         private void dataGridViewRepresentative_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
+
             // Exclude "View" column from showing "-"
             if (dataGridViewRepresentative.Columns[e.ColumnIndex].Name == "View")
             {
@@ -300,6 +303,7 @@ namespace SDH_Voting
                 e.Value = "-";
                 e.FormattingApplied = true;
             }
+
         }
 
         private void SetupDataGridViewColumns()
@@ -429,6 +433,16 @@ namespace SDH_Voting
             LoadRepresentatives();
             LoadSHSelected();
             CustomCellHeight();
+
+ 
+            // Sort by TotalVotes descending (largest at top) AFTER all data is loaded
+            if (dataGridViewRepresentative.Columns["TotalVotes"] != null && dataGridViewRepresentative.Rows.Count > 0)
+            {
+                dataGridViewRepresentative.Sort(
+                    dataGridViewRepresentative.Columns["TotalVotes"],
+                    ListSortDirection.Descending
+                );
+            }
         }
 
         private void btnExpandGrid_Click(object sender, EventArgs e)

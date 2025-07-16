@@ -767,9 +767,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.userControlVoting1.BackColor = System.Drawing.Color.White;
-            this.userControlVoting1.Location = new System.Drawing.Point(4, 79);
+            this.userControlVoting1.Location = new System.Drawing.Point(4, 82);
             this.userControlVoting1.Name = "userControlVoting1";
-            this.userControlVoting1.Size = new System.Drawing.Size(949, 570);
+            this.userControlVoting1.Size = new System.Drawing.Size(949, 567);
             this.userControlVoting1.TabIndex = 437;
             // 
             // tableLayoutPanel2
@@ -788,11 +788,11 @@
             this.tableLayoutPanel2.Controls.Add(this.buttonDelete, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnClearVote, 4, 0);
             this.tableLayoutPanel2.Controls.Add(this.button_Export, 5, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(475, 97);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(469, 97);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(474, 53);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(478, 53);
             this.tableLayoutPanel2.TabIndex = 439;
             // 
             // Main

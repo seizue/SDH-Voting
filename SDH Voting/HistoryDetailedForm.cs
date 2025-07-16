@@ -18,6 +18,7 @@ namespace SDH_Voting
         public HistoryDetailedForm()
         {
             InitializeComponent();
+            GridDetailedHistory.SortCompare += GridDetailedHistory_SortCompare;
 
             foreach (DataGridViewRow row in GridDetailedHistory.Rows)
             {
@@ -110,6 +111,8 @@ namespace SDH_Voting
                 {
                     row.Height = 30;
                 }
+
+               
             }
             catch (Exception ex)
             {
@@ -293,6 +296,20 @@ namespace SDH_Voting
             }
         }
 
+        private void GridDetailedHistory_SortCompare(object sender, DataGridViewSortCompareEventArgs e)
+        {
+            if (e.Column.Name == "TotalVotes")
+            {
+                // Remove commas and parse as integer
+                int value1 = 0, value2 = 0;
+                int.TryParse(e.CellValue1?.ToString().Replace(",", ""), out value1);
+                int.TryParse(e.CellValue2?.ToString().Replace(",", ""), out value2);
+
+                // Compare in descending order (large to small)
+                e.SortResult = value2.CompareTo(value1);
+                e.Handled = true;
+            }
+        }
     }
 }
 

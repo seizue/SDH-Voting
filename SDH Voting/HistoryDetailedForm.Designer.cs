@@ -259,6 +259,7 @@
             this.GridDetailedHistory.UseCustomForeColor = true;
             this.GridDetailedHistory.UseStyleColors = true;
             this.GridDetailedHistory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridDetailedHistory_CellContentClick);
+            this.GridDetailedHistory.SortCompare += new System.Windows.Forms.DataGridViewSortCompareEventHandler(this.GridDetailedHistory_SortCompare);
             // 
             // ID
             // 
