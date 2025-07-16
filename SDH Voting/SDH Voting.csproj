@@ -426,6 +426,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons8_zombie_hand_thumbs_up.ico" />
+    <None Include="Resources\print_24px.png" />
+    <None Include="Resources\print_28px.png" />
     <None Include="Resources\registration_24px.png" />
     <None Include="Resources\github_24px.png" />
   </ItemGroup>

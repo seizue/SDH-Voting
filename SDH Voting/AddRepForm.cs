@@ -14,12 +14,15 @@ namespace SDH_Voting
         private string masterListFilePath;
         private string repFilePath;
         private List<string> existingRepresentatives;
+        private List<string> allInvestorNames;
 
+ 
         public AddRepForm(List<string> existingRepresentatives)
         {
             InitializeComponent();
             this.existingRepresentatives = existingRepresentatives;
             InitializeData();
+            comboRep.TextUpdate += comboRep_TextUpdate;
         }
 
         private void InitializeData()
@@ -60,9 +63,10 @@ namespace SDH_Voting
         private void BindInvestorsToComboBox()
         {
             comboRep.Items.Clear();
-            foreach (var investor in investors)
+            allInvestorNames = investors.Select(inv => inv.Name).ToList();
+            foreach (var name in allInvestorNames)
             {
-                comboRep.Items.Add(investor.Name);
+                comboRep.Items.Add(name);
             }
         }
 
@@ -196,13 +200,38 @@ namespace SDH_Voting
 
         private void comboRep_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Get the selected investor's index
-            int selectedIndex = comboRep.SelectedIndex;
+            // Get the selected name
+            string selectedName = comboRep.SelectedItem as string;
+            if (string.IsNullOrEmpty(selectedName))
+                return;
 
-            // Display details for the selected investor
-            DisplayInvestorDetails(selectedIndex);
+            // Find the investor by name
+            var investor = investors.FirstOrDefault(inv => inv.Name.Equals(selectedName, StringComparison.OrdinalIgnoreCase));
+            if (investor != null)
+            {
+                textBoxName.Text = investor.Name;
+                textBoxVotes.Text = investor.Votes.ToString();
+                textBoxShares.Text = investor.Shares.ToString();
+            }
+        }
+
+        private void comboRep_TextUpdate(object sender, EventArgs e)
+        {
+            string searchText = comboRep.Text.ToLower();
+            comboRep.Items.Clear();
+
+            var filteredNames = allInvestorNames
+                .Where(name => name.ToLower().Contains(searchText))
+                .ToList();
+
+            foreach (var name in filteredNames)
+            {
+                comboRep.Items.Add(name);
+            }
+
+            comboRep.DroppedDown = true;
+            comboRep.SelectionStart = comboRep.Text.Length;
+            comboRep.SelectionLength = 0;
         }
     }
-
-  
 }
