@@ -17,7 +17,9 @@ namespace SDH_Voting
     {   
         private List<InvestorViewModel> originalInvestorList;
         private List<VoteSelectedData> SDH_VoteSelected = new List<VoteSelectedData>();
+        private List<InvestorViewModel> displayedInvestorList;
         private string sdhStockHolder;
+
         public Main()
         {
             InitializeComponent();
@@ -209,6 +211,8 @@ namespace SDH_Voting
 
         private void UpdateDataGridView(List<InvestorViewModel> investors)
         {
+            displayedInvestorList = investors;
+
             // Clear the existing rows and columns
             InventoryDataGrid.Rows.Clear();
             InventoryDataGrid.Columns.Clear();
@@ -274,7 +278,9 @@ namespace SDH_Voting
                 row.Height = 30;
             }
 
-            UpdateButtonStates();
+            UpdateButtonStates();         
+            UpdateTotalShares();
+            CustomCellHeight();
         }
 
         private void ApplyFilters()
@@ -571,8 +577,9 @@ namespace SDH_Voting
 
             // Update the DataGridView with the filtered data
             UpdateDataGridView(filteredData);
-
+            UpdateTotalShares();
             CustomCellHeight();
+          
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -595,6 +602,7 @@ namespace SDH_Voting
 
             // Update the DataGridView with the filtered data
             UpdateDataGridView(filteredData);
+            UpdateTotalShares();
             CustomCellHeight();
         }
 
@@ -725,6 +733,7 @@ namespace SDH_Voting
 
         private void btnVoting_Click(object sender, EventArgs e)
         {
+            UpdateTotalShares();
             userControlVoting1.Visible = true;
             userControlVoting1.ReloadData();
             btnVoting.BackColor = Color.WhiteSmoke;
@@ -841,7 +850,8 @@ namespace SDH_Voting
                 // Ensure the selected row index is within bounds
                 if (selectedIndex >= 0 && selectedIndex < originalInvestorList.Count)
                 {
-                    InvestorViewModel selectedInvestorViewModel = originalInvestorList[selectedIndex];
+                   
+                    InvestorViewModel selectedInvestorViewModel = displayedInvestorList[selectedIndex];
 
                     // Find the corresponding Investor object in the JSON file
                     string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "SDH Voting", "InvestorMasterlist.json");

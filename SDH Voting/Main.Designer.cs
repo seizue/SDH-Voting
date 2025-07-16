@@ -78,8 +78,8 @@
             this.button_UpdateUser = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.button_Export = new System.Windows.Forms.Button();
-            this.userControlVoting1 = new SDH_Voting.UserControlVoting();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.userControlVoting1 = new SDH_Voting.UserControlVoting();
             this.panelGrid.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InventoryDataGrid)).BeginInit();
@@ -563,7 +563,7 @@
             this.checkBoxNonVoted.AutoSize = true;
             this.checkBoxNonVoted.FontWeight = MetroFramework.MetroCheckBoxWeight.Bold;
             this.checkBoxNonVoted.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.checkBoxNonVoted.Location = new System.Drawing.Point(371, 120);
+            this.checkBoxNonVoted.Location = new System.Drawing.Point(366, 120);
             this.checkBoxNonVoted.Name = "checkBoxNonVoted";
             this.checkBoxNonVoted.Size = new System.Drawing.Size(84, 15);
             this.checkBoxNonVoted.TabIndex = 493;
@@ -761,17 +761,6 @@
             this.button_Export.UseVisualStyleBackColor = false;
             this.button_Export.Click += new System.EventHandler(this.button_Export_Click);
             // 
-            // userControlVoting1
-            // 
-            this.userControlVoting1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.userControlVoting1.BackColor = System.Drawing.Color.White;
-            this.userControlVoting1.Location = new System.Drawing.Point(4, 82);
-            this.userControlVoting1.Name = "userControlVoting1";
-            this.userControlVoting1.Size = new System.Drawing.Size(949, 567);
-            this.userControlVoting1.TabIndex = 437;
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.BackColor = System.Drawing.Color.White;
@@ -788,12 +777,23 @@
             this.tableLayoutPanel2.Controls.Add(this.buttonDelete, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnClearVote, 4, 0);
             this.tableLayoutPanel2.Controls.Add(this.button_Export, 5, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(469, 97);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(466, 97);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(478, 53);
             this.tableLayoutPanel2.TabIndex = 439;
+            // 
+            // userControlVoting1
+            // 
+            this.userControlVoting1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userControlVoting1.BackColor = System.Drawing.Color.White;
+            this.userControlVoting1.Location = new System.Drawing.Point(4, 259);
+            this.userControlVoting1.Name = "userControlVoting1";
+            this.userControlVoting1.Size = new System.Drawing.Size(949, 390);
+            this.userControlVoting1.TabIndex = 437;
             // 
             // Main
             // 
